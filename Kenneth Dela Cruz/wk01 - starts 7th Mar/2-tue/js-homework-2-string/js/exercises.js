@@ -26,9 +26,7 @@ const DrEvil = function(amount){
 // Look up the JavaScript string reference to find methods which may be useful!
 // ```
 const mixUp = function(mxWord1, mxWord2){
-    console.log(mxWord2[0]+mxWord2[1]+mxWord1[2]+mxWord1[3]+mxWord1[4]+mxWord1[5]+mxWord1[6]+mxWord1[7],mxWord1[0]+mxWord1[1])
-    //console.log(mxWord2.charAt(0) + mxWord2.charAt(1) + mxWord1.charAt(2) + ' ' + mxWord1.charAt(0) + mxWord1.charAt(1) + mxWord2.chartAt(2));
-    //console.log(mxWord2[0],mxWord2[1],mxWord1[2],mxWord1[3],mxWord1[4],mxWord1[5],mxWord1[6],mxWord1[7] + ' ' + mxWord1[0],mxWord1[1],mxWord2[2],mxWord2[3],mxWord2[4],mxWord2[5],mxWord2[6],mxWord[7]);
+    return `${mxWord2.substring(0,2)}${mxWord1.substring(2)} ${mxWord1.substring(0,2)}${mxWord2.substring(2)} `
 };
 
 // ## FixStart
@@ -37,7 +35,15 @@ const mixUp = function(mxWord1, mxWord2){
 // ```
 // fixStart('babble'): 'ba**le'
 // ```
+const fixStart = function(word){
+    let firstChar = word.charAt(0);
+    let woFirstChar = word.substring(1);
+    let result = woFirstChar.replaceAll(`${firstChar}`,`*`)
+    console.log(`${firstChar}${result}`);  
 
+    
+    //console.log(`${word.replaceAll(`${word.chartAt(0)}`,`*`)}`);
+}
 // ## Verbing
 
 // Create a function called verbing. It should take a single argument, a string. If its length is at least 3, it should add 'ing' to its end, unless it already ends in 'ing', in which case it should add 'ly' instead. If the string length is less than 3, it should leave it unchanged. For example:
