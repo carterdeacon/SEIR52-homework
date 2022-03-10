@@ -61,7 +61,7 @@ const isEquilateral = function(triObj) {
 
 //Isosceles triangle = 2 sides equal length
 const isIsosceles = function(triObj) {
-    return triObj.sideA === triObj.sideB || triObj.sideA === triObj.sideC ;
+    return triObj.sideA === triObj.sideB || triObj.sideA === triObj.sideC || triObj.sideB === triObj.sideC;
 };
 //Heron's area of triangle:
 //area of triangle = Sqr of s(s-a)(s-b)(s-c), where s = (a+b+c)/2; a,b,c = side length;
@@ -82,21 +82,21 @@ const isObtuse = function(triObj) {
 };
 //TEST CASES
 console.log("isEquilateral");
-console.log(isEquilateral(triangleA)); // not euqilateral
+console.log(isEquilateral(triangleA)); // not equilateral
 console.log(isEquilateral(triangleB)); // equilateral
 console.log(isEquilateral(triangleC)); // not equilateral
 console.log("isIsosceles");
-console.log(isIsosceles(triangleA)); //
-console.log(isIsosceles(triangleB));
-console.log(isIsosceles(triangleC));
+console.log(isIsosceles(triangleA)); // isosceles
+console.log(isIsosceles(triangleB)); // isosceles
+console.log(isIsosceles(triangleC)); // not isosceles
 console.log("find Area");
 console.log(triArea(triangleA));
 console.log(triArea(triangleB));
 console.log(triArea(triangleC));
 console.log("isObtuse");
-console.log(isObtuse(triangleA));
-console.log(isObtuse(triangleB));
-console.log(isObtuse(triangleC));
+console.log(isObtuse(triangleA)); //not obtuse
+console.log(isObtuse(triangleB)); //not obtuse
+console.log(isObtuse(triangleC)); //obtuse
 
 
 //Cash register
