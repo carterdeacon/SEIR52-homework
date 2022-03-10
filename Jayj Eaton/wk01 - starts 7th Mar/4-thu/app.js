@@ -144,21 +144,31 @@ const validateCreditCard = function (cardnumb) {
 			return a + b;
 		}, 0);
 	// constructor isnt working dont know why... im tired.. basic card works
-	const CardNumber = function (number) {
+	const CardNumber = function (number, bool) {
 		this.number = number;
 	};
-	const Card = new CardNumber(numbs);
-	Card.number;
+	const cardArray = [];
 
 	if (string.length === 16 && stringsAfter.length === 16) {
 		if (lastNumb % 2 === 0) {
 			if (sum > 16) {
 				for (let i = 0; i < incorrectCards.length; i++) {
 					if (string === incorrectCards[i]) {
-						return incorrect;
+						//const Card1 = new CardNumber(numbs, false);
+						// this makes a new object and adds it to the array
+						cardArray.push({
+							number: numbs,
+							isValid: false,
+						});
+						return incorrect, cardArray;
 					}
 				}
-				return `${cardnumb} is correct`;
+				// let Card2 = new CardNumber(numbs, true);
+				cardArray.push({
+					number: numbs,
+					isValid: true,
+				});
+				return `${cardnumb} is correct`, cardArray;
 			} else return incorrect;
 		} else return incorrect;
 	} else return incorrect;
@@ -166,6 +176,7 @@ const validateCreditCard = function (cardnumb) {
 console.log(validateCreditCard("8888-8888-8888-8888"));
 console.log(validateCreditCard("8888-8888-8388-8800"));
 
+// console.log(Card1);
 // console.table(CardNumber);
 // // - Number must be 16 digits, all of them must be numbers-
 // // - You must have at least two different digits represented (all of the digits cannot be the same)
@@ -180,11 +191,6 @@ console.log(validateCreditCard("8888-8888-8388-8800"));
 // // *Hint*: Remove the dashed from the input string before checking if the input credit card number is valid.
 
 // // *Bonus*: Return an object indicating whether the credit card is valid, and if not, what the error is
-
-// // ```
-// // { valid: true, number: 'a923-3211-9c01-1112' }
-// // { valid: false, number: 'a923-3211-9c01-1112', error: ‘wrong_length’ }
-// // ```
 
 // // *Double Bonus*: Make your credit card scheme even more advanced! What are the rules, and what are some numbers that pass or fail? Ideas: check expiration date! Check out the Luhn Algorithm for inspiration.
 
