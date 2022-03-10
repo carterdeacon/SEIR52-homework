@@ -180,14 +180,13 @@ const guessLetter2 = function (letter) {
 const wordArray3 = ["t", "e", "a", "c", "h"];
 let guessArray3 = ["_", "_", "_", "_", "_"];
 let count = 0;
+let guessedArray = [];
 
 const guessLetter3 = function (letter) {
     const includeLetter = wordArray3.includes(letter);
-    const guessedArray = [];
     if (count < 5) {
         if (!includeLetter) {
-
-            includeGuessedLetter = guessArray.includes(letter);
+            const includeGuessedLetter = guessedArray.includes(letter);
             if (!includeGuessedLetter) {
                 guessedArray.push(letter);
                 count++;
