@@ -41,7 +41,7 @@ console.log("mta script functional");
 // SUBWAY object
 const subway = {
     // ARRAYS of stops
-    lineN: [
+    N: [
         'Times Square', 
         '34th', 
         '28th', 
@@ -49,14 +49,14 @@ const subway = {
         'Union Square',
         '8th'
     ],
-    lineL: [
+    L: [
         '8th', 
         '6th', 
         'Union Square', 
         '3rd',
         '1st'
     ],
-    line6: [
+    '6': [
         'Grand Central', 
         '33rd', 
         '28th', 
@@ -68,57 +68,82 @@ const subway = {
 
 // HELPER FUNCTIONS
 const changeRequired = function(lineAt, lineDest) {
-    return lineAt != lineDest;
+    return lineAt != lineDest; // return true if commuter not at final destination
 };
 
 // vector function will determine whether iterator increments or decrements
-const direction = function(commuter, destination) {
+const direction = function(commuter, nextStop) {
     const line = commuter.line;
-    if (subway[line].indexOf(commuter.position) < subway[line].indexOf(destination)) {
+    if (subway[line].indexOf(commuter.position) < subway[line].indexOf(nextStop)) {
         return 1;
     };
     return -1;
 };
 
-const tripOver = function(commuter, destination) {
+const tripOver = function(i, commuter, nextStop) {
     const line = commuter.line;
-    if (direction(commuter, destination) > 0) {
-         return i < subway[line].indexOf(destination);
+    if (direction(commuter, nextStop) > 0) {
+         return i > subway[line].indexOf(nextStop);
     }
-    return i > subway[line].indexOf(destination);
+    return i < subway[line].indexOf(nextStop);
 };
 
-const travel = function(commuter, destination) {
+let stopsToTravel = [];
+let stopCount = 0;
+
+const travel = function(commuter, nextStop) {
     const line = commuter.line;
-    for (let i = subway[line].indexOf(commuter.position); !tripOver(commuter, destination); i + direction(commuter, destination)) {
+    for (let i = subway[line].indexOf(commuter.position); !tripOver(i, commuter, nextStop); i = i + direction(commuter, nextStop)) {
         commuter.position = subway[line][i];
-        console.log(commuter.position);
+        stopsToTravel.push(commuter.position);
+        stopCount ++;
     };
 };
 
 // MAIN FUNCTION
 const planTrip = function(lineOn, stopOn, lineOff, stopOff) {
 
-    // Object keeps tracks of commuters line and position
+    // object keeps tracks of commuters line and position
     let commuter = { 
         line: lineOn,
         position: stopOn
     };
-
+    let nextStop;
     // check if destination is on another line
-    if (changeRequired) {
-        destination = 'Union Square'
+    if (changeRequired(lineOn, lineOff)) {
+        nextStop = 'Union Square';
+    } else {
+        nextStop = stopOff;
     };
-
     // travel until commuter is at the line and stop they need to be at.
     while(commuter.line != lineOff || commuter.position != stopOff) {
-        travel(commuter, destination);
+        
+        travel(commuter, nextStop);
+
+        let changeOccured = false;
+
+        let output;
+
+        if (changeOccured) {
+            output = `Your journey continues through the following stops: ${stopsToTravel.join(', ')}.`;
+            console.log(output);
+        } else {
+            output = `You must travel through the following stops on the ${lineOn} line: ${stopsToTravel.join(', ')}.`;
+            console.log(output);
+        };
+
+        // Change lines
         if(commuter.line != lineOff) {
             commuter.line = lineOff;
-            console.log("changed lines...")
+            changeOccured = true;
         };
-        if (destination != stopOff) {
-            destination = stopOff;
+        if (nextStop != stopOff) {
+            nextStop = stopOff;
+        };
+        
+        if (changeOccured) {
+            console.log("Change at Union Square.");
         };
     };
+    console.log(`${stopCount} stops in total.`);
 };
