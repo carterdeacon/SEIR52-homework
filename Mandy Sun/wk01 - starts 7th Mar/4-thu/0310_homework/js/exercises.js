@@ -181,8 +181,9 @@ const validateCreditCard = function (card) {
     if (numberArray.length === 16) {
         for (let l = 0; l < 15; l++) {
             isNum = isNum + parseInt(numberArray[l]);
+
         }
-        if (isNum !== NaN) {
+        if (!isNaN(isNum)) {
             if (numberArray[15] % 2 === 0) {
                 let sum = 0
                 for (let n = 0; n < 16; n++) {
