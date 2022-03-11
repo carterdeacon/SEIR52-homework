@@ -88,21 +88,25 @@ const tripOver = function(i, commuter, nextStop) {
     return i < subway[line].indexOf(nextStop);
 };
 
-let stopsToTravel = [];
-let stopCount = 0;
-
-const travel = function(commuter, nextStop) {
-    const line = commuter.line;
-    for (let i = subway[line].indexOf(commuter.position); !tripOver(i, commuter, nextStop); i = i + direction(commuter, nextStop)) {
-        commuter.position = subway[line][i];
-        stopsToTravel.push(commuter.position);
-        stopCount ++;
-    };
-};
 
 // MAIN FUNCTION
 const planTrip = function(lineOn, stopOn, lineOff, stopOff) {
-
+    
+    let stopsToTravel;
+    let stopCount = 0;
+    
+    const travel = function(commuter, nextStop) {
+        // Set new trip
+        stopsToTravel = [];
+    
+        const line = commuter.line;
+        for (let i = subway[line].indexOf(commuter.position) + direction(commuter, nextStop); !tripOver(i, commuter, nextStop); i = i + direction(commuter, nextStop)) {
+            commuter.position = subway[line][i];
+            stopsToTravel.push(commuter.position);
+            stopCount ++;
+        };
+    };
+    
     // object keeps tracks of commuters line and position
     let commuter = { 
         line: lineOn,
@@ -115,23 +119,25 @@ const planTrip = function(lineOn, stopOn, lineOff, stopOff) {
     } else {
         nextStop = stopOff;
     };
+
+    let changeOccured = false;
+
     // travel until commuter is at the line and stop they need to be at.
     while(commuter.line != lineOff || commuter.position != stopOff) {
         
         travel(commuter, nextStop);
-
-        let changeOccured = false;
-
-        let output;
-
+        
         if (changeOccured) {
-            output = `Your journey continues through the following stops: ${stopsToTravel.join(', ')}.`;
+            const output = `Your journey continues through the following stops: ${stopsToTravel.join(', ')}.`;
             console.log(output);
         } else {
-            output = `You must travel through the following stops on the ${lineOn} line: ${stopsToTravel.join(', ')}.`;
+            const output = `You must travel through the following stops on the ${lineOn} line: ${stopsToTravel.join(', ')}.`;
             console.log(output);
+            if (changeRequired(lineOn, lineOff)) {
+                console.log("Change at Union Square.");
+            };
         };
-
+        
         // Change lines
         if(commuter.line != lineOff) {
             commuter.line = lineOff;
@@ -139,10 +145,6 @@ const planTrip = function(lineOn, stopOn, lineOff, stopOff) {
         };
         if (nextStop != stopOff) {
             nextStop = stopOff;
-        };
-        
-        if (changeOccured) {
-            console.log("Change at Union Square.");
         };
     };
     console.log(`${stopCount} stops in total.`);
