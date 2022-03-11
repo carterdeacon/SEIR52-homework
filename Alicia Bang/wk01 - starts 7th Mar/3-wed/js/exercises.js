@@ -39,17 +39,22 @@ const vowelChar = function (letter) {
 
 // 4. Define a function `sumArray` and a function `multiplyArray` that sums and multiplies (respectively) all the numbers in an array of numbers. For example, `sumArray([1,2,3,4])` should return 10, and `multiplyArray([1,2,3,4])` should return 24.
 
-const numbers = [2, 3, 5, 7];
-const sumArray = function (numbers) {
+const sumArray = function (number) {
     let sum = 0;
 
-    for (const i = 0; i < numbers.length; i++) {
-        sum += numbers[i];
+    for (const i = 0; i < number.length; i++) {
+        sum += number[i];
     }
-    console.log(sum);
-}; 
+    return sum;
+};
 
 // ## Bonus
 // 5. Define a function `reverseString` that computes the reversal of a string. For example, reverseString("jag testar") should return the string "ratset gaj".
+const reverseString = function (str) {
+    const arrayStrings = str.split("");
+    const reverseArray = arrayStrings.reverse();
+    const joinArray = reverseArray.join("");
+    return joinArray;
+};
 // 6. Write a function `findLongestWord` that takes an array of words and returns the length of the longest one.
 // 7. Write a function `filterLongWords` that takes an array of words and an number `i` and returns the array of words that are longer than i.
