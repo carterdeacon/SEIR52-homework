@@ -72,8 +72,44 @@ const planTrip = function (currentLine, currentStop, goingLine, goingStop) {
     //console.log(goingIndex);
     //console.log(goingInter);
 
+    if (currentIndex === currentInter) {
+        let numberStops = 0;
+        let nameStops = [];
+        if (goingIndex < goingInter) {
+            for (let i = goingInter-1; i > goingIndex-1; i--) {
+                numberStops++;
+                nameStops.push(stopsGoingLine[i]);
+            }
+        } else if (goingIndex > goingInter) {
+            for (let i = goingInter+1; i < goingIndex+1; i++) {
+                numberStops++;
+                nameStops.push(stopsGoingLine[i]);
+            }
+        }
+        // console.log(`You must travel through the following stops on the ${goingLine} line: ${nameStops}.`);
+        // console.log(`${numberStops} in total.`)
+        return `You must travel through the following stops on the ${goingLine} line: ${nameStops}. ${numberStops} stops in total.`
+    };
+    if (goingIndex === goingInter) {
+        let numberStops = 0;
+        let nameStops = [];
+        if (currentIndex < currentInter) {
+            for (let i = currentIndex+1; i < currentInter+1; i++) {
+                numberStops++;
+                nameStops.push(stopsCurrentLine[i]);
+            }
+        }
+        if (currentIndex > currentInter) {
+            for (let i = currentIndex-1; i > currentInter-1; i--) {
+                numberStops++;
+                nameStops.push(stopsCurrentLine[i]);
+            }
+        }
+        // console.log(`You must travel through the following stops on the ${currentLine} line: ${nameStops}.`);
+        // console.log(`${numberStops} in total.`)
+        return `You must travel through the following stops on the ${currentLine} line: ${nameStops}. ${numberStops} stops in total.`
+    };
     if (currentLine !== goingLine && currentIndex < currentInter && goingIndex < goingInter) {
-        const currentIndex = stopsCurrentLine.indexOf(currentStop);
         let numberStops = 0;
         let nameStops = [];
         let nameStops2 = [];
@@ -168,12 +204,16 @@ const planTrip = function (currentLine, currentStop, goingLine, goingStop) {
         return `You must travel through the following stops on the ${currentLine} line: ${nameStops}. ${numberStops} in total.`
     };
 }
-// console.log(planTrip('N', 'Times Square', '6', '33rd')); // 7 stops; 34, 28, 23, union, 23, 28, 33
-// console.log(planTrip('N', '8th', '6', 'Astor Place')); // 2 stops; union, astor
-// console.log(planTrip('N', '8th', '6', '33rd')); // 4 stops; union, 23, 28, 33
-// console.log(planTrip('N', 'Times Square', '6', 'Astor Place')); // 5 stops; 34, 28, 23, union, astor
-// console.log(planTrip('L', '8th', 'L', '1st')); // 4 stops; 6, union, 3, 1
-// console.log(planTrip('L', '1st', 'L', '8th')); // 4 stops; 3, union, 6, 8
+console.log(planTrip('N', 'Times Square', '6', '33rd')); // 7 stops; 34, 28, 23, union, 23, 28, 33
+console.log(planTrip('N', '8th', '6', 'Astor Place')); // 2 stops; union, astor
+console.log(planTrip('N', '8th', '6', '33rd')); // 4 stops; union, 23, 28, 33
+console.log(planTrip('N', 'Times Square', '6', 'Astor Place')); // 5 stops; 34, 28, 23, union, astor
+console.log(planTrip('L', '8th', 'L', '1st')); // 4 stops; 6, union, 3, 1
+console.log(planTrip('L', '1st', 'L', '8th')); // 4 stops; 3, union, 6, 8
+console.log(planTrip('L', 'Union Square', 'N', '34th')); // 3 stops; 23, 28, 34
+console.log(planTrip('N', '34th', 'L', 'Union Square')); // 3 stops; 28, 23, Union
+console.log(planTrip('L', 'Union Square', 'N', '8th')); // 1 stops; 8
+console.log(planTrip('N', '8th', 'L', 'Union Square')); // 1 stops; Union
 
-const resultPlanTrip = planTrip('L', 'Union Square', 'N', '34th');
-console.log(resultPlanTrip);
+// const resultPlanTrip = planTrip('L', 'Union Square', 'N', '34th');
+// console.log(resultPlanTrip);
