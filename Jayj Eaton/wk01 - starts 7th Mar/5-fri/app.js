@@ -7,6 +7,8 @@
 const trainSystem = function (online, onstation, offline, offstation) {
 	let arr = [];
 	let arrEnd = [];
+	let finalArray = [];
+
 	let userOn = {};
 	let startPoint = "";
 	let userOff = {};
@@ -143,14 +145,25 @@ const trainSystem = function (online, onstation, offline, offstation) {
 		dandy = stopsArray[i].slice(0, -2);
 		finalStops.push(` ${dandy}`);
 	}
+	union = " Union Square";
+	lastElement = finalStops[finalStops.length - 1];
+	if (lastElement === union) {
+		finalStops.pop();
 
-	const finalObject = new Set(finalStops);
-	const finalArray = [...finalObject];
+		if (onstation === "Union Square") {
+			console.log("here");
+			finalStops.push(" Union Square");
+		}
+		if (offstation === "Union Square") {
+			console.log("here >");
+			finalStops.push(" Union Square");
+		}
+	}
 
 	// 		----- final logs -----
 	console.log(`You boarded the train at ${startPoint}`);
 	console.log(`you exited the train at ${endPoint}`);
-	console.log(`your trip was ${finalArray.length} stops long and your stops were,${finalArray}`);
+	console.log(`your trip was ${finalStops.length} stops long and your stops were,${finalStops}`);
 
 	// 		------- referance console.logs for error checking -------
 	// console.log(`--test-- this is the stops array ${stopsArray}`);
@@ -159,7 +172,7 @@ const trainSystem = function (online, onstation, offline, offstation) {
 
 trainSystem("n", "Times Square", "s", "Grand Central");
 trainSystem("l", "6th", "n", "28th");
-trainSystem("l", "6th", "l", "1st");
+trainSystem("l", "8th", "l", "1st");
 
 // nLine stations: Times Square, 34th, 28th, 23rd, Union Square, 8th
 // lLine stations: 8th, 6th, Union Square, 3rd, 1st
