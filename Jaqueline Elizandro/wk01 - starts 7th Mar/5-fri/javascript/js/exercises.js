@@ -204,16 +204,16 @@ const planTrip = function (currentLine, currentStop, goingLine, goingStop) {
         return `You must travel through the following stops on the ${currentLine} line: ${nameStops.join(', ')}. ${numberStops} in total.`
     };
 }
-console.log(planTrip('N', 'Times Square', '6', '33rd')); // 7 stops; 34, 28, 23, union, 23, 28, 33
-console.log(planTrip('N', '8th', '6', 'Astor Place')); // 2 stops; union, astor
-console.log(planTrip('N', '8th', '6', '33rd')); // 4 stops; union, 23, 28, 33
-console.log(planTrip('N', 'Times Square', '6', 'Astor Place')); // 5 stops; 34, 28, 23, union, astor
-console.log(planTrip('L', '8th', 'L', '1st')); // 4 stops; 6, union, 3, 1
-console.log(planTrip('L', '1st', 'L', '8th')); // 4 stops; 3, union, 6, 8
-console.log(planTrip('L', 'Union Square', 'N', '34th')); // 3 stops; 23, 28, 34
-console.log(planTrip('N', '34th', 'L', 'Union Square')); // 3 stops; 28, 23, Union
-console.log(planTrip('L', 'Union Square', 'N', '8th')); // 1 stops; 8
-console.log(planTrip('N', '8th', 'L', 'Union Square')); // 1 stops; Union
+// console.log(planTrip('N', 'Times Square', '6', '33rd')); // 7 stops; 34, 28, 23, union, 23, 28, 33
+// console.log(planTrip('N', '8th', '6', 'Astor Place')); // 2 stops; union, astor
+// console.log(planTrip('N', '8th', '6', '33rd')); // 4 stops; union, 23, 28, 33
+// console.log(planTrip('N', 'Times Square', '6', 'Astor Place')); // 5 stops; 34, 28, 23, union, astor
+// console.log(planTrip('L', '8th', 'L', '1st')); // 4 stops; 6, union, 3, 1
+// console.log(planTrip('L', '1st', 'L', '8th')); // 4 stops; 3, union, 6, 8
+// console.log(planTrip('L', 'Union Square', 'N', '34th')); // 3 stops; 23, 28, 34
+// console.log(planTrip('N', '34th', 'L', 'Union Square')); // 3 stops; 28, 23, Union
+// console.log(planTrip('L', 'Union Square', 'N', '8th')); // 1 stops; 8
+// console.log(planTrip('N', '8th', 'L', 'Union Square')); // 1 stops; Union
 
-// const resultPlanTrip = planTrip('L', 'Union Square', 'N', '34th');
-// console.log(resultPlanTrip);
+const resultPlanTrip = planTrip('L', 'Union Square', 'N', '34th');
+console.log(resultPlanTrip);
