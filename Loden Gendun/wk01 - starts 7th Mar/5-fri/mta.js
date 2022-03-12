@@ -24,7 +24,7 @@ const tripOver = function(i, commuter, nextStop) {
     const line = commuter.line;
     if (direction(commuter, nextStop) > 0) {
          return i > subway[line].indexOf(nextStop);
-    }
+    };
     return i < subway[line].indexOf(nextStop);
 };
 
@@ -54,7 +54,7 @@ const planTrip = function(lineOn, stopOn, lineOff, stopOff) {
         stopsToTravel = []; // Set new trip
     
         const line = commuter.line;
-        const startPoint = subway[line].indexOf(commuter.position) + direction(commuter, nextStop)
+        const startPoint = subway[line].indexOf(commuter.position) + direction(commuter, nextStop);
 
         for (let i = startPoint; !tripOver(i, commuter, nextStop); i = i + direction(commuter, nextStop)) {
             commuter.position = subway[line][i];
