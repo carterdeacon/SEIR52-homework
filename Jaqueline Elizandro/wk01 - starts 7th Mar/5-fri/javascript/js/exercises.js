@@ -88,7 +88,7 @@ const planTrip = function (currentLine, currentStop, goingLine, goingStop) {
         }
         // console.log(`You must travel through the following stops on the ${goingLine} line: ${nameStops}.`);
         // console.log(`${numberStops} in total.`)
-        return `You must travel through the following stops on the ${goingLine} line: ${nameStops}. ${numberStops} stops in total.`
+        return `You must travel through the following stops on the ${goingLine} line: ${nameStops.join(', ')}. ${numberStops} stops in total.`
     };
     if (goingIndex === goingInter) {
         let numberStops = 0;
@@ -107,7 +107,7 @@ const planTrip = function (currentLine, currentStop, goingLine, goingStop) {
         }
         // console.log(`You must travel through the following stops on the ${currentLine} line: ${nameStops}.`);
         // console.log(`${numberStops} in total.`)
-        return `You must travel through the following stops on the ${currentLine} line: ${nameStops}. ${numberStops} stops in total.`
+        return `You must travel through the following stops on the ${currentLine} line: ${nameStops.join(', ')}. ${numberStops} stops in total.`
     };
     if (currentLine !== goingLine && currentIndex < currentInter && goingIndex < goingInter) {
         let numberStops = 0;
@@ -125,7 +125,7 @@ const planTrip = function (currentLine, currentStop, goingLine, goingStop) {
         // console.log(`Change at ${stopsCurrentLine[currentInter]}.`);
         // console.log(`Your journey continues through the following stops: ${nameStops2}.`);
         // console.log(`${numberStops} in total.`)
-        return `You must travel through the following stops on the ${currentLine} line: ${nameStops}. Change at ${stopsCurrentLine[currentInter]}. Your journey continues through the following stops: ${nameStops2}. ${numberStops} stops in total.`
+        return `You must travel through the following stops on the ${currentLine} line: ${nameStops.join(', ')}. Change at ${stopsCurrentLine[currentInter]}. Your journey continues through the following stops: ${nameStops2.join(', ')}. ${numberStops} stops in total.`
     };
     if (currentLine !== goingLine && currentIndex > currentInter && goingIndex > goingInter) { 
         let numberStops = 0;
@@ -143,7 +143,7 @@ const planTrip = function (currentLine, currentStop, goingLine, goingStop) {
         // console.log(`Change at ${stopsCurrentLine[currentInter]}.`);
         // console.log(`Your journey continues through the following stops: ${nameStops2}.`);
         // console.log(`${numberStops} in total.`)
-        return `You must travel through the following stops on the ${currentLine} line: ${nameStops}. Change at ${stopsCurrentLine[currentInter]}. Your journey continues through the following stops: ${nameStops2}. ${numberStops} stops in total.`
+        return `You must travel through the following stops on the ${currentLine} line: ${nameStops.join(', ')}. Change at ${stopsCurrentLine[currentInter]}. Your journey continues through the following stops: ${nameStops2.join(', ')}. ${numberStops} stops in total.`
     };
     if (currentLine !== goingLine && currentIndex > currentInter && goingIndex < goingInter) { 
         let numberStops = 0;
@@ -161,7 +161,7 @@ const planTrip = function (currentLine, currentStop, goingLine, goingStop) {
         // console.log(`Change at ${stopsCurrentLine[currentInter]}.`);
         // console.log(`Your journey continues through the following stops: ${nameStops2}.`);
         // console.log(`${numberStops} in total.`)
-        return `You must travel through the following stops on the ${currentLine} line: ${nameStops}. Change at ${stopsCurrentLine[currentInter]}. Your journey continues through the following stops: ${nameStops2}. ${numberStops} stops in total.`
+        return `You must travel through the following stops on the ${currentLine} line: ${nameStops.join(', ')}. Change at ${stopsCurrentLine[currentInter]}. Your journey continues through the following stops: ${nameStops2.join(', ')}. ${numberStops} stops in total.`
     };
     if (currentLine !== goingLine && currentIndex < currentInter && goingIndex > goingInter) { 
         let numberStops = 0;
@@ -179,7 +179,7 @@ const planTrip = function (currentLine, currentStop, goingLine, goingStop) {
         // console.log(`Change at ${stopsCurrentLine[currentInter]}.`);
         // console.log(`Your journey continues through the following stops: ${nameStops2}.`);
         // console.log(`${numberStops} in total.`)
-        return `You must travel through the following stops on the ${currentLine} line: ${nameStops}. Change at ${stopsCurrentLine[currentInter]}. Your journey continues through the following stops: ${nameStops2}. ${numberStops} stops in total.`
+        return `You must travel through the following stops on the ${currentLine} line: ${nameStops.join(', ')}. Change at ${stopsCurrentLine[currentInter]}. Your journey continues through the following stops: ${nameStops2.join(', ')}. ${numberStops} stops in total.`
     };
     if (currentLine === goingLine && currentIndex < goingIndex) { 
         let numberStops = 0;
@@ -190,7 +190,7 @@ const planTrip = function (currentLine, currentStop, goingLine, goingStop) {
         }
         // console.log(`You must travel through the following stops on the ${currentLine} line: ${nameStops}.`);
         // console.log(`${numberStops} stops in total.`)
-        return `You must travel through the following stops on the ${currentLine} line: ${nameStops}. ${numberStops} stops in total.`
+        return `You must travel through the following stops on the ${currentLine} line: ${nameStops.join(', ')}. ${numberStops} stops in total.`
     };
     if (currentLine === goingLine && currentIndex > goingIndex) { 
         let numberStops = 0;
@@ -201,7 +201,7 @@ const planTrip = function (currentLine, currentStop, goingLine, goingStop) {
         }
         // console.log(`You must travel through the following stops on the ${currentLine} line: ${nameStops}.`);
         // console.log(`${numberStops} in total.`)
-        return `You must travel through the following stops on the ${currentLine} line: ${nameStops}. ${numberStops} in total.`
+        return `You must travel through the following stops on the ${currentLine} line: ${nameStops.join(', ')}. ${numberStops} in total.`
     };
 }
 console.log(planTrip('N', 'Times Square', '6', '33rd')); // 7 stops; 34, 28, 23, union, 23, 28, 33
