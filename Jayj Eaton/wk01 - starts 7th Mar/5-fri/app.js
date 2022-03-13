@@ -1,14 +1,7 @@
-// Create a program that models a simple subway system.
 // The program takes the line and stop that a user is getting on at and the line and stop that user is getting off at and prints the journey and the total number of stops for the trip in the console:
-// iv also made it dynamic so i can add or remove stops from the existing lines
-
-// 			--- i think thats it???? probably missed some stuff but i think im happy for first week ---
-
 const trainSystem = function (online, onstation, offline, offstation) {
 	let arr = [];
 	let arrEnd = [];
-	let finalArray = [];
-
 	let userOn = {};
 	let startPoint = "";
 	let userOff = {};
@@ -28,7 +21,6 @@ const trainSystem = function (online, onstation, offline, offstation) {
 			stations: ["Grand Central s", "33rd s", "28th s", "23rd s", "Union Square s", "Astor Place s"],
 		},
 	};
-
 	const lineOn = function (online) {
 		if (online === "n") {
 			userOn = trainLines.nLine;
@@ -87,22 +79,22 @@ const trainSystem = function (online, onstation, offline, offstation) {
 		}
 	};
 	// if they change lines this function runs
+	//  ---- i need to refactor this part to create new array where it is reversed i thought the ++ and -- would work but it doesnt ----
 	const changedTrains = function () {
 		if (arrEnd.indexOf(endPoint) < arrEnd.indexOf(`Union Square ${lastCharEndPoint}`)) {
 			for (let i = arrEnd.indexOf(endPoint); i <= arrEnd.indexOf(`Union Square ${lastCharEndPoint}`); i++) {
 				cutStops = arrEnd[i];
-				stopsArray.push(`${cutStops}`);
+				stopsArray.push(cutStops); // might be able to just push to new array if start is higher then union sqr then join arrays
 			}
 		}
 		if (arrEnd.indexOf(endPoint) > arrEnd.indexOf(`Union Square ${lastCharEndPoint}`)) {
 			console.log("here > end");
 			for (let i = arrEnd.indexOf(endPoint); i >= arrEnd.indexOf(`Union Square ${lastCharEndPoint}`); i--) {
 				cutStops = arrEnd[i];
-				stopsArray.push(`${cutStops}`);
+				stopsArray.push(cutStops);
 			}
 		}
 	};
-
 	const travelLine = function (startPoint, endPoint) {
 		arr = userOn.stations;
 		arrEnd = userOff.stations;
@@ -120,60 +112,50 @@ const trainSystem = function (online, onstation, offline, offstation) {
 				cutStops = arr[i].slice(0, -2);
 				stopsArray.push(`${cutStops}, `);
 			}
-			// console.log(`you stopped ${stopsArray.length - 1} times and your stops were ${stopsArray.toString()}`);
 			// ----this is start of change lines------
 		} else if (lastCharStartPoint !== lastCharEndPoint) {
 			if (arr.indexOf(startPoint) < arr.indexOf(`Union Square ${lastCharStartPoint}`)) {
 				for (let i = arr.indexOf(startPoint); i <= arr.indexOf(`Union Square ${lastCharStartPoint}`); i++) {
 					cutStops = arr[i];
-					stopsArray.push(`${cutStops}`);
+					stopsArray.push(cutStops);
 				}
 				changedTrains();
 			}
 			if (arr.indexOf(startPoint) > arr.indexOf(`Union Square ${lastCharStartPoint}`)) {
 				for (let i = arr.indexOf(startPoint); i >= arr.indexOf(`Union Square ${lastCharStartPoint}`); i--) {
 					cutStops = arr[i];
-					stopsArray.push(`${cutStops}`);
+					stopsArray.push(cutStops);
 				}
 				changedTrains();
 			}
 		}
 	};
 	lineOn(online);
-	//	----- final loop/array for all stations including on and off -----
+	//	----- final loop/array for all stations including on and off needs refactor for reverse off stations-----
 	for (let i = 0; i < stopsArray.length; i++) {
 		dandy = stopsArray[i].slice(0, -2);
 		finalStops.push(` ${dandy}`);
 	}
+	// ------- should fix the bug removing matching stations except for union sqr ----
 	union = " Union Square";
 	lastElement = finalStops[finalStops.length - 1];
 	if (lastElement === union) {
 		finalStops.pop();
-
 		if (onstation === "Union Square") {
-			console.log("here");
 			finalStops.push(" Union Square");
 		}
 		if (offstation === "Union Square") {
-			console.log("here >");
 			finalStops.push(" Union Square");
 		}
 	}
-
 	// 		----- final logs -----
 	console.log(`You boarded the train at ${startPoint}`);
 	console.log(`you exited the train at ${endPoint}`);
 	console.log(`your trip was ${finalStops.length} stops long and your stops were,${finalStops}`);
-
-	// 		------- referance console.logs for error checking -------
-	// console.log(`--test-- this is the stops array ${stopsArray}`);
-	// console.log(`--test-- stops arr length ${stopsArray.length}`);
 };
-
 trainSystem("n", "Times Square", "s", "Grand Central");
 trainSystem("l", "6th", "n", "28th");
 trainSystem("l", "8th", "l", "1st");
-
 // nLine stations: Times Square, 34th, 28th, 23rd, Union Square, 8th
 // lLine stations: 8th, 6th, Union Square, 3rd, 1st
 // sLine stations: Grand Central, 33rd, 28th, 23rd, Union Square, Astor Place
