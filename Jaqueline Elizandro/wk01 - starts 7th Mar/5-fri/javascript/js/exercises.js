@@ -204,16 +204,32 @@ const planTrip = function (currentLine, currentStop, goingLine, goingStop) {
         return `You must travel through the following stops on the ${currentLine} line: ${nameStops.join(', ')}. ${numberStops} in total.`
     };
 }
-// console.log(planTrip('N', 'Times Square', '6', '33rd')); // 7 stops; 34, 28, 23, union, 23, 28, 33
-// console.log(planTrip('N', '8th', '6', 'Astor Place')); // 2 stops; union, astor
-// console.log(planTrip('N', '8th', '6', '33rd')); // 4 stops; union, 23, 28, 33
-// console.log(planTrip('N', 'Times Square', '6', 'Astor Place')); // 5 stops; 34, 28, 23, union, astor
-// console.log(planTrip('L', '8th', 'L', '1st')); // 4 stops; 6, union, 3, 1
-// console.log(planTrip('L', '1st', 'L', '8th')); // 4 stops; 3, union, 6, 8
-// console.log(planTrip('L', 'Union Square', 'N', '34th')); // 3 stops; 23, 28, 34
-// console.log(planTrip('N', '34th', 'L', 'Union Square')); // 3 stops; 28, 23, Union
-// console.log(planTrip('L', 'Union Square', 'N', '8th')); // 1 stops; 8
-// console.log(planTrip('N', '8th', 'L', 'Union Square')); // 1 stops; Union
+
+function test(expected, actual) {
+    if (actual !== expected) {
+        console.error(`${actual} should be ${expected}`);
+    }; 
+    
+}
+test(planTrip ('N', 'Times Square', '6', '33rd'), 'You must travel through the following stops on the N line: 34th, 28th, 23rd, Union Square. Change at Union Square. Your journey continues through the following stops: 23rd, 28th, 33rd. 7 stops in total.');
+
+test(planTrip ('N', '8th', '6', 'Astor Place'), 'You must travel through the following stops on the N line: Union Square. Change at Union Square. Your journey continues through the following stops: Astor Place. 2 stops in total.');
+
+test(planTrip ('N', '8th', '6', '33rd'), 'You must travel through the following stops on the N line: Union Square. Change at Union Square. Your journey continues through the following stops: 23rd, 28th, 33rd. 4 stops in total.');
+
+test(planTrip ('N', 'Times Square', '6', 'Astor Place'), 'You must travel through the following stops on the N line: 34th, 28th, 23rd, Union Square. Change at Union Square. Your journey continues through the following stops: Astor Place. 5 stops in total.');
+
+test(planTrip ('L', '8th', 'L', '1st'), 'You must travel through the following stops on the L line: 6th, Union Square, 3rd, 1st. 4 stops in total.');
+
+test(planTrip ('L', '1st', 'L', '8th'), 'You must travel through the following stops on the L line: 3rd, Union Square, 6th, 8th. 4 stops in total.');
+
+test(planTrip ('L', 'Union Square', 'N', '34th'), 'You must travel through the following stops on the N line: 23rd, 28th, 34th. 3 stops in total.');
+
+test(planTrip ('N', '34th', 'L', 'Union Square'), 'You must travel through the following stops on the N line: 28th, 23rd, Union Square. 3 stops in total.');
+
+test(planTrip ('L', 'Union Square', 'N', '8th'), 'You must travel through the following stops on the N line: 8th. 1 stops in total.');
+
+test(planTrip ('N', '8th', 'L', 'Union Square'), 'You must travel through the following stops on the N line: Union Square. 1 stops in total.');
 
 const resultPlanTrip = planTrip('L', 'Union Square', 'N', '34th');
 console.log(resultPlanTrip);
