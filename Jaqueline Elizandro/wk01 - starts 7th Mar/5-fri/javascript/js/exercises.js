@@ -35,6 +35,13 @@ const mta = {
 };
 
 const planTrip = function (currentLine, currentStop, goingLine, goingStop) {
+
+    if (currentStop === 'Union Square') {
+        currentLine = goingLine;
+    } else if (goingStop === 'Union Square') {
+        goingLine = currentLine;
+    };
+
     let currentInter = 0;
     let goingInter = 0;
     let stopsCurrentLine;
@@ -72,43 +79,6 @@ const planTrip = function (currentLine, currentStop, goingLine, goingStop) {
     //console.log(goingIndex);
     //console.log(goingInter);
 
-    if (currentIndex === currentInter) {
-        let numberStops = 0;
-        let nameStops = [];
-        if (goingIndex < goingInter) {
-            for (let i = goingInter-1; i > goingIndex-1; i--) {
-                numberStops++;
-                nameStops.push(stopsGoingLine[i]);
-            }
-        } else if (goingIndex > goingInter) {
-            for (let i = goingInter+1; i < goingIndex+1; i++) {
-                numberStops++;
-                nameStops.push(stopsGoingLine[i]);
-            }
-        }
-        // console.log(`You must travel through the following stops on the ${goingLine} line: ${nameStops}.`);
-        // console.log(`${numberStops} in total.`)
-        return `You must travel through the following stops on the ${goingLine} line: ${nameStops.join(', ')}. ${numberStops} stops in total.`
-    };
-    if (goingIndex === goingInter) {
-        let numberStops = 0;
-        let nameStops = [];
-        if (currentIndex < currentInter) {
-            for (let i = currentIndex+1; i < currentInter+1; i++) {
-                numberStops++;
-                nameStops.push(stopsCurrentLine[i]);
-            }
-        }
-        if (currentIndex > currentInter) {
-            for (let i = currentIndex-1; i > currentInter-1; i--) {
-                numberStops++;
-                nameStops.push(stopsCurrentLine[i]);
-            }
-        }
-        // console.log(`You must travel through the following stops on the ${currentLine} line: ${nameStops}.`);
-        // console.log(`${numberStops} in total.`)
-        return `You must travel through the following stops on the ${currentLine} line: ${nameStops.join(', ')}. ${numberStops} stops in total.`
-    };
     if (currentLine !== goingLine) {
         let numberStops = 0;
         let nameStops = [];
