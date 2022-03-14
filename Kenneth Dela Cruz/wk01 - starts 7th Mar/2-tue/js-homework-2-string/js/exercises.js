@@ -53,6 +53,25 @@ const fixStart = function(word){
 //   verbing('go'): 'go'
 // ```
 
+const verbing = function(str1){
+    if (str1.length >= 3){
+        if (str1.endsWith('ing')){
+            console.log(`${str1}ly`);
+        } else {
+            console.log(`${str1}ing`);
+        }
+
+    } else {
+        console.log(str1);
+    }
+}
+
+  verbing('swim')
+  verbing('swimming')
+  verbing('go')
+  verbing('bed')
+  verbing('bedding')
+
 // ## Not Bad
 
 // Create a function called notBad that takes a single argument, a string.
@@ -66,3 +85,24 @@ const fixStart = function(word){
 //   notBad('This movie is not so bad!'): 'This movie is good!'
 //   notBad('This dinner is bad!'): 'This dinner is bad!'
 // ```
+
+const notBad = function(str2){
+    if (str2.includes('not') && str2.includes('bad')){
+        if (str2.indexOf('not') < str2.indexOf('bad')) {
+            console.log(`${str2.slice(0, str2.indexOf('not'))}good.`)
+
+        } else {
+            console.log(str2);
+        }
+        
+    } else {
+      console.log(str2);
+    }
+}
+
+
+notBad('This dinner is not that bad!')
+notBad('This movie is not so bad!')
+notBad('This dinner is bad!')
+notBad('This dread has a bad not')
+
