@@ -1,0 +1,159 @@
+
+.wrapper{
+	margin: 0 40px 0 0;
+}
+
+header {
+	background-color: black;
+}
+
+ul {
+	padding: 0px;
+	
+}
+body {
+	width: 960px;
+	margin: 0 auto;
+	
+}
+
+nav {
+	height: 50px;
+	color: grey;
+	list-style-type: none;	
+}
+
+
+nav li {
+	margin: 0 auto;
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+	color:rgb(209, 204, 204);
+	margin: 30px;
+}
+
+#socialMedia {
+	float: right;
+}
+
+#socialMedia ul li {
+	 display:inline-block;
+	 width:60px;
+	 height:60px;
+	 background:blue;	
+	 text-indent:-9999em;
+}
+
+#socialMedia ul li.linkedIn {
+	background:url(../images/socialNav.png) 0px 64px;
+}
+#socialMedia ul li.twitter {
+	background:url(../images/socialNav.png) -60px 64px; 
+}
+
+#socialMedia ul li.facebook {
+	background:url(../images/socialNav.png) -120px 64px; 
+}
+
+#socialMedia ul li.rss {
+	background:url(../images/socialNav.png) -180px 64px; 
+}
+
+
+
+#socialMedia ul li.linkedIn:hover {
+	background:url(../images/socialNav.png) 0px 0px; 
+}
+
+#socialMedia ul li.twitter:hover {
+	background:url(../images/socialNav.png) -60px 0px; 
+}
+
+#socialMedia ul li.facebook:hover {
+	background:url(../images/socialNav.png) -120px 0px; 
+}
+
+#socialMedia ul li.rss:hover {
+	background:url(../images/socialNav.png) -180px 0px; 
+}
+
+.photobanner {
+	box-shadow: 10px;
+}
+
+.blurb-div {
+	border: 2px solid lightgray;
+	height: 80px;
+	background-image: url("../images/bg_blurb.jpg");
+}
+
+
+#p-blurb {
+	width: 70%;
+	margin-top: 20px;
+	margin-left: 15px;
+}
+
+.img-blurb {
+	position: relative;
+	left: 720px;
+	top: -55px;
+}
+
+#blurb {
+	width: 70%;
+}
+
+.imageshadow{
+	position: relative;
+	top: -10px;
+}
+
+
+.home-box {
+	width: 30%;
+	display: inline-block;
+	margin: 0px 10px;
+}
+
+#home-boxes{
+	border: 5px solid lightgrey;
+}
+
+.Read-more {
+	display: inline-block;
+}
+
+.read {
+	margin: 0;
+	color: rgb(148, 189, 241);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin-bottom: 20px;
+}
+
+
+footer {
+	margin-top: 20px;
+	background-color: black;
+}
+
+.box-footer {
+	display: inline-block;
+	width: 30%;
+}
+
+h4 {
+	color: lightgrey;
+}
+
+.blogroll {
+	color: lightgrey;
+	list-style-type: none;
+}
+
+.textwidget {
+	color: lightgray;
+}
