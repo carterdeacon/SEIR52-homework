@@ -75,7 +75,7 @@ const reverseString = function(string) {
     for (let i = string.length - 1; i >= 0; i--) {
         reversed += string[i];
     }
-return reversed;
+    return reversed;
 }
 
 console.log(reverseString('jag testar'));
@@ -183,7 +183,7 @@ const guessLetter = function(guess){
         winAmount = getRandomReward(rewards);
         reward -= winAmount;
         console.log(guesses)
-        console.log(`Your reward has descreased by $${winAmount}`);
+        console.log(`Your reward has decreased by $${winAmount}`);
     };
     
 
