@@ -1,0 +1,53 @@
+body {
+	margin: 0;
+	height: 100vh;
+}
+.button {
+	position: relative;
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 180px;
+	height: 100px;
+	text-align: center;
+	background-color: blueviolet;
+	border-radius: 20px;
+	box-shadow: 0px 0px 10px black;
+	display: flex;
+	flex-direction: column;
+}
+p {
+	margin: 0;
+}
+h1 {
+	margin-bottom: 0px;
+}
+.button:hover {
+	width: 200px;
+	height: 110px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.blender {
+	width: 300px;
+	height: 300px;
+	margin: 0 auto;
+	background-color: red;
+	border: 2px solid black;
+	position: relative;
+	top: -400px;
+	z-index: 9999;
+}
+.blood-container {
+	margin: 0 auto;
+	margin-top: 60px;
+	position: absolute;
+	width: 98%;
+}
+.blood1 {
+	margin: 0 auto;
+	width: 400px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: red;
+	opacity: 0;
+}
