@@ -1,0 +1,127 @@
+/* * { border: 1px solid limegreen; } */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+body {
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto; /* centers the container */
+    background-color: rgb(233, 230, 230);
+}
+
+header {
+    background-color: white;
+}
+
+h1 {
+    font-size: 250%;
+    text-align: left;
+    color: rgb(84, 83, 83);
+    margin: 0 auto;
+    width: 60%;
+    padding-left: 20px;
+    padding-top: 20px;
+    display: inline-block;
+}
+
+nav {
+    font-size: 12px;
+    width: 37%;
+    display: inline-block;
+}
+
+nav a {
+    color: lightgray;
+    padding: 13px;
+}
+
+nav a:hover {
+    color: rgb(95, 214, 224);
+}
+
+h3 {
+    text-align: left;
+    color: darkgray;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.main-container {
+    padding-left: 10px;
+}
+
+aside {
+    display: inline-block;
+    width: 26%;
+    margin-top: 2%;
+}
+
+aside img {
+    border-radius: 31em;
+    width: 100%;
+}
+
+main {
+    text-align: left;
+    width: 68%;
+    vertical-align: top;
+    color: rgb(84, 83, 83);
+    padding: 20px;
+    display: inline-block;
+}
+
+p {
+    line-height: 22px;
+    text-align: justify;
+}
+
+.frame-container {
+    text-align: right;
+    padding-right: 60px;
+    padding-bottom: 20px;
+}
+
+footer {
+    background-color: rgb(219, 121, 121);
+    color: white;
+}
+
+.footer-title {
+    color: rgb(95, 214, 224);
+    padding: 10px;
+}
+
+.awards {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 10px;
+    line-height: 22px;
+    font-size: 12px;
+}
+
+ul a {
+    color: white;
+}
+
+.curiosities {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.curiosities-p {
+    padding-left: 10px;
+    line-height: 22px;
+    font-size: 12px;
+}
