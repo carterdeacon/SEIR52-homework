@@ -1,0 +1,82 @@
+
+/* * {border: 1px solid limegreen;} */
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Rubik:wght@400;500;700&display=swap');
+body {
+    background-color: #222; 
+    margin: 0;
+    padding: 0;
+    font-family: 'Bitter', serif;
+}
+
+.container {
+    max-width: 960px; 
+    margin: 0 auto; 
+    background-color: aliceblue;
+    padding: 1em; 
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+}nav {
+    text-align: right;
+    color: green;
+}
+
+nav a {
+    color: black;
+    padding: 10px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: black;
+    background-color: rgba(192, 192, 192, 0.521);
+    padding: 10px;
+    font-size: 18px;
+    transition: all 1s;
+}
+
+h1 {    
+    text-align: center;
+    background-color: black;
+    color: rgb(115, 201, 255);
+    font-size: 400%;
+    padding: 0.5em;
+    text-transform: uppercase; 
+}
+
+h2 {
+    font-weight: bold;
+}
+
+
+main {
+    display: inline-block;
+    width: 72%;
+}
+
+main img {
+    display: block; 
+    margin: 0 auto;
+    width: 700px;    
+}
+aside {
+    display: inline-block;
+    width: 25.5%; 
+    vertical-align: bottom;        
+    border-radius: 0.5em; 
+    margin-left: 20px;
+}
+
+.small-image {
+    width: 260px;
+    height: 200px;
+    padding-bottom: 10px;
+    
+}
+p {
+    line-height: 20px;
+    font-size: 16px;
+    padding: 0 10px 0 10px;
+}
+
+
+

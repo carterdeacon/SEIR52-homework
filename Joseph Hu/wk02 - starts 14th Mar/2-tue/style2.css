@@ -1,0 +1,65 @@
+/* *{
+    border: 1px solid red;
+} */
+body{
+    background-color: #222;
+    margin: 0;
+    padding: 0;
+    background-image: url(icons/WallpaperDog-20462424.jpg);
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    text-align: center;
+    background-color:#222;
+    color: #ccc;
+    font-size: 300%;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+.grid-item{
+    width: 300px;
+}
+.grid-item-1{
+    font-family: 'Press Start 2P', cursive;
+    display: grid;
+    margin-bottom: 10px;
+}
+.grid-container{
+    background:#eee;
+    max-width: 960px;
+    position: relative;
+    margin:0 auto;
+    padding: 3em;
+    font-family: 'Share Tech', sans-serif;
+}
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(3, auto); 
+    grid-template-rows: 200px 200px 200px;
+    grid-gap: 1em;
+}
+.icon1{
+    background-image:url(./icons/icons/file-icons_jsx-atom.png);
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+}
+.icon2{
+    background-image:url(./icons/icons/healthicons_award-trophy-outline.png);
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+}
+.icon3{
+    background-image:url(./icons/icons/simple-line-icons_badge.png);
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+}
+.icon{
+    margin: 0 auto;
+}
