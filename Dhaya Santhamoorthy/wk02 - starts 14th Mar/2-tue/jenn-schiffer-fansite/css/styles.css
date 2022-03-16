@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap");
+
+body {
+  background-color: #d8f3dc;
+  color: #081c15;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1em; /* a chunky pixel */
+}
+
+nav {
+  text-align: right;
+}
+
+nav a {
+  color: #1f93db;
+  text-decoration: none;
+  margin: 0.5em;
+}
+
+h1 {
+  font-family: "Libre Baskerville", serif;
+}
+
+main img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+main {
+  margin-bottom: 3em;
+}
+
+.bio {
+  display: inline-block;
+  text-align: justify;
+  width: 57%;
+  padding-right: 2em;
+}
+
+.bio-header {
+  color: #0e8cbe;
+  font-size: 120%;
+}
+
+aside {
+  display: inline-block;
+  text-align: justify;
+  width: 35%;
+  padding-left: 2em;
+  vertical-align: top;
+}
+
+aside img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.trivia h2 {
+  color: #0eaceb;
+}
+
+.trivia {
+  font-family: "Libre Baskerville", serif;
+}
+
+.trivia a {
+  color: #1f93db;
+  text-decoration: none;
+}
+
+.trivia1 {
+  display: inline-block;
+  width: 45%;
+  padding-right: 3em;
+  vertical-align: top;
+}
+
+.trivia1 img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.trivia2 {
+  display: inline-block;
+  width: 38%;
+  padding-left: 3em;
+  font-size: 0.9em;
+}
+
+.trivia3 {
+  display: inline-block;
+  width: 100%;
+  padding-top: 5em;
+}
+
+.trivia3 img {
+  padding-top: 2em;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.trivia4 {
+  text-align: center;
+  display: inline-block;
+  width: 48%;
+  padding-top: 5em;
+  font-size: 1em;
+}
+
+.trivia4 img {
+  padding-top: 2em;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.trivia5 {
+  text-align: center;
+  display: inline-block;
+  width: 45.5%;
+  padding-top: 5em;
+  padding-left: 2em;
+  font-size: 1em;
+}
+
+.trivia5 img {
+  padding-top: 2em;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
