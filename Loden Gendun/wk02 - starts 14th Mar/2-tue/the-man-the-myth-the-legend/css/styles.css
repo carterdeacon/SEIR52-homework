@@ -1,0 +1,162 @@
+/* * {
+    border: 1px solid white;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+body {
+    width: 692px;
+    height: 1000px;
+    padding: 0;
+    margin: 0 auto;
+    font-family: 'PT Mono', monospace;
+}
+
+header {
+    background-color: #772953;
+    background-image: linear-gradient(to bottom left, rgba(119, 41, 83, 0.16) 0, rgba(119, 41, 83, 0.16) 49.9%, transparent 50%),linear-gradient(to bottom right, rgba(228, 228, 228, 0.5) 0, rgba(228, 228, 228, 0.5) 49.9%, transparent 50%),linear-gradient(to top left, white 0%, white 49.3%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%),linear-gradient(-89deg, #e95420 0%, #772953 42%, #2c001e 94%);
+    background-blend-mode: multiply,multiply,normal,normal;
+    background-position: top right,top left,right bottom -1px,left top;
+    background-repeat: no-repeat;
+    background-size: 74% 99.83%,68% 91%,103.8% 20.26%,100% 99.8%;
+    height: 25em;
+    width: 200%;
+    position: relative;
+    left: -50%;
+    color: white;
+    display: block;
+    text-align: center;
+}
+
+h1 {
+    font-size: 7em;
+    width: 5em;
+    margin: 0 auto;
+}
+
+nav li {
+    display: inline-block;
+    margin: 4px;
+}
+nav {
+    display: inline;
+    margin-bottom: 3em;
+}
+
+h2 {
+    display: inline-block;
+}
+
+a {
+    color: #C24124;
+}
+
+footer img {
+    display: block;
+}
+
+.timeline {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.vl {
+    height: 213%;
+    border: 0.5px solid #892F46;
+}
+
+.left {
+    width: 60%;
+}
+
+.right {
+    width: 37%;
+}
+
+.milestone {
+    border-bottom: 1px solid #892F46;
+}
+
+footer {
+    position: relative;
+    margin-top: 3em;
+    width: 120%;
+    left: -10%;
+    background-color: #4C1235;
+    color: white;
+    padding: 1em;
+    border-radius: 0 1em;
+}
+
+span.highlight {
+    color: #C24124;
+    font-weight: bold;
+}
+p.highlight {
+    color: #8A2F74;
+    font-weight: bold;
+}
+
+footer p {
+    display: inline-block;
+}
+
+footer p:last-child {
+    position: absolute;
+    right: 3em;
+}
+
+h2:last-child {
+    margin: 1em 0;
+}
+
+.milestone .placeholder {
+    visibility: hidden;
+}
+
+.expand {
+    display: none;
+}
+
+.milestone:hover .expand {
+    display: inline;
+}
+
+.milestone:hover .placeholder {
+    display: none;
+}
+
+.kennel {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+}
+
+.speech-bubble {
+    position: relative;
+    left: 14em;
+    bottom: 10em;
+    text-align: center;
+    visibility: hidden;
+}
+
+.rude{
+    height: auto;
+    width: 138px;
+    position: relative;
+    bottom: -14.2em;
+    left: 8.2em;
+}
+
+.speech-bubble img {
+    position: relative;
+    width: 14em;
+    height: auto;
+    top: 7.7em;
+    left: -0.5em;
+    z-index: -1;
+}
+
+a:hover + .speech-bubble {
+    visibility: visible;
+}

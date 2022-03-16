@@ -1,0 +1,118 @@
+
+
+body.custom-background {
+    background-image: url('../images/background-3.png');
+    background-position: left top;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: scroll;
+}
+
+.site{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 30px auto;
+    max-width: 1200px;
+    padding: 10px 0 60px 0;
+}
+
+.page-1{
+    height: 130em;
+}
+.article-1 {
+    height: 85em;
+}
+
+.article-header{
+    text-align: left;
+    display: block;
+    margin: 50px 0 0 0px;
+}
+
+.site-branding {
+    background-color: #fff;
+    margin: 0 auto;
+}
+.site-box{
+    text-align: center;
+}
+.article-box {
+    margin: 20px;
+    width: 97%;
+}
+.reivew{
+    padding-top: 0;
+}
+.article-link {
+    color: rgb(184, 77, 194);
+}
+.homebanner, .shadow{
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 20px;
+    
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 100px;
+    color: rgb(184, 77, 194);
+    margin: 60px 0 0 0; 
+    line-height: 200px;
+}
+h3 {
+    font-family: 'Smooch Sans', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    color:rgb(184, 77, 194);
+    margin-top: 50px;
+    line-height: 40px;
+    text-align: center;
+}
+nav{
+    height: 10px;
+    margin-left: 70%;
+}
+a {
+    text-decoration: none;
+    color: rgb(75, 75, 78);
+    padding: 0 15px;
+    line-height: 20px;
+}
+a:hover{
+    text-decoration: underline;
+    color: rgb(160, 160, 165);
+}
+
+p{
+    max-width: 700px;
+    display: block;
+    margin: 0 auto;
+    line-height: 2em;
+    padding-top: 2em;
+    text-align: left;
+    font-size: 20px;
+}
+
+article {
+    display: inline-block;
+    width: 75%;
+}
+
+.main-box{
+    display:inline-block;
+    width: 79%;
+}
+
+aside {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+    margin-top: 60px;
+
+}
+
+.aside-img{
+    display: block;
+}

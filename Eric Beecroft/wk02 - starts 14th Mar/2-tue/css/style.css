@@ -1,0 +1,133 @@
+/* * { border: 1px solid yellow; } */
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+    background-color: #F5F5F5;
+    margin: 0;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+header {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #0F0C24;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+}
+
+h1 {
+    display: inline-block;
+    width: 75%;
+    padding-left: 1em;
+    letter-spacing: 2px;
+    color: #F5F5F5;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #F5F5F5;
+}
+
+nav {
+    display: inline-block;
+    text-align: right;
+    width: 17%;
+    padding: 1em;
+    vertical-align: top;
+    margin-top: 0.5em;
+}
+
+nav a {
+    color: #8DB48E;
+    text-decoration: none;
+}
+
+main a {
+    color: #8DB48E;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+}
+
+main {
+    display: inline-block;
+    width: 52%;
+    vertical-align: middle;
+    margin-left: 1em;
+}
+
+span {
+    color: #8DB48E;
+    text-decoration: line-through;
+}
+
+aside {
+    display: inline-block;
+    width: 45%;
+}
+
+img {
+    border: 4px solid #0F0C24;
+}
+
+img.bio {
+    width: 930px;
+}
+
+main.bio {
+    width: 100%;
+    margin-left: 0.5em;
+}
+
+main.bio span {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: large;
+}
+
+main.trivia {
+    width: 50%;
+    margin-left: 1em;
+}
+
+main.trivia span {
+    text-decoration: none;
+}
+
+aside.trivia {
+    width: 80%;
+}
+
+footer {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: #0F0C24;
+    padding: 0.5em;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
+}
+
+h5 {
+    display: inline-block;
+    color: #F5F5F5;
+    margin: 1 auto;
+    padding-left: 2em;
+}
+
+aside.trivia span {
+    visibility: hidden;
+}
+
+aside.trivia:hover span {
+    visibility: visible;
+    color: #8DB48E;
+    font-weight: bold;
+    transition: 2s;
+    text-decoration: underline;
+}
