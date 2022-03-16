@@ -6,4 +6,8 @@
     transform: scaleX(-1);
 }
 
+img {
+    cursor: pointer;
+}
+
 

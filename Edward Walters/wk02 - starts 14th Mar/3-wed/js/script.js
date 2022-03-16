@@ -15,7 +15,7 @@ const catWalk = function() {
         catImg.classList.remove('flip');
         isMovingFwd = true;
         document.body.style.backgroundColor = `rgb(${getRandomRgb()},${getRandomRgb()},${getRandomRgb()})`;
-        meow.play();
+        
     };
     
     const walkFwd = function () {
@@ -35,7 +35,18 @@ const catWalk = function() {
     }
 };
 
+const scareCat = function() {
+    meow.play();
+    isMovingFwd = !isMovingFwd;
+    catImg.classList.toggle('flip');
+};
+
+
+
 const meow = new Audio('meow.wav');
-const catImg = document.getElementsByTagName('img')[0];
+const catImg = document.querySelector('img');
 catImg.style.left = '-50px';
-const timerId = setInterval(catWalk, 20);
+setInterval(catWalk, 20);
+document.querySelector('img').addEventListener('mouseover', scareCat);
+letisMovingFwd;
+
