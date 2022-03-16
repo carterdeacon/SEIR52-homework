@@ -1,0 +1,68 @@
+/* * {
+    bordar: 1pd solid limegreen
+} */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,500&display=swap');
+body {
+    background-color: #222222;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 960px;
+    position: relative;
+    margin: 0 auto;
+    background-color:white;
+    padding: 1.5em;
+    border-radius: 1em;
+}
+nav {
+    text-align: right;
+ 
+}
+nav a {
+    color: gray ;
+}
+h1 {text-align: center;
+    background-color: #222;
+    color: #ccc;
+    font-size: 400%;
+    padding: 0.5em;
+    text-transform: uppercase;
+    border-radius: 25px ;
+    font-family: 'Roboto', sans-serif;
+}
+main {
+    display: inline-block;
+    width: 75%;
+}
+aside {
+    display: inline-block;
+    width: 23%;
+    vertical-align: top;
+}
+
+ main img {
+    display: block;
+    width:600px;
+    height: 440px;
+    margin: 0 auto;
+}
+aside {
+    display: inline-block;
+    width: 21%;
+    vertical-align: top;
+    background-color: whitesmoke;
+    padding: 1em;
+    border-radius: 0.5em;
+    padding-left: 16px;
+    box-shadow: 0 15px 15px gainsboro;
+}
+h2 {
+    margin:5px;
+    
+}
+.trivia p h3 {
+    margin: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
