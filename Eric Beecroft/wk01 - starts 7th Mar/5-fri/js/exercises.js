@@ -173,7 +173,7 @@ const planTrip = function (lineA, on, lineB, off) {
         }
     }
 };
-planTrip('L', '8th', 'N', '34th');
+planTrip('N', 'Times Square', 'S', '33rd');
 
 // const listOfStops = startLine.concat(endLine);
 // console.log(listOfStops);

@@ -1,0 +1,45 @@
+/* 
+
+## Style Hints: 
+
+Body Font Size = 40px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/
+body {
+	font-size: 12px;
+	line-height: 17px;
+	font-family:"Times New Roman", serif;
+	color: #656565;
+
+}
+#container {
+	width: 950px;
+	margin: 0 auto;
+
+}
+header{
+	padding: 0px 0px;
+}
+#logo{
+	background: url(images/brook-and-lyn-logo.gif) no-repeat;
+	width:275ps;
+	height:40px;
+	font-family: "Times New Roman", serif ;
+	font-size: 20px;
+}
+.press {
+	border:5px solid gainsboro;
+}
+#DateOfPost{
+	color: rgb(49, 128, 198)
+}
+footer {
+	padding-bottom: 15px;
+	
+
+}
