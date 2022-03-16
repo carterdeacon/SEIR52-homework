@@ -9,12 +9,18 @@ img.style.left = '0px';
 // Create a function called catWalk() that moves the cat 10 pixels to the right of where it started, by changing the "left" style property.
 var catWalk = function() {
     const start = parseInt(img.style.left);
-    const move = start + 10;
-    img.style.left = move + 'px';
+    const end = parseInt(document.body.getBoundingClientRect().right);
+    const endImg = parseInt(img.getBoundingClientRect().right);
+    if(endImg < end) {
+        const move = start + 10;
+        img.style.left = move + 'px';
+    } else {
+        clearInterval(waltTimer);
+    }  
 };
 
 // Call that function every 50 milliseconds. Your cat should now be moving across the screen from left to right. Hurrah!
-setInterval(catWalk, 50);
+const waltTimer = setInterval(catWalk, 50);
 
 // Bonus #1: When the cat reaches the right-hand of the screen, restart them at the left hand side ("0px"). So they should keep walking from left to right across the screen, forever and ever.
 
