@@ -1,28 +1,68 @@
 const cat = document.querySelector(".kitty");
 cat.style.top = window.innerHeight - cat.height + "px";
 cat.style.left = "0px";
-cat.style.rotate = "0deg";
 let walkBackTimer = false;
+const button = document.querySelector(".button");
+const blender = document.querySelector(".blender");
+const bloodsplat = document.querySelector(".blood1");
+
+blender.style.top = "-400px";
+let blenderPosition = false;
+let suck = false;
+let newTop = 0;
+let newLeft = 0;
 
 let catWalks = function () {
 	let left = parseInt(cat.style.left);
-	let newLeft = left + 10;
+	newLeft = left + 8;
 	cat.style.left = newLeft + "px";
 	if (newLeft > window.innerWidth - cat.width) {
 		clearInterval(timer);
 		cat.style.transform = "scaleX(-1)";
-		walkBackTimer = setInterval(catWalksBack, 30);
+		walkBackTimer = setInterval(catWalksBack, 40);
 	}
 };
-let timer = setInterval(catWalks, 30);
+let timer = setInterval(catWalks, 40);
 
 let catWalksBack = function () {
 	let left = parseInt(cat.style.left);
-	let newLeft = left - 10;
+	let newLeft = left - 8;
 	cat.style.left = newLeft + "px";
 	if (newLeft < window.innerWidth - window.innerWidth) {
 		clearInterval(walkBackTimer);
 		cat.style.transform = "scaleX(1)";
-		timer = setInterval(catWalks, 30);
+		timer = setInterval(catWalks, 40);
 	}
 };
+//on blend button press stops cat and starts blender move
+const blendCat = function () {
+	clearInterval(walkBackTimer);
+	clearInterval(timer);
+	blend = setInterval(blenderOn, 50);
+};
+//blendmoves to position then calls suck cat funct
+let blenderOn = function () {
+	let top = parseInt(blender.style.top);
+	newTop = top + 2;
+	blender.style.top = newTop + "px";
+	if (newTop + 270 > 0) {
+		clearInterval(blend);
+		suck = setInterval(suckCat, 100);
+	}
+};
+let suckCat = function () {
+	// cat top position
+	let catTop = parseInt(cat.style.top);
+	let newCatTop = blender.style.bottom + 5;
+	cat.style.top = newCatTop + "px";
+	// cat left position
+	let catLeft = parseInt(cat.style.left);
+	let newCatLeft = (window.innerWidth - cat.width) / 2;
+	cat.style.left = newCatLeft + "px";
+	setTimeout(blood, 4000);
+};
+let blood = function () {
+	bloodsplat.style.opacity = 1;
+};
+
+button.addEventListener("click", blendCat);
