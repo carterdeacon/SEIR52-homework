@@ -64,7 +64,7 @@ console.log(' ');  // --> just so its clearer in console.log
 //   sideB: 4,
 //   sideC: 4
 
-const triangleA = {  // --> make sure you put in sort
+const triangleA = {  
     sideA: 3,
     sideB: 4,
     sideC: 4
@@ -352,6 +352,8 @@ const addAccount = function (owner, balance) {
 addAccount('Brad Pitt',10000);
 
 // make deposits & withdrawals with new balance --> accounts cannot have negative values
+
+// Carter's feedback Your function works and does the job but for managing balance so this is just a bonus tip; you’re probably better off having two functions (deposit and withdraw) and then calling each function as you need to. That way you don’t need to call one function with positive or negative numbers and your code will be a little more readable and reusable.
 
 const updateBalance = function (name,num) {
     let newBal=num;

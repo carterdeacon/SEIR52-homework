@@ -106,6 +106,7 @@ const cashRegister = function (cart) {
 	let arrValues = Object.values(cart);
 	let float = arrValues.map(parseFloat);
 	let sum = 0;
+
 	for (let i = 0; i < arrValues.length; i++) {
 		sum += float[i];
 	}
