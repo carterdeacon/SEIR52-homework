@@ -1,0 +1,59 @@
+body {
+    background-color: lightpink;
+    
+}
+.container {
+    max-width: 960px;
+    position: relative;
+    margin: 0 auto;
+    background-color: rgb(231, 255, 192);
+    
+}
+
+div.box {
+    margin: 0px;
+    font-size: 5px;
+    width: 320px;
+    height: 500px;
+    /* border: 1px solid black; */
+    background-color: white;
+    text-align: center;
+    line-height: 300px;
+    display: inline-block;
+    margin: -2px;
+}
+
+
+
+.block {
+    display: block;
+}
+.inline {
+    display: inline;
+}
+.inline-block {
+    display: inline-block;
+}
+
+.none {
+    display: none;
+}
+.hidden {
+    visibility: hidden;
+}
+
+/* Halloween turds */
+
+.spooky span { 
+    visibility: hidden;
+}
+
+.spooky:hover{
+    background-color: black;
+}
+
+.spooky:hover span {
+    visibility: visible;0.
+    color: yellow;
+    transition: 2s all;
+}
