@@ -1,0 +1,98 @@
+/* {border: 1px solid limegreen;}  /* you can use this to debug your layout*/  /*pesticide*/
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lobster&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Assistant:wght@300&family=Lobster&family=Permanent+Marker&display=swap');
+body {
+    background-color: rgb(252, 247, 247);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: rgb(200, 222, 233);
+    padding: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+}
+
+nav {
+    text-align: left;
+    color: greenyellow;
+    background-color: rgb(240, 177, 106);
+    padding: 0.3em;
+    padding-left: 3em;
+    margin-left: 570px;
+    border-radius: 2em;
+    box-shadow: 0 12px 12px #555;
+    font-family: 'Lobster', cursive;
+    
+}
+
+nav a {
+    display: inline-block;
+    padding: 1em;
+    color: green;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(106, 90, 163);
+    color:#ccc;
+    font-size: 400%;
+    padding: 0.5em;
+    text-transform: uppercase;    /*accessible to all caps */
+    font-family: 'Abril Fatface', cursive;
+    box-shadow: 10px 15px 15px #444;
+    border-radius: 1em;
+}
+h2 {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+}
+main {
+    display: inline-block;
+    width: 65%;
+    line-height: 25px;
+    font-family: 'Assistant', sans-serif;
+
+}
+
+main img {
+    display: block;    /* can't set margins on display:inline (which is the default for img)*/
+    margin: 40px auto;
+    border-radius: 0.5em;
+    box-shadow: 10px 15px 15px rgba(95, 100, 50, 0.5);
+}
+
+aside {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+    background-color: #cdc;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0px 15px 15px #444;
+    margin: 0 35px;
+    font-family: 'Lobster', cursive;
+}
+
+aside ul {
+    padding-left: 15px;
+}
+aside img {
+    margin: 0 auto;
+    border-radius: 1em;
+}
+
+footer {
+    border-top: 2px solid#444;
+    margin-top: 3em;
+    padding-top: 1em;
+    font-size: 12px;
+}
+
+

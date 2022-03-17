@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Rubik:wght@300&display=swap');
+
+body {
+    background-color: #DAE6E7;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto; 
+    padding: 1em; 
+    font-family: 'IBM Plex Sans', sans-serif;
+    position: relative
+    
+}
+
+.heading {
+    background-color: #F5F8F9;
+    width: 75%;
+    border-radius: .5em .5em .5em .5em;
+    border-style: solid;
+    border-color:#CBD8DC;
+    border-width: .2px;
+    display: inline-block;
+    height: auto;
+    position: absolute;
+    top: 30px;
+}
+
+aside {
+    width: 23%;
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    right: 0px;   
+}
+
+nav {
+    text-align: right;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    height: 40px;
+}
+
+li {
+    display: inline;
+    padding: 0px 30px 0px 32px;
+    position: relative;
+    top: 10px;
+    right: 125px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.banner{
+    object-fit: cover;
+    width: 100%;
+    height: 310px;
+    position: relative;
+    top: 0px;
+    border-radius: 1em 1em 0em 0em;
+}
+
+.profile {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border:5px solid white;
+    border-radius: 100px;
+    position: absolute;
+    top: 200px;
+    right: 650px;
+    z-index: 999999;
+}
+
+.leftHeader {
+    width: 48%;
+    display: inline-block;
+    position: relative;
+    top: 22px;
+    left: 20px;
+}
+
+.rightHeader {
+    width: 48%;
+    display: inline-block;
+    position: relative;
+    top: 22px;
+    left: 20px;
+}
+
+.name {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.pronoun {
+    font-size: 20px;
+    font-weight: lighter ;
+    color: gray;
+}
+
+.subName {
+    position: relative;
+    top: -20px;
+}
+
+.location {
+    position: relative;
+    top: -30px;
+    color: gray;
+}
+
+.school1 {
+    position: relative;
+    top: -27px;
+    font-weight: bold;
+}
+
+.name1 {
+    position: relative;
+    left: 10px;
+}
+
+.schlogo1 {
+    height: 30px;
+    position: relative;
+    bottom: -8px;
+    left: 14px;
+}
+
+.schlogo2 {
+    height: 30px;
+    position: relative;
+    bottom: -8px;
+    left: 5px;
+}
+
+.uni1 {
+    position: relative;
+    left: 35px;
+}
+
+.uni2 {
+    position: relative;
+    left: 20px;
+}
+
+.vid1 {
+    position: relative;
+    top: -10px;
+    width: 100%;
+    border-radius:  .5em .5em .5em .5em;
+}
+
+.vidtit1 {
+    font-weight: bold;
+    position: relative;
+    top: 0px;
+    text-align: center;
+
+}
+
+.videoGal {
+    border-radius: .5em .5em .5em .5em;
+    background-color: white;
+    height: 700px;
+    position: relative;
+    top: -19px;
+}
+
+.galtitle1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.about {
+    background-color: #F5F8F9;
+    width: 75%;
+    border-radius: .5em .5em .5em .5em;
+    border-style: solid;
+    border-color:#CBD8DC;
+    border-width: .2px;
+    display: inline-block;
+    height: auto;
+    position: absolute;
+    top: 530px;
+}
+
+.aboutMe1 {
+    position: relative;
+    left: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.aboutMe2 {
+    position: relative;
+    left: 20px;
+    text-align: justify;
+    margin-right: 40px;
+
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #5939b9;
+}
