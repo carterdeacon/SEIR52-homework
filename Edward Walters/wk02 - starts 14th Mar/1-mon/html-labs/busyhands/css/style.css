@@ -1,0 +1,162 @@
+
+html, body, h1, h2, h3, p, ul {
+    margin: 0;
+}
+
+body {
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav {
+    background: black;
+    width: 100vw;
+    height: 75px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;     
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav ul a:hover, 
+nav ul a:focus {
+    color: #32b5fe;
+}
+
+nav ul > li {
+    padding-right: 2.5em;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+#socialMedia ul li {
+	 display:inline-block;
+	 width:60px;
+	 height:60px;
+	 background:blue;	
+	 text-indent:-9999em;
+}
+
+#socialMedia ul li.linkedIn {
+	background:url(../images/socialNav.png) 0px 64px;
+}
+#socialMedia ul li.twitter {
+	background:url(../images/socialNav.png) -60px 64px; 
+}
+
+#socialMedia ul li.facebook {
+	background:url(../images/socialNav.png) -120px 64px; 
+}
+
+#socialMedia ul li.rss {
+	background:url(../images/socialNav.png) -180px 64px; 
+}
+
+#socialMedia ul li.linkedIn:hover {
+	background:url(../images/socialNav.png) 0px 0px; 
+}
+
+#socialMedia ul li.twitter:hover {
+	background:url(../images/socialNav.png) -60px 0px; 
+}
+
+#socialMedia ul li.facebook:hover {
+	background:url(../images/socialNav.png) -120px 0px; 
+}
+
+#socialMedia ul li.rss:hover {
+	background:url(../images/socialNav.png) -180px 0px; 
+}
+
+.image-shadow {
+    box-shadow: 0px 20px 15px -6px rgb(0 0 0 / 0.5);
+}
+
+.quote-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    border: 1px solid grey;
+}
+
+.quote-container p {
+    flex-basis: 65%;
+}
+
+.quote-button {
+    transition: transform, 1s;
+}
+.quote-button:hover, 
+.quote-button:focus {
+    transform: scale(1.1);
+}
+
+.home-box-container {
+    margin-top: 40px;
+    display: flex;
+    gap: 5em;
+}
+
+.home-box h2 {
+    font-weight: normal;
+    margin-bottom: .8em;
+}
+
+.home-box {
+    flex: 1 1 33%;
+}
+
+.home-box img {
+    width: 100%;
+    margin-bottom: 1em;
+    border: 2px solid white;
+    outline: 5px solid #dbdbdc;
+}
+
+.home-box p {
+    font-size: .8rem;
+    margin-bottom: .5em;
+}
+
+.home-box a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #1d8cdf;
+    font-size: .8rem;
+}
+
+.home-box a:hover, 
+.home-box a:focus {
+    font-weight: bold;
+}

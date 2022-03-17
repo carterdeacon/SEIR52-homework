@@ -1,0 +1,50 @@
+/* 
+
+## Style Hints: 
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/
+
+h1 {
+	padding-top: 10px;
+	font-family: 'Times New Roman', Times, serif;
+	color: #999898;
+	font-size: 300%;
+}
+
+h2, p {
+	font-family: 'Times New Roman', Times, serif;
+	color: #999898;
+}
+
+body {
+	margin: 0 auto;
+	width: 950px;
+	font-size: 12px;
+	line-height: 17px;
+}
+
+.NY, .lucky, .huff, .mc {
+	border: 5px solid #cfcece;
+}
+
+footer {
+	padding-bottom: 50px;
+	font-family: 'Times New Roman', Times, serif;
+	color: #999898;
+}
+
+a {
+	text-decoration: none;
+	color:rgb(109, 179, 226);
+}
+
+a:hover {
+	color: #20222a;
+}
