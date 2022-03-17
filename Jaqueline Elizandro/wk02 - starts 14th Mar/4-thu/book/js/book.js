@@ -29,11 +29,10 @@ var books = [
 
 // jquery
 for (let i = 0; i < books.length; i++) {
-  const book = books[i];
   const p = $('<p>');
-  p.text(`${book.title} by ${book.author}`);
+  p.text(`${books[i].title} by ${books[i].author}`);
   $('body').append(p);
-}
+};
 
 // Bonus: Use a ul and li to display the books.
 // Bonus: add a property to each book with the URL of the book cover, and add an img element for each book on the page.
@@ -58,13 +57,12 @@ for (let i = 0; i < books.length; i++) {
 const ul = $('<ul>');
 
 for (let i = 0; i < books.length; i++) {
-  const book = books[i];
   const li = $('<li>');
-  li.text(`${book.title} by ${book.author}`);
-  if (book.alreadyRead) {
+  li.text(`${books[i].title} by ${books[i].author}`);
+  if (books[i].alreadyRead) {
     li.addClass('alreadyRead');
   }
   ul.append(li);
-}
+};
 
 $('body').append(ul)
