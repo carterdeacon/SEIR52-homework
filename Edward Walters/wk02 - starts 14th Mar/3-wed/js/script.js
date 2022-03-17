@@ -6,7 +6,7 @@ const getRandomRgb = function(){
 const catWalk = function() {
     const catPos = parseInt(catImg.style.left);
     
-    if (catPos >= window.innerWidth -250){
+    if (catPos >= window.innerWidth -300){
         catImg.classList.add('flip');
         isMovingFwd = false;
     };
@@ -41,12 +41,31 @@ const scareCat = function() {
     catImg.classList.toggle('flip');
 };
 
+const speedCat = function() {
+    clearInterval(timerID);
+    timerID = setInterval(catWalk, speed /= 2)
+}
+
+const resetSpeed = function() {
+    clearInterval(timerID);
+    speed = 20;
+    timerID = setInterval(catWalk, speed);
+};
 
 
 const meow = new Audio('meow.wav');
+
 const catImg = document.querySelector('img');
 catImg.style.left = '-50px';
-setInterval(catWalk, 20);
+
+let speed = 20;
+let isMovingFwd;
+let timerID = setInterval(catWalk, 20);
+
 document.querySelector('img').addEventListener('mouseover', scareCat);
-letisMovingFwd;
+document.querySelector('img').addEventListener('click', speedCat);
+document.addEventListener('auxclick', resetSpeed);
+
+
+
 
