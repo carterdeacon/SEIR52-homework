@@ -1,52 +1,50 @@
 
-let totalChecking = 0;
-let totalSavings = 0;
+let totalChecking = 0; // store the current value of the checking account
+let totalSavings = 0; // store the current value of the savings account
 
-const updateDisplay = function (totalChecking, totalSavings) {
+const updateDisplay = function (totalChecking, totalSavings) { // change the balance value and colour on display
     $('#checking-balance').text('$' + totalChecking)
     $('#savings-balance').text('$' + totalSavings)
     if (totalChecking === 0) {
-        $('#checking div').toggleClass('zero-balance', true);
+        $('#checking div').toggleClass('zero', true);
     } else {
-        $('#checking div').toggleClass('zero-balance', false);
+        $('#checking div').toggleClass('zero', false);
     }
     if (totalSavings === 0) {
-        $('#savings div').toggleClass('zero-balance', true);
+        $('#savings div').toggleClass('zero', true);
     } else {
-        $('#savings div').toggleClass('zero-balance', false);
+        $('#savings div').toggleClass('zero', false);
     }
 };
 
-$('#checking-deposit').click(function () {
+$('#checking-deposit').click(function () { // update the balance value at checkings deposit
     totalChecking += + $('#checking-amount').val();
     updateDisplay(totalChecking, totalSavings);
 });
 
-$('#savings-deposit').click(function () {
+$('#savings-deposit').click(function () { // update the balance value at savings deposit
     totalSavings += + $('#savings-amount').val();
     updateDisplay(totalChecking, totalSavings);
 });
 
-$('#checking-withdraw').click(function () {
+$('#checking-withdraw').click(function () { // update the balance value at checkings withdraw
     const value = + $('#checking-amount').val();
     if (value <= totalChecking) {
         totalChecking -= value
     } else if (value <= (totalChecking + totalSavings)) {
-        const remainValue = value - totalChecking;
+        totalSavings -= (value - totalChecking);
         totalChecking = 0;
-        totalSavings -= remainValue;
     };
     updateDisplay(totalChecking, totalSavings);
 });
 
-$('#savings-withdraw').click(function () {
+$('#savings-withdraw').click(function () { // update the balance value at savings withdraw
     const value = + $('#savings-amount').val();
     if (value <= totalSavings) {
         totalSavings -= value
     } else if (value <= (totalSavings + totalChecking)) {
-        const remainValue = value - totalSavings;
+        totalChecking -= (value - totalSavings);
         totalSavings = 0;
-        totalChecking -= remainValue;
     };
     updateDisplay(totalChecking, totalSavings);
 });
