@@ -1,62 +1,74 @@
 
-// * Keep track of the checking and savings balances somewhere
-// * Add functionality so that a user can deposit money into one of the bank accounts.
-// * Make sure you are updating the display and manipulating the HTML of the page
-// so a user can see the change.
-// * Add functionality so that a user can withdraw money from one of the bank accounts.
-// * Make sure you are updating the display and manipulating the HTML of the page
-// so a user can see the change.
-// * Make sure the balance in an account can't go negative. If a user tries to
-// withdraw more money than exists in the account, ignore the transaction.
-
 let totalChecking = 0;
 
-const depositChecking = function () {
+$('#checking-deposit').click(function () {
     const value = + $('#checking-amount').val();
     totalChecking += value
     $('#checking-balance').text('$' + totalChecking)
-}
+    $('#checking div').toggleClass('zero-balance', false)
+});
 
-$('#checking-deposit').click(depositChecking)
-
-const withdrawChecking = function () {
+$('#checking-withdraw').click(function () {
     const value = + $('#checking-amount').val();
-    if (value <= totalChecking) {
+    if (value < totalChecking) {
         totalChecking -= value
         $('#checking-balance').text('$' + totalChecking)
-    } else if (value <= (totalChecking + totalSavings)) {
+    } else if (value === totalChecking) {
+        totalChecking -= value
+        $('#checking-balance').text('$' + totalChecking)
+        $('#checking div').toggleClass('zero-balance', true)
+    } else if (value < (totalChecking + totalSavings)) {
         const remainValue = value - totalChecking;
         totalChecking = 0;
         totalSavings -= remainValue;
         $('#checking-balance').text('$' + totalChecking)
         $('#savings-balance').text('$' + totalSavings)
-    }
-};
+        $('#checking div').toggleClass('zero-balance', true)
+    } else if (value === (totalChecking + totalSavings)) {
+        const remainValue = value - totalChecking;
+        totalChecking = 0;
+        totalSavings -= remainValue;
+        $('#checking-balance').text('$' + totalChecking)
+        $('#savings-balance').text('$' + totalSavings)
+        $('#checking div').toggleClass('zero-balance', true)
+        $('#savings div').toggleClass('zero-balance', true)
+    };
+});
 
-$('#checking-withdraw').click(withdrawChecking)
+//
 
 let totalSavings = 0;
 
-const depositSavings = function () {
+$('#savings-deposit').click(function () {
     const value = + $('#savings-amount').val();
     totalSavings += value
     $('#savings-balance').text('$' + totalSavings)
-}
+    $('#savings div').toggleClass('zero-balance', false)
+});
 
-$('#savings-deposit').click(depositSavings)
-
-const withdrawSavings = function () {
+$('#savings-withdraw').click(function () {
     const value = + $('#savings-amount').val();
-    if (value <= totalSavings) {
+    if (value < totalSavings) {
         totalSavings -= value
         $('#savings-balance').text('$' + totalSavings)
-    } else if (value <= (totalSavings + totalChecking)) {
+    } else if (value === totalSavings) {
+        totalSavings -= value
+        $('#savings-balance').text('$' + totalSavings)
+        $('#savings div').toggleClass('zero-balance', true)
+    } else if (value < (totalSavings + totalChecking)) {
         const remainValue = value - totalSavings;
         totalSavings = 0;
         totalChecking -= remainValue;
         $('#checking-balance').text('$' + totalChecking)
         $('#savings-balance').text('$' + totalSavings)
-    }
-};
-
-$('#savings-withdraw').click(withdrawSavings)
+        $('#savings div').toggleClass('zero-balance', true)
+    } else if (value === (totalSavings + totalChecking)) {
+        const remainValue = value - totalSavings;
+        totalSavings = 0;
+        totalChecking -= remainValue;
+        $('#checking-balance').text('$' + totalChecking)
+        $('#savings-balance').text('$' + totalSavings)
+        $('#savings div').toggleClass('zero-balance', true)
+        $('#checking div').toggleClass('zero-balance', true)
+    };
+});

@@ -39,6 +39,14 @@
   padding: 25px 0;
 }
 
+.zero-balance {
+  background-color: #F52F4F;
+  border: 1px solid #676767;
+  font-family: 'Ruluko', sans-serif;
+  font-size: 50px;
+  padding: 25px 0;
+}
+
 .clear {
   clear: both;
 }
