@@ -1,74 +1,52 @@
 
 let totalChecking = 0;
+let totalSavings = 0;
+
+const updateDisplay = function (totalChecking, totalSavings) {
+    $('#checking-balance').text('$' + totalChecking)
+    $('#savings-balance').text('$' + totalSavings)
+    if (totalChecking === 0) {
+        $('#checking div').toggleClass('zero-balance', true);
+    } else {
+        $('#checking div').toggleClass('zero-balance', false);
+    }
+    if (totalSavings === 0) {
+        $('#savings div').toggleClass('zero-balance', true);
+    } else {
+        $('#savings div').toggleClass('zero-balance', false);
+    }
+};
 
 $('#checking-deposit').click(function () {
-    const value = + $('#checking-amount').val();
-    totalChecking += value
-    $('#checking-balance').text('$' + totalChecking)
-    $('#checking div').toggleClass('zero-balance', false)
+    totalChecking += + $('#checking-amount').val();
+    updateDisplay(totalChecking, totalSavings);
+});
+
+$('#savings-deposit').click(function () {
+    totalSavings += + $('#savings-amount').val();
+    updateDisplay(totalChecking, totalSavings);
 });
 
 $('#checking-withdraw').click(function () {
     const value = + $('#checking-amount').val();
-    if (value < totalChecking) {
+    if (value <= totalChecking) {
         totalChecking -= value
-        $('#checking-balance').text('$' + totalChecking)
-    } else if (value === totalChecking) {
-        totalChecking -= value
-        $('#checking-balance').text('$' + totalChecking)
-        $('#checking div').toggleClass('zero-balance', true)
-    } else if (value < (totalChecking + totalSavings)) {
+    } else if (value <= (totalChecking + totalSavings)) {
         const remainValue = value - totalChecking;
         totalChecking = 0;
         totalSavings -= remainValue;
-        $('#checking-balance').text('$' + totalChecking)
-        $('#savings-balance').text('$' + totalSavings)
-        $('#checking div').toggleClass('zero-balance', true)
-    } else if (value === (totalChecking + totalSavings)) {
-        const remainValue = value - totalChecking;
-        totalChecking = 0;
-        totalSavings -= remainValue;
-        $('#checking-balance').text('$' + totalChecking)
-        $('#savings-balance').text('$' + totalSavings)
-        $('#checking div').toggleClass('zero-balance', true)
-        $('#savings div').toggleClass('zero-balance', true)
     };
-});
-
-//
-
-let totalSavings = 0;
-
-$('#savings-deposit').click(function () {
-    const value = + $('#savings-amount').val();
-    totalSavings += value
-    $('#savings-balance').text('$' + totalSavings)
-    $('#savings div').toggleClass('zero-balance', false)
+    updateDisplay(totalChecking, totalSavings);
 });
 
 $('#savings-withdraw').click(function () {
     const value = + $('#savings-amount').val();
-    if (value < totalSavings) {
+    if (value <= totalSavings) {
         totalSavings -= value
-        $('#savings-balance').text('$' + totalSavings)
-    } else if (value === totalSavings) {
-        totalSavings -= value
-        $('#savings-balance').text('$' + totalSavings)
-        $('#savings div').toggleClass('zero-balance', true)
-    } else if (value < (totalSavings + totalChecking)) {
+    } else if (value <= (totalSavings + totalChecking)) {
         const remainValue = value - totalSavings;
         totalSavings = 0;
         totalChecking -= remainValue;
-        $('#checking-balance').text('$' + totalChecking)
-        $('#savings-balance').text('$' + totalSavings)
-        $('#savings div').toggleClass('zero-balance', true)
-    } else if (value === (totalSavings + totalChecking)) {
-        const remainValue = value - totalSavings;
-        totalSavings = 0;
-        totalChecking -= remainValue;
-        $('#checking-balance').text('$' + totalChecking)
-        $('#savings-balance').text('$' + totalSavings)
-        $('#savings div').toggleClass('zero-balance', true)
-        $('#checking div').toggleClass('zero-balance', true)
     };
+    updateDisplay(totalChecking, totalSavings);
 });
