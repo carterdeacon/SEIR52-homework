@@ -29,6 +29,13 @@ $("#checking-withdraw").click(function () {
 		if (checkingTotal === 0) {
 			$checkingBalance.addClass("zero");
 		}
+	} else if (checkingTotal + savingsTotal >= checkingInput) {
+		let overdraft = checkingInput - checkingTotal;
+		checkingTotal = 0;
+		$checkingBalance.text("$" + checkingTotal);
+		savingsTotal -= overdraft;
+		$savingsBalance.text("$" + savingsTotal);
+		console.log("overdraft protection activated");
 	}
 });
 
@@ -52,6 +59,13 @@ $("#savings-withdraw").click(function () {
 		if (savingsTotal === 0) {
 			$savingsBalance.addClass("zero");
 		}
+	} else if (checkingTotal + savingsTotal >= checkingInput) {
+		let overdraft = savingsInput - savingsTotal;
+		savingsTotal = 0;
+		$savingsBalance.text("$" + savingsTotal);
+		checkingTotal -= overdraft;
+		$checkingBalance.text("$" + checkingTotal);
+		console.log("overdraft protection activated");
 	}
 });
 if (checkingTotal === 0) {
