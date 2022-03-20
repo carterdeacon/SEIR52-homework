@@ -3,12 +3,20 @@ $("body").css("font-family", "Arial, sans-serif");
 $("#nickname").html("oldbettie");
 $("#favorites").html("Drum & Bass, Electro, Punkrock");
 $("#hometown").html("Perth");
-$(".about").each(function () {
-	$(this).addClass("listitem");
-	$(this).css("color", "red");
-}); //---this one stumped me errors getting the image to display was annoying
-let $image = $("<img>");
-$image.attr("src", "me.jpeg").appendTo(".container");
+//---this is----
+// $(".about").each(function () {
+// 	$(this).addClass("listitem");
+// 	$(this).css("color", "red");
+// });
+//--same as-- jQuery is smart enough to not have to use loops
+$(".about").addClass("listitem").css("color", "red");
+
+//
+//---this one stumped me errors getting the image to display was annoying
+// let $image = $("<img>");
+// $image.attr("src", "me.jpeg").appendTo(".container");
+//---same as---
+$('<img src="me.jpeg">').appendTo(".container");
 //
 //----books----
 const books = [
@@ -20,10 +28,14 @@ books.forEach((book) => $("<p>").html(`${book.title} written by ${book.author}`)
 //
 //----Lib it----
 $("#lib-button").click(function () {
-	const $noun = $("#noun").val();
-	const $adj = $("#adjective").val();
-	const $person = $("#person").val();
-	$("<p>").html(`${$person} really loves ${$noun} ${$adj}`).appendTo("#story");
+	const noun = $("#noun").val();
+	const adj = $("#adjective").val();
+	const person = $("#person").val();
+	$(`<p class="todo">${person} really loves ${noun} ${adj}</p>`).appendTo("#story");
+});
+// ---removes the child element. note you have to use the parent to choose the child to delete --- this removes all items with class todo havnt figured out how to remove just 1
+$("p").click(function () {
+	$(this).remove();
 });
 
 //
