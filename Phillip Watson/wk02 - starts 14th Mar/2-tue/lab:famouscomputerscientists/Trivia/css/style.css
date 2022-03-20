@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+body {
+    background-color: darkgrey;
+    font-family: 'Alice', serif;
+    margin: auto;
+    padding: 20px;
+    border-left: 1em;
+    border-right: 1em;
+    text-shadow: 1px 1px 1px burlywood;
+    letter-spacing: 1px;
+    color: solid black;
+    word-spacing: 1px;
+    font-size: 20px;
+}
+
+.container {
+    text-align: center;
+}
+
+nav {
+    text-align: right; 
+    word-spacing: 1em;
+    
+}
+
+a:link {
+    display: block;
+    padding: 4px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+main {
+    text-align: center;
+}
+main img {
+    display: block;
+    margin: auto;
+    box-shadow: 0px 0px 20px black;
+    border-radius: 1em;
+    width: 300px;
+    height: 300px;
+
+}
+
+ul {
+    list-style: none;
+}
+
+li.a:hover, li.b:hover, li.c:hover, li.d:hover, li.e:hover, li.f:hover, li.g:hover, li.h:hover, li.i:hover, li.j:hover, li.l:hover{
+    color: blue;
+    transition: background-color .2000s;
+
+}

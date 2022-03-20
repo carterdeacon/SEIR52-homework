@@ -1,10 +1,13 @@
-//bonus 1
+
 const catImg = document.querySelector("img");
 catImg.style.left = 0;
 catImg.style.transform = "scaleX(1)";
 
 const step = 10
 const imgWidth = 296
+
+
+//bonus 1
 
 // const catWalkRight = function () {
 //     const maxWidth = window.innerWidth;
@@ -15,6 +18,8 @@ const imgWidth = 296
 
 // }
 // setInterval(catWalkRight, 50);
+
+
 
 //bonus 2
 
@@ -38,6 +43,10 @@ const imgWidth = 296
 
 // setInterval(catWalkForever, 50);
 
+
+
+
+
 //bonus 3
 
 const replaceImageHalfway = function () {
@@ -53,11 +62,8 @@ const replaceImageHalfway = function () {
             const changeURL = function () {
                 // console.log(catImg.src);
                 catImg.src = rawImageURL;
-                if (catImg.src == rawImageURL) {
-                    clearInterval(changeURL);
-                }
             }
-            setInterval(changeURL, 10000);
+            setTimeout(changeURL, 5000);
         }
     }
 }
