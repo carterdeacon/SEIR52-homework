@@ -39,11 +39,11 @@ $("#savings-deposit").click(function () {
 // --- savings withdraw
 $("#savings-withdraw").click(function () {
 	savingsInput = Number($("#savings-amount").val());
-	if (savingsTotal > -1 + savingsInput) {
+	if (savingsTotal >= savingsInput) {
 		savingsTotal -= savingsInput;
 		$savingsBalance.text("$" + savingsTotal);
 		toggleClass(checkingTotal, savingsTotal);
-	} else if (checkingTotal + savingsTotal >= checkingInput) {
+	} else if (savingsTotal + checkingTotal >= checkingInput) {
 		// --- overdraft ---
 		let overdraft = savingsInput - savingsTotal;
 		savingsTotal = 0;
