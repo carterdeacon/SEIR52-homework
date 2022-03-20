@@ -28,22 +28,22 @@ $('#savings-deposit').click(function () { // update the balance value at savings
 });
 
 $('#checking-withdraw').click(function () { // update the balance value at checkings withdraw
-    const value = + $('#checking-amount').val();
-    if (value <= totalChecking) {
-        totalChecking -= value
-    } else if (value <= (totalChecking + totalSavings)) {
-        totalSavings -= (value - totalChecking);
+    const amountWithdrawChecking = + $('#checking-amount').val();
+    if (amountWithdrawChecking <= totalChecking) {
+        totalChecking -= amountWithdrawChecking
+    } else if (amountWithdrawChecking <= (totalChecking + totalSavings)) {
+        totalSavings -= (amountWithdrawChecking - totalChecking);
         totalChecking = 0;
     };
     updateDisplay(totalChecking, totalSavings);
 });
 
 $('#savings-withdraw').click(function () { // update the balance value at savings withdraw
-    const value = + $('#savings-amount').val();
-    if (value <= totalSavings) {
-        totalSavings -= value
-    } else if (value <= (totalSavings + totalChecking)) {
-        totalChecking -= (value - totalSavings);
+    const amountWithdrawSavings = + $('#savings-amount').val();
+    if (amountWithdrawSavings <= totalSavings) {
+        totalSavings -= amountWithdrawSavings
+    } else if (amountWithdrawSavings <= (totalSavings + totalChecking)) {
+        totalChecking -= (amountWithdrawSavings - totalSavings);
         totalSavings = 0;
     };
     updateDisplay(totalChecking, totalSavings);
