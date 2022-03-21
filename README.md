@@ -1,4 +1,4 @@
-# SEIR48
+# SEIR52
 
 ### Steps to do
 
@@ -20,7 +20,7 @@ _'Forking' creates a personal, 'forked' copy of this repository on your Github a
 
 _'Cloning' takes your 'forked' repository on GitHub and creates a local copy - or 'clone' - on your computer._
 
-- Make sure you're browser is open to **your** forked version of this repository on Github (eg [http://github.com/{YOUR_USERNAME}/seir48-homework](http://github.com/{YOUR_USERNAME}/seir48-homework)).
+- Make sure you're browser is open to **your** forked version of this repository on Github (eg [http://github.com/{YOUR_USERNAME}/SEIR52-homework](http://github.com/{YOUR_USERNAME}/SEIR52-homework)).
 - Hit the **Clone or Download** button in the top right-hand corner of the page and copy the URL to your clipboard.
 - Open your computer's terminal to the directory in which you intend to store your homework.
 - `git clone URL_OF_YOUR_FORK_ON_GITHUB` (where `URL_OF_YOUR_FORK_ON_GITHUB` is the URL you copied after hitting 'Clone or Download', above).
@@ -29,8 +29,8 @@ _'Cloning' takes your 'forked' repository on GitHub and creates a local copy - o
 
 _Adding an upstream repository links the local repository on your computer to the original repository on Github (i.e. mine, the one from which you created the fork)_
 
-- `cd SEI52-homework`
-- `git remote add upstream https://github.com/carterdeacon/SEI52-homework.git`
+- `cd SEIR52-homework`
+- `git remote add upstream https://github.com/carterdeacon/SEIR52-homework.git`
 - `git pull upstream main`
 
 ### Do your homework
@@ -38,8 +38,8 @@ _Adding an upstream repository links the local repository on your computer to th
 You should put each night's homework in a new folder within the appropriate directory of your homework repo. So, for day two, where you have two tasks ("Calculator" and "Strings"), you might do something like this:
 
 1. Open Terminal/iTerm2/Ubuntu;
-2. Go to your local homework repo (eg, `cd ~/Projects/sei52-homework`);
-3. From here, go to the folder matching your name within that repo, and the appropriate week / day (eg, `taylor_swift/week_01`);
+2. Go to your local homework repo (eg, `cd ~/Projects/SEIR52-homework`);
+3. From here, go to the folder matching your name within that repo, and the appropriate week / day (eg, `Taylor Swift/wk01`);
 4. Create new folders for each of the day's homework tasks: (eg `mkdir calculator` and `mkdir strings`);
 5. Create the files necessary to complete the homework in their respective directories;
 6. Get to it!
@@ -56,7 +56,7 @@ You need to do this every time you're submitting homework.
   - `git pull upstream main` - merge changes that have been made to this repository into your own local repository (if a weird screen appears on this step, PLEASE SEE THE **IMPORTANT 2** NOTED BELOW).
   - `git push origin main`
 - **Once you're finished, submit a pull request for me to accept your homework**
-  - Navigate to your forked version of this repository on Github (eg [https://github.com/{YOUR_USERNAME_HERE}/seir48-homework](https://github.com/{YOUR_USERNAME_HERE}/seir48-homework)).
+  - Navigate to your forked version of this repository on Github (eg [https://github.com/{YOUR_USERNAME_HERE}/SEIR52-homework](https://github.com/{YOUR_USERNAME_HERE}/SEIR52-homework)).
   - Hit the **Pull request** button.
   - Make sure the destination for the pull request is set to my repository, not your own or anyone else's.
   * **IMPORTANT:**

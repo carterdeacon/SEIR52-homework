@@ -1,0 +1,17 @@
+body{
+    background-color: pink;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+img{
+    width: 35%;
+    
+}
+.click-me {
+    width: 5%;
+    position: absolute;
+    top: 26%;
+    left: 15%;
+}
