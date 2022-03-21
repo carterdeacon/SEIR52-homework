@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(1, 147, 72);
+}
+
+.track {
+ position: absolute;
+}
+
+.lane {
+    position: absolute;
+    width: 129.5em;
+    height: 6.1em;
+}
+
+.lane1 {
+    left: 12em;
+    top: 25.6em;
+}
+
+.lane2 {
+    left: 12em;
+    top: 31.8em;
+}
+
+.lane3 {
+    left: 12em;
+    top: 38.1em;
+}
+
+.lane4 {
+    left: 12em;
+    top: 44.4em;
+}
+
+.lane5 {
+    left: 12em;
+    top: 50.7em;
+}
+
+.lane6 {
+    left: 12em;
+    top: 57em;
+}
+
+.cat {
+    position: absolute;
+    width: 10em;
+    height: auto;
+    top: -4.5em;
+    left: 0;
+}
+
+.pistol {
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    left: 20em;
+    top: 7em;
+}
+
+#winner {
+    width: 9em;
+    top: -11.5em;
+}

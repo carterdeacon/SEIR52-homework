@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@600&display=swap');
+
+body {
+    background-image: url("../images/joshua-fuller-p8w7krXVY1k-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 900px;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Bungee', cursive;
+    text-align: center;
+    color: rgb(230, 225, 225);
+    font-size: 450%;
+    text-transform: uppercase;
+    height: 100px;
+    line-height: 100px;
+}
+
+h1 a {
+    text-decoration: none;
+    color: rgb(230, 225, 225);
+}
+
+nav {
+    margin: 0 auto;
+    position: absolute;
+    top: 120px;
+    left: 140px;
+}
+
+nav a {
+    width: 30%;
+    text-decoration: none;
+    color: rgb(230, 225, 225);
+    margin: 0 auto;
+    font-family: 'Bungee', cursive;
+    font-size: 150%;
+    padding: 50px;
+}
+
+
+nav a:hover {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+nav a:hover:before {
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    border-style: solid;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    left: calc(50% - 10px);
+    top: 0;
+    border-width: 35px 10px 10px 10px;
+    border-color: transparent transparent #e1e1e1 transparent;
+}
+
+nav a:hover:before, nav:focus:before, nav a:active:before {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    visibility: visible;
+}
+
+main {
+    margin-top: 200px;
+    padding: 10px 30px;
+    background: rgb(230, 225, 225, 0.3);
+    color: rgb(230, 225, 225);
+    font-size: 30px;
+    font-family: 'Smooch Sans', sans-serif;
+}
+
+a.ref, a {
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(230, 225, 225);
+}
+
+img {
+    width: 900px;
+    padding-bottom: 10px;
+}
+
+.box {
+    background-image: url(../images/question.jpg);
+    opacity: 0.5;
+    background-size: cover;
+    background-position: center;
+    width: 250px;
+    height: 250px;
+    display: inline-block;
+    margin: 23px;
+    border-radius: 0.5em;
+    box-shadow: 0px 15px 15px black;
+}
+
+p {
+    text-align: center;
+    opacity: 1;
+
+}
+
+p span {
+    visibility: hidden;
+    
+}
+
+p:hover span{
+    visibility: visible;
+}
