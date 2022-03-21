@@ -1,0 +1,82 @@
+* {
+    border: 1px solid limegreen;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #9544;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto; /* centres element inside parent */
+    background-color: #ccc;
+    padding: 1em; /* size of font of letter m in relevant font */
+    border-bottom-right-radius: 1em; 
+    border-bottom-left-radius: 1em;
+}
+
+.img feature {
+    width: 100px
+
+}
+
+.linkcolor {
+    color: brown;
+
+}
+
+
+nav {
+    text-align: right;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+mav a {
+    color: green;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: white;
+}
+
+p {
+    text-align: center;
+    color: darkred;
+}
+
+h1 {
+    text-align: center;
+    /* background-color: darkred; */
+    color: darkred;
+    text-transform: uppercase; /* accessible way to style font */
+    font-size: 400%;
+    padding: 0.5em;
+}
+
+h2 {
+    text-align: center;
+    color: darkred;
+}
+main {
+    display: inline-block;
+}
+
+main img {
+    display: block; /* can't set margins on display: line, which is default for img */
+    margin: 0 auto;
+}
+
+/* aside {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+    background-color: blue;
+    padding: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0px 15px 15px black;
+} */
