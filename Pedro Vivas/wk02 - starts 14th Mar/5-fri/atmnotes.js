@@ -38,6 +38,8 @@ const account = {
 };
 
 $(function() {
+    //All accounts start with $0
+    $('.balance').addClass('zero');
     //selects all buttons, sets onlick event
     $('input[type=button]').on('click', function() {
         //gets user input using reference to clicked button and turns into float
@@ -55,14 +57,14 @@ $(function() {
         //applies f() to both display balances. i optional param for each method
         $('.balance').each(function(i) {
             //updates display in accounts
-            this.innerHTML = updateVals[i];
+            this.innerHTML = '$' + updateVals[i];
             //resets input after transaction
             $('input[type=text]').val('');
             //toggles color if account is empty or not
-            if (this.innerHTML === '0') {
-                this.style.backgroundColor = 'red';
+            if (this.innerHTML === '$0') {
+                $(this).addClass('zero');
             } else {
-                this.style.backgroundColor = '#E3E3E3';
+                $(this).removeClass('zero');
             };
         });
     });

@@ -26,6 +26,7 @@ const account = {
 };
 
 $(function() {
+    $('.balance').addClass('zero');
     $('input[type=button]').on('click', function() {
         let inAmount = parseFloat($(this).siblings('[type=text]').val());
         if(isNaN(inAmount)) {
@@ -39,11 +40,10 @@ $(function() {
             this.innerHTML = '$' + updateVals[i];
             $('input[type=text]').val('');
             if (this.innerHTML === '$0') {
-                this.style.backgroundColor = 'red';
+                $(this).addClass('zero');
             } else {
-                this.style.backgroundColor = '#E3E3E3';
+                $(this).removeClass('zero');
             };
         });
     });
-})
-
+});
