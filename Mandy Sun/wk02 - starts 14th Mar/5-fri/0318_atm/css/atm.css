@@ -1,0 +1,87 @@
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script);
+@import url(http://fonts.googleapis.com/css?family=Ruluko);
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+
+
+#content {
+  margin: 0 auto;
+  text-align: center;
+  width: 700px;
+}
+
+#nav {
+  margin: 50px 0px;
+}
+
+#title {
+  color: #F52F4F;
+  font-family: 'Oleo Script', cursive;
+  font-size: 50px;
+}
+
+#checking {
+  float: left;
+}
+
+#savings {
+  float: right;
+}
+
+.account {
+  background-color: #6C9A74;
+  border: 1px solid #295A33;
+  padding: 10px;
+}
+
+.balance {
+  background-color: #E3E3E3;
+  border: 1px solid #676767;
+  font-family: 'Ruluko', sans-serif;
+  font-size: 50px;
+  padding: 25px 0;
+}
+
+.clear {
+  clear: both;
+  text-align: left;
+  padding-top: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+}
+
+.zero {
+  background-color: #F52F4F;
+  color: #FFF;
+}
+
+.num{
+  height:30px;
+  width: 30px;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+  font-size: 30px;
+}
+
+.threeNums{
+  margin: 20px;
+}
+
+td{
+  width: 175px;
+  height: 40px;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: rgb(235, 235, 235);
+  line-height: 40px;
+  border-bottom: 1px dashed black;
+}
+
+#historyList{
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  color: rgb(74, 74, 74);
+}
+
+
+
