@@ -18,7 +18,6 @@ $("#checking-withdraw").click(function () {
 	if (checkingTotal >= checkingInput) {
 		checkingTotal -= checkingInput;
 		$checkingBalance.text("$" + checkingTotal);
-		toggleClass(checkingTotal, savingsTotal);
 	} else if (checkingTotal + savingsTotal >= checkingInput) {
 		// --- overdraft ---
 		let overdraft = checkingInput - checkingTotal;
@@ -27,8 +26,8 @@ $("#checking-withdraw").click(function () {
 		savingsTotal -= overdraft;
 		$savingsBalance.text("$" + savingsTotal);
 		console.log("overdraft protection activated");
-		toggleClass(checkingTotal, savingsTotal);
 	}
+	toggleClass(checkingTotal, savingsTotal);
 });
 //--- savings deposit
 $("#savings-deposit").click(function () {
@@ -39,11 +38,11 @@ $("#savings-deposit").click(function () {
 // --- savings withdraw
 $("#savings-withdraw").click(function () {
 	savingsInput = Number($("#savings-amount").val());
-	if (savingsTotal > -1 + savingsInput) {
+	// --- if balance is higher then input amount
+	if (savingsTotal >= savingsInput) {
 		savingsTotal -= savingsInput;
 		$savingsBalance.text("$" + savingsTotal);
-		toggleClass(checkingTotal, savingsTotal);
-	} else if (checkingTotal + savingsTotal >= checkingInput) {
+	} else if (savingsTotal + checkingTotal >= savingsInput) {
 		// --- overdraft ---
 		let overdraft = savingsInput - savingsTotal;
 		savingsTotal = 0;
@@ -51,9 +50,10 @@ $("#savings-withdraw").click(function () {
 		checkingTotal -= overdraft;
 		$checkingBalance.text("$" + checkingTotal);
 		console.log("overdraft protection activated");
-		toggleClass(checkingTotal, savingsTotal);
 	}
-}); // --- toggles red background if 0 in accounts ---
+	toggleClass(checkingTotal, savingsTotal);
+});
+// --- toggles red background if 0 in accounts ---
 const toggleClass = function (checkingTotal, savingsTotal) {
 	if (checkingTotal === 0 ? $checkingBalance.addClass("zero") : $checkingBalance.removeClass("zero"));
 	if (savingsTotal === 0 ? $savingsBalance.addClass("zero") : $savingsBalance.removeClass("zero"));
