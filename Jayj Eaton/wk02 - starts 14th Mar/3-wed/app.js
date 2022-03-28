@@ -12,9 +12,10 @@ let suck = false;
 let newTop = 0;
 let newLeft = 0;
 
+//cat walking loop catWalks-catWalksBack
 let catWalks = function () {
 	let left = parseInt(cat.style.left);
-	newLeft = left + 8;
+	let newLeft = left + 8;
 	cat.style.left = newLeft + "px";
 	if (newLeft > window.innerWidth - cat.width) {
 		clearInterval(timer);
@@ -34,13 +35,15 @@ let catWalksBack = function () {
 		timer = setInterval(catWalks, 40);
 	}
 };
+
 //on blend button press stops cat and starts blender move
 const blendCat = function () {
 	clearInterval(walkBackTimer);
 	clearInterval(timer);
 	blend = setInterval(blenderOn, 50);
 };
-//blendmoves to position then calls suck cat funct
+
+//blender moves to position then calls suck cat funct
 let blenderOn = function () {
 	let top = parseInt(blender.style.top);
 	newTop = top + 2;
@@ -50,6 +53,8 @@ let blenderOn = function () {
 		suck = setInterval(suckCat, 100);
 	}
 };
+
+//sucks cat into tube
 let suckCat = function () {
 	// cat top position
 	let catTop = parseInt(cat.style.top);
@@ -61,6 +66,8 @@ let suckCat = function () {
 	cat.style.left = newCatLeft + "px";
 	setTimeout(blood, 4000);
 };
+
+//circle thats a very poor representation of blood apears on the ground could of just found a vector or image on google but figured it wasnt important
 let blood = function () {
 	bloodsplat.style.opacity = 1;
 };
