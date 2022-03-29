@@ -1,11 +1,9 @@
 # fuckin choo choo
-
 $lines = {
-    'n' => ["Times square", "34th", "28th", "23rd", "Union square", "8th"],
-    'l' => ["8th", "6th", "Union square", "3rd", "1st"],
-    's' => ["Grand central", "33rd", "28th", "23rd", "Union square", "Astor place"],
+    'n' => ["Times square n", "34th n", "28th n", "23rd n", "Union square", "8th n"],
+    'l' => ["8th l", "6th l", "Union square", "3rd l", "1st l"],
+    's' => ["Grand central l", "33rd l", "28th l", "23rd l", "Union square", "Astor place l"],
 };
-
 # ------------- menu -----------
 puts "welcome to The New York Subway 2.0"
 puts "=-=-" *20
@@ -25,40 +23,42 @@ puts "=-=-" *20
 print " Which station will u be exiting at?"
 station_off = gets.chomp.capitalize
 puts "=-=-" *20
-
-#  ------------- start of logic ------------ index, 
+#  ------------- start of line logic ------------  
 def line_change (station_on, line_on, station_off, line_off)
-    start_index = $lines[line_on].index(station_on) #<--- replace with station_on and line on
-    start_change = $lines[line_on].index('Union square') #<--- replace with station_off and line off
-    finish_index = $lines[line_off].index(station_off) #<--- replace with station_off and line off
-    finish_change = $lines[line_off].index('Union Square') #<--- replace with station_off and line off
-
-    puts 'fuck my life'
-    p start_index
-    p start_change
-    p finish_index
-    p finish_change
+    start_index = $lines[line_on].index(station_on) 
+    start_change = $lines[line_on].index('Union square') 
+    finish_index = $lines[line_off].index(station_off) 
+    finish_change = $lines[line_off].index('Union square') 
+    # first half array in order
+    if start_index < start_change
+        first_half = $lines[line_on][start_index..start_change]
+    else 
+        first_half = $lines[line_on][start_change..start_index].reverse
+    end
+    # second half array in order
+    if finish_index > finish_change
+        second_half = $lines[line_off][finish_change..finish_index]
+    else
+        second_half = $lines[line_off][finish_index..finish_change].reverse
+    end
+    trip = first_half | second_half # pipe to remove duplicate stop
+    puts "your trip includes the following stops #{trip}"
+    # puts 'fuck my life'
 end
-
 def same_line (station_on, station_off)
-    start_index = $lines['n'].index('23rd') #<--- replace with station_on and line on
-    finish_index = $lines['n'].index('Times square') #<--- replace with station_off and line off
+    start_index = $lines[line_on].index('23rd')
+    finish_index = $lines[line_on].index('Times square')
     if  start_index < finish_index
-        journey = $lines['n'][start_index..finish_index]
+        journey = $lines[line_on][start_index..finish_index]
         puts "your journey was the following stops: #{journey}"
     else
-        journey = $lines['n'][finish_index..start_index].reverse
+        journey = $lines[line_on][finish_index..start_index].reverse
         puts "your journey was the following stops: #{journey}" 
     end  
 end
-
 # line change logic for later
 if line_on == line_off
     same_line(station_on, station_off)
-end
-    
-if line_on != line_off
+else
     line_change(station_on, line_on, station_off, line_off)
 end
-
-# # temp call for logic
