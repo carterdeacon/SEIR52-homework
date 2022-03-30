@@ -35,11 +35,13 @@ const books = [
 $(books).each(function () {
     const author = $(this).attr('author');
     const title = $(this).attr('title');
-    const alreadyRead = $(this).attr('alreadyRead');
+    // const alreadyRead = $(this).attr('alreadyRead');
 
     $('body').append(`<li>${title} by ${author}</li>`);
 
-    if ( $(alreadyRead).is('true') ); $(this).css('color', 'grey');
+    if (books.alreadyRead) {
+        $(this).addClass('alreadyRead');
+    }
 });
 
 // Bonus: add a property to each book with the URL of the book cover, and add an img element for each book on the page.
