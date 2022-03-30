@@ -1,0 +1,15 @@
+.already-read {
+  color: rgb(216, 137, 137);
+  opacity: 0.5;
+}
+
+.not-read {
+  color: rgb(55, 231, 134);
+  font-style: italic;
+}
+
+a {
+  color: rgb(65, 158, 212);
+  text-decoration: none;
+  font-style: normal;
+}

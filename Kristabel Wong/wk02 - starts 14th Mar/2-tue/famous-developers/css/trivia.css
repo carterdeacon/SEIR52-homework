@@ -89,7 +89,7 @@ main {
     font-family: 'Smooch Sans', sans-serif;
 }
 
-a.ref {
+a.ref, a {
     text-decoration: none;
     font-style: italic;
     color: rgb(230, 225, 225);
