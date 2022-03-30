@@ -1,0 +1,24 @@
+<h2>
+  
+    <%= params[:book_title] %>
+   
+     
+</h2>
+
+<ul>
+    <img src='<%= @info["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]%>'>
+    
+    <li> 
+        <span>Author:</span> 
+        <%= @info["items"][0]["volumeInfo"]["authors"][0] %>
+    </li>
+    
+   <li>
+        <span>Description:</span> 
+        <%= @info["items"][0]["volumeInfo"]["description"] %>
+   </li>
+   <li> 
+       <span>Publisher and Date:</span> 
+        <%= @info["items"][0]["volumeInfo"]["publisher"]%> (<%= @info["items"][0]["volumeInfo"]["publishedDate"]%>)
+   </li>
+</ul>
