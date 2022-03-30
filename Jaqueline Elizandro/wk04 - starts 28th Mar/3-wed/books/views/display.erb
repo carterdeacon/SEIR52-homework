@@ -1,0 +1,10 @@
+<div class="container_display">
+    <h1 class="title_display"><%= @info_book["items"][0]["volumeInfo"]["title"] %></h1>
+    <p class="author">by <%= @info_book["items"][0]["volumeInfo"]["authors"].join(', ') %></p>
+
+    <article>
+        <img src="<%= @info_book["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"] %>">
+
+        <p class="description"><%= @info_book["items"][0]["volumeInfo"]["description"] %></p>
+    </article>
+</div>
