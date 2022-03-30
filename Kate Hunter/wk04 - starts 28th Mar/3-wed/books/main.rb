@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'httparty'
+require 'pry'
 
 # Define path 
 get '/' do 
@@ -9,9 +10,9 @@ get '/' do
 end
 
 get '/book' do
-    book_name = params[:title]
-    response = HTTParty.get("https://www.googleapis.com/books/v1/volumes?q=#{title}")
-    @diss = response.items.description
+    book_name = params[:book_name]
+    response = HTTParty.get("https://www.googleapis.com/books/v1/volumes?q=#{book_name}")
+    @diss = response["items"][0]["volumeInfo"]["imageLinks"]["smallThumbnail"]
 
     erb :result
 
