@@ -1,0 +1,50 @@
+body {
+	text-align: center;
+	background-color: rgba(16, 16, 16, 0.886);
+	color: aliceblue;
+	font-family: "Roboto", sans-serif;
+}
+.header-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header-container h1 {
+	padding-right: 80px;
+	padding-left: 120px;
+}
+a {
+	color: aliceblue;
+	text-decoration: none;
+	background-color: aliceblue;
+	color: rgba(16, 16, 16, 0.886);
+	border-radius: 4px;
+	padding: 5px;
+}
+a:hover {
+}
+
+h1 {
+	font-size: 6vw;
+	margin: 0px;
+}
+h2 {
+	font-size: 4vw;
+	margin: 0px;
+}
+.price {
+	font-size: 6vw;
+	margin-top: 0px;
+}
+.book-title {
+	font-size: 4vw;
+	margin-top: 5px;
+}
+.book-cover {
+	width: 20vw;
+}
+.description {
+	font-size: 2vw;
+	width: 80vw;
+	margin: 20px auto;
+}
