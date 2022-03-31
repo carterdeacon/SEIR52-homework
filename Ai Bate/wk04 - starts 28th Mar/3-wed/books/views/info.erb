@@ -1,0 +1,11 @@
+
+<h2>
+    book cover
+    <img src="<%= @info["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"] %>" alt=""> 
+</h2>
+<p>
+   Book title : <%= @info["items"][0]["volumeInfo"]["title"] %>
+</p>
+<p>
+    Authors : <%= @info["items"][0]["volumeInfo"]["authors"] %>
+</p>

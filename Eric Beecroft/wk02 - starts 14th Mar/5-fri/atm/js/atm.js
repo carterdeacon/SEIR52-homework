@@ -15,6 +15,7 @@ $('#checking-deposit').on('click', function () { // Deposit click event listener
         return a + b;
     }, 0);
     $('#checking-balance').text('$' + newChecking) // Change checking balance to new total
+    zeroBalance(); // Check for zero balance
 })
 
 // Savings Deposit
@@ -26,6 +27,7 @@ $('#savings-deposit').on('click', function () { // Deposit click event listener
         return a + b;
     }, 0);
     $('#savings-balance').text('$' + newSavings) // Change checking balance to new total
+    zeroBalance(); // Check for zero balance
 })
 
 // Add functionality so that a user can withdraw money from one of the bank accounts.
@@ -51,7 +53,7 @@ $('#checking-withdraw').on('click', function () { // Deposit click event listene
 
         $('#checking-balance').text('$' + newChecking) // Reset checking balance display
     }
-
+    zeroBalance(); // Check for zero balance
 })
 
 // Saving Withdraw
@@ -62,7 +64,7 @@ $('#savings-withdraw').on('click', function () { // Deposit click event listener
     const newSavings = savings.reduce(function(a, b){ // Reduce function to sum checking array
         return a + b;
     }, 0);
-    $('#svaings-balance').text('$' + newSavings) // Change savings balance to new total
+    $('#savings-balance').text('$' + newSavings) // Change savings balance to new total
 
     if (newSavings < 0) { // Overdraft test & block
         alert("Cannot withdraw beyond $0.");
@@ -74,7 +76,7 @@ $('#savings-withdraw').on('click', function () { // Deposit click event listener
 
         $('#savings-balance').text('$' + newSavings) // Reset savings balance display
     }
-
+    zeroBalance(); // Check for zero balance
 })
 
 // TO DOS
@@ -88,17 +90,18 @@ $('#savings-withdraw').on('click', function () { // Deposit click event listener
 // should be red. It should be gray when there is money in the account.
 
 const zeroBalance = function () {
+    $('.zero').removeClass('zero'); // Can't get this to return to grey
+
     if ($('#checking-balance').text() === '$0') { // Test for $0 balance
         $('#checking-balance').addClass('zero'); // Change background to red
     }
-    else {
-        $('#checking-balance').removeClass('zero'); // Can't get this the change back to grey
-    }
+
+    if ($('#savings-balance').text() === '$0') { // Test for $0 balance
+        $('#savings-balance').addClass('zero'); // Change background to red
+    };
+
 };
 zeroBalance();
 
-if ($('#savings-balance').text() === '$0') { // Test for $0 balance
-    $('#savings-balance').addClass('zero'); // Change background to red
-};
 
 // What happens when the user wants to withdraw more money from the checking account than is in the account? These accounts have overdraft protection, so if a withdrawal can be covered by the balances in both accounts, take the checking balance down to $0 and take the rest of the withdrawal from the savings account. If the withdrawal amount is more than the combined account balance, ignore it.
