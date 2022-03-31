@@ -1,0 +1,27 @@
+<h1 class="title_new">edit movie to the gallery</h1>
+
+<form action="/movies/<%= @movie["id"] %>" method="post">
+    <label>
+        MOVIE:
+        <input name="name" placeholder="Ghostbusters" required value="<%= @movie["name"] %>">
+    </label>
+
+    <label>
+        YOUR RATING:
+        <input name="rate" placeholder="Enter a number between 1..10" value="<%= @movie["rate"] %>">
+    </label>
+
+    <label>
+        WATCH IN THE YEAR OF:
+        <input name="year_watched" placeholder="1984" value="<%= @movie["year_watched"] %>">
+    </label>
+
+    <label>
+        COMMENTS:
+        <input name="comments" placeholder="Very funny" value="<%= @movie["comments"] %>">
+    </label>
+
+    <div class="button">
+        <button>EDIT MOVIE</button>
+    </div>
+</form>
