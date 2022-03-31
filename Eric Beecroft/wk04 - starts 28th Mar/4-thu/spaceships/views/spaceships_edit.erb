@@ -1,0 +1,30 @@
+<h1>Edit spaceship</h1>
+
+<form action="/spaceships<%= @spaceship["id"] %>" method="post">
+    <label>
+        Name:
+        <input name="name" placeholder="Millenium Falcon" required value="<%= @spaceship["name"] %>">
+    </label>
+
+    <label>
+        Class:
+        <input name="class" placeholder="YT-1300 Light Freighter" value="<%= @spaceship["class"] %>">
+    </label>
+
+    <label>
+        Affiliation:
+        <input name="affiliation" placeholder="Rebel Alliance" value="<%= @spaceship["affiliation"] %>">
+    </label>
+
+    <label>
+        Source:
+        <input name="source" placeholder="Star Wars" value="<%= @spaceship["source"] %>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" placeholder="http://..." value="<%= @spaceship["image"] %>">
+    </label>
+
+    <button>Retrofit spaceship!</button>
+</form>
