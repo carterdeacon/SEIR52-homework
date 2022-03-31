@@ -2,7 +2,7 @@
 $lines = {
     'n' => ["Times square n", "34th n", "28th n", "23rd n", "Union square", "8th n"],
     'l' => ["8th l", "6th l", "Union square", "3rd l", "1st l"],
-    's' => ["Grand central l", "33rd l", "28th l", "23rd l", "Union square", "Astor place l"],
+    's' => ["Grand central s", "33rd s", "28th s", "23rd s", "Union square", "Astor place s"],
 };
 # ------------- menu -----------
 puts "welcome to The New York Subway 2.0"
@@ -45,10 +45,10 @@ def line_change (station_on, line_on, station_off, line_off)
     puts "your trip includes the following stops #{trip}"
     # puts 'fuck my life'
 end
-def same_line (station_on, station_off)
-    start_index = $lines[line_on].index('23rd')
-    finish_index = $lines[line_on].index('Times square')
-    if  start_index < finish_index
+def same_line (station_on, station_off, line_on, line_off)
+    start_index = $lines[line_on].index(station_on)
+    finish_index = $lines[line_off].index(station_off)
+    if  start_index <= finish_index
         journey = $lines[line_on][start_index..finish_index]
         puts "your journey was the following stops: #{journey}"
     else
@@ -58,7 +58,7 @@ def same_line (station_on, station_off)
 end
 # line change logic for later
 if line_on == line_off
-    same_line(station_on, station_off)
+    same_line(station_on, station_off, line_on, line_off)
 else
     line_change(station_on, line_on, station_off, line_off)
 end

@@ -1,0 +1,10 @@
+<div class="container_display">
+    <h1 class="title_display"><%= @volume_info["title"] %></h1>
+    <p class="author">by <%= @volume_info["authors"].join(', ') %></p>
+
+    <article>
+        <img src="<%= @volume_info["imageLinks"]["thumbnail"] %>">
+
+        <p class="description"><%= @volume_info["description"] %></p>
+    </article>
+</div>

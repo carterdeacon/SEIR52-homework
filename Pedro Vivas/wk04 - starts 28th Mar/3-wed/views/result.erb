@@ -1,0 +1,18 @@
+<a href="/">Back</a>
+<h1>
+    Book Search
+</h1>
+
+<div class="book-display">
+    <h2>
+        Title: 
+        <%= @book_url["items"][0]["volumeInfo"]["title"] %>
+        <br>
+        Author:
+        <%= @book_url["items"][0]["volumeInfo"]["authors"][0] %>
+        <br> 
+    </h2>
+    <div>
+        <img src= <%= @book_url["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"] %> alt="book image">   
+    </div>
+</div>
