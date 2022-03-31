@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+* {
+    font-family: 'Amatic SC', cursive;
+}
+
+
+h1 {
+    font-size: 200%;
+    margin: 0px;
+}
+
+body {
+    /* background: rgb(240,186,242); */
+    background-image: url(../library.jpg);
+    background-size: cover;
+    /* background: linear-gradient(100deg, rgba(240,186,242,1) 0%, rgba(216,167,249,1) 29%, rgba(161,234,249,1) 100%); */
+    font-size: 180%;
+}
+
+#stock {
+    width: 210px;
+}
+
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: rgba(254, 255, 255, 0.85);
+    padding: 1em;
+    min-height: 85vh; /* 85% of the viewport height */
+}
+
+img {
+    display: block;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+   
+}
+
+span {
+    text-decoration: underline;
+}
+
+input, button {
+    font-size: 100%;
+}
