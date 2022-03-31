@@ -1,0 +1,15 @@
+body{ 
+    background-image: url("https://images.unsplash.com/photo-1588581939864-064d42ace7cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80");
+}
+
+.img{
+    width: 50%;
+}
+
+.container{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.509);
+    padding: 10px;
+}

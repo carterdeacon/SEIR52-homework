@@ -1,0 +1,17 @@
+<h1>Edit Pokemon</h1>
+<form action="/pokemons/<%= @pokemon["id"] %>" method="post">
+    <label>
+    Name:
+    <input name="name" placeholder="Pikachu" requied value="<%= @pokemon["name"] %>">
+    </label>
+    <label>
+    Regions:
+    <<input name="regions" placeholder="JOHTO KALOS" value="<%= @pokemon["regions"] %>">
+    </label>
+    <label>
+    Image:
+    <input type="url" name="image" placeholder="http://" value="<%= @pokemon["image"] %>" >
+    </label>
+    <button>Update Pokemon</button>
+
+</form>
