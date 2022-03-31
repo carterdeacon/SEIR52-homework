@@ -1,0 +1,10 @@
+<h1>All Plants</h1>
+
+
+<% @plants.each do |plant| %>
+    <p>
+        <a href="/plants/<%= plant["id"] %>" class="list">
+        <%= plant["name"] %>
+        </a>
+    </p>
+<% end %>
