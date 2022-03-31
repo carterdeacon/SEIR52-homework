@@ -14,6 +14,14 @@ def divide (a,b)
     a / b
 end 
 
+def exp (a,b)
+    a ** b
+end
+
+def sqrt (a)
+    Math.sqrt(a)
+end
+
 def show_menu
     puts "=-" * 40
     puts "calculator".center(80, padstr = ' ')  #TODO: checkout .center to make this look nicer
@@ -22,6 +30,8 @@ def show_menu
     puts "[s] - subtraction"
     puts "[m] - multiplication"
     puts "[d] - division"
+    puts "[e] - exponent"
+    puts "[q] - square root"
     puts "[q] - quit"
     print "Enter your choice: " 
 end
@@ -65,6 +75,15 @@ until menu_choice == 'q'
         print "Enter divisor: "
         b = gets.to_i
         puts "the sum of #{ a } divided by #{ b } is: #{ divide(a,b) }"
+        show_menu
+        menu_choice = gets.chomp.downcase
+    when 'e'
+        puts "you chose exponentials"
+        print "Enter factor 1: "
+        a = gets.to_i
+        print "Enter factor 2: "
+        b = gets.to_i
+        puts "the sum of #{ a } to the factor of #{ b } is: #{ exp(a,b) }"
         show_menu
         menu_choice = gets.chomp.downcase
     else 
