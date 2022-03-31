@@ -1,0 +1,33 @@
+body {
+    background: rgb(247, 237, 198);
+}
+
+h2 {
+    margin: 0;
+}
+
+nav {
+    width: 500px;
+    background-color: rgb(223, 166, 166);
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+
+a {
+    font-size: 1.2rem;
+}
+
+span {
+    color: rgb(45, 91, 208);
+}
+
+button {
+    transform: translateY(8px)
+}
+
+
+
