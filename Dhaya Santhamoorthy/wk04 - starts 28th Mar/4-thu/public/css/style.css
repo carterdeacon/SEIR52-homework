@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat&display=swap");
+
+body {
+  background-color: rgb(248, 237, 229);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+nav {
+  text-align: right;
+}
+
+.nav-item {
+  display: inline-block;
+  margin: 10px 5px 5px 5px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.stadium-name {
+  font-size: 1.5em;
+}
+
+.feature {
+  max-width: 100%;
+}
+
+.controls {
+  display: inline-block;
+  margin: 20px 10px 10px 5px;
+}
+
+.edit-control,
+.delete-control {
+  margin-left: 25px;
+  margin-right: 25px;
+  font-size: 1.5em;
+}
