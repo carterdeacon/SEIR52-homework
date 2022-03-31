@@ -1,0 +1,12 @@
+<h2>Most scenic stadiums</h2>
+
+<% @stadiums.each do |stadium| %>   
+    <p class="stadium-name">
+        <a href="/stadiums/<%= stadium["id"] %>">
+            <%= stadium["name"] %>
+        </a>
+    </p>
+<% end %>
+
+
+
