@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+body{ 
+    background-color: black;
+    color: white;
+    font-family:'Ubuntu', sans-serif; 
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+}
+
+.container{
+    text-align: center;
+
+}
+
+.text{
+    font-size: 40px;
+    margin-top: 200px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.buttondiv{
+    display: inline;
+}
+
+form{
+    display: inline;
+}
+
+.greenButton{
+    margin: 20px;
+    padding: 11px 19px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: #5bb75b;
+    border: none;
+}
+
+.greenButton:hover{
+    text-decoration: underline;
+}
+
+.redButton{
+    margin: 20px;
+    padding: 11px 19px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: #da4f49;
+    border: none;
+}
+
+.redButton:hover{
+    text-decoration: underline;
+}
+
+.blueButton{
+    margin: 20px;
+    padding: 11px 19px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: #0044cc;
+    border: none;
+}
+
+.blueButton:hover{
+    text-decoration: underline;
+}
