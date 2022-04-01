@@ -1,0 +1,12 @@
+<h1><%= @anime["name"]%></h1>
+
+<h2>Genre: <%= @anime["genre"] %></h2>
+<h2>Rating: <%= @anime["rating"]%>/10<h2>
+<% unless @anime["image"].nil? || @anime["image"].empty?%>
+    <img class="feature" src="<%= @anime["image"] %>" alt="<%=@anime["name"] %>">
+<%end%>
+
+<div class="controls">
+    <a class="active" href="/animes/<%= @anime["id"]%>/edit">Edit Anime</a>
+    <a class= "active" href="/animes/<%= @anime["id"]%>/delete">Delete Anime</a>
+</div>

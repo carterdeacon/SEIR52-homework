@@ -1,0 +1,18 @@
+<h1>Edit Character</h1>
+
+<form action="/bluey/<%= @character["id"]%>" method = "post">
+    <label>
+        Name:
+        <input name="name" placeholder = "Bandit" required value = "<%= @character["name"]%>">
+    </label>
+    <label>
+        Breed:
+        <input name="breed" placeholder = "Blue Heeler" value = "<%=@character["breed"]%>">
+    </label>
+    <label>
+        Image:
+        <input type="url" name ="image" placeholder = "http://..." value = "<%=@character["image"]%>">
+    </label>
+
+    <button>Update Character</button>
+</form>

@@ -1,0 +1,29 @@
+<h1>Edit SLS Pro</h1>
+
+<form action="/skaters/<%= @skater['id'] %>" method="post">
+    <label>
+        First Name:
+        <input name="first_name" placeholder="first name" value="<%= @skater['first_name'] %>">    
+    </label>
+    <label>
+        Last Name:
+        <input name="last_name" placeholder="last name" value="<%= @skater['last_name'] %>">    
+    </label>
+    <label>
+        Year born:
+        <input type="integer" name="birthyr" placeholder="year of birth" value="<%= @skater['birthyr'] %>">    
+    </label>
+    <label>
+        Location:
+        <input name="location" placeholder="location" value="<%= @skater['location'] %>">    
+    </label>
+    <label>
+        description:
+        <input name="description" placeholder="about goes here" value="<%= @skater['description'] %>">    
+    </label>
+    <label>
+        Image:
+        <input type="url" name="image" placeholder="http...." value="<%= @skater['image'] %>">    
+    </label>
+    <button>Submit</button>
+</form>

@@ -1,0 +1,17 @@
+<div class="info">
+  <div class="image">
+     <% unless @pokemons["image"].nil? || @pokemons["image"].empty? %>
+       <img class="pokemons_image" src="<%= @pokemons["image"] %>" alt="<%= @pokemons["name"] %>">
+     <% end %>
+  </div>
+  <div class="pokemons_info">
+     <p>Name: <%= @pokemons["name"] %></p>
+     <p>Category: <%= @pokemons["category"] %></p>
+     <p>Abilities: <%= @pokemons["abilities"] %></p>
+  </div>
+  <div class="controls">
+     <a href="/pokemons/<%= @pokemons["id"] %>/edit">Edit Pokemon</a>
+     <a href="/pokemons/<%= @pokemons["id"] %>/delete">Release Pokemon</a>
+  </div>
+</div>
+

@@ -9,7 +9,11 @@ console.log('wow');
 // const body = document.body;
 // body.style.fontFamily = 'Arial, sans-serif';
 
-$('body').css('fontFamily', 'Arial, sans-serif');
+// jQuery two strings method
+$('body').css('font-family', 'Arial, sans-serif');
+
+// jQuery Object Method (you can set multiple values in the object)
+$('body').css({'font-family': 'Arial, sans-serif', 'color': 'blue'})
 
 // (In JS) Replace each of the spans (nickname, favorites, hometown) with your own information.
 
@@ -17,19 +21,19 @@ $('body').css('fontFamily', 'Arial, sans-serif');
 // const nickName = document.getElementById('nickname');
 // nickName.innerHTML = "Everyone just calls me Eric";
 
-$('#nickname').replaceWith('Everyone just calls me Eric');
+$('#nickname').html('Everyone just calls me Eric');
 
 // DOM
 // const favs = document.getElementById('favorites');
 // favs.innerHTML = "Dallas Cowboys, Waratahs, Dallas Mavericks, LA Dodgers & Lakers fanboy cause their games are fun";
 
-$('#favorites').replaceWith('Dallas Cowboys, Waratahs, Dallas Mavericks, LA Dodgers & Lakers fanboy cause their games are fun');
+$('#favorites').html('Dallas Cowboys, Waratahs, Dallas Mavericks, LA Dodgers & Lakers fanboy cause their games are fun');
 
 // DOM
 // const hometown = document.getElementById('hometown');
 // hometown.innerHTML = "Technically Houston (humid) but moved to Sydney (less humid) before I could form memories";
 
-$('#hometown').replaceWith('Technically Houston (humid) but moved to Sydney (less humid) before I could form memories')
+$('#hometown').html('Technically Houston (humid) but moved to Sydney (less humid) before I could form memories')
 
 // Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
 
@@ -41,10 +45,17 @@ $('#hometown').replaceWith('Technically Houston (humid) but moved to Sydney (les
 //     item.className = 'listitem';
 // }
 
-$('li').each(function (){
-    $('li').addClass('listItem');
-    $('li').css('color', 'red');
-})
+// jQuery loop (.each) - a middle ground
+
+// $('li').each(function (){
+//     $(this).addClass('listItem');
+//     $(this).css('color', 'red');
+// })
+
+// Simplest version
+
+$('li').addClass('listItem');
+$('li').css('color', 'red');
 
 // Create a new img element and set its src attribute to a picture of you. Append that element to the page.
 
@@ -53,5 +64,4 @@ $('li').each(function (){
 // meImg.src = 'https://celebritypictures.org/images/4169409/4169409_1.jpeg';
 // body.appendChild(meImg);
 
-const href = 'https://celebritypictures.org/images/4169409/4169409_1.jpeg'
-$('<img>').attr('src', href).appendTo('body');
+$('<img src="https://celebritypictures.org/images/4169409/4169409_1.jpeg">').appendTo('body');
