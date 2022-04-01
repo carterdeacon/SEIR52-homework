@@ -20,7 +20,9 @@ $('button').click(function() {
     const adj = $('#adjective').val();
     const person = $('#person').val();
 
-    $('#story').html(`${person} really likes ${adj} ${noun}!`);
+    const story = `<p>${person} really likes ${adj} ${noun}!</p>`  // adds a paragraph or every sentence.
+    $('#story').append(story);
+
 })
 
 $('<button>').html('Add style!').insertAfter('#lib-button');

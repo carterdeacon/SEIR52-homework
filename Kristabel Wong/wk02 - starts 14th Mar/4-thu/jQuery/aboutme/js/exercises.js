@@ -12,7 +12,7 @@ $('#hometown').html('Sydney');
 // Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
 
 $('li').addClass('listitem');
-$('li').css('color','red'); // trying a diff syntax to like 3
+$('li').css('color','red'); // trying a diff syntax to line 3
 
 //Create a new img element and set its src attribute to a picture of you. Append that element to the page.
 
