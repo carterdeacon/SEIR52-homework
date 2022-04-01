@@ -1,0 +1,24 @@
+<h1>Edit Patient Info</h1>
+
+<form action="/patients/<%= @patient["id"]%>" method="post">
+    <label>
+    Name:
+        <input name="name" placeholder="John" required value="<%=@patient["name"]%>">
+    </label>
+    
+    <label>
+    Family:
+        <input name="family" placeholder="Smith" value="<%=@patient["family"]%>">
+    </label>
+    
+    <label>
+    Phone Number:
+        <input name="phone" placeholder="04...." value="<%=@patient["phone"]%>"> 
+    </label>
+    <label>
+    Patient Image:
+        <input type="url" name="image" placeholder="http://..." value="<%=@patient["image"]%>">
+    </label>
+
+    <button>Update Info</button>
+</form>
