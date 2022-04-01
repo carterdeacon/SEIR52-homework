@@ -1,0 +1,9 @@
+<div class="single-artist-container">
+    <h1> <%= @artist.name %> </h1>
+    <h2> Sub Genre: <%= @artist.sub %> </h2>
+</div>
+
+<div class="controls">
+    <a href="/artists/<%= @artist.id %>/edit">Edit Artist</a>
+    <a href="/artists/<%= @artist.id %>/delete">Delete Artist</a>
+</div>

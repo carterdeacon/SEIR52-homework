@@ -1,0 +1,9 @@
+<div class="single-artist-container">
+    <h1> <%= @song.name %> </h1>
+    <h2> Artist: <%= @song.artist %> </h2>
+</div>
+
+<div class="controls">
+    <a href="/songs/<%= @song.id %>/edit">Edit Song</a>
+    <a href="/songs/<%= @song.id %>/delete">Delete Song</a>
+</div>

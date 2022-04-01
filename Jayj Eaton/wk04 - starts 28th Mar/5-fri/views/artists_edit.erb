@@ -1,0 +1,26 @@
+<div class="content-container">
+    <h2>Update Artist</h2>
+    <form action="/artists/<%= @artist.id %>" method='post'>
+        <label>
+            Name:
+            <input name="name" placeholder='name here' value='<%= @artist.name%>'>
+        </label>
+        <label>
+            Location:
+            <input name="location" placeholder='hometown' value='<%= @artist.location%>'>
+        </label>
+        <label>
+            Sub Genre:
+            <input name="sub" placeholder='sub genre' value='<%= @artist.sub%>'>
+        </label>
+        <label>
+        Image:
+            <input name="image" placeholder='image url' value='<%= @artist.image%>'>
+        </label>
+        <label>
+            Video:
+            <input name="video" placeholder='video url' value='<%= @artist.video%>'>
+        </label>          
+        <button>Submit</button>
+    </form>
+</div>

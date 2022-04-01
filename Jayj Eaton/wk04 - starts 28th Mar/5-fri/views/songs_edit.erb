@@ -1,0 +1,30 @@
+<div class="content-container">
+    <h2>Update Song</h2>
+    <form action="/songs/<%= @song.id %>" method='post'>
+        <label>
+            Artist:
+            <input name="artist" placeholder='artist name here' value='<%= @song.artist%>'>
+        </label>
+        <label>
+            Album:
+            <input name="album" placeholder='album here' value='<%= @song.album%>'>
+        </label>
+        <label>
+            Song Name:
+            <input name="name" placeholder='song name' value='<%= @song.name%>'>
+        </label>
+        <label>
+        Release year:
+            <input name="date" placeholder='year of release' value='<%= @song.date%>'>
+        </label>
+        <label>
+        Image:
+            <input name="cover" placeholder='image url' value='<%= @song.cover %>'>
+        </label>
+        <label>
+            Video:
+            <input name="link" placeholder='video url' value='<%= @song.link%>'>
+        </label>         
+        <button>Submit</button> 
+    </form>
+</div>

@@ -1,0 +1,5 @@
+body {
+	max-width: 800px;
+	margin: 0 auto;
+	/* wont work with water css */
+}
