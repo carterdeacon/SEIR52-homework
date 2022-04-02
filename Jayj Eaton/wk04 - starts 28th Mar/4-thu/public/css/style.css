@@ -1,0 +1,14 @@
+body {
+	text-align: center;
+	max-width: 80vw;
+	margin: 0 auto;
+	background-color: rgb(19, 19, 19);
+	color: aliceblue;
+}
+a {
+	text-decoration: none;
+	color: aliceblue;
+}
+.image {
+	max-width: 100%;
+}

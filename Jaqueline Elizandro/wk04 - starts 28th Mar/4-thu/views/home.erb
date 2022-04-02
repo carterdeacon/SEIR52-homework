@@ -1,0 +1,9 @@
+<h1 class="title_home">movies gallery</h1>
+
+<a class="link_new" href="/movies/new">-- ADD NEW MOVIE TO THE GALLERY --</a>
+
+<% @movies.each do |movie| %>
+    <p class="list_movies">
+        <a class="link_home" href="/movies/<%= movie["id"] %>"><%= movie["name"] %></a>
+    </p>
+<% end %>
