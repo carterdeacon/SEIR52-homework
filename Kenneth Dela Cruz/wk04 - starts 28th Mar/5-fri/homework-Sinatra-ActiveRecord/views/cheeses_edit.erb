@@ -1,0 +1,41 @@
+<div class="input">
+
+<h2>Edit Cheese Listing</h2>
+
+<form action="/cheeses/<%= @cheese.id %>" method="post">
+    <p>
+        <label>
+            Variant:
+                <input name="variant" placeholder="Brie" value="<%= @cheese.variant%>" required>
+        </label>
+    <p>
+    <p>
+        <label>
+            Cheese Type:
+                <input name="cheeseType" placeholder="Soft" value="<%= @cheese.cheeseType%>" required>
+        </label>
+    </p>
+    <p>
+        <label>
+            Country:
+                <input name="country" placeholder="France" value="<%= @cheese.country%>" required>
+        </label>
+    </p>
+    <p>
+        <label>
+            Wine Pairing:
+                <input name="winePairing" placeholder="Brie" value="<%= @cheese.winePairing%>" required>
+        </label>
+    </p>
+    <p>
+        <label>
+            Image: 
+                <input name="image" placeholder="http://..." value="<%= @cheese.image%>"> 
+        </label>
+    </p>
+    <p>
+        <button>Update Cheese Listing</button>
+    </p>
+
+</form>
+</div>
