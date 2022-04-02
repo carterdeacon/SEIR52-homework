@@ -1,9 +1,31 @@
-<div class="single-artist-container">
-    <h1> <%= @song.name %> </h1>
-    <h2> Artist: <%= @song.artist %> </h2>
+<div class="content" style='background-color:rgba(0, 0, 0, 0.79); height:100%; color:aliceblue'>
+    <div class="container">
+        <br/>
+        <h1 style="text-align:center"> <%= @song.name %> </h1>
+        <% unless @song.artist.nil? || @song.artist.empty? %>
+            <h2 style="text-align:center"> Artist: <%= @song.artist %> </h2>
+        <%end%>
+        <% unless @song.album.nil? || @song.album.empty? %>
+             <h3 style="text-align:center"> Album: <%= @song.album %> </h3>
+        <%end%>
+        <% unless @song.date.nil? || @song.date.empty? %>
+            <h3 style="text-align:center"> Release year: <%= @song.date %> </h3>
+        <%end%> 
+
+        <div class="container" style="text-align:center"> <%# image and video container %>
+            <% unless @song.link.nil? || @song.link.empty? %>
+                <embed width="560" height="315" src="<%=@song.link %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            <%end%>
+            <% unless @song.cover.nil? || @song.cover.empty? %>
+                <img src="<%=@song.cover %>">
+            <%end%>  
+        </div>
+    </div>
+
+    <div class="container-fluid" style="text-align:center">
+        <a href="/songs/<%= @song.id %>/edit" style="text-decoration:none">Edit</a> |
+        <a href="/songs/<%= @song.id %>/delete" style="text-decoration:none">Delete</a>
+    </div>
 </div>
 
-<div class="controls">
-    <a href="/songs/<%= @song.id %>/edit">Edit Song</a>
-    <a href="/songs/<%= @song.id %>/delete">Delete Song</a>
-</div>
+

@@ -1,14 +1,14 @@
-<div class="content-container">
-    <h2>All Songs</h2>
-
+<div class="container">
+    <br/>
+    <h2 style="text-align:center; color:aliceblue">All Songs</h2>
+    <br/>
     <% @songs.each do |song| %>
-
         <h2> 
-            <a href="/songs/<%= song.id %>">
-                <%= song.name %>
-            </a>
+            <li class="list-group"  >
+                <a href="/songs/<%= song.id %>" style="text-decoration:none" class="list-group-item list-group-item-action">
+                    <%= song.name %>
+                </a>
+            </li>
         </h2>
-
     <%end %>
-
 </div>

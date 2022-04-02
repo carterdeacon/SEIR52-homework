@@ -1,30 +1,38 @@
-<div class="content-container">
-    <h2>New Song</h2>
+<div class="content" style='background-color:rgba(0, 0, 0, 0.79); height:100%; color:aliceblue'>
+    <div class="container">
+    <h2 style="text-align:center">New Song</h2>
     <form action="/songs" method='post'>
-        <label>
-            Artist:
-            <input name="artist" placeholder='artist name here'>
-        </label>
-        <label>
-            Album:
-            <input name="album" placeholder='album here'>
-        </label>
-        <label>
-            Song Name:
-            <input name="name" placeholder='song name'>
-        </label>
-        <label>
-        Release year:
-            <input name="date" placeholder='year of release'>
-        </label>
-        <label>
-        Image:
-            <input name="cover" placeholder='image url'>
-        </label>
-        <label>
-            Video:
-            <input name="link" placeholder='video url'>
-        </label>
-        <button>submit</button> 
+       <div class="mb-3">
+            <label class="form-label">
+                <input name="artist" class="form-control" placeholder='artist name'>
+            </label>
+        </div> 
+        <div class="mb-3">
+            <label class="form-label">
+                <input name="album" class="form-control" placeholder='album'>
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">
+                <input name="name" class="form-control" placeholder='song name' required>
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">
+                <input name="date" class="form-control" placeholder='year of release'>
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">
+                <input name="cover" class="form-control" placeholder='image url'>
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">
+                <input name="link" class="form-control" placeholder='video url'>
+            </label>
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
     </form>
+</div>
 </div>

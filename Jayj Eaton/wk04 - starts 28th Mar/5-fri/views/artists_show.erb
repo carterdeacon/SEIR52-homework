@@ -1,9 +1,26 @@
-<div class="single-artist-container">
-    <h1> <%= @artist.name %> </h1>
-    <h2> Sub Genre: <%= @artist.sub %> </h2>
+<div class="content" style='background-color:rgba(0, 0, 0, 0.79); height:100%; color:aliceblue'>
+    <div class="container" style="text-align:center">
+        <br/>
+        <h1> <%= @artist.name %> </h1>
+        <% unless @artist.location.nil? || @artist.location.empty? %>
+            <h2> Hometown: <%= @artist.location %> </h2>
+        <%end%>
+        <% unless @artist.sub.nil? || @artist.sub.empty? %>
+            <h2> Sub Genre: <%= @artist.sub %> </h2>
+        <%end%>
+        <% unless @artist.image.nil? || @artist.image.empty? %>
+            <img width="600px" src="<%= @artist.image %>">
+        <%end%>
+        <% unless @artist.video.nil? || @artist.video.empty? %>
+         <embed src="<%=@artist.video %>">
+        <%end%>
+
+    
+    </div>
+
+    <div class="container" style="text-align:center">
+        <a href="/artists/<%= @artist.id %>/edit" style="text-decoration:none">Edit Artist</a> |
+        <a href="/artists/<%= @artist.id %>/delete" style="text-decoration:none">Delete Artist</a>
+    </div>
 </div>
 
-<div class="controls">
-    <a href="/artists/<%= @artist.id %>/edit">Edit Artist</a>
-    <a href="/artists/<%= @artist.id %>/delete">Delete Artist</a>
-</div>
