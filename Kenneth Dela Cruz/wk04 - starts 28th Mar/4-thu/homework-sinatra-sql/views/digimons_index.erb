@@ -1,0 +1,9 @@
+<h1>Digimon List</h1>
+
+<% @digimons.each do |digimon| %>
+
+    <p>
+        <a href="/digimons/<%= digimon["id"] %>">
+        <%= digimon["name"] %></a>
+    </p>
+<% end %>

@@ -1,0 +1,9 @@
+<h1> All My Trash Animes</h1>
+
+<% @animes.each do |anime|%>
+    <p>
+        <a href="/animes/<%= anime["id"] %>">
+            <%= anime["name"] %>
+        </a>
+    </p>
+<% end %>
