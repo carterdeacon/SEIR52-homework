@@ -1,0 +1,16 @@
+<h1>Edit cat </h1>
+
+<form action="/cats/<%= @cat["id"]%>" method="post">
+    <label>
+        breed:
+        <input name="breed" placeholder="Ragdoll"  required value="<%= @cat["breed"]%>">
+
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" placeholder="http://..." value="<%= @cat["image"]%>">
+    </label>
+
+    <button>Update cat</button>
+</form>
