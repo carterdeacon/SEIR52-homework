@@ -1,6 +1,6 @@
 CREATE TABLE songs (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    artist TEXT,
+    artist_id INTEGER,
     album TEXT,
     name TEXT,
     date TEXT,
@@ -8,5 +8,3 @@ CREATE TABLE songs (
     link TEXT -- url video or audio
 );
 
-INSERT INTO songs (artist, name) VALUES ('Pendulum', 'Come alive');
-INSERT INTO songs (artist, name) VALUES ('Pendulum', 'Witchcraft');

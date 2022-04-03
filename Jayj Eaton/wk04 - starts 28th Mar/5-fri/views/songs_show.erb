@@ -1,10 +1,8 @@
 <div class="content" style='background-color:rgba(0, 0, 0, 0.79); height:100%; color:aliceblue'>
     <div class="container">
         <br/>
-        <h1 style="text-align:center"> <%= @song.name %> </h1>
-        <% unless @song.artist.nil? || @song.artist.empty? %>
-            <h2 style="text-align:center"> Artist: <%= @song.artist %> </h2>
-        <%end%>
+        <h1 style="text-align:center">Song:  <%= @song.name %> </h1>
+        <h2 style="text-align:center"> Artist: <%= @song.artist.name %> </h2>
         <% unless @song.album.nil? || @song.album.empty? %>
              <h3 style="text-align:center"> Album: <%= @song.album %> </h3>
         <%end%>

@@ -5,7 +5,7 @@
         <form action="/songs/<%= @song.id %>" method='post'>
             <div class="mb-3">
                 <label class="form-label">
-                    <input name="artist" class="form-control" placeholder='artist name' value='<%= @song.artist%>'>
+                    <input name="artist_id" class="form-control" placeholder='artist name' value='<%= @song.artist.name%>'>
                 </label>
             </div> 
             <div class="mb-3">

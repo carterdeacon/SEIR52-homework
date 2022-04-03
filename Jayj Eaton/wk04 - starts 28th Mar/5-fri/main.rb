@@ -13,9 +13,11 @@ ActiveRecord::Base.establish_connection(
 ActiveRecord::Base.logger = Logger.new(STDERR)
 
 class Artist < ActiveRecord::Base
+    has_many :songs 
 end
 
 class Song < ActiveRecord::Base
+    belongs_to :artist
 end
 
 #  HOME
@@ -51,7 +53,21 @@ post '/artists' do
 end
 post '/songs' do
     song = Song.new
-    song.artist = params['artist']
+
+    Artist.all.each do |artist|
+        if artist.name == params['artist_id']
+            song.artist_id = artist.id
+        end
+    end
+    if song.artist_id == nil
+        song.create_artist(name: params['artist_id'])
+        Artist.all.each do |artist|
+            if artist.name == params['artist_id']
+                song.artist_id = artist.id
+            end
+        end
+    end
+
     song.album = params['album']
     song.name = params['name']
     song.date = params['date']
@@ -91,7 +107,20 @@ post '/artists/:id' do
 end
 post '/songs/:id' do
     song = Song.find params[:id]
-    song.artist = params['artist']
+
+    Artist.all.each do |artist|
+        if artist == params['artist_id']
+            song.artist_id = artist.id
+        end
+    end
+    if song.artist_id == nil
+        song.create_artist(name: params['artist_id'])
+        Artist.all.each do |artist|
+            if artist == params['artist_id']
+                song.artist_id = artist.id
+            end
+        end
+    end
     song.album = params['album']
     song.name = params['name']
     song.date = params['date']
