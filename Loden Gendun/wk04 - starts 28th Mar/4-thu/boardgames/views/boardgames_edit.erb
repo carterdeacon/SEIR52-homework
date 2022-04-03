@@ -1,0 +1,18 @@
+<form action="/boardgames/<%= params[:id] %>" method="post">
+
+    <% @boardgame.keys.drop(1).each do |key| %>
+
+        <label>
+            <p>
+                <%= key.gsub('_', ' ').capitalize %>:
+            </p>
+            <p>
+                <input type="text" name="<%= key %>" placeholder="<%= @boardgame[key] %>" value="<%= @boardgame[key] %>" required>        
+            </p>
+        </label>
+
+    <% end %>
+
+    <button>Update Boardgame</button>
+
+</form>

@@ -1,0 +1,10 @@
+<h1 Class="h1">ALL CAMERAS</h1>
+
+<% @cameras.each do |camera| %>
+    <p>
+        <a href="/cameras/<%= camera["id"] %>">
+        <%= camera["name"] %>
+        </a>
+    </p>
+<% end %>
+
