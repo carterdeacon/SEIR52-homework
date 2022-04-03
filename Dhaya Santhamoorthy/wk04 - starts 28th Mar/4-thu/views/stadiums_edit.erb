@@ -1,0 +1,17 @@
+<h1>Edit stadium</h1>
+
+<form action="/stadiums/<%= @stadium["id"] %>" method="post">
+    <label>
+        Name:
+        <input name="name" placeholder="Santiago Bernabéu" value="<%= @stadium["name"] %>" required>
+    </label>
+    <label>
+        Country:
+        <input name="country" placeholder="Spain" value="<%= @stadium["country"] %>" required>
+    </label>
+    <label>
+        Picture:
+        <input type="url" name="image"  placeholder="http://.." value="<%= @stadium["image"] %>">
+    </label>
+    <button>Update Stadium</button>
+</form>

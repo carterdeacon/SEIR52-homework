@@ -1,0 +1,10 @@
+<h2>Gallery</h2>
+
+<% @boardgames.each do |boardgame| %>
+
+    <div class="slot">
+        <h3><a href="/boardgames/<%= boardgame['id'] %>"><%= boardgame['name'] %></a></h3>
+        <a href="/boardgames/<%= boardgame['id'] %>"><img src="<%= boardgame['image'] %>" alt="Boardgame Image"></a>
+    </div>
+
+<% end %>

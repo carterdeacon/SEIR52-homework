@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+body {
+    background-color: #f4f2e9;
+    background-image: url('../img/img_movies.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.title_home {
+    color: #FDCCCC;
+    font-size: 70px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.title_show {
+    color: #FDCCCC;
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+.title_new {
+    color: #FDCCCC;
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+.link_home {
+    color: #ABD7E6;
+    font-size: 25px;
+}
+
+.link_new {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: white;
+    font-size: 12px;
+}
+
+.list_show {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: white;
+}
+
+.list_movies {
+    padding-top: 1em;
+}
+
+.link_show {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: #ABD7E6;
+    font-size: 12px;
+    padding-right: 4em;
+}
+
+.label {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: white;
+    font-size: 16px;
+}
+
+button {
+    background-color: #ABD7E6;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    border-radius: 4px;
+}
+
+.button {
+    padding-top: 3em;
+}
+
+.controls {
+    padding-top: 1em;
+}
