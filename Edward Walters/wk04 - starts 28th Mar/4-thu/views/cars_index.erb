@@ -1,0 +1,5 @@
+<% @cars.each do | car | %>
+   <p>
+   <a href="cars/<%=car['id']%>"><%= "#{ car['make'] } #{ car['model'] }" %></a>
+   </p>
+<% end %>

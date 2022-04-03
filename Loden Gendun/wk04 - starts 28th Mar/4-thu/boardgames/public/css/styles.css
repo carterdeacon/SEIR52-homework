@@ -1,0 +1,13 @@
+body {
+    background-color: aliceblue;
+}
+
+.slot {
+    max-width: 24%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+img {
+    max-width: 100%;
+}

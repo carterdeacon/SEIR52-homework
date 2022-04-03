@@ -1,0 +1,14 @@
+<h1><%= @spaceship["name"] %></h1>
+
+<h2>Class: <%= @spaceship["class"] %></h2>
+<h3>Affiliation: <%= @spaceship["affiliation"] %></h3>
+<h3>Source: <%= @spaceship["source"] %></h3>
+
+<% unless @spaceship["image"].nil? || @spaceship["image"].empty? %>
+    <img class="feature" src="<%= @spaceship["image"] %>" alt="<%= @spaceship["name"] %>">
+<% end %>
+
+<div class="controls">
+    <a href="/spaceships/<%= @spaceship["id"] %>/edit">Edit spaceship</a>
+    <a href="/spaceships/<%= @spaceship["id"] %>/delete">Delete spaceship</a>
+</div>
