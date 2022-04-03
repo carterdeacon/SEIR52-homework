@@ -1,0 +1,45 @@
+body{
+    background-image: url("../images/background.jpg");
+    font-family: 'Bangers', cursive;
+    background-size: cover;
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+img{
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+.container{
+    background-color: rgba(167, 198, 218, 0.8); 
+    max-width: 960px;
+    margin: 0 auto;
+    min-height: 90vh;
+    color: #8980F5;
+}
+div{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+nav{
+    background-color: #9AD4D6;
+    max-width: 960px;
+    text-align: center;
+    padding: 5px;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li{
+    margin-right: 0.5em;
+    padding: 5px 20px;
+    display: inline-block;
+}
+nav a{
+    text-decoration: none;
+}
+

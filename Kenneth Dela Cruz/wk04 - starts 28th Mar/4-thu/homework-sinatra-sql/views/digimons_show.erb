@@ -1,0 +1,14 @@
+<h1><%= @digimon["name"] %></h1>
+
+<h3>Type:<%= @digimon["type"] %></h3>
+
+<h3>Stage:<%= @digimon["stage"] %></h3>
+
+<% unless @digimon["image"].nil? || @digimon["image"].empty? %>
+<img class="feature" src="<%= @digimon["image"] %>" alt="<% @digimon["name"] %>"> 
+<% end %>
+
+<div class="controls">
+    <a href="/digimons/<%= @digimon["id"] %>/edit">Edit Digimon Data</a>
+    <a href="/digimons/<%= @digimon["id"] %>/delete">Delete Digimon Data</a>
+</div>
