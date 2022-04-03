@@ -1,0 +1,30 @@
+<h2>Edit doctos</h2>
+
+<form action="/doctors/<%= @doctor.id%>" method="post">
+    <label>
+        Name:
+        <input  name="name" placeholder="John" required value="<%=@doctor.name%>">    
+    </label>        
+
+    <label>
+        Family:
+        <input name="family" placeholder="Smith" values="<%=@doctor.family%>">
+    </label>
+
+    <label>
+        Speciality:
+        <input name="speciality" placeholder="Eye specialist" value="<%=@doctor.speciality%>">
+    </label>
+
+    <label>
+        Urgent Phone Number:
+        <input name="phone" placeholder="04.." value="<%=@doctor.phone%>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" placeholder="https://" value="<%=@doctor.image%>">    
+    </label>
+
+    <button>Update Doctor info</button>
+</form>
