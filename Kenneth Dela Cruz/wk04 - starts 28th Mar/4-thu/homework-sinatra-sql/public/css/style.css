@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background-color: lightgoldenrodyellow;
+    background-image: url(https://i.redd.it/47y14z6u5nh51.jpg);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 150%;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, .5);
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+nav {
+    text-align: right;
+}
+
+.feature {
+    max-width: 100%;
+}

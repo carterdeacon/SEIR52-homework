@@ -1,0 +1,24 @@
+<h1>Recommend Me Another Trash Anime</h1>
+
+<form action= "/animes" method="post">
+    <label>
+        Name:
+        <input name="name" placeholder="Domestic Girlfriend" required>
+    </label>
+
+    <label>
+        Genre:
+        <input name="genre" placeholder="Slice of Life">
+    </label>
+
+    <label>
+        Rating out of 10:
+        <input type= "number" min="0" max="10" name="rating" placeholder="7">
+    </label>
+
+    <label>
+        Art:
+        <input type= "url" name="image" placeholder="http://...">
+    </label>
+    <button>Add Anime</button>
+</form>
