@@ -1,0 +1,10 @@
+<h1 class="heading-page">All Directors</h1>
+
+<ul>
+    <% @directors.each do | director | %>
+    <li>
+        <%= "<a href='/directors/#{ director.id }'<p>#{ director.first_name } #{ director.last_name }</a>" %>
+    </li>
+    <% end %>
+</ul>
+<a href="/directors/new"><button>ADD DIRECTOR</button></a>

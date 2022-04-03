@@ -1,0 +1,30 @@
+<h1>Edit <%= @movie.title %></h1>
+<form action="/movies/<%= @movie.id %>" method='post' id="form_id">
+    <label>
+       Title:
+        <input name="title" value=" <%= @movie.title %>" required>
+    </label>
+
+     <label>
+        Release Year:
+        <input name="release_year" type="number" value="<%= @movie.release_year %>" placeholder="1980" min="1900" max="2050">
+    </label>
+
+    <label>
+       Genre:
+        <input name="genre" value="<%= @movie.genre %>" placeholder="e.g. Comedy">
+    </label>
+    
+    <label class="bio">
+        <span class="bio">Synopsis:</span>
+        <textarea name="synopsis" form="form_id" placeholder="Enter a brief synopsis of the movie plot here...." rows="10"><%= @movie.synopsis %></textarea>
+    </label>
+
+     <label>
+        Movie Poster Image URL:
+        <input name="photo" type="url" value="<%= @movie.photo %>" placeholder="https://www.photohosting.com/some_image.jpg" size="40">
+    </label>
+    
+    <button>Submit</button>
+
+</form>
