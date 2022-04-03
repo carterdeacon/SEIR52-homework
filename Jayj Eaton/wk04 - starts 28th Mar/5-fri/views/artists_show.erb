@@ -1,4 +1,4 @@
-<div class="content" style='background-color:rgba(0, 0, 0, 0.79); height:100%; color:aliceblue'>
+<div class="content" style='background-color:rgba(0, 0, 0, 0.79); min-height: 93vh; color:aliceblue'>
     <div class="container" style="text-align:center">
         <br/>
         <h1> <%= @artist.name %> </h1>
@@ -14,6 +14,19 @@
         <% unless @artist.video.nil? || @artist.video.empty? %>
          <embed src="<%=@artist.video %>">
         <%end%>
+        <ul class="list-group">
+         <br/>
+        <h3>All songs:</h3>
+        <% @songs_filtered.each do |song| %>
+            <h2>     
+                <li class="list-group"  >
+                    <a href="/songs/<%= song.id %>" style="text-decoration:none" class="list-group-item list-group-item-action">
+                        <%= song.name %>
+                    </a>
+                </li>
+            </h2>
+        <%end %>
+    </ul>
 
     
     </div>
@@ -22,5 +35,6 @@
         <a href="/artists/<%= @artist.id %>/edit" style="text-decoration:none">Edit Artist</a> |
         <a href="/artists/<%= @artist.id %>/delete" style="text-decoration:none">Delete Artist</a>
     </div>
+        <br/>
 </div>
 

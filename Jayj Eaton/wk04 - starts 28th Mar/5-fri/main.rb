@@ -13,7 +13,7 @@ ActiveRecord::Base.establish_connection(
 ActiveRecord::Base.logger = Logger.new(STDERR)
 
 class Artist < ActiveRecord::Base
-    has_many :songs 
+    has_many :songs, dependent: :destroy 
 end
 
 class Song < ActiveRecord::Base
@@ -79,6 +79,7 @@ end
 #  SHOW singular
 get '/artists/:id' do
     @artist = Artist.find params[:id]
+    @songs_filtered = Song.where(artist_id: params[:id])
     erb :artists_show
 end
 get '/songs/:id' do
@@ -140,3 +141,4 @@ get '/songs/:id/delete' do
     song.destroy
     redirect to('/songs')
 end
+
