@@ -1,16 +1,9 @@
 CREATE TABLE sightings (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    speciesCode TEXT,
-    comName TEXT,
-    sciName TEXT,
-    locID TEXT
     locName TEXT,
-    obsDt TEXT
-    howmany NUMBER,
+    obsDt TEXT,
+    howMany NUMBER,
     lat NUMBER,
-    lng NUMBER
+    lng NUMBER,
+    bird_id INTEGER
 );
-
-
-
--- "speciesCode", "comName", "sciName", "locId", "locName", "obsDt", "howMany", "lat", "lng", "obsValid", "obsReviewed", "locationPrivate", "subId"
