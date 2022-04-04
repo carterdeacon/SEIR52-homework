@@ -1,0 +1,33 @@
+<h1>Edit Music</h1>
+
+<form action="/musics/<%=@music.id%>" method="post">
+    <label>Name: </label>
+        <input name="name" placeholder ="La Campanella" required value="<%= @music.name%>">
+    
+    <label>Composer: </label>
+        <select name="musician_id">
+        <% @musicians.each do |musician| %>
+            <% if musician.name != @musician_selected.name %>
+            <option value="<%= musician.id %>">
+            <%=musician.name %>
+            </option>
+        <% else %>
+
+        <option value="<%= @musician_selected.id%>" selected>
+        <%= @musician_selected.name%>
+        </option>
+        <% end %>
+        <% end %>
+        </select>
+    
+    <label>Publish Year:  </label>
+        <input name="publish" placeholder = "1851" value ="<%= @music.publish%>">
+   
+    <label>Keys: </label>
+        <input name="keys" placeholder = "G sharp minor" value ="<%= @music.keys%>">
+    
+    <label>Description: </label>
+         <input name="description" placeholder = "..." value ="<%= @music.description%>">
+    
+    <button>Update Music</button>
+</form>

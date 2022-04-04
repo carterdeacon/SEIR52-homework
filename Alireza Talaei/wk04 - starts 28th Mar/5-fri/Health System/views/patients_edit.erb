@@ -1,0 +1,30 @@
+<h2>Edit patient</h2>
+
+<form action="/patients/<%= @patient.id%>" method="post">
+    <label>
+        Name:
+        <input  name="name" placeholder="John" required value="<%=@patient.name%>">    
+    </label>        
+
+    <label>
+        Family:
+        <input name="family" placeholder="Smith" value="<%=@patient.family%>">
+    </label>
+
+    <label>
+        Age:
+        <input name="age" placeholder="60" value="<%=@patient.age%>">
+    </label>
+
+    <label>
+        Symptoms:
+        <input name="symptoms" placeholder="04.." value="<%=@patient.symptoms%>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" placeholder="https://" value="<%=@patient.image%>">    
+    </label>
+
+    <button>Update Patient info</button>
+</form>

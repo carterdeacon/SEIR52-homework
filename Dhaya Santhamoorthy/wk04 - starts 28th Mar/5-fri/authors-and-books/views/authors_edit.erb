@@ -1,0 +1,16 @@
+<h1>Edit author</h1>
+<form action="/authors/<%= @author.id %>" method=post>
+    <label>
+        Name:
+        <input name="name" placeholder="Dan Brown"  value="<%= @author.name %>" required>
+    </label>     
+    <label>
+        Bio:
+        <input name="bio" placeholder="The author is known for his crime thrillers" value="<%= @author.bio %>">
+    </label>
+    <label>
+        Image:
+        <input class="feature-img" type="url" name="image" placeholder="http://.." value=<%= @author.image %>>
+    </label>
+    <button>Edit author</button>
+</form>

@@ -1,0 +1,30 @@
+<h1 class="heading-page">Add New Director</h1>
+<form action="/directors" method='post' id="form_id">
+    <label>
+        First Name:
+        <input name="first_name" placeholder="Enter First Name" required>
+    </label>
+
+     <label>
+        Last Name:
+        <input name="last_name" placeholder="Enter Last Name" required>
+    </label>
+
+     <label>
+        Birth Year:
+        <input name="birth_year" type="number" placeholder="1960" min="1900" max="2020">
+    </label>
+
+    <label class="bio">
+        <span class="bio">Bio:</span>
+        <textarea name="bio" form="form_id" placeholder="Enter brief biography here..." rows="10"></textarea>
+    </label>
+
+    <label>
+        Photo URL:
+        <input name="photo" type="url" placeholder="https://www.myphoto.com/myphoto.jpg" size="40">
+    </label>
+    <button>Submit</button>
+
+
+</form>

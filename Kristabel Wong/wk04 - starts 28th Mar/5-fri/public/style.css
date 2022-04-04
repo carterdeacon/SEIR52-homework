@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    font-family: 'Bebas Neue', cursive;
+}
+
+body {
+    background-image: url(/film.jpg);
+    background-size: cover;
+    background-position: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+.container {
+    position: relative;
+    max-width: 960px;
+    min-height: 80vh;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.89);
+    padding: 1em;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+#nav {
+    text-align: right;
+    color: whitesmoke;
+}
+
+nav {
+    margin: 15px 0;
+}
+
+a:visited, a:link {
+    color: black;
+    text-decoration: none;
+    font-size: 150%;
+}
+
+.one {
+    margin-right: 20px;
+}
+
+.two {
+    margin-left: 20px;
+}
+
+.feature {
+    max-width: 100%;  /* will resize */
+}
+
+p {
+    margin: 10px 0;
+}
+
+
+li {
+    list-style: none;
+    font-size: 180%;
+    padding: 5px 0;
+}
+
+ul {
+    line-height: 2em;
+    padding-left: 0;
+}
+
+input {
+    font-size: 80%;
+    width: 300px;
+}
+
+button {
+    font-size: 150%;
+}
+
+.right {
+    float: right;
+    margin-top: -45px;
+}
+
+span {
+    width: 110px;
+    display: inline-block;
+}
+
+img {
+    /* max-height: 65vh; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+
+.controls {
+    position: absolute;
+    bottom: 10px;
+}
+
+.direct, .movies {
+    text-align: center;
+    width: 48%;
+    height: 40vh;
+    line-height: 40vh;
+    /* border: 2px solid black; */
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.home {
+    text-align: center;
+    font-size: 700%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.direct {
+    float: left;
+    font-size: 300%;
+}
+
+.direct:hover, .movies:hover {
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.movies {
+    float: right;
+    font-size: 300%;
+}
+
+
+.topnav {
+    position: relative;
+}
+
+.middle {
+    float: none;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+
+}
