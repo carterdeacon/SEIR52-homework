@@ -1,6 +1,6 @@
 <h1>Secret Number Guess</h1>
 <h3>Please click a number between 1 and 10</h3>
-<form action="/secretnumber/results">
+<form action="/games/secretnumber/results">
 <% (1..10).each do |num|%>
     <input type="radio" name = "number" value = <%=num%>>
     <label><%=num%></label>
