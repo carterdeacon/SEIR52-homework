@@ -75,9 +75,9 @@ post '/books/:id' do
     if author.nil?
         author = Author.new
         author.name = params[:author]  
-        author.save
-        book.author_id = author.id
+        author.save        
     end    
+    book.author_id = author.id
     book.genre = params[:genre]
     book.image = params[:image]
     book.save
