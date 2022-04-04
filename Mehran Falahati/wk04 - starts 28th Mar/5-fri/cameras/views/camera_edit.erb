@@ -1,0 +1,23 @@
+<h1 Class="h1">EDITING CAMERA's DETAILS</h1>
+
+<form action="/cameras/<%= @camera["id"] %>" method="post">
+    <label>
+        NAME OR CODE OF CAMERA:
+        <input name="name" placeholder="D3300" value="<%= @camera["name"] %>">
+    </label>
+
+
+    <label>
+        BRAND:
+        <input name="brand" placeholder="Nikon, Sony, ..." value="<%= @camera["brand"] %>">
+    </label>
+
+    <label>
+        IMAGES OF CAMERA:
+        <input type="url" name="image" placeholder="HTTP//WWW.abc..." value="<%= @camera["image"] %>">
+    </label>
+
+    <button>UPDATE THE CAMERA</button>
+
+</form>
+

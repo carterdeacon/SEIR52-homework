@@ -1,0 +1,17 @@
+<div class="container">
+    <br/>
+    <h2 style="text-align:center; color:aliceblue">All Artists</h2>
+    <br/>
+    <ul class="list-group">
+        <% @artists.each do |artist| %>
+            <h2>     
+                <li class="list-group"  >
+                    <a href="/artists/<%= artist.id %>" style="text-decoration:none" class="list-group-item list-group-item-action">
+                        <%= artist.name %>
+                    </a>
+                </li>
+            </h2>
+        <%end %>
+    </ul>
+</div>
+

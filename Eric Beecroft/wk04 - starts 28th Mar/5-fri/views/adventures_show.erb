@@ -1,0 +1,26 @@
+<h1><%= @adventure["title"] %></h1>
+
+<h3>
+    System: <%= @adventure["system"] %>
+    |
+    <%= @adventure["edition"] %> Edition
+</h3>
+
+<% unless @adventure["cover"].nil? || @adventure["cover"].empty? %>
+    <img class="feature" src="<%= @adventure["cover"] %>" alt="<%= @adventure["title"] %>">
+<% end %>
+
+<p>
+    Levels: <%= @adventure["levels"] %>
+    |
+    Setting: <%= @adventure["setting"] %>
+    |
+    Publisher: <%= @adventure["publisher"] %>
+    |
+    Year: <%= @adventure["year"] %>
+</p>
+
+<div class="controls">
+    <a href="/adventures/<%= @adventure["id"] %>/edit">Edit adventure</a>
+    <a href="/adventures/<%= @adventure["id"] %>/delete">Delete adventure</a>
+</div>
