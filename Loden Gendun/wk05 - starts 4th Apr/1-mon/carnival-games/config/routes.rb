@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   get '/secretnumber' => 'secretnumber#play'
   get '/secretnumber/results' => 'secretnumber#results'
 
+  get '/rps' => 'rps#play'
+  get '/rps/results' => 'rps#results'
 
 end
