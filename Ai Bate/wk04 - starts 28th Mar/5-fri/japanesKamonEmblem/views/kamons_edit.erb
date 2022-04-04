@@ -1,0 +1,17 @@
+<h1>Edit Kamon</h1>
+
+<form action="/kamons/<%= @kamon.id %>" method="post">
+    <label>
+        Name:
+        <input name="name" placeholder="Kirimon" required value ="<%= @kamon.name %>" >
+    </label>
+    <label>
+        Meaning:
+        <input name="meaning" placeholder="Fortunes" value="<%= @kamon.meaning %>">
+    </label>
+    <label>
+        <input type="url" name="image" placeholder="http://" value="<%= @kamon.image%>">
+    </label>
+    <button>Update Kamon</button>
+
+</form>
