@@ -1,0 +1,13 @@
+<h1>Rock Paper Scissors game:</h1>
+
+<form action="/rock_paper_scissors/result">
+    <label>
+        What is your choice:
+        <select name="choice">
+            <% @choices.each do |choice| %>
+                <option value="<%= @choices.index(choice) %>"> <%= choice %> </option>
+            <% end %>
+        </select>
+    </label>
+    <button>Did I win?</button>
+</form>
