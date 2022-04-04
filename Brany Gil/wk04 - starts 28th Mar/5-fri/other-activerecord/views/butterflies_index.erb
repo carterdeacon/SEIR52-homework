@@ -1,0 +1,21 @@
+<h1>All Flowers</h1>
+
+<% @flowers.each do |flower| %>
+    <p>
+        <a href="/flowers/<%= flower.id %>">
+            <%= flower.name %>
+        </a>
+    </p>
+<% end %>
+
+<!-- /butterflies/1
+<-- /butterflies/2 show pages -> -->
+
+
+
+
+<!-- <p>
+
+    <%= "echoing ERB" %>
+    <% ""
+</p> -->

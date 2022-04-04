@@ -1,0 +1,41 @@
+<div class="input">
+
+<h2>Edit Wine Listing</h2>
+
+<form action="/wines/<%= @wine.id %>" method="post">
+    <p>
+        <label>
+            Variant:
+                <input name="variant" placeholder="Chardonnay" value="<%= @wine.variant%>" required>
+        </label>
+    <p>
+    <p>
+        <label>
+            Wine Type:
+                <input name="wineType" placeholder="Red" value="<%= @wine.wineType%>" required>
+        </label>
+    </p>
+    <p>
+        <label>
+            Ingredient:
+                <input name="ingredient" placeholder="Grapes" value="<%= @wine.ingredient%>" required>
+        </label>
+    </p>
+    <p>
+        <label>
+            Cheese Pairing:
+                <input name="cheesePairing" placeholder="Brie" value="<%= @wine.cheesePairing%>" required>
+        </label>
+    </p>
+    <p>
+        <label>
+            Image: 
+                <input name="image" placeholder="http://..." value="<%= @wine.image%>"> 
+        </label>
+    </p>
+    <p>
+        <button>Update Wine Listing</button>
+    </p>
+
+</form>
+</div>

@@ -1,0 +1,15 @@
+
+
+<h1><%= @band["name"]  %></h1>
+
+<h2>Country: <%= @band['country'] %></h2>
+
+<% unless @band["image"].nil? || @band["image"].empty? %>
+    <img class= "feature" src="<%= @band["image"] %>" alt= @band["name"]>
+<% end %>
+
+<div class="controls">
+    <a href="/bands/<%= @band["id"]%>/edit"> Edit band </a>
+    <a href="/bands/<%= @band["id"]%>/delete"> Delete band </a>
+</div>
+

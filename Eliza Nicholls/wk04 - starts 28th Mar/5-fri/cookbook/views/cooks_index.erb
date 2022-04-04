@@ -1,0 +1,12 @@
+<div class="container">
+
+<% @cooks.each do |cook| %>
+<p>
+    <a href="/cooks/<%= cook.id %>">
+    <%= cook.name %>
+    </a>
+</p>
+<% end %>
+
+
+</div>

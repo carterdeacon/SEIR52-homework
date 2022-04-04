@@ -1,0 +1,21 @@
+
+
+<div class="container">
+<h1>Edit Cookbook</h1>
+<form action="/cookbooks/<%= @cookbook["id"] %>" method="post">
+<label>
+Title:
+<input name="title" placeholder="<%= @cookbook["title"] %>">
+</label>
+<label>
+Cook:
+<input name="cook" placeholder="Ratatouille"  value=<%= @cookbook["cooks"] %> >
+</label>
+<label>
+Image:
+<input type="url" name="image" placeholder="http://...."  value=<%= @cookbook["image"] %>>
+</label>
+
+<button>Edit Cookbook</button>
+</form>
+</div>
