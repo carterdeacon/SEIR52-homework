@@ -1,0 +1,14 @@
+<h1> <%= @film.title %> (<%= @film.year %>) </h1>
+
+<h2> Director: <%= @film.director %>, <%= @film.country %> </h2>
+
+<% unless @film.image.nil? || @film.image.empty? %>
+
+    <img class="feature" src=" <%=@film.image %>" alt=" <%=@film.title %> ">
+
+<% end %>
+
+<div class="controls">
+    <a href="/films/<%= @film.id %>/edit">Edit Film</a>
+    <a href="/films/<%= @film.id %>/delete">Delete Film</a>
+</div>
