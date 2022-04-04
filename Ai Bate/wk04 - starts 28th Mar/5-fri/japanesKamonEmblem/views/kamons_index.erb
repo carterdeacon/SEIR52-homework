@@ -1,0 +1,10 @@
+<h1>All Kamon 家紋</h1>
+
+
+<% @kamons.each do |kamon|%>
+<p>
+    <a href="/kamons/<%= kamon.id %>">
+    <%= kamon.name %>
+    </a>
+</p>
+<% end %>
