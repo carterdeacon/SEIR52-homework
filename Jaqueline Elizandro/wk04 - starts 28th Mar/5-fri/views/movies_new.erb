@@ -1,0 +1,27 @@
+<h1 class="title">new movie to the gallery</h1>
+
+<form action="/movies" method="post">
+    <label>MOVIE </label>
+    <input class="name" name="name" placeholder="Ghostbusters" required>
+
+    <label>YOUR RATING </label>
+    <div class="stars">
+        <input type="radio" name="rate" value="1" />
+        <input type="radio" name="rate" value="2" />
+        <input type="radio" name="rate" value="3" />
+        <input type="radio" name="rate" value="4" />
+        <input type="radio" name="rate" value="5" />
+        <i></i>
+    </div>
+
+    <label>WATCH IN THE YEAR OF </label>
+    <input name="year_watched" placeholder="1984">
+
+    <label>COMMENTS </label>
+    <input name="comments" id="comments" placeholder="Very funny...">
+
+
+    <div class="button">
+        <button>ADD NEW MOVIE</button>
+    </div>
+</form>
