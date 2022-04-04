@@ -1,0 +1,19 @@
+<div class="">
+     <h2>Name: <%= @director.name %></h2>
+     <h2>Movies' list</h2>
+     <% @movies.each do |movie|%>
+     <p>
+        <a href="/movies/<%= movie.id %>">
+        <%= movie.name %>
+        </a>
+     </p>
+     <% end %>
+
+     <a href="/directors/<%= @director.id %>/edit">
+     Edit Director &  Add Movie
+     </a>
+     <a href="/directors/<%= @director.id %>/delete">
+     Delete Director
+     </a>
+     
+      

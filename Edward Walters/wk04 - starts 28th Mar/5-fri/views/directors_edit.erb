@@ -1,0 +1,29 @@
+
+<h1>Edit <%= @director.first_name %> <%= @director.last_name %></h1>
+<form action="/directors/<%= @director.id %>" method='post' id="form_id">
+    <label>
+        First Name:
+        <input name="first_name" value="<%= @director.first_name %>" required>
+    </label>
+
+     <label>
+        Last Name:
+        <input name="last_name" value="<%= @director.last_name %>" required>
+    </label>
+
+     <label>
+        Birth Year:
+        <input name="birth_year" type="number" placeholder="1962" value="<%= @director.birth_year %>" min="1900" max="2020">
+    </label>
+
+     <label class="bio">
+        <span class="bio">Bio:</span>
+       <textarea name="bio" form="form_id" placeholder="David Fincher was born in 1962 in Denver, Colorado, and was raised in Marin County, California. When he was 18 years old he went to work for John Korty at Korty Films in Mill Valley. He subsequently worked at ILM (Industrial Light and Magic) from 1981-1983. Fincher left ILM to direct TV commercials and music videos after signing with N. Lee Lacy in Hollywood. He went on to found Propaganda in 1987 with fellow directors Dominic Sena, Greg Gold and Nigel Dick. Fincher has directed TV commercials for clients that include Nike, Coca-Cola, Budweiser, Heineken, Pepsi, Levis, Converse, AT&T and Chanel." rows="10"><%= @director.bio %></textarea>
+    </label>
+
+     <label>
+        Photo URL:
+        <input name="photo" type="url" placeholder="https://www.photohosting.com/some_image.jpg" size="40" value="<%= @director.photo %>">
+    </label>
+    <button>Update Changes</button>
+</form>
