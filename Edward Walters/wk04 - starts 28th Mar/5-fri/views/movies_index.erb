@@ -1,0 +1,11 @@
+<h1 class="heading-page">All Movies</h1>
+
+<ul>
+    <% @movies.each do | movie | %>
+    <li>
+        <%= "<a href='/movies/#{ movie.id }'<p>#{ movie.title }</a>" %>
+    </li>
+    <% end %>
+</ul>
+
+<p class="message-bottom">Movies can be added from the Director page</p>

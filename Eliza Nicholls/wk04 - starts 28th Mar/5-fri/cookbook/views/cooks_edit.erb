@@ -1,0 +1,17 @@
+
+
+<div class="container">
+<h1>Edit Cooks</h1>
+<form action="/cooks/<%= @cook["id"] %>" method="post">
+<label>
+Name:
+<input name="cook" placeholder="<%= @cook.name %>">
+</label>
+<label>
+Image:
+<input type="url" name="image" placeholder="http://...."  value=<%= @cook["image"] %>>
+</label>
+
+<button>Edit Cook</button>
+</form>
+</div>

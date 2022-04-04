@@ -1,0 +1,15 @@
+<h1>Please update the details</h1>
+<form action="/shops/<%= @shop["id"] %>" method="post">
+    <label>
+        New Name:
+        <input name="name" placeholder="Camera God" value="<%= @shop["name"] %>">
+    </label>
+
+    <label>
+        New Location:
+        <input name="location" placeholder="Bristbane..." value="<%= @shop["location"] %>">
+    </label>
+
+    <button>Change the details</button>
+ 
+</form>

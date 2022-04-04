@@ -1,0 +1,12 @@
+
+
+<h1>Wine List</h1>
+
+    <% @wines.each do |wine| %>
+        <p>
+            <a class="list" href="/wines/<%= wine.id %>">
+            <%= wine.variant %></a>
+        </p>
+    <% end %>
+
+

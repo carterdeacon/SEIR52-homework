@@ -1,0 +1,14 @@
+<h2><%= @movies.name %></h2>
+
+<% unless @movies.image.nil? || @movies.image.empty? %>
+<img src="<%= @movies.image %>" alt="<%= @movies.name %>">
+<% end %>
+
+
+
+<a href="/movies/<%= @movies.id %>/edit">
+Edit Movie
+</a>
+<a href="/movies/<%= @movies.id %>/delete">
+Delete Movie
+</a>

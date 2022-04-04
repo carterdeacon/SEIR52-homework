@@ -1,0 +1,17 @@
+<h2>Edit director</h2>
+
+<form action="/directors/<%= @director.id %>" method="post">
+     <label for="">
+          Director Name:
+         <input name ="name" placeholder="Enter the name" required value="<%= @director.name%>">
+     </label>
+     <label for="">
+          Add Movie:
+         <input name ="movie_name" placeholder="Skipper">
+     <label for="">
+          Add Movie Poster:
+         <input type ="url" name="image" placeholder="http://...">
+     </label>
+</br>
+     <button >Save changes</button>
+</form>
