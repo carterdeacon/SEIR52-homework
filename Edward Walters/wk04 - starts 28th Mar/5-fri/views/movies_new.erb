@@ -1,0 +1,40 @@
+<h1>Add New Movie</h1>
+<form action="/movies" method='post' id="form_id">
+    <label>
+       Title:
+        <input name="title" placeholder="Enter Movie Title" required>
+    </label>
+
+     <label>
+        Director: <%= @director.first_name + " " + @director.last_name %>
+    </label>
+
+   <%# This is to include the director id as part of the form, but it is invisible so the user can't see or change it! %>
+    <label>
+        <input class="invisible" name="director_id" value="<%= @director.id %>">
+    </label>
+
+     <label>
+        Release Year:
+        <input name="release_year" type="number" placeholder="1980" min="1900" max="2050">
+    </label>
+
+    <label>
+       Genre:
+        <input name="genre" placeholder="e.g. Comedy">
+    </label>
+    
+
+     <label class="bio">
+        <span class="bio">Synopsis:</span>
+       <textarea name="synopsis" form="form_id" placeholder="Enter a brief synopsis of the movie plot here...." rows="10"></textarea>
+    </label>
+
+     <label>
+        Movie Poster Image URL:
+        <input name="photo" type="url" placeholder="https://www.myimage.com/movieposter.jpg" size="40">
+    </label>
+    <button>Submit</button>
+
+
+</form>

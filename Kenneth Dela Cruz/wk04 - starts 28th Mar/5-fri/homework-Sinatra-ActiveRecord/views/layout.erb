@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <img class="bg" src="/img/winecheese.png">
+
+    <div class="container">
+
+        <nav>
+            <a href="/">Home</a>
+            |
+            <a href="/wines">Wine List</a>
+            <a href="/wines/add">Add Wine</a> 
+            |
+            <a href="/cheeses">Cheese List</a>
+            <a href="/cheeses/add">Add Cheese</a>
+        </nav>
+        
+        
+        <%= yield %>
+
+    </div>
+    
+</body>
+</html>

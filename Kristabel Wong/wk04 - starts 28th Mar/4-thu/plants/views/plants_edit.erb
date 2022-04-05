@@ -1,0 +1,43 @@
+ <h1>Edit Plants</h1>
+
+ <form action="/plants/<%= @plant["id"] %>" method="post">
+ 
+    <ul>
+    <li>
+        <label>
+            Name:
+            <input name="name" placeholder="Mother of Pearls" required value="<%= @plant["name"] %>">
+        </label>
+    </li>
+    <li>
+        <label>
+            Scientific Name:
+            <input name="scientific" placeholder="Senecio Rowleyanus" value="<%= @plant["scientific"] %>">
+        </label>
+    </li>
+    <li>
+        <label>
+            Family:
+            <input name="family" placeholder="Asteraceae" value="<%= @plant["family"] %>">
+        </label>
+    </li>
+    <li>
+        <label>
+            Season:
+            <input name="season" placeholder="Summer" value="<%= @plant["season"] %>">
+        </label>
+    </li>
+    <li>
+        <label>
+            Image:
+            <input type="url" name="image" placeholder="http://..." value="<%= @plant["image"] %>">
+        </label>
+    </li>
+    </ul>
+
+    <button>Edit Plant</button>
+ 
+ 
+ 
+ 
+ </form>

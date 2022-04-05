@@ -1,0 +1,24 @@
+<h2>Ooh, you like the look of this bird, huh? Well let me tell you a bit more about it...</h2>
+
+<!-- display common name -->
+<h3>Common Name:</h3>
+<p><%= @bird['comName'] %></p>
+<!-- display scientific name -->
+<h3>Scientific Name:</h3> 
+<p><%= @bird['sciName'] %></p>
+<h4>Species Code:</h4>
+<!-- display species code -->
+<p><%= @bird['speciesCode'] %></p>
+<br>
+<!-- list sightings -->
+<h3>Sightings:</h3> 
+<hr>
+<% @bird.sightings.each do |sighting| %>
+    <% sighting.attributes.keys.slice(1..-2).each do |key| %>
+        <h4> <%= key %>: </h4>
+        <p> <%= sighting[key] %> </p>
+    <% end %>
+    <hr>
+<% end %>
+
+<a href=<%= "/birds/#{ params[:id] }/newsighting" %>>New Sighting</a>

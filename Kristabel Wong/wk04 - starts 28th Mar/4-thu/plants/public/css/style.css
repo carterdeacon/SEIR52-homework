@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+
+* {
+    font-family: 'Amatic SC', cursive;
+}
+
+body {
+    background-image: url(./monstera.jpg); /*this should sit in the public folder */
+    background-size: cover;
+    padding: 40px;
+    background-position: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+.container {
+    min-height: 80vh;
+    font-size: 150%;
+    background-color: rgba(255, 255, 255, 0.89);
+    padding: 1em;
+
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+nav {
+    text-align: right;
+    padding-bottom: 10px;
+    font-size: 180%;
+
+}
+
+.feature {
+    max-width: 100%;  /* will resize */
+}
+
+
+li {
+    list-style: none;
+}
+
+ul {
+    line-height: 2em;
+    padding-left: 25px;
+}
+
+form {
+    width: 400px;
+}
+
+
+a:visited, a:link {
+    color: black;
+
+}
+
+a {
+    margin-right: 20px;
+}
+
+.list {
+    text-decoration: none;
+}

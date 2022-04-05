@@ -1,0 +1,38 @@
+body {
+    background-image: url("https://i.imgur.com/IghoEyU.png");
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.images-container {
+    height: auto;
+    width: 600px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.dog-container {
+    background-color: azure;
+    padding: 1vh;
+}
+
+.main-title {
+    font-size: 4vh;
+    color: white;
+    background-color: rgba(101, 97, 114, 0.60);
+    padding: 1vh 0 0 0;
+    margin: 1vh;
+}
+
+.main-links {
+    font-size: 3vh;
+    background-color: rgba(0, 0, 0, 0.70);
+    color: white;
+
+}

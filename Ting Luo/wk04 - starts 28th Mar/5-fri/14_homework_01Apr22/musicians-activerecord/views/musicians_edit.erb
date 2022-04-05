@@ -1,0 +1,18 @@
+<h1>Edit Musician</h1>
+
+<form action="/musicians/<%=@musician.id%>" method="post">
+    <label>Name: 
+        <input name="name" placeholder ="Wolfgang Amadeus Mozart" value="<%= @musician.name%>"required>
+    </label>
+    <label>Born Year: 
+        <input name="born" placeholder ="1756" value="<%= @musician["born"]%>" required>
+    </label>
+    <label>Deceased Year: 
+        <input name="deceased" placeholder = "1791" value ="<%= @musician["deceased"]%>"required>
+    </label>
+    <label>Image: 
+        <input type="url" name="image" placeholder ="http://..." value ="<%= @musician["image"]%>">
+    </label>
+
+    <button>Update Musician</button>
+</form>
