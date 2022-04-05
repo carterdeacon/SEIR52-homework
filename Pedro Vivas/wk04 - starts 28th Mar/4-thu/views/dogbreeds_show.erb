@@ -1,0 +1,25 @@
+<div class="main-title">
+    <h1>
+        <%= @dog["breed_name"] %>
+    </h1>
+    <h2>
+        size:
+        <%= @dog["breed_size"] %>
+    </h2>
+    <h2>
+        Country of origin:
+        <%= @dog["breed_origin"] %>
+    </h2>
+</div>
+
+<div>
+    <% unless @dog["breed_image"].nil? || @dog["breed_image"].empty? %>
+    <img class="dogpic" src="<%= @dog["breed_image"] %>" alt="<%= @dog["breed_name"] %>">
+    <% end %>
+</div>
+
+<div>
+    <a class="main-links" href="/dogs/<%= @dog['id']%>/edit">Edit Dog Breed</a>
+    <a class="main-links" href="/dogs/<%= @dog['id']%>/delete">Delete Breed</a>
+</div>
+

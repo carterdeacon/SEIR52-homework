@@ -1,0 +1,32 @@
+<h1>Edit Director</h1>
+
+<form action="/directors/<%= @director.id %>" method="post">
+
+    <ul>
+        <li>
+            <label>
+                <span> Name:</span> 
+                <input name="name" placeholder="Quentin Tarantino" required value="<%= @director.name %>">
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <span>Country:</span>
+                <input name="country" placeholder="United States" value="<%= @director.country %>" >
+            </label>
+        
+        </li>
+
+        <li>
+            <label>
+                <span>Image:</span>
+                <input type="url" name="image" placeholder="http://..." value="<%= @director.image %>" >
+            </label>
+        </li>
+
+    </ul>
+
+    <button>Update Director</button>
+
+</form>

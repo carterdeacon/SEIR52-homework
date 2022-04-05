@@ -1,0 +1,20 @@
+<form action="/impulses" method="post">
+    <%# catalog_number,artist,album_name,cover_art %>
+    <label>
+        Number:
+        <input type="number" name="catalog_number" placeholder="impulse recs cat no." required>
+    </label>
+    <label>
+        Artist:
+        <input name="artist" placeholder="John Coltrane" required>
+    </label>
+    <label>
+        Album:
+        <input name="album_name" placeholder="Ballads" required>
+        </label>
+    <label>
+        Cover Art:
+        <input name="cover_art" type="url" placeholder="http://...">
+    </label>
+    <button>Add</button>
+</form>

@@ -1,0 +1,46 @@
+<h1>Edit Adventure</h1>
+
+<form action="/adventures/<%= @adventure["id"] %>" method="post">
+    <label>
+        Title:
+        <input name="title" placeholder="Temple of the Frog" required value="<%=@adventure["title"] %>">
+    </label>
+
+    <label>
+        System:
+        <input name="system" placeholder="D&D" required value="<%=@adventure["system"] %>">
+    </label>
+
+    <label>
+        Edition:
+        <input name="edition" placeholder="1st" required value="<%=@adventure["edition"] %>">
+    </label>
+
+    <label>
+        Levels:
+        <input name="levels" placeholder="10-14" value="<%=@adventure["levels"] %>">
+    </label>
+
+    <label>
+        Setting:
+        <input name="setting" placeholder="Blackmoor" required value="<%=@adventure["setting"] %>">
+    </label>
+
+    <label>
+        Publisher:
+        <input name="publisher" placeholder="TSR" required value="<%=@adventure["publisher"] %>">
+    </label>
+
+    <label>
+        Year:
+        <input name="year" placeholder="1986" required value="<%=@adventure["year"] %>">
+    </label>
+
+    <label>
+        Cover Image:
+        <input type="url" name="cover" placeholder="http://..." value="<%= @adventure["cover"] %>">
+    </label>
+
+    <button>Update adventure</button>
+
+</form>

@@ -1,0 +1,45 @@
+<h1>Edit Film</h1>
+
+<form action="/films/<%= @film.id %>" method="post">
+    <ul>
+        <li>
+            <label>
+            <span> Name:</span> 
+            <input name="title" placeholder="Pulp Fiction" required value="<%= @film.title %>">
+            </label>
+        </li>
+    
+        <li>
+            <label>
+                <span>Director:</span>
+                <input name="director" placeholder="Quentin Tarantino" required value="<%= @film.director %>">
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <span>Country:</span>
+                <input name="country" placeholder="United States" value="<%= @film.country %>" >
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <span>Year:</span>
+                <input name="year" placeholder="1994" value="<%= @film.year %>" >
+            </label>
+        </li>
+
+        <li>
+            <label>
+                <span>Image:</span>
+                <input type="url" name="image" placeholder="http://..." value="<%= @film.image %>" >
+            </label>
+        </li>
+
+    </ul>
+
+
+    <button>Update Film</button>
+
+</form>

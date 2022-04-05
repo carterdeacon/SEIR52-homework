@@ -1,0 +1,23 @@
+<h1 class="heading-page"><%= @director.first_name %> <%= @director.last_name %></h1>
+<ul>
+    <li>Born: <%= @director.birth_year %></li>
+
+    <li><%= @director.bio %></li>
+
+    <img src="<%= @director.photo %>" alt="<%= @director.first_name + ' ' + @director.last_name %>">
+
+</ul>
+
+<a href=<%= "/directors/#{ @director.id }/edit"%>><button>Edit</button></a>
+<a href=<%= "/directors/#{ @director.id }/delete"%>><button>Delete</button></a>
+
+<br>
+
+<h2 class="heading-movies">Movies:</h2>
+
+<% @movies.each do | movie |   %>
+    <p><a class="movie" href=<%= "/movies/#{ movie.id }"   %>><%= movie.title %></a></p>
+<% end %>
+
+<br>
+<a href="/directors/<%= @director.id %>/newmovie"><button>Add Movie</button></a>
