@@ -1,0 +1,36 @@
+<form action="/cars/<%= @car['id'] %>" method="post">
+    
+    <label>
+        Make:
+        <input name="make" value="<%=@car['make']%>">
+    </label>
+    <br>
+
+    <label>
+        Model:
+        <input name="model" value="<%=@car['model']%>">
+    </label>
+    <br>
+    <label>
+        Body type:
+        <input name="body" value="<%=@car['body']%>">
+    </label>
+    <br>
+    <label>
+        Electric:
+        <input name="electric" type="checkbox" value="<%=@car['electric']%>">
+    </label>
+    <br>
+    <label>
+        Price $:
+        <input name="price" type="number" value="<%=@car['price']%>">
+    </label>
+    <br>
+    <label>
+        Photo URL:
+        <input name="photo" type="URL" value="<%=@car['photo']%>">
+    </label>
+    <br>
+    <button>Save Changes</button>
+
+</form>

@@ -1,0 +1,10 @@
+<h1><%= @flower.name %></h1>
+
+<% unless @flower.image.nil? || @flower.image.empty? %>
+    <img class="feature" src="<%= @flower.image %>" alt="<%= @flower.name %>">
+<% end %>
+
+<div class="controls">
+    <a href="/flowers/<%= @flower.id %>/edit">Edit flower</a>
+    <a href="/flowers/<%= @flower.id %>/delete">Delete flower</a>
+</div>

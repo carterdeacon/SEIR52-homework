@@ -1,0 +1,32 @@
+<h1>Edit band</h1>
+
+<form action="/bands/<%= @band["id"] %>" method="post">
+    <label>
+        Name:
+        <input name="name" placeholder="Yeah Yeah Yeahs" required value="<%= @band["name"] %>">    
+    </label>
+
+     <label>
+        Country:
+        <input name="country" placeholder="USA" value="<%= @band["name"] %>">    
+    </label>
+
+    <label>
+        Image:
+        <input type="URL" name="image" placeholder="http://..." value="<%= @band["name"] %>">
+        
+    </label>
+
+    <label>
+        Venue:
+        <select name="venue_id">
+            <option></option>
+            <% Venues.all.each do |venue| %>
+            <option value="<%= venue.id %>" <%= "selected" if band.id == @band.venue_id %>><%= venue.name %> </option>
+            <% end %>
+        </select>
+
+    </label>
+
+    <button>Update band</button>
+</form>

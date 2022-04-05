@@ -1,0 +1,12 @@
+<h1><%= @music.name%></h1>
+<% %>
+<h3>composed by
+<a href="/musicians/<%=@musician.id%>"><%= @musician.name%></a>
+</h3>
+<% unless @music.description.nil? || @music.description.empty? %>
+<p><%= @music.description%></p>
+<% end %>
+<div class="controls">
+    <a href="/musics/<%= @music.id%>/edit">Edit Music</a>
+    <a href="/musics/<%= @music.id%>/delete">Delete Music</a>
+</div>

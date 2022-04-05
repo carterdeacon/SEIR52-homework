@@ -1,0 +1,9 @@
+<h1>Adventures Index</h1>
+
+<% @adventures.each do |adventure| %>
+    <p>
+        <a href="/adventures/<%= adventure["id"] %>">
+            <%= adventure["title"] %>
+        </a>
+    </p>
+<% end %>

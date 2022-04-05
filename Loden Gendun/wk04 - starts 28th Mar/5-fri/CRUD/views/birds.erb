@@ -1,0 +1,7 @@
+<h2>Holy smokes, thats a lot of birds!</h2>
+
+<% @birds.each do |bird|%>
+<a href="/birds/<%= bird['id'] %>"><%= bird['comName'] %>
+</a>
+<hr>
+<% end %>

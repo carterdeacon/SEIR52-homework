@@ -1,0 +1,14 @@
+<h1 class="main-title">
+    Dog Breeds Index List
+</div>
+
+    <% @dogs.each do |dog| %>
+    <div class='dog-container'>
+        <br>
+        <a href="/dogs/<%= dog["id"] %>">
+            <%= dog["breed_name"] %>
+        </a>
+    </div>
+
+    <%  end %>
+</div>

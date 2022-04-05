@@ -1,0 +1,9 @@
+<h1>Spaceship Index</h1>
+
+<% @spaceships.each do |spaceship| %>
+    <p>
+        <a href="/spaceships/<%= spaceship["id"] %>">
+            <%= spaceship["name"] %>
+        </a>
+    </p>
+<% end %>

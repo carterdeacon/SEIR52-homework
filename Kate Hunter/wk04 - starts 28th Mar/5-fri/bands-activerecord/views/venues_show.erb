@@ -1,0 +1,27 @@
+
+
+<h1><%= @venue.name  %></h1>
+
+
+<% unless @venue.image.nil? || @venue.image.empty? %>
+    <img class= "feature" src="<%= @venue.image %>" alt= @venue.name>
+<% end %>
+
+<% unless @venue.bands.empty? %>
+    <h3>Associated bands</h3>
+    <ul>
+        <% @venue.bands.each do |band| %>
+            <li>
+                <a href="/butterflies/<%= butterfly.id %>">
+                    <% band.name %>
+                 </a>    
+            </li>
+        <% end %>
+    </ul>
+<% end %>
+
+<div class="controls">
+    <a href="/venues/<%= @venue.id %>/edit"> Edit venue </a>
+    <a href="/venues/<%= @venue.id %>/delete"> Delete venue </a>
+</div>
+

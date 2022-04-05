@@ -1,0 +1,20 @@
+<h1 class="name-title">
+    <%= @movie.title %>
+</h1>
+
+<h2 class="other-info">
+    Release date: <%= @movie.release %>
+</h2>
+
+<p class="synopsis">
+    <%= @movie.synopsis %>
+</p>
+
+<% unless @movie.pic.nil? || @movie.pic.empty? %>
+    <img src="<%= @movie.pic %>" alt="<%= @movie.title %>">
+<% end %>
+
+<div class="panel">
+    <a href="/movies/<%= @movie.id %>/edit">Edit Movie</a>
+    <a href="/movies/<%= @movie.id %>/delete">Remove Movie</a>
+</div>

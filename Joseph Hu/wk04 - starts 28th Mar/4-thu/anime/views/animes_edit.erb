@@ -1,0 +1,24 @@
+<h1>Change Anime</h1>
+
+<form action= "/animes/<%= @anime["id"]%>" method="post">
+    <label>
+        Name:
+        <input name="name" placeholder="Domestic Girlfriend" required value="<%= @anime["name"]%>">
+    </label>
+
+    <label>
+        Genre:
+        <input name="genre" placeholder="Slice of Life" value="<%= @anime["genre"] %>">
+    </label>
+
+    <label>
+        Rating out of 10:
+        <input type= "number" min="0" max="10" name="rating" placeholder="7" value="<%= @anime["rating"]%>">
+    </label>
+
+    <label>
+        Art:
+        <input type= "url" name="image" placeholder="http://..." value="<%= @anime["image"]%>">
+    </label>
+    <button>Update Anime</button>
+</form>

@@ -1,0 +1,10 @@
+<h1>Bluey Family Characters</h1>
+
+<% @bluey_family.each do |character| %>
+<p>
+    <a class='char' href="/bluey/<%= character["id"]%>"><%= character["name"]%></a>
+</p>
+<% end %>
+
+
+

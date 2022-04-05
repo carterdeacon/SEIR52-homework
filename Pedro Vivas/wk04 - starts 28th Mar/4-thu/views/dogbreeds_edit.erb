@@ -1,0 +1,27 @@
+<h1 class="main-title">
+    Edit dog breed
+</h1>
+<div  class="dog-container">
+    <form action="/dogs/<%= @dog['id'] %>" method="post">
+        <label>
+            Breed name:
+            <input type="text" name="name" placeholder="Breed" value="<%= @dog['breed_name'] %>" required>
+        </label>
+    
+        <label>
+            Dog size:
+            <input type="text" name="size" placeholder="small/medium/large" value="<%= @dog['breed_size'] %>">
+        </label>
+    
+        <label for="">
+            Country of origin:
+            <input type="text" name="origin" placeholder="country" value="<%= @dog['breed_origin'] %>">
+        </label>
+    
+        <label for="">
+            Image:
+            <input type="url" name="image" placeholder="http//..." value="<%= @dog['breed_image'] %>">
+        </label>
+        <button>Update breed</button>
+    </form>
+</div>

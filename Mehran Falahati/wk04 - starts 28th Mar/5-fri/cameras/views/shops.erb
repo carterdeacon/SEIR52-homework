@@ -1,0 +1,13 @@
+<h1 Class="h1">ALL SHOPS</h1>
+
+<% @shop.each do |shop| %>
+    <p>
+        <a href="/shops/<%= shop["id"] %>">
+        <%= shop["name"] %>
+        </a>
+    </p>
+<% end %>
+
+
+<h2 Class="h1">ADD A NEW SHOP</h2>
+<a href="/shops/new">Click here</a>

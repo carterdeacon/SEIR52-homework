@@ -1,0 +1,11 @@
+<h1>Patient Profile</h1>
+
+<h2><%=@patient.name%></h2>
+<h2><%=@patient.family%></h2>
+<p><%= @patient.age%> years old</p>
+<p>Patient symptoms: <%= @patient.symptoms %></p>
+
+<img src="<%=@patient.image%>" alt="<%=@patient.name%>"><br>
+
+<a href="/patients/<%=@patient.id%>/edit">Edit Information</a>
+<a href="/patients/<%=@patient.id%>/delete">Delete</a>

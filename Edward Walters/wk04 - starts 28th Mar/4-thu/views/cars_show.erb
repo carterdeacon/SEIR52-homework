@@ -1,0 +1,12 @@
+<h3><%= @car['make'] + " " + @car['model']%></h3>
+
+<p>Body type: <%= @car['body']  %></p>
+<p>Electric: <%= @car['electric'] === 1 ? 'Yes' : 'No' %></p>
+<p>MRP: $<%= @car['price'] %></p>
+
+<img src="<%= @car['photo'] %>" alt="<%= @car['make'] + " " + @car['model']%>">
+
+<a href="/cars/<%= @car['id'] %>/edit">Edit Car</a>
+<a href="/cars/<%= @car['id'] %>/delete">Delete Car</a>
+
+
