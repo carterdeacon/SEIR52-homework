@@ -1,0 +1,27 @@
+<h1><%= @musician.name%></h1>
+<h3><%= @musician.born%> - <%= @musician.deceased%></h3>
+
+<% unless @musician.image.nil? || @musician.image.empty? %>
+<img class="feature" src="<%= @musician.image%>" alt="<%= @musician.name%>">
+<% end %>
+
+<div class="controls">
+    <a href="/musicians/<%= @musician.id%>/edit">Edit Musician</a>
+    <a href="/musicians/<%= @musician.id%>/delete">Delete Musician</a> 
+</div>
+
+<h2>Music List: </h2>
+<% @musics.each do |music| %>
+    <p>
+        <a class = "index" href="/musics/<%= music.id %>">
+        <%= music.name %>
+        </a>
+    </p>
+<% end %>
+<div class="music_controls">
+    <a href="/musics/new?musician_id=<%=@musician.id%>">New Music</a> 
+</div>
+
+
+
+

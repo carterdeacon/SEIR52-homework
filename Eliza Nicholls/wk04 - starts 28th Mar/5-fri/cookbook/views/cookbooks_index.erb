@@ -1,0 +1,12 @@
+<div class="container">
+
+<% @cookbooks.each do |cookbook| %>
+<p>
+    <a href="/cookbooks/<%= cookbook["id"] %>">
+    <%= cookbook["title"] %>
+    </a>
+</p>
+<% end %>
+
+
+</div>

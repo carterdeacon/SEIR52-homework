@@ -1,0 +1,21 @@
+<h1>Edit Actor </h1>
+
+<form action="/actors/<%= @actor["id"]%>" method="post">
+    <label>
+        Name:
+        <input name="name" placeholder="Johnny Depp"  required value="<%= @actor["name"]%>">
+
+    </label>
+
+    <label>
+        Nationality:
+        <input name="nationality" placeholder="American" value="<%= @actor["nationality"]%>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" placeholder="http://..." value="<%= @actor["image"]%>">
+    </label>
+
+    <button>Update actor</button>
+</form>

@@ -1,0 +1,11 @@
+<h1><%= @movie["name"] %></h1>
+
+
+<% unless @movie["image"].nil?||@movie["image"].empty?%>
+    <img class="feature" src="<%= @movie["image"] %>" alt="<%= @movie["name"] %>">
+<% end %>
+
+<div class="controls">
+    <a href="/movies/<%= @movie["id"]%>/edit">Edit movie</a>
+    <a href="/movies/<%= @movie["id"]%>/delete">Delete Movies</a>
+</div>

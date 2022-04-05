@@ -1,0 +1,19 @@
+<h1>New Music</h1>
+<h3>New Music from <%=@musician.name%></h3>
+<form action="/musics/create" method="post">
+    <label>Title: </label>
+    <input name="name" placeholder = "Nocturne No 20" required>
+
+    <label>Publish Year: </label>
+    <input name= "publish" placeholder = "1870" >
+
+    <label>Keys: </label>
+    <input name= "keys" placeholder = "C sharp minor">
+
+    <label>Description: </label>
+    <input name= "description" placeholder = "xxx...">
+
+    <input type="hidden" name="musician_id" value = "<%=@musician.id%>"> 
+
+    <button>Create Music</button>
+</form>

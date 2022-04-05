@@ -1,0 +1,38 @@
+<div class="content" style='background-color:rgba(0, 0, 0, 0.79); height:100%; color:aliceblue'>
+    <div class="container">
+    <h2 style="text-align:center">New Song</h2>
+    <form action="/songs" method='post'>
+       <div class="mb-3">
+            <label class="form-label">
+                <input name="artist_id" class="form-control" placeholder='artist name'>
+            </label>
+        </div> 
+        <div class="mb-3">
+            <label class="form-label">
+                <input name="album" class="form-control" placeholder='album'>
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">
+                <input name="name" class="form-control" placeholder='song name' required>
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">
+                <input name="date" class="form-control" placeholder='year of release'>
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">
+                <input name="cover" class="form-control" placeholder='image url'>
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">
+                <input name="link" class="form-control" placeholder='video url'>
+            </label>
+        </div>
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+</div>
+</div>
