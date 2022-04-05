@@ -1,0 +1,7 @@
+<h1>All Castles</h1>
+
+<% @castles.each do |castle|%>
+<p>
+<%= link_to castle.name, castle_path(castle.id) %>
+</p>
+<% end %>
