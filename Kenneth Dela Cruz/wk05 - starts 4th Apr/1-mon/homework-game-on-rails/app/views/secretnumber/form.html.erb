@@ -1,0 +1,8 @@
+<h1>Secret Number</h1>
+
+<h3>Guess the secret number</h3>
+
+
+<% @buttons.each do |button|%>
+    <a href="/secretnumber/result/<%= button %>"><%=button %></a>
+<% end %>

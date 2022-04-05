@@ -1,0 +1,20 @@
+<h1><%= @studio["name"]%></h1>
+
+<h2>Years Active: <%= @studio["years"] %></h2>
+<h2>Location: <%= @studio["location"]%><h2>
+<h3>Works:<% @animes.each do |anime|%> <%# iterates through all the anime objects where the studio_id is the same as the :id of the studio from the index %>
+    <p><%# displays the value of the key "title" from the anime object %>
+        <a href="/animes/<%= anime["id"] %>"> <%# makes each title a link back to the SHOW anime with the anime object primary key %>
+            <%= anime["title"] %>
+        </a>
+    </p>
+<% end %>   
+</h2>
+<% unless @studio["logo"].nil? || @studio["logo"].empty?%>
+    <img class="feature" src="<%= @studio["logo"] %>" alt="<%=@studio["name"] %>">
+<%end%>
+
+<div class="controls">
+    <a class="active" href="/studios/<%= @studio["id"]%>/edit">Edit studio</a>
+    <a class= "active" href="/studios/<%= @studio["id"]%>/delete">Delete studio</a>
+</div>

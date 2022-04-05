@@ -1,0 +1,11 @@
+<h1><%= @kamon.name %></h1>
+<h2>Meaning:<%= @kamon.meaning %></h2>
+<% unless @kamon.image.nil? || @kamon.image.empty? %>
+<img class ='feature' src="<%= @kamon.image %>" alt="<%= @kamon.name %>">
+<% end %>
+
+
+<div class="controls">
+    <a href="/kamons/<%= @kamon.id %>/edit">Edit Kamon</a>
+    <a href="/kamons/<%= @kamon.id %>/delete">Delete Kamon</a>
+</div>

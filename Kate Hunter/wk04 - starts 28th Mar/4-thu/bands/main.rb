@@ -56,7 +56,7 @@ end
 
 post '/bands/:id' do 
     # Update the butterfly
-    "UPDATE bands SET name='#{ params[:name]}', country='#{ params[:country] }', image='#{ params[:image] }' WHERE id=#{ params[:id] }"
+    query_db "UPDATE bands SET name='#{ params[:name]}', country='#{ params[:country] }', image='#{ params[:image] }' WHERE id=#{ params[:id] }"
     redirect to("/bands/#{ params[:id] }")
 end
     # Redirect to the added band

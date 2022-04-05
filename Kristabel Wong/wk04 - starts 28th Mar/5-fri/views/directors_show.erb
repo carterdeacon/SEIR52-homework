@@ -1,0 +1,14 @@
+<h1> <%= @director.name %> </h1>
+
+<h2> Country: <%= @director.country %> </h2>
+
+<% unless @director.image.nil? || @director.image.empty? %>
+
+    <img class="feature" src=" <%=@director.image %>" alt=" <%=@director.name %> ">
+
+<% end %>
+
+<div class="controls">
+    <a href="/directors/<%= @director.id %>/edit">Edit Director</a>
+    <a href="/directors/<%= @director.id %>/delete">Delete Director</a>
+</div>

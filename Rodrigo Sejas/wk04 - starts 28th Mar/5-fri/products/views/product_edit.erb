@@ -1,0 +1,36 @@
+<h1>Edit Product Details</h1>
+
+<form action="/products/<%= @product["id"] %>" method="post">
+    <label>
+        Product name:
+        <input name="name" placeholder="Expert 3D" required value="<%= @product["name"] %>">
+    </label>
+
+    <label>
+        Brand:
+        <input name="brand" placeholder="Singing Rock" value="<%= @product["brand"] %>">
+    </label>
+
+    <label>
+        Type:
+        <input name="type" placeholder="Helmet" value="<%= @product["type"] %>">
+    </label>
+    
+    <label>
+        SKU:
+        <input name="sku" placeholder="RBX01234" value="<%= @product["sku"] %>">
+    </label>    
+
+    <label>
+        Image:
+        <input type="url" name="image" placeholder="http://..." value="<%= @product["image"] %>">
+    </label>
+
+    <label>
+        Manual:
+        <input type="url" name="manual" placeholder="http://..." value="<%= @product["manual"] %>">
+    </label>
+
+    <button>Update product</button>
+
+</form>

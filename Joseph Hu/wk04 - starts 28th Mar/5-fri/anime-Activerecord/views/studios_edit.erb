@@ -1,0 +1,29 @@
+<h1>Change studio</h1>
+
+<form action= "/studios/<%= @studio["id"]%>" method="post">
+    <label>
+        Name:
+        <input name="name" placeholder="Kyoto Animation" required value="<%= @studio["name"]%>">
+    </label>
+
+    <label>
+        Years Active:
+        <input name="years" placeholder="1981-Present" value="<%= @studio["years"] %>">
+    </label>
+
+    <label>
+        Location
+        <input name="studioID" placeholder="Kyoto Japan" value="<%= @studio["loacation"]%>">
+    </label>
+
+    <label>
+        Notable Works
+        <input name="works" placeholder="A Silent Voice" value="<%= @studio["works"]%>">
+    </label>
+
+    <label>
+        Logo:
+        <input type= "url" name="logo" placeholder="http://..." value="<%= @studio["logo"]%>">
+    </label>
+    <button>Update studio</button>
+</form>
