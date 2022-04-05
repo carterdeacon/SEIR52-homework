@@ -1,0 +1,15 @@
+<h1>Magic 8 Ball</h1>
+
+<form action="/magic8ball/result">
+    <label>
+        Enter your question:
+        <input name="question" value="<%= @question %>" required>
+    </label>
+
+    <button>Find answer</button>
+</form>
+
+<h3>The ball says:</h3>
+<p>
+    <%= @result %>
+</p>
