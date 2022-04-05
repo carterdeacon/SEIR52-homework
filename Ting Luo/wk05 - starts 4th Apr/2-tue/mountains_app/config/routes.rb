@@ -5,5 +5,8 @@ Rails.application.routes.draw do
   post "/mountains" => "mountains#create"
   get "/mountains/:id" => "mountains#show", :as=> "mountain"
 
-  get "mountains/:id/edit" => "mountain#edit" :as=>"edit_mountain"
+  get "/mountains/:id/edit" => "mountains#edit", :as=>"edit_mountain"
+  post "/mountains/:id" => "mountains#update"
+
+  get "mountains/:id/delete" => "mountains#delete",:as=> "delete_mountain"
 end

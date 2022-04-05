@@ -2,5 +2,10 @@
 <ul>
     <li>Elevation: <%= number_with_delimiter @mountain.elevation %> m</li>
     <li>Country: <%= @mountain.country %></li>
-    <li><%= image_tag @mountain.image %> </li>
+    <li><%= image_tag @mountain.image if @mountain.image.present? %> </li>
 </ul>
+
+<div class="controls">
+<%= link_to "Edit Mountain", edit_mountain_path(@mountain.id)%>
+<%= link_to "Delete Mountain", delete_mountain_path(@mountain.id)%>
+</div>
