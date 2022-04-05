@@ -1,0 +1,23 @@
+body {
+    /* background-color: aqua; */
+    background-color:grey;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    /* background-color: rgba(255,255, 255, 0.8); */
+    padding: 1em;
+    /* min-height: 90vh; */
+    text-align: center;
+}
+#button {
+    max-width: 960px;
+    margin: 0 auto;
+    /* background-color: rgba(255,255, 255, 0.8); */
+    padding: 1em;
+    /* min-height: 1vh; */
+    max-height: 10px;
+    height: 10px;
+    text-align: center;
+}

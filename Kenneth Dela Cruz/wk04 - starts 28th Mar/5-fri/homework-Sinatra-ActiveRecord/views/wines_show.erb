@@ -1,0 +1,20 @@
+
+<div class="left">
+
+<h1><%= @wine.variant %></h1>
+
+<p>Wine Type: <%= @wine.wineType %> </p>
+<p>Ingredient: <%= @wine.ingredient %></p>
+<p>Cheese Pairing: <%= @wine.cheesePairing %></p>
+
+<% unless @wine.image.nil? || @wine.image.empty? %>
+    <img src="<%= @wine.image %>" alt="<%= @wine.variant %>">
+<% end %>
+
+<div class="controls">
+    <a href="/wines/<%= @wine.id %>/edit">Edit Wine Listing</a>
+    <a href="/wines/<%= @wine.id %>/delete">Delete Wine Listing</a>
+</div>
+
+
+</div>
