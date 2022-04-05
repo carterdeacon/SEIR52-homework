@@ -1,0 +1,24 @@
+<h1>Change Anime</h1>
+
+<form action= "/animes/<%= @anime["id"]%>" method="post">
+    <label>
+        Name:
+        <input name="title" placeholder="Domestic Girlfriend" required value="<%= @anime["title"]%>">
+    </label>
+
+    <label>
+        Genre:
+        <input name="genres" placeholder="Slice of Life" value="<%= @anime["genres"] %>">
+    </label>
+
+    <label>
+        Studio Name
+        <input type= "text" name="studio" placeholder="Ghibli" value="<%=@studio["name"]%>"> <%# the pre-fill value of studio is the studio object value of key "name" %>
+    </label>
+
+    <label>
+        Art:
+        <input type= "url" name="image" placeholder="http://..." value="<%= @anime["image"]%>">
+    </label>
+    <button>Update Anime</button>
+</form>
