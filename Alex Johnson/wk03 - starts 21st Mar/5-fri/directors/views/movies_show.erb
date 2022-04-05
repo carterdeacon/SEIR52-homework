@@ -1,0 +1,12 @@
+<h1> <%= @movie.name %> </h1>
+<h2> Directed by <%= @movie.director %> </h2>
+<h2> Released <%= @movie.released %> </h2>
+
+<% unless @movie.image.nil? || @movie.image.empty? %>   
+<img class="feature" src="<%= @movie.image %>" alt="<%= @movie.name %>">
+<% end %>
+
+<div class="controls">
+    <a href="/movies/<%= @movie.id %>/edit">Edit Movie</a>  
+   <a href="/movies/<%= @movie.id %>/delete">Delete Movie</a>  
+</div>

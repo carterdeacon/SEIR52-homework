@@ -1,0 +1,12 @@
+<h1><%= @impulse["album_name"] %></h1>
+<h2>
+<%= @impulse["artist"] %>
+</h2>
+<% unless @impulse["cover_art"].nil? || @impulse["cover_art"].empty? %>
+<img class="feature" src="<%= @impulse["cover_art"] %>" alt="<%= @impulse["album_name"] %>">
+<% end %>
+<div class="controls">
+    <a href="/impulses/<%= @impulse["id"] %>/edit">Edit Record</a>
+    <a href="/impulses/<%= @impulse["id"] %>/delete">Delete Record</a>
+</div>
+
