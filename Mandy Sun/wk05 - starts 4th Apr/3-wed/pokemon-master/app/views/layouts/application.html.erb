@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PokemonMaster</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+   <div class="container">
+      <nav>
+         <%= link_to "All masters", masters_path, :class => "linkButton" %>
+         <%= link_to "New master", new_master_path, :class => "linkButton" %>
+         <%= link_to "All pokemons", pokemons_path, :class => "linkButton" %>
+         <%= link_to "New pokemon", new_pokemon_path, :class => "linkButton" %>
+         
+         
+      </nav>
+    <%= yield %>
+  </div>
+  </body>
+</html>
