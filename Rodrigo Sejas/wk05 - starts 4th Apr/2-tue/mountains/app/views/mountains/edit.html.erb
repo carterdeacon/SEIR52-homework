@@ -1,0 +1,48 @@
+<h1>Edit Climb</h1>
+
+<form action="<%= mountain_path(@mountain.id) %>" method="post">
+
+    <label>
+        Name:
+        <input name="name" required value="<%= @mountain.name %>">
+    </label>
+
+    <label>
+        Length (KM):
+        <input type="number" name="length" value="<%= @mountain.length %>">
+    </label>
+
+    <label>
+        Average Gradient:
+        <input type="number" name="avg_gradient" value="<%= @mountain.avg_gradient %>">
+    </label>
+
+    <label>
+        Category:
+        <select name="category" value="<%=@mountain.category%>">
+            <option value="HC">HC</option>
+            <option value="1">Cat 1</option>
+            <option value="2">Cat 2</option>
+            <option value="3">Cat 3</option>
+            <option value="4">Cat 4</option>
+        </select>
+    </label>
+
+    <label>
+        Elevation Gain (Metres):
+        <input type="number" name="elevation_gain" value="<%= @mountain.elevation_gain %>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" value="<%= @mountain.image %>">
+    </label>
+
+    <label>
+        VeloViewer Segment:
+        <input type="url" name="map" value="<%= @mountain.map %>">
+    </label>
+
+    <button>Update</button>
+
+</form>
