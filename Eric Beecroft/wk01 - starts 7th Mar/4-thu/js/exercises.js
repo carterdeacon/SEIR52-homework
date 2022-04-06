@@ -85,11 +85,12 @@ isIsosceles(triangleA);
 
 const areaTri = function (tri) {
     const s = ((tri.sideA + tri.sideB + tri.sideC) / 2);
-    areaT = Math.sqrt(s * ( s - tri.sideA ) * ( s - tri.sideB ) * ( s - tri.sideC ));
+    areaT = Math.sqrt(s * ( s - tri.sideA ) * ( s - tri.sideB ) * ( s - tri.sideC )); //Heron's Formula
     console.log(`The area of the triangle is ${ areaT }`)
 };
 areaTri(triangleA);
 
+// a^2 + b^2 < c^2
 const isObtuse = function (tri) {
     let triangle = [tri.sideA, tri.sideB, tri.sideC];
     triangle = triangle.sort();
@@ -115,26 +116,23 @@ const cartForParty = {
 //   cashRegister(cartForParty)); // 60.55
 
 const cashRegister = function (cart) {
+    let total = 0;
     const price = Object.values(cartForParty);
-    console.log(price);
+    for ( let i=0; i < price.length; i++) {
+        total += parseFloat(price[i]);
+        }
+        return total;
 };
-cashRegister(cartForParty);
+console.log(cashRegister(cartForParty));
 
-// const cashRegister = function (cart) {
-//     let totalPrice = 0;
-//     for ( let i = 0; i < cart.length; i++ ) {
-//         totalPrice = totalPrice + place[i];
-//     }
-//     console.log(totalPrice);
-// };
-// cashRegister(cartForParty);
+// Example solution:
 
-// const pantryTotal = function (place) {
-//     let totalPrice = 0;
-//     for ( let i=0; i < place.length; i++ ) {
-//         totalPrice = totalPrice + place[i].cost;
+// const cashRegister = obj => {
+//     let total = 0;
+//     const sumArr = Object.values(obj);
+//     for ( let i = 0; i < sumArr.length; i++ ) {
+//         total += parseFloat(sumArr[i]);
 //     }
-//     console.log(totalPrice);
+//     return total;
 // }
-
-// pantryTotal(house.kitchen.pantry);
+// console.log(cashRegister(cartForParty));

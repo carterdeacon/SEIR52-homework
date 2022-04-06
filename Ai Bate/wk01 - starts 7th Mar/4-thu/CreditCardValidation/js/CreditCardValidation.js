@@ -32,32 +32,40 @@
 
 const inputCreditCardNumber = '1111-1111-1111-1111'
 const validateCreditCard = function(){
-let CreditCardNumberNoDashes = '';
-for(let i = 0; i < inputCreditCardNumber.length; i++  ){
-    if(inputCreditCardNumber[i] !== '-') {
-        CreditCardNumberNoDashes += inputCreditCardNumber[i];
+    let CreditCardNumberNoDashes = '';
+    for(let i = 0; i < inputCreditCardNumber.length; i++  ){
+        if(inputCreditCardNumber[i] !== '-') {
+            CreditCardNumberNoDashes += inputCreditCardNumber[i];
+        }
     }
-}
 // }console.log(CreditCardNumberNoDashes);
-if(CreditCardNumberNoDashes.length <= 16){
-    console.log("false") ;
-}
-let arr = [];
-for(let index = 0; index < CreditCardNumberNoDashes.length; index++ ){
-    arr.push(parseInt(CreditCardNumberNoDashes[index]));
-} console.log([arr]);
-if(arr.includes(NaN)){
-    console.log("false");
-}
-let sameNum;
-for(let n=0;n<arr.length; n++){
-    let sameNum = arr[n];
-if(!arr.includes(n)===sameNum){
-    console.log(" Valid Credit Number")
-}else{
-    console.log("false");
-}
-}
+    if(CreditCardNumberNoDashes.length <= 16){
+        console.log("false") ;
+    }
+    // アルファベットを取り除く。
+    
+    for(let index = 0; index < CreditCardNumberNoDashes.length; index++ ){
+        if(Number(CreditCardNumberNoDashes[i]) == NaN) {
+            console.log('false');
+        }
+    }
+    // let arr = [];
+    // for(let index = 0; index < CreditCardNumberNoDashes.length; index++ ){
+    //     arr.push(Number(CreditCardNumberNoDashes[index]));
+    // } 
+    // console.log(arr);
+    // if(arr.includes(NaN)){
+    //     console.log("false");
+    // }
+    let sameNum;
+    for(let n=0;n<arr.length; n++){
+        let sameNum = arr[n];
+        if(!arr.includes(n)===sameNum){
+            console.log(" Valid Credit Number")
+        }else{
+            console.log("false");
+        }
+    }
 }
 console.log()
 

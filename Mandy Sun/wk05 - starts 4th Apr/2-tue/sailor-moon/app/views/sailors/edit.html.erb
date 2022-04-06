@@ -1,0 +1,27 @@
+<h1>💖🌙  Update the guardian's profile 🌙💖</h1>
+
+<form action="<%= show_sailor_path(@sailor.id) %>" method="post">
+    <label>
+        Name:
+        <input name="name" required value="<%= @sailor.name %>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" value="<%= @sailor.image %>">
+    </label>
+
+    <label>
+        Identity:
+        <input type="text" name="identity" value="<%= @sailor.identity %>">
+    </label>
+
+    <label>
+        Residency:
+        <input type="text" name="residency" value="<%= @sailor.residency %>">
+    </label>
+
+    <button>Update guardian</button>
+
+    <img src="https://33.media.tumblr.com/f0959fa2f4601eac1514509201840269/tumblr_nq9nbjCiVl1tha0uzo1_500.gif" alt="" class="gif">
+</form>

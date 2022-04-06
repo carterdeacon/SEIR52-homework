@@ -1,0 +1,75 @@
+body {
+    background-color: #f4f4f2
+}
+
+.container{
+
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+header{
+
+    font-size: 50px;
+    text-align: center;
+    margin: 30px;
+    background-color: black;
+    color: white;
+  
+  }
+
+  #body{
+    background-color: white;
+    font-size: 20px;
+    padding: 30px;
+  }
+
+  #profile{
+   position: absolute;
+   text-align: left;
+    margin: auto;
+   
+  
+ 
+}
+
+
+#profile h3{
+  background-color: black;
+  text-align: center;
+  font-size: 30px;
+  padding: 0;
+  color: white;
+  width: 350px;    
+}
+
+#profile img{
+  
+  margin-top: 30px;
+  margin-left: 0px;
+  border: 3px solid black;
+
+}
+#bio{
+  padding: 10px;
+  float: right;
+  width: 65%;
+  text-align: center;
+
+
+}
+footer{
+  clear: both;
+ float: right;
+  color: white;
+  text-align: right;
+}
+
+p{
+text-indent: 30px;
+}
+
+
+
+

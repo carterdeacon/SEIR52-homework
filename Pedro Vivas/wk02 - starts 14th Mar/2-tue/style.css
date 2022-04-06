@@ -1,0 +1,56 @@
+* {
+    border: 1px solid black;
+}
+
+body {
+    background-color: #d9d9d9;
+    min-height: 100vh;
+
+}
+
+main {
+    background-color: white;
+    margin: 5rem;
+}
+
+.main2 {
+    background-image: url(turing-grayscale.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    color: white;
+}
+
+nav {
+    text-align: right;
+    padding: 2rem;
+}
+
+nav>a {
+    margin: 2rem;
+    color: black
+}
+
+h1 {
+    text-align: center;
+    margin-left: 2rem;
+    margin-bottom: -1rem;
+}
+
+.surname {
+    margin-left: 10rem;
+}
+
+h2 {
+    text-align: right;
+    margin-right: 4rem;
+}
+
+.quote {
+    display: block;
+    text-align: right;
+    margin-top: 10rem;
+    margin-right: 3rem;
+}

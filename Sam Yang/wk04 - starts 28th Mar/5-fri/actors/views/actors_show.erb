@@ -1,0 +1,11 @@
+<h1><%= @actor["name"] %></h1>
+<h2>Nationality: <%= @actor["nationality"]%></h2>
+
+<% unless @actor["image"].nil?||@actor["image"].empty?%>
+    <img class="feature" src="<%= @actor["image"] %>" alt="<%= @actor["name"] %>">
+<% end %>
+
+<div class="controls">
+    <a href="/actors/<%= @actor["id"]%>/edit">Edit actor</a>
+    <a href="/actors/<%= @actor["id"]%>/delete">Delete actors</a>
+</div>

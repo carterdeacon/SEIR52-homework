@@ -1,0 +1,16 @@
+<h1>All butterflies</h1>
+
+<% @dogs.each do |dog| %>
+<p>
+
+ <a href="/dogs/<%= dog["id"] %>">
+
+<%= dog ["name"] %>
+</p>
+<% end %>
+
+
+
+
+
+

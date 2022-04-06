@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directors & Films</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="topnav">
+        <nav class="left">
+            <a id="nav" class="one" href="/directors">Favorite Directors</a>
+            <a id="nav" class="one" href="/directors/new">New Director</a>
+        </nav>
+
+        <nav class="middle">
+            <a id="nav" href="/">HOME</a>
+        </nav>
+
+        <nav class="right">
+            <a id="nav" class="two" href="/films">Favorite Films</a>
+            <a id="nav" class="two" href="/films/new">New Film</a>
+        </nav>
+    </div>
+    <div class="container">
+
+
+        <%= yield %>
+    </div>
+    
+</body>
+</html>

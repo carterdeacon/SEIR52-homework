@@ -1,0 +1,15 @@
+<h1>
+    <%= @pokemon["name"]%>  
+</h1>
+
+<h2>
+    Region: <%= @pokemon["regions"]%> 
+</h2>
+<% unless @pokemon["image"].nil? || @pokemon["image"].empty? %>
+<img src="<%= @pokemon["image"]%>" alt="<%= @pokemon["name"]%>">
+<% end %>
+<div class="controls">
+    <a href="/pokemons/<%=@pokemon["id"] %>/edit">Edit Pokemon</a>
+    <a href="/pokemons/<%=@pokemon["id"] %>/delete">Delete Pokemon</a>
+
+</div>

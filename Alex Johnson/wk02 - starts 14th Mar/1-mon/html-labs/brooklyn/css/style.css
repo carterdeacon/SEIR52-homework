@@ -1,0 +1,44 @@
+/* 
+
+## Style Hints: 
+
+Body Font Size = 12px
+	 Line Height = 17px
+	 Font Family = "Times New Roman", serif
+	 Font Color = #656565
+
+Link Hover Color = #20222a
+
+*/
+
+/* looks somehat like the mockup although doesn't look that great on the page
+...a bit confused here as to what the end result shuold really look like ToDO*/  
+
+#container {
+margin:  0 auto;
+max-width: 70%;
+font-size: 12px;
+font-family: "Times New Roman", serif;
+}
+p {
+
+max-width: 58.5%;	
+
+}
+.date {
+	color: blue;
+}
+
+.picture-ribbon { 
+  display: inline-block;
+  
+}
+
+.ad-pic {
+	border: 3px solid rgb(206, 209, 204);
+
+/*ToDO couldn't get the 4 images across the bottom to space evenl;y across 
+from the left margin to the right margin ... tried max-width/max-height 
+on both the .imgs and the div created to contain the.... no joy so far */ 
+
+  }

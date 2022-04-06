@@ -1,0 +1,133 @@
+body {
+  background-color: #b7cadb;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Reenie Beanie", cursive;
+  font-size: 300%;
+  display: inline;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: #fdf6ec;
+  padding: 1.5em;
+  padding-bottom: 0px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+img {
+  max-width: 50%;
+  max-height: 50%;
+  display: inline-block;
+  margin: 10px 0;
+  border-radius: 2em;
+}
+
+figure {
+  margin: 0;
+}
+
+a.top-nav {
+  font-family: "Mukta", sans-serif;
+  font-size: 16px;
+  box-shadow: 0 2.5px 0 darkslategray;
+  color: black;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+
+a.top-nav:hover {
+  background-color: #dab88b;
+}
+
+a.top-nav:active {
+  background-color: black;
+}
+
+nav {
+  float: right;
+}
+
+blockquote {
+  font-family: "Karla", sans-serif;
+  float: right;
+  position: relative;
+  margin: 80px auto;
+  width: 45%;
+  font-size: 40px;
+  line-height: 56px;
+  padding-left: 20px;
+  border-left: 2px solid #d82148;
+}
+
+blockquote span {
+  display: block;
+  text-align: right;
+  font-size: 24px;
+  line-height: 40px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+article {
+  font-family: "Mukta", sans-serif;
+  font-size: 20px;
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: slategray;
+  border-radius: 10px 10px 0px 0px;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+}
+
+.footer-links li {
+  list-style-type: none;
+  text-align: right;
+}
+
+li {
+  display: inline;
+  padding: 10px;
+  line-height: 100px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  display: inline;
+}
+
+a.continue {
+  color: #d82148;
+}
+
+a.footer:hover {
+  color: #003355;
+}
+
+.info-box {
+  border: 1px solid black;
+  box-shadow: 5px 5px 6px black;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "Mukta", sans-serif;
+  margin: 40px auto;
+}
+
+aside img {
+  float: left;
+  width: 35%;
+  height: auto;
+  margin: 90px 30px;
+  border: 2px solid slategrey;
+}

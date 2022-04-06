@@ -1,0 +1,27 @@
+<h1>New Ocean</h1>
+
+<form action="<%= oceans_path%>"  method="post">
+    <label>
+        Name:
+        <input name="name"  required>
+    </label>
+
+     <label>
+        Image:
+        <input type="url" name="image">
+    </label>
+
+     <label>
+        area:
+        <input type="number" name="area">
+    </label>
+
+     <label>
+        average_depth:
+        <input type="number" name="average_depth">
+    </label>
+
+    <button>Create Ocean</button>
+
+
+</form>

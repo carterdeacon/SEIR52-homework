@@ -1,0 +1,23 @@
+<h1>Let's update your pokemon</h1>
+
+
+<form action="/pokemons/<%= @pokemons["id"] %>" method="post">
+     <label for="">
+          Name:
+         <input name ="name" placeholder="" required value="<%= @pokemons["name"] %>">
+     </label>
+     <label for="">
+          Category:
+         <input name ="category" placeholder="Skipper" value="<%= @pokemons["category"] %>">
+     </label>
+      <label for="">
+          Abilities:
+         <input name ="abilities" placeholder="Skipper" value="<%= @pokemons["abilities"] %>">
+     </label>
+     <label for="">
+          Image:
+         <input type ="url" name="image" placeholder="http://..." value="<%= @pokemons["image"] %>" >
+     </label>
+
+     <button>Update Pokemon</button>
+</form>
