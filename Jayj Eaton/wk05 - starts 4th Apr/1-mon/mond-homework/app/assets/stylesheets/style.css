@@ -1,0 +1,28 @@
+body {
+	text-align: center;
+	background-color: rgba(11, 11, 11, 0.892);
+	color: aliceblue;
+}
+button {
+	border: none;
+	padding: 10px;
+	background-color: aliceblue;
+	border-radius: 3px;
+	margin: 5px;
+}
+nav {
+	margin-top: 20px;
+}
+a {
+	text-decoration: none;
+	margin: 10px;
+	color: rgb(12, 12, 12);
+	background-color: aquamarine;
+	padding: 5px;
+	border-radius: 4px;
+}
+
+button:hover,
+a:hover {
+	cursor: pointer;
+}

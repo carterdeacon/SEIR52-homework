@@ -1,0 +1,9 @@
+<h1> All My Trash Animes</h1>
+
+<% @animes.each do |anime|%> <%# This takes @animes which is ALL the objects in the animes table %>
+    <p><%# for each object, show the value of "title" in the title's column %>
+        <a href="/animes/<%= anime["id"] %>"> <%# create a link to the specific "anime" being iterated's id %>
+            <%= anime["title"] %> 
+        </a>
+    </p>
+<% end %>

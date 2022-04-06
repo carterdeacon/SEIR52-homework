@@ -1,0 +1,10 @@
+<h1>All venues</h1>
+
+<h1><% @venues.each do |venue| %></h1>
+    <p> 
+        <a href="/venues/ <%= venue.id %>">
+        <%= venue.name %>
+    </p>
+<% end %>
+
+

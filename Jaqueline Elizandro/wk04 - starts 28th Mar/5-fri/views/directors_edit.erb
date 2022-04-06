@@ -1,0 +1,23 @@
+<h1 class="title">edit director info</h1>
+
+<form action="/directors/<%= @director["id"] %>" method="post">
+    <label>FIRST NAME:</label>
+    <input class="name" name="firstname" placeholder="Damien" required value="<%= @director["firstname"] %>">
+
+    <label>MIDDLE NAME:</label>
+    <input class="name" name="middlename" placeholder="" value="<%= @director["middlename"] %>">
+
+    <label>SURNAME:</label>
+    <input class="name" name="surname" placeholder="Chazelle" value="<%= @director["surname"] %>">
+
+    <label>BIRTH DATE:</label>
+    <input class="name" name="birthdate" placeholder="1985-01-19" value="<%= @director["birthdate"] %>">
+
+    <label>BIRTHPLACE:</label>
+    <input class="name" name="birthplace" placeholder="United States" value="<%= @director["birthplace"] %>">
+
+
+    <div class="button">
+        <button>UPDATE DIRECTOR</button>
+    </div>
+</form>
