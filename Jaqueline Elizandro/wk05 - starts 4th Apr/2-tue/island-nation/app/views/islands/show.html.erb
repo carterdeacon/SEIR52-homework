@@ -1,0 +1,18 @@
+<%= link_to "ALL ISLANDS", islands_path %>
+
+<h1><%= @island.name %></h1>
+
+<div class="controls">
+    <%= link_to "EDIT", edit_island_path(@island.id) %>
+    <%= link_to "DELETE", delete_island_path(@island.id) %>
+</div>
+
+<h3>Capital: <%= @island.capital %></h3>
+
+<h3>Language: <%= @island.language %></h3>
+
+<h3>Area (km2): <%= number_to_human @island.area %></h3>
+
+<h3>Continent: <%= @island.continent %></h3>
+
+<%= image_tag @island.image, :class => "image" if @island.image.present? %>
