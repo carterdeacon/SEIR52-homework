@@ -1,0 +1,10 @@
+<h1>All the spoons</h1>
+
+<% @handsomespoons.each do |handsomespoon| %>
+    <%= image_tag handsomespoon.image, :class => 'thumb' if handsomespoon.image.present? %>
+    <ul>
+        <li>Name: <%= link_to handsomespoon.name, handsomespoon %></li> 
+    
+    </ul>
+
+<% end %>
