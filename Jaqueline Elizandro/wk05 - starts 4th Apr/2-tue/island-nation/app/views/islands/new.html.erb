@@ -1,0 +1,25 @@
+<%= link_to "ALL ISLANDS", islands_path %>
+
+<h1>New Island</h1>
+
+<form action="<%= islands_path %>" method="post">
+    <label>Name</label>
+    <input name="name" required>
+
+    <label>Capital</label>
+    <input name="capital">
+
+    <label>Language</label>
+    <input name="language">
+
+    <label>Area (km2)</label>
+    <input type="number" name="area">
+
+    <label>Continent</label>
+    <input name="continent">
+
+    <label>Image</label>
+    <input name="image">
+
+    <button>CREATE ISLAND</button>
+</form>

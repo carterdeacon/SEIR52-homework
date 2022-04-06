@@ -1,0 +1,15 @@
+<h1>Ocean's Details</h1>
+
+<%= image_tag @ocean.image if @ocean.image.present? %>
+
+<ul>
+    <li>Name: <%= @ocean.name %></li>
+    <li>Depth: <%= @ocean.depth %></li>
+    <li>Location: <%= @ocean.location %></li>
+</ul>
+
+
+<div>
+    <%= link_to "Edit", edit_path(@ocean.id) %>
+    <%= link_to "Delete", delete_path(@ocean.id) %>
+</div>
