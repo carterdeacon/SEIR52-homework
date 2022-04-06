@@ -1,0 +1,18 @@
+<h1 class="name-title">
+    <%= @actor.actor_name %>
+</h1>
+
+<h2 class="other-info">
+    Birthplace: <%= @actor.birthplace %>
+</h2>
+
+<div class="pic-container">
+    <% unless @actor.photo.nil? || @actor.photo.empty? %>
+        <img src="<%= @actor.photo %>" alt="<%= @actor.actor_name %>">
+    <% end %>
+</div>
+
+<div class="panel">
+    <a href="/actors/<%= @actor.id %>/edit">Edit actor</a>
+    <a href="/actors/<%= @actor.id %>/delete">Remove actor</a>
+</div>
