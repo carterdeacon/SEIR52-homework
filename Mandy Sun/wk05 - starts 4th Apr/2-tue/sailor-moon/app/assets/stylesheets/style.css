@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+body{
+    background-image:url("https://images2.alphacoders.com/962/thumb-1920-962690.png") ;
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    margin: 0;
+}
+
+.control {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.521);
+    border-radius: 30px;
+}
+
+nav{
+    width: 70%;
+    text-align: right;
+    margin: 40px auto;
+    font-size: 40px;
+    height: 60px;
+    line-height: 60px;
+}
+
+a{
+  
+}
+
+.sailors_name{
+    font-size: 20px;
+    line-height: 40px;
+}
+
+li{
+    text-align: left;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.link{
+    font-size: 25px;
+    line-height: 80px;
+}
+
+button{
+    display: block;
+    margin: 20px auto;
+    font-size: 20px;  
+}
+
+.gif{
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+
+h1{
+    font-size: 40px;
+    line-height: 80px;
+}
+
+.cat{
+    position: absolute;
+    width: 220px;
+    bottom:  0;
+    right: 10px;
+}
+
+.feature{
+    width: 300px;
+}
+
+.nav_link{
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 30px;
+}
