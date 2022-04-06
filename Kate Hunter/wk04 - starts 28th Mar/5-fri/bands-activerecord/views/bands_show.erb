@@ -1,0 +1,22 @@
+
+
+<h1><%= @band["name"] %></h1>
+
+<% unless @band["image"].nil? || @band["image"].empty? %>
+    <img class= "feature" src="<%= @band["image"] %>" alt= @band["name"]>
+<% end %>
+
+<% unless @band.venue.nil? %>
+    <h3>
+        Venue:
+        <a href="/venues/<%= @band.venue_id %>">
+        <%= @band.venue.name %>
+        </a>
+    </h3>
+<% end %>
+
+<div class="controls">
+    <a href="/bands/<%= @band["id"]%>/edit"> Edit band </a>
+    <a href="/bands/<%= @band["id"]%>/delete"> Delete band </a>
+</div>
+

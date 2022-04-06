@@ -1,0 +1,12 @@
+<h1>Best Star Signs</h1>
+
+<% @starsigns.each do |starsign| %>
+ <p>
+     <%= link_to starsign.name, starsign_path(starsign.id) %>
+     has
+     <%= link_to starsign.planet, 'planet' %>
+
+    </p>
+
+<% end %>
+

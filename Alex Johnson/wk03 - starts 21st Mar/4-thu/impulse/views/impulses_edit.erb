@@ -1,0 +1,20 @@
+<form action="/impulses/<%= @impulse["id"] %>" method="post">
+    <%# catalog_number,artist,album_name,cover_art %>
+    <label>
+        Number:
+        <input type="number" name="catalog_number" placeholder="impulse recs cat no." required value="<%= @impulse["catalog_number"] %>">
+    </label>
+    <label>
+        Artist:
+        <input name="artist" placeholder="John Coltrane" required value="<%= @impulse["artist"] %>">
+    </label>
+    <label>
+        Album:
+        <input name="album_name" placeholder="Ballads" required value="<%= @impulse["album_name"] %>">
+        </label>
+    <label>
+        Cover Art:
+        <input name="cover_art" type="url" placeholder="http://..." value="<%= @impulse["cover_art"] %>">
+    </label>
+    <button>Edit Record</button>
+</form> 

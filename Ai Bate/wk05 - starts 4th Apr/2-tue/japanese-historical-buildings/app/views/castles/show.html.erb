@@ -1,0 +1,13 @@
+<h1><%= @castle.name %></h1>
+<%= image_tag @castle.image, :class =>'feature' if @castle.image.present? %>
+<ul>
+    <li>Name:<%= @castle.name %></li>
+    <li>Prefecture:<%= @castle.prefecture %></li>
+    <li>Built by:<%= @castle.who %></li>
+    <li>Built in:<%= @castle.age %></li>
+</ul>
+<div class="controls">
+    <%= link_to "Edit Castle", edit_castle_path(@castle.id)%>
+    <%= link_to "Delete Castle", delete_castle_path(@castle.id)%>
+    
+</div>
