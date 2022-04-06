@@ -1,0 +1,41 @@
+body {
+    background-color: #F9F7F7;
+}
+
+nav {
+    text-align: right;
+}
+
+.nav-link {
+    padding: 10px;
+}
+
+.grid-container {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    line-height: 2em;
+    height: 10vh;
+    text-align: center;
+    /* background-color: #F0F5F9; */
+    padding: 20px;
+}
+
+.index-gallery {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5vw);
+    grid-gap: 15px;
+}
+
+.muted {
+    color: #6c757d;
+}
+
+.controls-link {
+    padding: 10px;
+}
+
+.image {
+    border-radius: 10px;
+}
