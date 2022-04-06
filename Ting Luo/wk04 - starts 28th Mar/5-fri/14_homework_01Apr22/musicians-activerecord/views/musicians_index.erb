@@ -1,0 +1,10 @@
+<h1>All Musicians</h1>
+
+<% @musicians.each do | musician| %>
+    <p>
+        <a class = "index" href="/musicians/<%= musician["id"] %>">
+        <%= musician["name"]%>
+        </a>
+    </p>
+<% end %>
+

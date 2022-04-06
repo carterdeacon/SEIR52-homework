@@ -1,0 +1,10 @@
+<h1>Impulse! Records Catalogue</h1>
+<a href="/impulses/new">Add a new record</a>
+<% @impulses.each do |impulse| %>
+    <p>
+         Catalogue Number<%= impulse["catalog_number"] %>       : 
+        <a href="/impulses/<%= impulse["id"]%>">
+            <%= impulse["album_name"] %>
+        </a>
+    </p>
+<% end %>

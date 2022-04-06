@@ -1,0 +1,68 @@
+p {
+    margin: 0 auto;
+    text-align: center;
+}
+h1, h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600px;
+    text-align: center;
+}
+button {
+    font-size: 25px;
+    font-weight: 100px;
+    outline: none;
+    border: none;
+    background: black;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+button a {
+    color: white;
+    margin: 0 auto;
+    display: block;
+}
+form {
+    text-align: center;
+    margin: 0 auto;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 20px auto;
+
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+.result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    
+}
+
+.secretnum_results p{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 100px;
+    margin: 0 auto;
+}
+.secretnum_results button{
+    margin: 20px auto;
+    display: block;
+}
+
+.display button {
+    margin: 20px auto;
+    display: block;
+}
