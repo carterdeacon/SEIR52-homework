@@ -1,0 +1,16 @@
+<h1>Edit venues</h1>
+
+<form action="/venues/<%= @venue["id"] %>" method="post">
+    <label>
+        Name:
+        <input name="name" placeholder="The Palace" required value="<%= @venue.name %>">    
+    </label>
+
+    <label>
+        City:
+        <input name="city" placeholder="Melbourne" value="<%= @venue.name %>">
+        
+    </label>
+
+    <button>Update venue</button>
+</form>

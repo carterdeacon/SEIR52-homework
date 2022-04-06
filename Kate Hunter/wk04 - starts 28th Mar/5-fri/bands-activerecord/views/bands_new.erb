@@ -1,0 +1,33 @@
+<h1>New band</h1>
+
+<form action="/bands" method="post">
+    <label>
+        Name:
+        <input name="name" placeholder="Foo Fighters" required>    
+    </label>
+
+     <label>
+        Country:
+        <input name="country" placeholder="USA">    
+    </label>
+
+    <label>
+        Image:
+        <input type="URL" name="image" placeholder="http://...">
+        
+    </label>
+
+    <label>
+        Venue:
+        <select name="venue_id">
+            <option></option>
+            <% Venues.all.each do |venue| %>
+            <option value="<%= venue.id %>"> <%= venue.name %> </option>
+            <% end %>
+        </select>
+
+    </label>
+
+    <button>Create band</button>
+</form>
+
