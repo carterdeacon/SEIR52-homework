@@ -1,0 +1,48 @@
+* {
+    transition: all .5s;
+}
+
+body {
+    background-color: gainsboro;
+    background-image: url(/assets/play.png);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    margin: 0 auto;
+}
+
+.container {
+    background-color: rgba(249, 250, 245, .5);
+    max-width: 960px;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+    font-size: 130%;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(74, 93, 157);
+    border: .1em solid mediumaquamarine;
+    padding: 4px 4px 4px 4px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(230, 146, 146);
+    border: .1em solid mediumaquamarine;
+    padding: 4px 4px 4px 4px;
+    font-size: 135%;
+}
+
+nav {
+    position: relative;
+    top: 10px;
+}
+
+.yield {
+    position: relative;
+    top: 10%;
+}

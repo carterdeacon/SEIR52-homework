@@ -1,0 +1,13 @@
+<h1><%= @anime["title"]%></h1> <%# Access the object @anime from the animes table and use the key "title" column to acess the value of title %>
+
+<h2>Genre: <%= @anime["genres"] %></h2><%# same for genres %>
+<%#Uses the key "name" to acess the value of name from the @studio's object (the studio associated with the anime) %>    
+<h2>Studio Name: <a href="/studios/<%=@studio["id"]%>"><%= @studio["name"]%></a><h2> </h2><%#Also makes it into a link to the related studio on the show page of the specific studio :id %>
+<% unless @anime["image"].nil? || @anime["image"].empty?%> <%#makes sure there is an image %>
+    <img class="feature" src="<%= @anime["image"] %>" alt="<%=@anime["name"] %>">
+<%end%>
+
+<div class="controls">
+    <a class="active" href="/animes/<%= @anime["id"]%>/edit">Edit Anime</a>
+    <a class= "active" href="/animes/<%= @anime["id"]%>/delete">Delete Anime</a>
+</div>

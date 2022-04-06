@@ -1,0 +1,77 @@
+li {
+    padding: .5em;
+}
+
+nav a {
+    padding-left: 2em;
+}
+
+nav a:first-child {
+    padding: 0;
+}
+
+label {
+    margin-bottom: 1em;
+}
+
+.homepage-menu {
+    font-size: 2rem;
+}
+
+.eightball-btn {
+   transform:translateY(22px)
+}
+
+.secretnum-container {
+    margin-top: 2em;
+    display: flex;
+  
+}
+
+.secretnum-box {
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secretnum-box a {
+    padding: 1em;
+}
+
+.rps-image {
+    margin-top: 2em;
+    width: 15rem;
+    height: 10.5rem;
+    margin-right: 1em;
+    border: 2px solid black;
+    transition: all 1s;
+}
+
+.rps-image:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.rps-result-image {
+    width: 15rem;
+    height: 10.5rem;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+}
+
+.rps-guess {
+    font-weight: bold;
+    margin: 0;
+}
+
+.back-btn {
+    margin-top: 1rem;
+}
+
+.eightball-result {
+    margin-left: 2rem;
+}
+
+
+

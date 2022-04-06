@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GamesOnRails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+  </head>
+
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      |
+      <a href="/balls/question">Magic 8 Ball</a>
+      |
+      <a href="/secrets">Secret Number</a>
+    </nav>
+
+    <%= yield %>
+  </body>
+</html>
