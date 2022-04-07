@@ -1,0 +1,14 @@
+<h1>All Beers</h1>
+
+<div class="small">
+    <% @beers.each do |beer| %>
+        <%= link_to image_tag(beer.image, :class => 'thumb_beer'), beer %>
+        <ul class="beers_info">
+            <li>Beer Name: <%= beer.name %></li>
+            <% if beer.brewery.present? %>
+                <li>Brewery: <%= link_to beer.brewery.name, beer.brewery %></li>
+                <li>Location: <%= beer.brewery.suburb %>, <%= beer.brewery.state %>, <%= beer.brewery.country %></li>
+            <% end %>
+        </ul>
+    <% end %>
+</div>
