@@ -1,0 +1,15 @@
+<h1><%= @mountain.name %></h1>
+<%=image_tag @mountain.image, :class=>'feature' if @mountain.image.present?%> <!--we don't need to check if nil or blank, present? does it for us-->
+<ul>
+    <li>Name: <%= @mountain.name %></li>
+    <li>Elevation: <%=@mountain.elevation%> meters</li>
+    <li>Country Location: <%= @mountain.country%></li>
+    <li>Parent Range: <%=@mountain.range%></li>
+    <li>Listing: <%=@mountain.listing%></li>
+</ul>
+
+
+<div class="controls">
+    <%= link_to "Edit Mountain", edit_mountain_path(@mountain.id)%> <!--creates an <a> tag but we don't need to hardcode the path. We get @mountain.id from the sepcific mountain object.-->
+    <%= link_to "Delete Mountain", delete_mountain_path(@mountain.id) %>
+</div>
