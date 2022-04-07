@@ -1,0 +1,22 @@
+<h1>Mountain: <%= @mountain.name %></h1>
+<p>Name: <%= @mountain.name %></p>
+<p>Country: <%= @mountain.country %></p>
+<p>Height: <%= number_to_human @mountain.height %> ft </p>
+<p>Prominence Rank: <%= @mountain.prominence_rank %></p>
+<p>First Climbed: <%= @mountain.first_climbed_year %></p>
+<p>Conquered by: <%= @mountain.first_climbed_by %></p>
+<%= image_tag @mountain.photo, :alt => @mountain.name if @mountain.photo.present? %>
+<div class="controls">
+    <%= link_to 'Edit Mountain', edit_mountain_path(@mountain.id) %>
+    <%= link_to 'Delete Mountain', delete_mountain_path(@mountain.id) %>
+</div>
+
+
+
+
+
+
+
+
+
+
