@@ -1,0 +1,13 @@
+<h1>Let's see the masters have registered</h1>
+
+<% @masters.each do |master| %>
+<div class="master_info">
+    <%= image_tag master.image, :class => "master" if master.image.present? %>
+    <ul>
+       <li>Name: <%= link_to master.name, master, :class => "nameLink" %></li>
+       <li>Alias: <%= master.alias %></li>
+       <li>Gender: <%= master.gender %></li>
+    </ul>
+    </div>
+<% end %>
+
