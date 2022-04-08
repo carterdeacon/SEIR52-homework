@@ -1,0 +1,20 @@
+<h1>Alireza Health system</h1>
+
+
+<h2>
+    The current system keeps the record of the patients
+</h2>
+
+<h4>
+    By clicking on each name, you can get more information of each patient in detail
+</h4>
+<% @patients.each do |patient|%>
+<p>
+    <a href="/patients/<%= patient["id"] %>">
+        <%= patient["name"] %>
+    </a>
+    <a href="/patients/<%= patient["id"]%>/edit">Edit</a>
+    <a href="/patients/<%= patient["id"]%>/delete">Delete</a>
+</p>
+<% end %>
+

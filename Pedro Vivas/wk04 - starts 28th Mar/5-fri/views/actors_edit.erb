@@ -1,0 +1,17 @@
+<h1>Edit Actor</h1>
+
+<form action="/actors/<%= @actor[:id] %>" method="post">
+    <div>
+        <label>Name</label>
+        <input name="name" placeholder="Name" value="<%= @actor["actor_name"] %>" required>
+    </div>
+    <div>
+        <label>Release year</label>
+        <input name="birthplace" placeholder="birthplace" value="<%= @actor["birthplace"] %>">
+    </div>
+    <div>
+        <label>Actor photo</label>
+        <input name="photo" placeholder="Photo" value="<%= @actor["photo"] %>">
+    </div>
+    <button>Update actor</button>
+</form>

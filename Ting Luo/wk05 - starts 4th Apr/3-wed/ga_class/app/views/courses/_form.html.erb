@@ -1,0 +1,11 @@
+<%= form_for @course do |f| %>
+    <%= f.label :Course_Code%>
+    <%= f.text_field :name, placeholder: "SEI-ANZ-SEIR00"%>
+    <%= f.label :Start_Date%>
+    <%= f.text_field :start, placeholder: "YYY-MM-DD"%>
+        <%= f.label :End_Date%>
+    <%= f.text_field :end, placeholder: "YYY-MM-DD"%>
+        <%= f.label :Period%>
+    <%= f.text_field :period,placeholder: "3mths"%>
+    <%= f.submit%>
+<% end %>

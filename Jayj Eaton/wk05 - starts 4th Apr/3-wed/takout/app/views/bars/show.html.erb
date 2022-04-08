@@ -1,0 +1,22 @@
+<h1><%= @bar.name %></h1>
+
+<p>Location: <%= @bar.location %></p>
+<p>Store Amount: <%= @bar.store_count %></p>
+<p>Genre: <%= @bar.style %></p>
+<p>Rating: <%= @bar.rating %></p>
+<%= image_tag @bar.image, :class => 'show-img' %>
+<h3> Burgers available</h3>
+<%  @bar.burgers.each do |burger| %>
+    <p><%= link_to burger.name, burger, :class => 'show-btn' %></p>
+<% end %>
+
+<br/>
+<br/>
+
+
+<%= link_to 'Edit bar', edit_bar_path(@bar) %>
+<%= link_to 'Delete', @bar, :method => 'delete', :data => {:confirm => "Are you sure?"} %>
+
+
+
+

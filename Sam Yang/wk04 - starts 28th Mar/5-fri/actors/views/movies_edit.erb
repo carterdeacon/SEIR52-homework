@@ -1,0 +1,16 @@
+<h1>Edit movie </h1>
+
+<form action="/movies/<%= @movie["id"]%>" method="post">
+    <label>
+        Name:
+        <input name="name" placeholder="The Avengers"  required value="<%= @movie["name"]%>">
+
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="image" placeholder="http://..." value="<%= @movie["image"]%>">
+    </label>
+
+    <button>Update movie</button>
+</form>

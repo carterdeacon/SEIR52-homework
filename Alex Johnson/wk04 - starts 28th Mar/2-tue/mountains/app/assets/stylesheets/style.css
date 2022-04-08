@@ -1,0 +1,9 @@
+.buttons {
+    text-align: center;
+    color: black;
+    font-size: 36px;
+  }
+  .inputButton:hover {
+    background-color:#002ead;
+    transition: 0.7s;
+}

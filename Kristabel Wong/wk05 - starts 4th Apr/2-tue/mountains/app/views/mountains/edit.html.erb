@@ -1,0 +1,52 @@
+<h1>Update Ski mountain</h1>
+
+<form action="<%= mountain_path(@mountain.id) %>" method="post">
+ 
+    <ul>
+        <li>
+            <label>
+                Name:
+                <input name="name" required value="<%= @mountain.name %>">
+            </label>
+        </li>
+        <li>
+            <label>
+                Image:
+                <input type="url" name="image" value="<%= @mountain.image %>">
+            </label>
+        </li>
+        <li>
+            <label>
+                Country:
+                <input name="country" value="<%= @mountain.country %>">
+            </label>
+        </li>
+        <li>
+            <label>
+                Total Runs/Trails:
+                <input type="number" name="runs" value="<%= @mountain.runs %>">
+            </label>        
+        </li>
+        <li>
+            <label>
+                Beginner:
+                <input type="number" name="beginner" value="<%= @mountain.beginner %>">
+            </label>        
+        </li>
+        <li>
+            <label>
+                Intermediate:
+                <input type="number" name="intermediate" value="<%= @mountain.intermediate %>">
+            </label>        
+        </li>
+        <li>
+            <label>
+                Advanced:
+                <input type="number" name="advanced" value="<%= @mountain.advanced %>">
+            </label>        
+        </li>
+
+    </ul>
+
+    <button>Update Ski Mountain</button>
+</form>

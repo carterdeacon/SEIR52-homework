@@ -1,0 +1,5 @@
+<h1>Let's see the Pokemons have been catched</h1>
+
+<% @pokemons.each do |pokemon| %>
+    <%= link_to image_tag(pokemon.image, :class => 'thumb'), pokemon %>
+<% end %>

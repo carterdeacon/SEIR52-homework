@@ -1,0 +1,30 @@
+<%= form_for @brewery do |f| %>
+    <ul>
+        <li>
+            <%= f.label :name %>
+            <%= f.text_field :name, :placeholder => "BentSpoke Brewing Co", :required => true %>
+        </li>
+        <li>
+            <%= f.label :country %>
+            <%= f.text_field :country, :placeholder => "Australia" %>
+        </li>
+        <li>
+            <%= f.label :state %>
+            <%= f.text_field :state, :placeholder => "ACT" %>
+        </li>
+        <li>
+            <%= f.label :suburb %>
+            <%= f.text_field :suburb, :placeholder => "Braddon" %>
+        </li>
+        <li>
+            <%= f.label :image %>
+            <%= f.url_field :image, :placeholder => "http://...", :required => true %>    
+        </li>
+        <li>
+            <%= f.label :website %>
+            <%= f.url_field :website, :placeholder => "http://..." %>
+        </li>
+        
+        <%= f.submit %>
+    </ul>
+<% end %>

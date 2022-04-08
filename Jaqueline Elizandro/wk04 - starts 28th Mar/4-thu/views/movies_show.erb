@@ -1,0 +1,13 @@
+<h1 class="title_show"><%= @movie["name"] %></h1>
+
+<p class="list_show">YOUR RATING: <%= @movie["rate"] %></p>
+
+<p class="list_show">WATCHED IN THE YEAR OF: <%= @movie["year_watched"]%></p>
+
+<p class="list_show">COMMENTS: "<%= @movie["comments"] %>"</p>
+
+<div class="controls">
+    <a class="link_show" href="/movies/<%= @movie["id"] %>/edit">EDIT INFO MOVIE</a>
+    <a class="link_show" href="/movies/<%= @movie["id"] %>/delete">DELETE MOVIE</a>
+    <a class="link_show" href="/"> BACK TO MOVIES GALLERY</a>
+</div>

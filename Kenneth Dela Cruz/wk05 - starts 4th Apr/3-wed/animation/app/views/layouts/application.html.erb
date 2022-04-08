@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Animation</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+   
+    <div class="container">
+      <nav>
+        <%= link_to "Animation Studio Index", studios_path %>
+        <%= link_to "Add Animation Studio", new_studio_path %>
+        |
+        <%= link_to "Motion Pictures", pictures_path %>
+        <%= link_to "Add Motion Picture", new_picture_path %>
+      </nav>
+      <%= yield %>
+    </div>
+  </body>
+</html>

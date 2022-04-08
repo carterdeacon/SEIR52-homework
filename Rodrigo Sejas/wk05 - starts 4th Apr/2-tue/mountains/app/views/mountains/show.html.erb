@@ -1,0 +1,41 @@
+<h1><%= @mountain.name %> </h1>
+
+<%= image_tag @mountain.image, :class => 'image' if @mountain.image.present? %>
+
+
+
+<div class="grid-container">
+
+    <div class="grid-item">
+    <i class="fa-solid fa-arrow-down-short-wide fa-3x"></i><br>
+    <span class="muted"> Category</span> <a href="/mountains/categories"><i class="fa-solid fa-circle-question"></i></a> <br>
+    <span class="details"><%=@mountain.category%></span>
+    </div>
+
+    <div class="grid-item">
+    <i class="fas fa-arrows-alt-h fa-3x"></i><br>
+    <span class="muted">Length</span><br> 
+    <span class="details"><%=@mountain.length %> km</span>
+    </div>
+
+    <div class="grid-item">
+    <i class="fas fa-ruler fa-3x"></i><br>
+    <span class="muted">Average Gradient</span><br>
+    <%=@mountain.avg_gradient%>%
+    </div>
+
+    <div class="grid-item">
+    <i class="fas fa-chart-line fa-3x"></i><br>
+    <span class="muted">Elevation Gain</span><br>
+    <span class="details"><%=@mountain.elevation_gain%>m</span>
+    </div>
+
+</div>
+
+<div class="controls">
+    <%= link_to "Edit", edit_mountain_path(@mountain.id), :class => "controls-link" %>
+    <%= link_to "Delete", delete_mountain_path(@mountain.id), :class => "controls-link" %>
+</div>
+
+<h3>Map</h3>
+<iframe style="width:100%;height:550px;" src="<%=@mountain.map%>/embed2" frameborder="0" scrolling="no"></iframe>

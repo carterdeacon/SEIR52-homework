@@ -51,7 +51,7 @@ $('<h3>').html('Putting my booklist into a list').insertAfter($p2);
 //Bonus: Use a ul and li to display the books. 
 $('<ul>').appendTo('body'); // create a UL first as we dont want to loop it (only need one)
 
-for (let i = 0; i < books.length; i++) {
+for (let i = 0; i < books.length; i++) {  // cant used jQuery for this function stuff
     const title = books[i].title;
     const author = books[i].author;
     const text = `${title} by ${author}`;

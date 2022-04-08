@@ -1,0 +1,15 @@
+<%= form_for @bars do |f| %>
+    <%= f.label :name%>
+    <%= f.text_field :name, :required => true %>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+    <%= f.label :store_count %>
+    <%= f.text_field :store_count %>
+    <%= f.label :style %>
+    <%= f.text_field :style %>
+    <%= f.label :rating %>
+    <%= f.text_field :rating %>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+    <%= f.submit %>
+<%end%>

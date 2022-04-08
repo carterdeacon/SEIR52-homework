@@ -1,0 +1,18 @@
+body {
+    background-color: whitesmoke;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  min-height: 100vh;
+}
+nav{
+    text-align: right;
+}
+.feature {
+    max-width: 100%;
+    width: 300px;
+}

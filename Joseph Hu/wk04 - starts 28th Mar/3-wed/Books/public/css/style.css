@@ -1,0 +1,28 @@
+body{
+    background-image: url("../images/catbook.jpg");
+    text-align: center;
+}
+img{
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+.container{
+    background-color: rgba(167, 198, 218, 0.8); 
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 1em;
+    min-height: 90vh;
+}
+div{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+nav{
+    background-color: #9AD4D6;
+    width: 920px;
+}
+

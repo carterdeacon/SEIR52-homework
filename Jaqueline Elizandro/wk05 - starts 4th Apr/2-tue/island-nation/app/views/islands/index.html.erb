@@ -1,0 +1,9 @@
+<h1>Island Nations</h1>
+
+<%= link_to "--ADD NEW ISLAND--", new_island_path %>
+
+<% @islands.each do |island| %>
+    <p>
+        <%= link_to island.name, island_path(island.id) %>
+    </p>
+<% end %>

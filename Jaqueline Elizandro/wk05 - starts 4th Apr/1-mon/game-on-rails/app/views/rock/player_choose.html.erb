@@ -1,0 +1,17 @@
+<h1>Rock Paper Scissors</h1>
+
+<form action="/rock/player_choose/answer">
+    <label>
+        Take your pick:
+        <select name="pick">
+            <% @picks.each do |pick| %>
+                <option name="pick" value="<%= @picks.index(pick) %>"><%= @picks[@picks.index(pick)] %></option>
+            <% end %>
+        </select>
+    </label>
+    <button>Check your bet</button>
+</form>
+
+<p>
+    <a href="/">Play another game</a>
+</p>

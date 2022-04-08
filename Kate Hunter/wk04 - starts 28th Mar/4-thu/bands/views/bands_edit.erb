@@ -1,0 +1,21 @@
+<h1>Edit band info</h1>
+
+<form action="/bands/<%= @bands["id"] %>" method="post">
+    <label>
+        Name:
+        <input name="name" placeholder="Foo Fighters" required value="<%= @bands["name"] %>">    
+    </label>
+
+     <label>
+        Country of origin:
+        <input name="country" placeholder="USA" value="<%= @bands["country"] %>">    
+    </label>
+
+    <label>
+        Image:
+        <input type="URL" name="image" placeholder="http://..." value="<%= @bands["image"] %>">
+        
+    </label>
+
+    <button>Update Band</button>
+</form>
