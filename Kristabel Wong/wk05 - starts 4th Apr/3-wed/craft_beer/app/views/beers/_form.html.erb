@@ -1,0 +1,30 @@
+<%= form_for @beer do |f| %>
+<ul>
+    <li>
+        <%= f.label :name %>
+        <%= f.text_field :name, :placeholder => "Crankshaft", :required => true %>
+    </li>
+    <li>
+        <%= f.label :image %>
+        <%= f.url_field :image, :placeholder => "http://...", :required => true %> 
+    </li>
+    <li>
+        <%= f.label :abv %>
+        <%= f.text_field :abv, :placeholder => "5.8" %>
+    </li>
+    <li>
+        <%= f.label :style %>
+        <%= f.text_field :style, :placeholder => "Indian Pale Ale" %>
+    </li>
+    <li>
+        <%= f.label :standard %>
+        <%= f.text_field :standard, :placeholder => "1.7" %>
+    </li>
+
+    <li>
+        <%= f.label :brewery_id %>
+        <%= f.select :brewery_id, Brewery.pluck(:name, :id), :include_blank => true %>
+    </li>
+    <%= f.submit %>
+</ul>
+<% end %>

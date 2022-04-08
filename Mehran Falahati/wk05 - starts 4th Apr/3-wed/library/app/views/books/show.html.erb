@@ -1,0 +1,16 @@
+<h1><%= @book.name %></h1>
+
+<%= image_tag @book.image if @book.image.present? %> 
+
+<ul>
+    <li>Name: <%= @book.name %></li>
+    <% if @book.author.present? %>
+        <li>Author: <%= link_to @book.author.name, book.author %></li>
+    <% end %>
+    <li>Year: <%= @book.year %></li>
+</ul>
+
+<div>
+    <%= link_to "EDIT",  edit_book_path	%>
+    <%= link_to "DELETE", @book, :method => 'delete' %>
+</div>

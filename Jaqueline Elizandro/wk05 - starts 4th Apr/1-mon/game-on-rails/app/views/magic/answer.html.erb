@@ -1,6 +1,8 @@
-<h3>You ask <%= params[:question] %></h3>
+<h3>You ask: <%= params[:question] %></h3>
 
 <h3>The answer is: <%= @answers.sample %></h3>
 
-<a href="/magic">Ask another question</a>
-<a href="/">Play another game</a>
+<p>
+    <a href="/magic">Ask another question</a>
+    <a href="/">Play another game</a>
+</p>

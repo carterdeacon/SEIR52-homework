@@ -1,0 +1,10 @@
+<h1>All the oatmeal</h1>
+
+<% @oatmeals.each do |oatmeal| %>
+    <%= image_tag oatmeal.image, :class => 'thumb' if oatmeal.image.present? %>
+    <ul>
+        <li>Name: <%= link_to oatmeal.name, oatmeal %></li> 
+    
+    </ul>
+
+<% end %>

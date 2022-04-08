@@ -1,0 +1,25 @@
+<%= link_to "ALL ISLANDS", islands_path %>
+
+<h1>Edit Island</h1>
+
+<form action="<%= island_path(@island.id) %>" method="post">
+    <label>Name</label>
+    <input name="name" required value="<%= @island.name%>">
+
+    <label>Capital</label>
+    <input name="capital" value="<%= @island.capital%>">
+
+    <label>Language</label>
+    <input name="language" value="<%= @island.language%>">
+
+    <label>Area (km2)</label>
+    <input type="number" name="area" value="<%= @island.area %>">
+
+    <label>Continent</label>
+    <input name="continent" value="<%= @island.continent%>">
+
+    <label>Image</label>
+    <input name="image" value="<%= @island.image%>">
+
+    <button>EDIT ISLAND</button>
+</form>

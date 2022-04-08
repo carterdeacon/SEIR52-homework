@@ -1,0 +1,9 @@
+<h1>Formula 1 Teams</h1>
+
+<%= link_to 'New team', new_team_path %>
+
+<% @teams.each do |team| %>
+    <p title="<%= team.name%>">
+        <%= link_to image_tag(team.image, :class => 'thumbnail'), team %>
+    </p>
+<% end %>

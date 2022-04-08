@@ -1,0 +1,13 @@
+<%= form_for @pokemon do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+    <%= f.label :abilities %>
+    <%= f.text_field :abilities %>
+    <%= f.label :image %>
+    <%= f.url_field :image, :required => true %>
+    <%= f.label :master_id %>
+    <%= f.select :master_id, Master.pluck(:name, :id), :include_blank => true %>
+    <%= f.submit %>
+<% end %>
