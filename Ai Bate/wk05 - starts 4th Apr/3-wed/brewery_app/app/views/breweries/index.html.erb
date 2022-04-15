@@ -1,0 +1,11 @@
+<h1>All Breweries</h1>
+
+<% @breweries.each do |brewery| %>
+<%= image_tag brewery.logo,:class => 'thumb' if brewery.logo.present?%> 
+    <ul>
+    <li>Name: <%= link_to brewery.name, brewery %>   </li>
+    <li>Located: <%= brewery.state %> </li>
+    <li>Phone: <%= brewery.phone %> </li>
+    <li>Web: <%= link_to brewery.web %> </li>
+    </ul>
+<% end %>
