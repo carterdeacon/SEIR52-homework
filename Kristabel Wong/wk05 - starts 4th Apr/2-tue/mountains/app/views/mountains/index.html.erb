@@ -1,0 +1,7 @@
+<h1 class="index" id="index">All Ski Mountains</h1>
+
+<% @mountains.each do |mountain| %>
+    <h2 class="index">
+        <%= link_to mountain.name, mountain_path(mountain.id) %>, <%= mountain.country %>
+    </h2>
+<% end %>

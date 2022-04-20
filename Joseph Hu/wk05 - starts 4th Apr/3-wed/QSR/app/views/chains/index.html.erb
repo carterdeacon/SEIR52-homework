@@ -1,0 +1,15 @@
+<div class="index-container">
+<h1>All Fast Food Chains</h1>
+
+<%@chains.each do |chain|%>
+    <%= image_tag chain.logo, :class => 'chain-thumbnail' if chain.logo.present? %>
+    <ul>
+        <li>Name: <%=link_to chain.name, chain_path(chain.id)%></li>
+        <li>Founder: <%=chain.founder%></li>
+        <%unless chain.founded.nil? %>
+            <li>Founding Date: <%=chain.founded.strftime '%e %b %Y' %></li>
+        <%end%>
+        <li>Locations: <%=number_to_human chain.locations%></li>  
+    </ul>
+<%end%>
+</div>

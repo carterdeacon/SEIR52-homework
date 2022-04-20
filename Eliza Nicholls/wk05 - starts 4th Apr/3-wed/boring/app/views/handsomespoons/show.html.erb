@@ -1,0 +1,19 @@
+<h1><%= @handsomespoon.name %></h1>
+
+
+
+    <%= image_tag @handsomespoon.image, :class => 'feature' if @handsomespoon.image.present? %>
+    <ul>
+        <li>Name: <%= @handsomespoon.name %></li> <!---or handsomespoon.id --->
+        <li>Material: <%= @handsomespoon.material %></li>
+        <% if @handsomespoon.oatmeal.present? %>
+    <li>Oatmeal : <%= link_to @handsomespoon.oatmeal.name, @handsomespoon.oatmeal %></li>
+    <%end%>
+
+    </ul>
+
+
+    <div class="controls">
+        <%= link_to "Edit spoon", edit_handsomespoon_path(@handsomespoon) %>
+        <%= button_to "Delete tragic handsomespoon", @handsomespoon, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+    </div>

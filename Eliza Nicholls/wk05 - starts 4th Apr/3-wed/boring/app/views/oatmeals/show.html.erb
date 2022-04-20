@@ -1,0 +1,16 @@
+<h1><%= @oatmeal.name %></h1>
+
+
+
+    <%= image_tag @oatmeal.image, :class => 'feature' if @oatmeal.image.present? %>
+    <ul>
+        <li>Name: <%= @oatmeal.name %></li> <!---or oatmeal.id --->
+        <li>Vibe: <%= @oatmeal.vibe %></li>
+
+    </ul>
+
+
+    <div class="controls">
+        <%= link_to "Make more boring", edit_oatmeal_path(@oatmeal) %>
+        <%= button_to "Delete tragic oatmeal", @oatmeal, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+    </div>

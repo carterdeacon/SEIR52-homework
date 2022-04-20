@@ -1,0 +1,13 @@
+<%= form_for @beer do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :image, 'Image URL' %>
+    <%= f.url_field :image %>
+    <%= f.label :abv, 'ABV %' %>
+    <%= f.number_field :abv, step: :any %>
+    <%= f.label :brewery_id %>
+    <%= f.select :brewery_id, Brewery.pluck(:name, :id), :include_blank => true %>
+    <%= f.submit %>
+<% end %>

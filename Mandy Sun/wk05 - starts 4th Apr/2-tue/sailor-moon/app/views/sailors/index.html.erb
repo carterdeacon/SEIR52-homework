@@ -1,0 +1,11 @@
+<h1>💖🌙  Welcome to Moon Kingdom 🌙💖</h1>
+
+<ul>
+   <% @sailors.each do |sailor|%>
+     <li>
+      <%= link_to sailor.name, show_sailor_path(sailor.id), :class =>"sailors_name"%>
+     </li>
+   <% end %>
+</ul>
+
+<img src="https://www.pikpng.com/pngl/b/298-2987776_sailor-moon-cat-sailor-moon-luna-perler-beads.png" alt="" class="cat">

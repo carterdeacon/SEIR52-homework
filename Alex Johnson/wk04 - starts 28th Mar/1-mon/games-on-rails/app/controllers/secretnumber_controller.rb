@@ -8,7 +8,7 @@ class SecretnumberController < ApplicationController
        if secret_number == userchoice 
         @result =  "You guessed it! the secret number is #{ secret_number }"
        else
-        @result = "You lost ...the secret number was Pi...not really it was #{ secret_number }"
+        @result = "You lost ... was #{ secret_number }"
        end
     end
 

@@ -1,0 +1,12 @@
+<h1>All Cities</h1>
+
+<% @cities.each do |city|%>
+    <%= image_tag city.image, :class => 'thumb' if city.image.present? %>
+        <ul>
+            <li>Name: <%= link_to city.name, city %></li>
+            <li>Country: <%= city.country %></li>
+            <li>Population: <%= city.population %></li>
+            <li>Metropolitan Area: <%= city.metropolitan_area %></li>
+        </ul>
+<% end %>
+
