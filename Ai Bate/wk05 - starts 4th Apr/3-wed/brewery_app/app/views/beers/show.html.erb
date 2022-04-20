@@ -1,0 +1,18 @@
+<h1><%= @beer.name %></h1>
+<%= image_tag @beer.image, :class =>'feature' %>
+<ul>
+    <li>Name: <%= @beer.name%></li>
+    <% if @beer.brewery.present?%>
+    <li>Brewery: <%= link_to @beer.brewery.name, @beer.brewery %> </li>
+    <%end%>
+
+
+    <li>Style: <%= @beer.style%></li>
+    <li>Abv: <%= @beer.abv%> % </li>
+</ul>
+
+
+<div class="controls">
+        <%= link_to "Edit Beer", edit_beer_path(@beer) %>
+        <%= link_to "Delete Beer", @beer, :method => 'delete', :data =>{:confirm =>"are you sure?"} %>
+        

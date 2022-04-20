@@ -1,0 +1,18 @@
+body {
+    background-color: white;
+}
+
+.container {
+    max-width: 906px;
+    margin: 0 auto;
+
+}
+
+.thumb {
+    height: 12em;
+
+}
+
+.feature {
+    max-height: 30em;
+}

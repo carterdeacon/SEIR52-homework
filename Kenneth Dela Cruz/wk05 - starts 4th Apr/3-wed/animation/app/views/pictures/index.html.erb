@@ -1,0 +1,11 @@
+<h1>Motion Pictures</h1>
+
+<div class="content">
+    <% @pictures.each do |picture| %>
+        <%= image_tag picture.image, :class => 'thumb' if picture.image.present? %>
+        <ul>
+            <li>Name: <%= link_to picture.name, picture %></li>
+            <li>Genre: <%= picture.genre %></li>
+        </ul>
+    <% end %>
+</div>

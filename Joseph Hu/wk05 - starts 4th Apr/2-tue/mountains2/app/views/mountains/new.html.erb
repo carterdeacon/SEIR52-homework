@@ -1,0 +1,28 @@
+<form action="<%=mountains_path%>" method="post"> <!--don't write the route by hand, use the planets_path-->
+    <label>
+        Name:
+        <input name="name" required>
+    </label>
+    <label>
+        Image:
+        <input type="url" name="image">
+    </label>
+    <label>
+        Elevation:
+        <input type="number" name="elevation">
+    </label>
+    <label>
+        Country:
+        <input type="text" name="country">
+    </label>
+    <label>
+        Parent Range:
+        <input type="text" name="range">
+    </label>
+    <label>
+        Listing:
+        <input type="text" name="listing">
+    </label>
+    <button>Create Mountain</button>
+</form>
+

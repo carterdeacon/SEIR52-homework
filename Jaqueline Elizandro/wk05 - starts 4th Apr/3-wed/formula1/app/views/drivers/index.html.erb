@@ -1,0 +1,9 @@
+<h1>Formula 1 Drivers</h1>
+
+<%= link_to 'New driver', new_driver_path %>
+
+<% @drivers.each do |driver| %>
+    <p title="<%= driver.gname%> <%= driver.surname %>">
+        <%= link_to image_tag(driver.image, :class => 'thumbnail'), driver %>
+    </p>
+<% end %>
