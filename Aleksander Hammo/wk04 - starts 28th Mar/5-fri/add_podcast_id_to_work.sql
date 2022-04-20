@@ -1,0 +1,1 @@
+ALTER TABLE work ADD COLUMN podcast_id INTEGER;
