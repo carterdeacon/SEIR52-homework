@@ -1,0 +1,11 @@
+<h1>All Buildings</h1>
+
+<% @buildings.each do |building|%>
+    <%= image_tag building.image, :class => 'thumb' if building.image.present? %>
+        <ul>
+            <li>Name: <%= link_to building.name, building %></li>
+            <li>Year: <%= building.year %></li>
+            <li>Height: <%= building.height %></li>
+            <li>Floor: <%= building.floor %></li>
+        </ul>
+<% end %>

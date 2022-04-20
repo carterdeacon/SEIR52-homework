@@ -1,0 +1,12 @@
+
+<%= form_for @handsomespoon do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name, :required => true %>
+<%= f.label :material%>
+<%= f.text_field :material%>
+<%= f.label :image%>
+<%= f.url_field :image%>
+<%= f.label :oatmeal_id %>
+<%= f.select :oatmeal_id, Oatmeal.pluck(:name, :id), :include_blank => true %>
+<%= f.submit%>
+<%end%>

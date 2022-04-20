@@ -1,0 +1,19 @@
+<h1><%= @team.name %></h1>
+
+
+<p><%= link_to @team.website, @team.website, target: :_blank %></p>
+
+
+<%= image_tag @team.image %>
+
+<% @team.drivers.each do |driver| %>
+    <p><%= link_to image_tag(driver.image, :class => 'thumbnail'), driver %></p>
+<% end %>
+
+<p>
+    <div class="controls">
+        <%= link_to 'All teams', teams_path %>
+        <%= link_to 'Edit team', edit_team_path %>
+        <%= link_to 'Delete team', @team, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+    </div>
+</p>

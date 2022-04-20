@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(247, 244, 186);
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto
+}
+.feature {
+    max-width: 30em;
+}
+.thumb {
+    height: 20em;
+}
+label {
+    display: block;
+}

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+* {
+    font-family: 'Amatic SC', cursive;
+}
+
+body {
+    background-image: url(/assets/chalet-zermatt.jpg);
+}
+
+.container {
+    width: 70vw;
+    height: 80vh;
+    margin: 3.5vw auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    position: relative;
+}
+
+a, a:hover, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    text-align: right;
+}
+
+nav a {
+    margin-left: 20px;
+    font-size: 140%;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+.feature {
+    height: 32vmax;
+    float: right;
+    margin-right: 20px;
+}
+
+li {
+    list-style: none;
+    font-size: 120%;
+}
+
+ul {
+    padding-left: 10px;
+}
+
+.index {
+    text-align: center;
+    font-size: 4vh;
+}
+
+#index {
+    font-size: 500%;
+}
+
+span {
+    width: 110px;
+    display: inline-block;
+}
+
+input {
+    width: 200px;
+}
+
+.show {
+    text-align: center;
+    font-size: 250%;
+}
+
+.controls {
+    position: absolute;
+    bottom: 10px;
+    font-size: 150%;
+}

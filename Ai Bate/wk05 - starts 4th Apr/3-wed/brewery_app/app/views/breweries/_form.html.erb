@@ -1,0 +1,14 @@
+<%= form_for @brewery do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+    <%= f.label :logo, 'logo link' %>
+    <%= f.url_field :logo  %>
+    <%= f.label :state%>
+    <%= f.text_field :state %>
+    <%= f.label :phone%>
+    <%= f.text_field :phone, :placeholder => '0412 354 125' %>
+    <%= f.label :web%>
+    <%= f.url_field :web  %>
+    <%= f.submit %>
+
+<% end %>

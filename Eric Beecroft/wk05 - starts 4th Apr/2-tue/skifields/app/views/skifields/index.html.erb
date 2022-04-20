@@ -1,0 +1,7 @@
+<h1>Ski-Fields</h1>
+
+<% @skifields.each do |skifield| %>
+    <p>
+        <%= link_to skifield.name, skifield_path(skifield.id) %>
+    </p>
+<% end %>

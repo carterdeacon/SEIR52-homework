@@ -1,0 +1,10 @@
+<h1>All Doctors</h1>
+
+
+<% @doctors.each do |doctor|%>
+    <ul>
+        <li>Dr <%= link_to doctor.name, doctor%>
+        <%= link_to doctor.family, doctor %>
+        </li>
+    </ul>
+<% end %>

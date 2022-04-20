@@ -1,0 +1,12 @@
+<h1><%= @podcast["title"] %></h1>
+
+<h2>Guest: <%= @podcast["guest_image"] %></h2>
+
+<% unless @podcast["guest_image"].nil? || @podcast["guest_image"].empty? %>
+    <img class="feature" src="<%= @podcast["guest_image"] %>" alt="<%= @podcast["title"] %>">
+<% end %>
+
+<div class="controls">
+    <a href="/podcasts/<%= @podcast["id"] %>/edit">Edit podcast</a>
+    <a href="/podcasts/<%= @podcast["id"] %>/delete">Delete podcast</a>
+</div>

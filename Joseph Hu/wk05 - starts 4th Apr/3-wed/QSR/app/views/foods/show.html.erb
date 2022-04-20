@@ -1,0 +1,21 @@
+<div class="show-container">
+<h1><%= @food.name %></h1>
+
+<%= image_tag @food.image, :class=>'food-feature' if @food.image.present? %>
+
+<ul>
+    <li>Name:<%=@food.name%></li>
+    <% if @food.chain.present? %> 
+        <li>Chain: <%= link_to @food.chain.name, @food.chain %></li> 
+    <%end%>
+    <li>Type of Food: <%=@food.category%></li>
+    <li>Ingredients: <%=@food.ingredients%></li>
+    <li>Kilojoules per serve: <%=@food.kilojoules%> KJ</li>
+</ul>
+</div>
+
+
+<div class="controls">
+    <%= link_to 'Edit food', edit_food_path(@food) %>
+    <%= link_to 'Delete food', @food, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+</div>
