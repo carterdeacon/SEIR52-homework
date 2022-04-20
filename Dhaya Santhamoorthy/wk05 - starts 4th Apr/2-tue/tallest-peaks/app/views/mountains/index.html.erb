@@ -1,0 +1,9 @@
+<h1>Tallest mountains in the world:</h1>
+
+<% @mountains.each do |mountain| %>
+    <p>
+        <%= link_to mountain.name, mountain_path(mountain.id) %>
+        is
+        <%= mountain.elevation %> m heigh
+    </p>
+<% end %>

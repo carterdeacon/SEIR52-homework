@@ -1,0 +1,40 @@
+<h1>New Mountain</h1>
+<form action=<%= mountains_path %>method="post">
+    <label>
+        Name:
+        <input name="name" required>
+    </label>
+    <label>
+        Country:
+        <input name="country">
+    </label>
+
+    <label>
+        Height:
+        <input name="height" type="number">
+    </label>
+
+     <label>
+        Prominence Rank:
+        <input name="prominence_rank" type="number">
+    </label>
+
+     <label>
+        Photo URL:
+        <input name="photo">
+    </label>
+
+      <label>
+        First Climbed Year:
+        <input name="first_climbed_year" type="number">
+    </label>
+
+      <label>
+        First Climber(s):
+        <input name="first_climbed_by">
+    </label>
+
+    <button>Submit</button>
+
+
+</form>

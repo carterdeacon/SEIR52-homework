@@ -1,0 +1,52 @@
+<h1>New Ski mountain</h1>
+
+<form action="<%= mountains_path %>" method="post">
+ 
+    <ul>
+        <li>
+            <label>
+                <span> Name:</span>  
+                <input name="name" required>
+            </label>
+        </li>
+        <li>
+            <label>
+                <span>Image:</span>
+                <input type="url" name="image">
+            </label>
+        </li>
+        <li>
+            <label>
+                <span>Country:</span>
+                <input name="country">
+            </label>
+        </li>
+        <li>
+            <label>
+                <span>Total Runs/Trails:</span>
+                <input type="number" name="runs">
+            </label>        
+        </li>
+        <li>
+            <label>
+                <span>Beginner:</span>
+                <input type="number" name="beginner">
+            </label>        
+        </li>
+        <li>
+            <label>
+                <span>Intermediate:</span>
+                <input type="number" name="intermediate">
+            </label>        
+        </li>
+        <li>
+            <label>
+                <span>Advanced:</span>
+                <input type="number" name="advanced">
+            </label>        
+        </li>
+
+    </ul>
+
+    <button>Create Ski Mountain</button>
+</form>

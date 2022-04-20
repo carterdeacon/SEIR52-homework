@@ -1,0 +1,13 @@
+<h1>💖🌙  <%= @sailor.name %> 🌙💖</h1>
+
+<%= image_tag @sailor.image, :class => 'feature' if @sailor.image.present? %>
+<ul>
+    <li>Name: <%= @sailor.name %></li>
+    <li>Identity: <%= @sailor.identity %></li>
+    <li>Residency: <%= @sailor.residency %></li>
+</ul>
+
+<div class="controls">
+    <%= link_to "Edit guardian", edit_sailor_path,  :class => "link" %>
+    <%= link_to "Delete guardian",delete_sailor_path, :class => "link" %>
+</div>
