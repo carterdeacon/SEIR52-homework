@@ -1,11 +1,11 @@
-// ajax
 const title = document.querySelector(".title");
 const image = document.querySelector(".image");
 const bio = document.querySelector(".bio");
 
+// ajax
 const fetchFact = function () {
-	const xhr = new XMLHttpRequest();
 	let search = document.querySelector("#search").value;
+	const xhr = new XMLHttpRequest();
 	xhr.open("GET", `https://www.googleapis.com/books/v1/volumes?q=title:${search}`);
 	xhr.send();
 	xhr.onreadystatechange = function () {
@@ -15,6 +15,8 @@ const fetchFact = function () {
 			title.innerHTML = book.title;
 			image.innerHTML = `<img src="${book.imageLinks.smallThumbnail}">`;
 			bio.innerHTML = book.description;
+		} else {
+			title.innerHTML = "error try again";
 		}
 	};
 };
