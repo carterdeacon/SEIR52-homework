@@ -5,25 +5,46 @@ document.addEventListener('DOMContentLoaded', function() {
     
         xhr.open('GET', `https://www.googleapis.com/books/v1/volumes?q=title:${query}`);
         xhr.send();
-    
         xhr.onreadystatechange = function () {
             if (xhr.readyState != 4) {
                 return;
             };
-    
+            
             const data = JSON.parse(xhr.responseText);
-    
-            const titleelement = document.getElementById('title');
-            let title = data.items[1].volumeInfo.title
-            titleelement.innerText = title;
-            const div = document.getElementById('cover');
-            let thumbnail = data.items[1].volumeInfo.imageLinks.thumbnail;
-            div.innerHTML = `<img src="${ thumbnail }" alt="searched novels cover">`;
+
+            try {
+                const coverElement = document.getElementById('cover');
+                const thumbnail = data.items[0].volumeInfo.imageLinks.thumbnail;
+                coverElement.innerHTML = `<img src="${ thumbnail }" alt="searched novels cover">`;
+            }
+            catch {};
+            try {
+                const publishElement = document.getElementById('publisher')
+                const publisher = data.items[0].volumeInfo.publisher
+                publisherElement.innerText = publisher;
+            } 
+            catch {};
+            try { 
+                const blurbElement = document.getElementById('blurb');
+                const blurb = data.items[0].volumeInfo.description;
+                if (blurb) { blurbElement.innerText = blurb };
+            }
+            catch {};
+
+            const titleElement = document.getElementById('title');
+            let authors = data.items[0].volumeInfo.authors
+            const title = data.items[0].volumeInfo.title
+            titleElement.innerHTML = `${title}<br>by ${authors}.`;
+
+            if (authors != undefined) {
+                if (authors.length > 2) {
+                    authors = authors.subarray(0, authors.length-1).join(', ') + ' and ' + authors[authors.length-1];
+                } else if (authors.length > 1) {
+                    authors = authors.join(' and ')
+                };
+            };
         };
     };
     
     document.getElementById('fetch').addEventListener('click', fetchBook);
 });
-
-// data.items[1].volumeInfo.title // => "Ulysses"
-// data.items[0].volumeInfo.imageLinks.thumbnail // => book cover image
