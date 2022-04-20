@@ -1,0 +1,21 @@
+<h1> <%= @brewery.name%> </h1>
+<%= image_tag @brewery.logo, :class => 'feature' if @brewery.logo.present? %>
+    <ul>
+        <li>Name: <%= @brewery.name %> </li>
+        <li>Located: <%= @brewery.state %> </li>
+        <li>Phone: <%= @brewery.phone %></li>
+        <li>Website: <%= link_to @brewery.name, @brewery.web, target: '_blank' %></li>
+               
+    </ul>
+
+    <% @brewery.beers.each do |beer|%>
+        <%= link_to image_tag(beer.image, :class => 'thumb'), beer %>
+    <% end %>
+
+
+    <div class="controls">
+        <%= link_to "Edit Brewery", edit_brewery_path(@brewery) %>
+        <%= button_to "Delete Brewery", @brewery, :method => 'delete', :data =>{:confirm =>"are you sure?"} %>
+        
+    
+    </div>

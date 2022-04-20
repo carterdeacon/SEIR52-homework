@@ -1,0 +1,9 @@
+<div class="index-container">
+<h1>All Foods</h1>
+
+<% @foods.each do |food| %>
+    <%= link_to image_tag(food.image, :class => "food-thumbnail"), food if food.image.present? %> <!-- lets you click on the image as a link that takes you to the work SHOW page. the brackets just group the image related stuff together-->
+    <li>Food Item: <%= link_to food.name, food %></li>
+<%end%>
+
+</div>

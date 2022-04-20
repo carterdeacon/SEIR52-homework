@@ -1,0 +1,8 @@
+<h1><%= @job["title"] %></h1>
+
+<h2>Guest: <%= @job["guest_image"] %></h2>
+
+<div class="controls">
+    <a href="/jobs/<%= @job["id"] %>/edit">Edit job</a>
+    <a href="/jobs/<%= @job["id"] %>/delete">Delete job</a>
+</div>
