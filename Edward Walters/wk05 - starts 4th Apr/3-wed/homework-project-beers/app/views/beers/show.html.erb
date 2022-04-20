@@ -1,0 +1,16 @@
+<h1><%= @beer.name %> </h1>
+<%= image_tag @beer.image, :class => 'feature' if @beer.image.present? %>
+<ul>
+    <li><%= @beer.description %></li>
+    <li>ABV: <%= @beer.abv %>%</li>
+       <% if @beer.brewery.present? %>
+        <li>Brewery: <%= link_to @beer.brewery.name, @beer.brewery %></li>
+    <% end %>
+
+</ul>
+
+<%= button_to 'Edit Beer', edit_beer_path(@beer), method: :get %> 
+
+<%= button_to 'Delete Beer', @beer, :method => 'delete', :data => { :confirm => 'Are you sure?'} %>
+
+

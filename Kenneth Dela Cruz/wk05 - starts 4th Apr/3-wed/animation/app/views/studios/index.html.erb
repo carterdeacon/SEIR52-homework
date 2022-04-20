@@ -1,0 +1,15 @@
+<h1>Animation Studios</h1>
+
+<div class="content">
+    <% @studios.each do |studio| %>
+        <%= image_tag studio.image, :class => 'thumb' if studio.image.present? %>
+        <ul>
+            <li>Name: <%= link_to studio.name, studio %></li>
+            <% unless studio.founded.nil? %>
+                <li>Founded: <%= studio.founded.strftime '%B %e, $Y' %></li>
+            <% end %>
+            <li>Headquarters: <%= studio.headquarters %></li>
+            <li>Employees: <%= studio.employees %></li>
+        </ul>
+    <% end %>
+</div>

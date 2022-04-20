@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HomeworkProjectBeers</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.min.css">
+
+  </head>
+
+  <body>
+  <nav>
+    <%= link_to "All Breweries", breweries_path %>
+    <%= link_to "New Brewery", new_brewery_path %>
+    ---
+    <%= link_to "All Beers", beers_path %>
+    <%= link_to "New Beer", new_beer_path %>
+    <%= %>
+  </nav>
+  <div class="container">
+    <%= yield %>
+  </div>
+  </body>
+</html>

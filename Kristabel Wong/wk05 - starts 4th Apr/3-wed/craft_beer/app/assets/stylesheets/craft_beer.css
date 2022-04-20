@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+* {
+    font-family: 'Amatic SC', cursive;
+}
+
+body {
+    background-image: url(/assets/beach.jpg);
+    background-position: center;
+}
+.thumb {
+    height: 13em;
+}
+
+.feature {
+    max-height: 30em;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding-left: 10px;
+    display: inline-block;
+}
+
+a, a:hover, a:visited {
+    color: black;
+}
+
+.container {
+    width: 60vw;
+    margin: 2vw auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+
+nav a {
+    margin-left: 20px;
+    font-size: 180%;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 400%;
+}
+
+nav {
+    text-align: center;
+}
+
+.thumb_beer {
+    height: 15em;
+    margin-left: 20px;
+}
+
+.beers_info {
+    text-align: left;
+}
+
+.beer_info {
+    display: block;
+}
+
+.small {
+    width: 53vw;
+    margin: 0 auto;
+}

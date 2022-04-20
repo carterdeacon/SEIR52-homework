@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    // border: 1px solid red;
+}
+body{
+    font-size: 17px;
+    background-image:url("background.jpg");
+    background-size: cover;
+}
+
+h1{
+   margin-bottom: 20px;
+}
+
+.main{
+    font-family: 'Libre Baskerville', serif;
+    color: black;
+    display: grid;
+    max-width: 992px;
+    max-height: 992px;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+ul{
+    list-style-type: none;
+}
+.img{
+    margin: 0 auto;
+    display: block;
+    border-radius: 2em;
+    margin-bottom: 20px;
+}
+.controls{
+    text-decoration: none;
+}
+.food-thumbnail{
+    max-height:300px;
+}
+
+.food-feature{
+    max-height:40%
+}
