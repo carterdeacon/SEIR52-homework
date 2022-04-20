@@ -1,4 +1,4 @@
-const fetchFact = function() {
+const fetchBook = function() {
     const xhr = new XMLHttpRequest();
     const search = document.getElementById("search").value;
     xhr.open('GET', `https://www.googleapis.com/books/v1/volumes?q=title:${search}`);
@@ -17,4 +17,13 @@ const fetchFact = function() {
     };
 };
 
-document.getElementById('fetch').addEventListener('click', fetchFact);
+document.getElementById('fetch').addEventListener('click', function() {
+    let imgs = document.querySelectorAll('img')
+    if (imgs.length !== 0) {
+        imgs.forEach(function(img) {
+            (img).remove();
+        });
+    };
+    fetchBook()
+});
+    
