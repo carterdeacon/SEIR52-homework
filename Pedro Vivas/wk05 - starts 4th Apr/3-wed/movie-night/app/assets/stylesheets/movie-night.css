@@ -1,0 +1,17 @@
+body {
+    background-color: azure;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.thumb {
+    max-height: 12em;
+    border: 1px solid black;
+}
+
+.feature {
+    max-height: 30em;
+}
