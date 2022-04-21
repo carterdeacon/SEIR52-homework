@@ -1,5 +1,5 @@
 let pageNum = 1;
-
+let searchTerm;
 const searchFlickr = function (keywords) {
     console.log('Searching for', keywords);
 
@@ -50,14 +50,15 @@ $(document).ready(function() {
 
         event.preventDefault(); // disable the form from being submitted to a server.
         
-        const searchTerm = $('#query').val();
-        searchFlickr(searchTerm);                
-        $(window).on('scroll', _.throttle(function () {
-            if (scrollBottom() < 700) {
-                pageNum += 1;
-                searchFlickr(searchTerm);
-                console.log('near the bottom');
-            };
-        }, 500));
+        searchTerm = $('#query').val();
+        searchFlickr(searchTerm);     
     });
+    
+    $(window).on('scroll', _.throttle(function () {
+        if (scrollBottom() < 700) {
+            pageNum += 1;
+            searchFlickr(searchTerm);
+            console.log('near the bottom');
+        };
+    }, 500));
 });
