@@ -1,0 +1,52 @@
+<h1><%= @god.name %></h1>
+<p>
+    Name:
+    <%= @god.name %>
+</p>
+
+<% if @god.pantheon.present? %>
+<p>
+    Pantheon:
+    <%= @god.pantheon.name %>
+</p>
+<% end %>
+
+<% if @god.parents.present? %>
+<p>
+    Parents:
+    <%= @god.parents %>
+</p>
+<% end %>
+<p>
+    Domains:
+    <%= @god.domain %>
+</p>
+<p>
+    Home:
+    <%= @god.home %>
+</p>
+<p>
+    Symbol:
+    <%= @god.symbol %>
+</p>
+<% if @god.sacred_animals.present? %>
+<p>
+    Sacred Animals:
+    <%= @god.sacred_animals %>
+</p>
+<% end %>
+<% if @god.retinue.present? %>
+<p>
+    Retinue:
+    <%= @god.retinue %>
+</p>
+<% end %>
+<p>
+    Other Names:
+    <%= @god.other_names %>
+</p>
+
+<div class="controls">
+<%= link_to 'edit god', edit_god_path(@god) %>
+<%= button_to "Delete god", @god, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>
