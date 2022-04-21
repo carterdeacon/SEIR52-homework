@@ -1,0 +1,16 @@
+<h1><%= @author.name %></h1>
+
+<%= image_tag @author.image if @author.image.present? %>
+
+<ul>
+    <li>Name: <%= @author.name %></li>
+    <li>Nationality: <%= @author.nationality %></li>
+</ul>
+
+
+<div>
+    <%= link_to "EDIT", edit_author_path(@author) %>
+    <%= link_to "DELETE", @author, :method => 'delete', :data => { :confirm => "Are you Sure? "} %>
+</div>
+
+

@@ -1,0 +1,15 @@
+<h1>All Consoles</h1>
+
+<% @consoles.each do |console| %>
+    <%= image_tag console.image, :class => 'thumb' if console.image.present? %>
+
+    <ul>
+        <li>Name: <%= link_to console.name, console%></li>
+        <li>Period: <%= console.period%></li>
+        <li>Release Date: <%= console.release_date %></li>
+        <li>Sold: <%= console.sold %></li>
+    
+    </ul>
+
+    <% end %>
+ 

@@ -1,0 +1,13 @@
+<%= form_for @artist do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :born %>
+    <%= f.text_field :born %>
+    <%= f.label :dob, 'Date of Birth' %>
+    <%= f.text_field :dob, :placeholder => 'YYYY-MM-DD' %>
+    <%= f.label :instrument %>
+    <%= f.text_field :instrument %>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+    <%= f.submit%>
+<% end %>

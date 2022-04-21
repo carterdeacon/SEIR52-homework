@@ -1,0 +1,14 @@
+
+<%= form_for @studio do |f| %>
+    <%= f.label :name%>
+    <%= f.text_field :name %>
+    <%= f.label :founded %>
+    <%= f.text_field :founded, :placeholder => 'YYYY-MM-DD' %>
+    <%= f.label :headquarters %>
+    <%= f.text_field :headquarters %>
+    <%= f.label :employees %>
+    <%= f.text_field :employees %>
+    <%= f.label :image %>
+    <%= f.text_field :image, :required => true%>
+    <%= f.submit %>
+<% end %>

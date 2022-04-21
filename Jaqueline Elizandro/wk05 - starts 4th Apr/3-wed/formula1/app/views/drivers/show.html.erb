@@ -1,0 +1,17 @@
+<h1><%= @driver.gname %> <%= @driver.surname %></h1>
+
+
+<p>Date of bith: <%= @driver.dob.strftime "%B %e, %Y" unless @driver.dob.nil? %> (age <%= ((Time.zone.now - @driver.dob.to_time) / 1.year.seconds).floor unless @driver.dob.nil? %>)</p>
+<p>Nationality: <%= @driver.nationality %></p>
+
+<% if @driver.team.present? %>
+    <p>Racing team: <%= link_to @driver.team.name, @driver.team %></p>
+<% end %>
+
+<%= image_tag @driver.image %>
+
+<div class="controls">
+    <%= link_to 'All drivers', drivers_path %>
+    <%= link_to 'Edit driver', edit_driver_path %>
+    <%= link_to 'Delete driver', @driver, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+</div>
