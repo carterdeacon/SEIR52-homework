@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Skifields</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+      <%= link_to "All Ski-Fields", skifields_path %>
+      |
+      <%= link_to "New Ski-Field", new_skifield_path %>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <img class="base" src="/assets/mountains.png" alt="mountain drawing">
+  </body>
+</html>

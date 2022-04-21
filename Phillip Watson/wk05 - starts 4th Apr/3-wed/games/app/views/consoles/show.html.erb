@@ -1,0 +1,16 @@
+<h1><%= @console.name %></h1>
+
+<%= image_tag @console.image, :class => 'feature' if @console.image.present? %>
+
+    <ul>
+        <li>Name: <%= @console.name %></li>
+        <li>Period: <%= @console.period%></li>
+        <li>Release Date: <%= @console.release_date %></li>
+        <li>Sold: <%= @console.sold %></li>
+    </ul>
+    <div class="controls">
+        <%= link_to "Edit Console", edit_console_path(@console) %>
+        
+        </div>
+    
+

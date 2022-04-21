@@ -1,0 +1,43 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(43, 31, 16);
+	color: aliceblue;
+	text-decoration: none;
+	max-width: 800px;
+	text-align: center;
+}
+a {
+	text-decoration: none;
+	color: aliceblue;
+	padding: 8px;
+	margin-top: 10px;
+}
+nav {
+	padding: 10px;
+	text-align: left;
+}
+.show-img {
+	max-width: 90%;
+}
+.show-btn {
+	background-color: aqua;
+	border-radius: 5px;
+	color: rgb(43, 31, 16);
+}
+.bars-content {
+	background-color: rgb(53, 38, 20);
+	padding: 5px;
+	margin: 0 auto;
+	width: 400px;
+}
+.bar-btn {
+	padding: 5px;
+	background-color: aliceblue;
+	border-radius: 8px;
+	color: rgb(43, 31, 16);
+}
+.bar-btn:hover {
+	background-color: cadetblue;
+	transition: 0.4s;
+}

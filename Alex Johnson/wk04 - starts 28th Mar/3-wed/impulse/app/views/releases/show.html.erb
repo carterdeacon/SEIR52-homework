@@ -1,0 +1,17 @@
+<h1><%= @release.title %></h1>
+
+<%= image_tag @release.image, :class => 'feature' %>
+
+<ul>
+    <li>Title: <%= @release.title %></li>
+    <% if @release.artist.present? %>
+        <li>Artist: <%= link_to @release.artist.name, @release.artist %></li>
+    <% end %>
+    <li>Catalogue: <%= @release.catalog %></li>
+    <li>Year: <%= @release.year %></li>
+</ul>
+
+<div class="controls">
+    <%= link_to "Edit Release", edit_release_path(@release) %>
+    <%= button_to "Delete Release", @release, :method => 'delete', :data => { :confirm  => 'Are you sure?' } %>
+</div>

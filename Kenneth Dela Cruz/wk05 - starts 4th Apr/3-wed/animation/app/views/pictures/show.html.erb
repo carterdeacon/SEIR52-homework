@@ -1,0 +1,22 @@
+<h1>Motion Picture</h1>
+
+<div class="content">
+
+    <%= image_tag @picture.image, :class => 'thumb' if @picture.image.present? %>
+    <ul>
+        <li>Name: <%= @picture.name %></li>
+        <% if @picture.studio.present? %>
+        <li>Studio: <%= link_to @picture.studio.name, @picture.studio%></li>
+        <% end %>
+        <li>Genre: <%= @picture.genre %></li>
+        <% unless @picture.gif.nil? %>
+        <li><%= image_tag @picture.gif, :class => 'clip' %> </li> 
+        <% end %>
+    </ul>
+
+    <div class="controls">
+    <%= link_to "Edit", edit_picture_path(@picture) %>
+    <%= link_to "Delete", @picture, :method => 'delete', :data => { :confirm => 'Are you sure'} %>
+    </div>
+   
+</div> 

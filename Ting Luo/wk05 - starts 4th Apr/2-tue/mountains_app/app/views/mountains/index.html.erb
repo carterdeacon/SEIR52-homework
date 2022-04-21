@@ -1,0 +1,8 @@
+<h1>Famous Mountians</h1>
+<ul class = "index">
+<% @mountains.each do |mountain|%>
+<li>
+<%= link_to mountain.name, mountain_path(mountain.id)%>
+</li>
+<% end %>
+</ul>

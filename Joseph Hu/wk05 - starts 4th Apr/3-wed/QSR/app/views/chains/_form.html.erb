@@ -1,0 +1,18 @@
+<%=form_for @chain do |f| %>
+    <%=f.label :name %>
+    <%=f.text_field :name, :required => true %>
+
+    <%=f.label :founder %>
+    <%=f.text_field :founder %>
+
+    <%=f.label :founded, "Founding Date" %>
+    <%=f.date_field :founded, :placeholder =>'YYYY-MM-DD'%>
+
+    <%=f.label :locations %>
+    <%=f.number_field :locations%>
+
+    <%=f.label :logo %>
+    <%=f.url_field :logo%>
+
+    <%=f.submit%>
+<%end%>
