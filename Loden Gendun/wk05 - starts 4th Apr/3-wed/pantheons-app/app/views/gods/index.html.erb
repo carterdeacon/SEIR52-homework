@@ -1,0 +1,8 @@
+<h2>Gods</h2>
+<ul>
+    <% @gods.each do |god|%>
+    <li>
+        <%= link_to god.name, god %>
+    </li>
+    <% end %>
+</ul>
