@@ -18,6 +18,12 @@ const searchFlicker = function(keywords, setPage){
 const showImages = function(results){
     results.photos.photo.forEach(function(photo){
         const thumbnailURL = generateURL(photo);
+        // const link_id = photo.id
+        // const $img = $('<img>',{src: thumbnailURL, id: "search-img"});
+        // const $link = $('<link>', {href: thumbnailURL});
+        // console.log($link)
+        // $img.appendTo($link);
+        // $link.appendTo("#images");
         const $img = $('<img>',{src: thumbnailURL, id: "search-img"});
         const html = `<a href="https://www.flickr.com/photos/${ photo.owner }/${ photo.id }"><img src="${ thumbnailURL }"></a>`
         $('#images').append(html)
