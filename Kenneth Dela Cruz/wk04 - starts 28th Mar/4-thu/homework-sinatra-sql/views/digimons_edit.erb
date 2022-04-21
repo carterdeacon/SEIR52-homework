@@ -1,0 +1,10 @@
+<h1>Edit Digimon Data</h1>
+
+<form action="/digimons/<%= @digimon["id"] %>" method="post">
+    <label>Name<input name="name" value="<%= @digimon["name"] %>" required></label>
+    <label>Type<input name="type" value="<%= @digimon["type"] %>" required></label>
+    <label>Stage <input name="stage" value="<%= @digimon["stage"] %>" required></label>
+    <label>Image <input type="url" name="image" value="<%= @digimon["image"] %>" required></label>
+
+    <button>Edit data</button>
+</form>

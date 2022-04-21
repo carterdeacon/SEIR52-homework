@@ -1,0 +1,15 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: "Tahoma", "Verdana", "Helvetica", "Arial", sans-serif;
+    text-align: center;
+}
+.container{
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 1em;
+    min-height: 90vh;
+}
+div{
+    display: block;
+}

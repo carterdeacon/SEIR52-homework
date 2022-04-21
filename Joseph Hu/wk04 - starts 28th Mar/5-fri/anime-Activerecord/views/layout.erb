@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime/Studios</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">   
+</head>
+<body>
+    <header>
+        <span>Anime</span>
+    </header>
+    <div class="main-container">
+        <aside class="sidebar ">
+        <div>
+            <ul>
+                <li><a href="/animes">All Animes</a></li>
+                <li><a href="/animes/new">New Animes</a></li>
+                
+                <li><a href="/studios">All studios</a></li>
+                <li><a href="/studios/new">New studio</a></li>
+             <ul>
+        </div>
+        </aside>
+
+        <main class="content-container">
+            <div class="container">
+                <%= yield %>
+            </div>
+        </main>
+    </div>
+
+
+        
+</body>
+</html>

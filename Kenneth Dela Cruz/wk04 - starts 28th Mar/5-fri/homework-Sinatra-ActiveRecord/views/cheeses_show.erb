@@ -1,0 +1,19 @@
+<div class="left">
+
+<h1><%= @cheese.variant %></h1>
+
+<p>Cheese Type: <%= @cheese.cheeseType %> </p>
+<p>Country: <%= @cheese.country %></p>
+<p>Wine Pairing: <%= @cheese.winePairing %></p>
+
+<% unless @cheese.image.nil? || @cheese.image.empty? %>
+    <img src="<%= @cheese.image %>" alt="<%= @cheese.variant %>">
+<% end %>
+
+<div class="controls">
+    <a href="/cheeses/<%= @cheese.id %>/edit">Edit Cheese Listing</a>
+    <a href="/cheeses/<%= @cheese.id %>/delete">Delete Cheese Listing</a>
+</div>
+
+
+</div>

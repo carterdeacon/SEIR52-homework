@@ -1,0 +1,13 @@
+<h1><%= @stadium["name"] %></h1>
+
+<h3><%= @stadium["country"] %></h3>
+
+<% unless @stadium["image"].nil? || @stadium["image"].empty?  %>
+<img src="<%= @stadium["image"] %>" class="feature" alt="<%= @stadium["name"] %>image">
+<% end %>
+
+<div class="controls">
+    <a href="/stadiums/<%= @stadium["id"] %>/edit" class="edit-control">Edit Stadium</a>
+    <a href="/stadiums/<%= @stadium["id"] %>/delete" class="delete-control">Delete Stadium</a>
+</div>
+

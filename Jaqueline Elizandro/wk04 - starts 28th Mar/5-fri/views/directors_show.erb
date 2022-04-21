@@ -1,0 +1,11 @@
+<h1 class="title"><%= @director["surname"] %></h1>
+
+<p class="list-show">BIRTH DATE: <%= @director["birthdate"] %></p>
+
+<p class="list-show">BIRTHPLACE: <%= @director["birthplace"] %></p>
+
+<div class="controls">
+    <a class="link-show" href="/directors/<%= @director["id"] %>/edit">EDIT INFO DIRECTOR</a>
+    <a class="link-show" href="/directors/<%= @director["id"] %>/delete">DELETE DIRECTOR</a>
+    <a class="link-show" href="/directors">BACK TO DIRECTORS LIST</a>
+</div>

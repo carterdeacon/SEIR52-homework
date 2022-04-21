@@ -1,0 +1,14 @@
+<div class="container">
+<h1><%=@cook["name"]%></h1>
+
+<h2>Cook: <%= @cook["cook"] %></h2>
+
+<% unless @cook["image"].nil? || @cook["image"].empty? %>
+
+<img class="feature" src="<%= @cook["image"]%>" alt="<%= @cook["name"]%>">
+<% end %>
+
+<div class="controls">
+<a href="/cooks/<%= @cook["id"] %>/edit">Edit Cook</a>
+<a href="/cooks/<%= @cook["id"] %>/delete">Remove Cook.</a>
+</div></div>

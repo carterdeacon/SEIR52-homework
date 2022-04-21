@@ -1,0 +1,27 @@
+<h1>New Patient</h1>
+
+<form action="/patients" method="post">
+    <label>
+        Name:
+        <input name="name" placeholder="John" required>
+    </label>
+    <label>
+        Family:
+        <input name="family" placeholder="Smith">
+    </label>        
+    <label>
+        Age:
+        <input type="number" name="age" placeholder='60' required>
+    </label>
+    <label>
+        Symptoms:
+        <input name="symptoms" placeholder="fever">
+    </label>
+    <label>
+        Image:
+        <input type="url" name="image" placeholder="https://">
+    </label>
+
+
+    <button>Create New Patient</button>
+</form>

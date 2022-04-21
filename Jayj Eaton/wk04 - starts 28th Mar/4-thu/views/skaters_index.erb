@@ -1,0 +1,10 @@
+<h1>Current SLS Pros are</h1>
+
+<% @skaters.each do |skater| %>
+    <p>
+        <a href="/skaters/<%= skater['id'] %>">
+            <%= skater['first_name']%>
+            <%= skater['last_name']%>
+        </a>
+    </p>
+<% end %>

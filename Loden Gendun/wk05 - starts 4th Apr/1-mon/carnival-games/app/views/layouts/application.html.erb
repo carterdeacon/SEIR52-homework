@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CarnivalGames</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <h1>The Circus of Value</h1>
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/eightball">Magic (8) Ball</a>
+        </li>
+        <li>
+          <a href="/secretnumber">Secret Number</a>
+        </li>
+        <li>
+          <a href="/rps">Rock Paper Scissors</a>
+        </li>
+      </ul>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(160, 201, 231);
+    
+}
+.container {
+    max-width:  1080px;
+    margin: 0 auto;
+    background-color: rgb(224, 238, 192);
+    padding: 30px;
+    background-image: url ("../public/background.jpg");
+
+}
+.background {
+    background-image: url ("background.jpg");
+    max-width: 1080px ;
+    position: relative;
+    opacity: 60%;
+}
+nav {
+    text-align: right;
+    position: absolute;
+}
+
+.feature {
+    max-width: 100%;
+    position: absolute;
+    padding: 130px
+}
