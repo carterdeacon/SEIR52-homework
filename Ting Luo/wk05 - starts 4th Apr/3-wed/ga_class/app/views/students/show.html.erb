@@ -1,0 +1,14 @@
+<h1>Student: <%= @student.name%></h1>
+
+<ul>
+<li>Age: <%= @student.age %></li>
+<li>Location: <%= @student.location %></li>
+<% unless @student.course_id.nil? %>
+    <li>Course: <%= link_to @student.course.name, @student.course %></li>
+<% end %>
+</ul>
+
+<div class="controls">
+    <%= link_to "Edit Student", edit_student_path%>
+    <%= link_to "Delete Student", @student, :method => "delete", :data => {:confirm => " Please confirm "}%>
+</div>

@@ -1,0 +1,19 @@
+<h1><%= @burger.name%></h1>
+<p>Ingredients: <%= @burger.ingredients %></p>
+<p>Price: $<%= @burger.price %></p>
+
+<% if @burger.bar.present? %>
+    <%= link_to @burger.bar.name, @burger.bar, :class => 'show-btn'  %>
+<% end %>
+
+
+
+<br/>
+<br/>
+
+
+<div class="controls">
+    <%= link_to 'Edit Burger', edit_burger_path(@burger) %>
+    <%= link_to 'Delete Burger', @burger, :method => 'delete', :data => {:confirm => 'are you sure'} %>
+
+</div>

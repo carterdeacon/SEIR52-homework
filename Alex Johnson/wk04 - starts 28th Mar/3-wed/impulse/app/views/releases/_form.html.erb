@@ -1,0 +1,21 @@
+<%= form_for @release do |f| %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :catalog %>
+    <%= f.text_field :catalog %>
+
+    <%= f.label :year %>
+    <%= f.text_field :year %>
+
+    <%= f.label :image %>
+    <%= f.url_field :image, :required => true %>
+
+    <%= f.label :artist_id %>
+    <%= f.select :artist_id, Artist.pluck(:name, :id), :include_blank => true  %>
+
+
+    <%= f.submit %>
+
+<% end %>

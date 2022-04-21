@@ -1,0 +1,12 @@
+<%= form_for @team do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+
+    <%= f.label :website %>
+    <%= f.text_field :website %>
+
+    <%= f.label :image %>
+    <%= f.text_field :image, :required => true %>
+
+     <%= f.submit%>
+<% end %>

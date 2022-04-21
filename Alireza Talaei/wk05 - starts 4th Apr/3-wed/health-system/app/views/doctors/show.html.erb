@@ -1,0 +1,26 @@
+<h1><%= @doctor.name %></h1>
+
+
+<ul>
+    <li>Name: <%=  @doctor.name %></li> 
+    <li>Family: <%= @doctor.family %></li>
+    <li>Date of Birth: <%= @doctor.dob.strftime '%A, %B %e, %Y' unless @doctor.dob.nil? %></li>
+    <li>Speciality: <%= @doctor.speciality %></li>
+    
+</ul>
+
+ <%= image_tag @doctor.image, :class => 'feature' if @doctor.image.present? %>
+
+
+
+<p>
+    Patients <% @doctor.patients.each do |patient|%>
+        <%= link_to patient.name, patient %>
+    <% end %>
+</p>
+
+
+<div class="controls">
+    <%= link_to "Edit doctor", edit_doctor_path(@doctor)%> 
+    <%= link_to "Delete doctor", @doctor, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>

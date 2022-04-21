@@ -1,0 +1,21 @@
+<h1>Edit jobs</h1>
+
+<form action="/jobs/<%= @job["id"] %>" method="post">
+
+    <label>
+        Job:
+        <input name="job" placeholder="Podcasting" required value="<%= @job["job"] %>"">
+    </label>
+
+    <label>
+        Location:
+        <input name="location" placeholder="Melbourne/Remote" required value="<%= @job["location"] %>">
+    </label>
+
+    <label>
+        Paid?:
+        <input name="paid" placeholder="Paid/Unpaid" required value="<%= @job["paid"] %>">
+    </label>
+
+    <button>Update job</button>
+</form>

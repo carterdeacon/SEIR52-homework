@@ -1,0 +1,28 @@
+<form action="<%=mountains_path(@mountain.id)%>" method="post"> <!--don't write the route by hand, use the planets_path-->
+    <label>
+        Name:
+        <input name="name" required value=<%=@mountain.name%>>
+    </label>
+    <label>
+        Image:
+        <input type="url" name="image" value=<%=@mountain.image%>>
+    </label>
+    <label>
+        Elevation:
+        <input type="number" name="elevation" value=<%=@mountain.elevation%>>
+    </label>
+    <label>
+        Country:
+        <input type="text" name="country" value=<%=@mountain.country%>>
+    </label>
+    <label>
+        Parent Range:
+        <input type="text" name="range" value=<%=@mountain.range%>>
+    </label>
+    <label>
+        Listing:
+        <input type="text" name="listing" value=<%=@mountain.listing%>>
+    </label>
+    <button>Edit Mountain</button>
+</form>
+

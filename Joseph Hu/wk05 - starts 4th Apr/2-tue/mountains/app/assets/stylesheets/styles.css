@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size: 17px;
+    background-image:url("background.jpg");
+    background-size: cover;
+}
+.feature{
+    max-width: 50%;
+}
+h1{
+   font-family: 'Rubik Glitch', cursive;
+   margin-bottom: 20px;
+}
+form{
+    margin-top: 80px;
+}
+.main{
+    font-family: 'Libre Baskerville', serif;
+    color: black;
+    display: grid;
+    max-width: 992px;
+    max-height: 992px;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+}
+.index-container{
+    padding-top: 100px;
+}
+
+a{ 
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    margin: 0 auto;
+    border-radius: 2em;
+    margin-bottom: 20px;
+}
+.controls{
+    text-decoration: none;
+    font-family: 'Iceberg', cursive;
+}
+.form-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap:30px;
+}
+
+label{
+    padding: 10px;
+    display: inline-block;
+    width: 200px;
+}
+input{
+    display:inline-block
+}
+button{
+    font-family: 'Iceberg', cursive;
+}

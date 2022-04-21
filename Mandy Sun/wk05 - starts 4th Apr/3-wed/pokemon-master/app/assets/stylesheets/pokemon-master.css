@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Ubuntu:wght@700&display=swap');
+
+body {
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/305c01e6-3141-4a4f-9fe6-c0f1abb7ce1c/d3e1i4c-f6dee4ac-16dc-49f2-a398-220f7c65e860.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMwNWMwMWU2LTMxNDEtNGE0Zi05ZmU2LWMwZjFhYmI3Y2UxY1wvZDNlMWk0Yy1mNmRlZTRhYy0xNmRjLTQ5ZjItYTM5OC0yMjBmN2M2NWU4NjAuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.VXPnE0VUN5gxRQRO4p43PbzIS9uWKtHEATPC2hm6tok");
+    background-size: cover;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+
+.container {
+    max-width: 1020px;
+    margin: 100px auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.banner {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.button {
+    text-align: center;
+}
+
+button {
+    font-size: 20px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.info {
+    display: inline;
+    height: 600px;
+}
+
+.image {
+    width: 45%;
+    display: inline-block;
+}
+
+.masters_image {
+    width: 300px;
+    margin-top: 50px;
+}
+
+.pokemons_info {
+    width: 45%;
+    margin-bottom: 40px;
+}
+
+.master_info{
+    width: 30%;
+    display: inline-block;
+}
+
+.linkButton {
+    background-color: white;
+    padding: 10px;
+    margin-right: 30px;
+    margin-top: 30px;
+    border-radius: 5px;
+    font-size: 20px;
+    color: black;
+}
+
+p {
+    margin: 30px 0 0 0;
+}
+
+nav {
+    text-align: center;
+}
+
+form {
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: white;
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: 0;
+    border-radius: 5px;
+    font-size: 15px;
+    color: black;
+    border: none;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.image {
+    position: relative;
+}
+
+.pokemons_image {
+    position: absolute;
+    right: -800px;
+    top: -200px;
+    width: 300px;
+}
+
+.nameLink{
+    background-color: rgba(255, 255, 255, 0);
+    margin: 0;
+    padding: 0;
+}
+
+.master{
+    height: 200px;
+    text-align: center;
+}
+
+li {
+    font-size: 20px;
+}
+
+h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.thumb{
+    width: 28%;
+    display: inline-block;
+}
+
+input, label{
+    display:block;
+}
+
+label{
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.imageList{
+    width: 25%;
+    margin-bottom: 30px;
+}
+

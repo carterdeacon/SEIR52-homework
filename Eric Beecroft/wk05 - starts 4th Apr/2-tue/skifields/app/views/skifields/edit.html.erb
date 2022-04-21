@@ -1,0 +1,46 @@
+<h1>Edit Ski-Field</h1>
+
+<form action="<%= skifield_path(@skifield.id) %>" method="post"">
+    <label>
+        Name:
+        <input name="name" required value="<%= @skifield.name %>">
+    </label>
+    <label>
+        Image:
+        <input type="url" name="image" value="<%= @skifield.image %>">
+    </label>
+    <label>
+        Country:
+        <input name="country" required value="<%= @skifield.country %>">
+    </label>
+    <label>
+        Lifts:
+        <input type="number" name="lifts" value="<%= @skifield.lifts %>">
+    </label>
+    <label>
+        Runs (total kms):
+        <input type="number" name="runs" value="<%= @skifield.runs %>">
+    </label>
+    <label>
+        Longest Run (kms):
+        <input type="number" name="longest" value="<%= @skifield.longest %>">
+    </label>
+    <label>
+        Top Elevation (ms):
+        <input type="number" name="top" value="<%= @skifield.top %>">
+    </label>
+    <label>
+        Base Elevation (ms):
+        <input type="number" name="base" value="<%= @skifield.base %>">
+    </label>
+    <label>
+        Average annual snowfall (cms):
+        <input type="number" name="snowfall" value="<%= @skifield.snowfall %>">
+    </label>
+    <label>
+        Have I skied there:
+        <input name="skied" value="<%= @skifield.skied %>">
+    </label>
+
+    <button>Update Ski-Field</button>
+</form>
