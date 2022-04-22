@@ -1,0 +1,15 @@
+<h1>
+    <%= @actor.name %>
+</h1>
+
+<%= image_tag @actor.photo , :class => 'feature' if @actor.photo.present? %>
+<ul>
+    <li>Name: <%= @actor.name %></li>
+    <li>Birthplace: <%= @actor.birthplace %></li>
+    <li>Date of Birth: <%= @actor.dob.strftime '%B %e, %Y' if @actor.dob.present? %></li>
+</ul>
+
+<div>
+    <%= link_to "Edit actor", edit_actor_path(@actor) %>
+    <%= link_to "Delete actor", @actor, :method => 'delete', :data => { :confirm => 'Sure?' } %>
+</div>
