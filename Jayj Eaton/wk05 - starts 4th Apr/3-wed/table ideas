@@ -1,0 +1,2 @@
+bars = name - location - store_count - style - rating - image
+burgers = name - ingredients - price - image - bar_id - 

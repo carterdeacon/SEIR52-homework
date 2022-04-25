@@ -1,0 +1,11 @@
+body {
+    background: palegoldenrod;
+}
+
+#search-btn{
+    transform: translateY(8px);
+}
+
+img {
+    width: 200px;
+}
