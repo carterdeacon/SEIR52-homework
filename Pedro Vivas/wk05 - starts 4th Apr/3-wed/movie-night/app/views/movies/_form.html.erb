@@ -1,0 +1,19 @@
+<%= form_for @movie do |f| %>
+
+    <%= f.label :title  %>
+    <%= f.text_field :title  %>
+
+    <%= f.label :poster  %>
+    <%= f.url_field :poster  %>
+
+    <%= f.label :genre  %>
+    <%= f.text_field :genre  %>
+
+    <%= f.label :release  %>
+    <%= f.text_field :release, :placeholder => "YYYY-MM-DD" %>
+
+    <%= f.label :synopsis  %>
+    <%= f.text_field :synopsis  %>
+    
+    <%= f.submit %>
+<% end %>

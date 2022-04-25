@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PantheonsApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Encyclopedia Religio</h1>
+      <nav>
+          <%= link_to "The Pantheons", pantheons_path %>
+          <%= link_to "Create Pantheon", new_pantheon_path %>
+          |
+          <%= link_to "The Gods", gods_path %>
+          <%= link_to "Create God", new_god_path %>
+      </nav>
+      <%= yield %>
+    </div>
+  </body>
+</html>
