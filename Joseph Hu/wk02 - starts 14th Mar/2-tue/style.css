@@ -1,0 +1,69 @@
+/* *{
+    border: 1px solid red;
+}  */
+body{
+    background-color: #222;
+    margin: 0;
+    padding: 0;
+    background-image: url(icons/WallpaperDog-20462424.jpg);
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    text-align: center;
+    background-color:#222;
+    color: #ccc;
+    font-size: 300%;
+    padding: 0.5em;
+    text-transform: uppercase;
+}
+.grid-container{
+    background:#eee;
+    max-width: 960px;
+    position: relative;
+    margin:0 auto;
+    padding: 4em;
+    padding-left: 3em;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-gap:1em;
+    font-family: 'Share Tech', sans-serif;
+}
+nav{
+    text-align:left;
+}
+.childhood{
+    background-image:url(./icons/bio/Rectangle\ 2.png);
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 300px;
+}
+.life{
+    background-image:url(./icons/bio/Rectangle\ 3.png);
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 300px;
+}
+.lateryears{
+    background-image:url(./icons/bio/Rectangle\ 5.png);
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 300px;
+}
+.grid-item-1{
+    font-family: 'Press Start 2P', cursive;
+    background: #ddd;
+    grid-column: 1/3;
+}
+.grid-item-3{
+    vertical-align: center;
+}
+.grid-item-4{
+    vertical-align: center;
+}
+.grid-item-5{
+    vertical-align: center;
+}

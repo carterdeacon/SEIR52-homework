@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventures</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <nav>
+            <a href="/adventures">Adventure Index</a>
+            <a href="/adventures/new">Add adventure</a>
+            |
+            <a href="/authors">Author Index</a>
+            <a href="/authors/new">Add author</a>
+        </nav>
+
+        <%= yield %>
+    </div>
+
+</body>
+</html>

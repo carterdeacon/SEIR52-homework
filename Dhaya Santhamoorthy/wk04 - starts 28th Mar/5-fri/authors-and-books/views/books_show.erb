@@ -1,0 +1,17 @@
+<h1><%= @book.name %></h1>
+
+<% unless @author.name.nil? || @author.name.empty? %>
+<h3 class="author">Author : <a href="/authors/<%= @author.id %>"><%= @author.name %></a></h3>
+<% end %>
+
+
+<p class="genre">Genre: <%= @book.genre %></p>
+
+<% unless @book.image.nil? || @book.image.empty? %>
+<img src="<%= @book.image %>" alt="<%= @book.name %>">
+<% end %>
+
+<div class="controls">
+    <a href="/books/<%= @book.id %>/edit" class="edit-control">Edit Book</a>
+    <a href="/books/<%= @book.id %>/delete" class="delete-control">Delete Book</a>
+</div>

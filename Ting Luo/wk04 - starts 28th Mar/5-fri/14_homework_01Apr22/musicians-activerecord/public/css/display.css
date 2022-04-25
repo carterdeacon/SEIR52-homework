@@ -1,0 +1,77 @@
+body {
+    background-image: url(https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701265859.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no repeat;
+    background-size: cover;
+    background-color: rgb(229, 215, 196);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav, nav a {
+    color: white;
+    margin: 0 5px;
+}
+a {
+    color: white;  
+}
+h1,h2{
+    color: white;
+    font-weight: 600px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20vh;
+    line-height: 50px;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    margin: 10px auto;
+}
+.feature {
+    height: 50%;
+    margin: 0 auto;
+    display: block;
+}
+.controls{
+    margin-left: 33vw;
+    margin-top: 10vh;
+}
+
+.controls a{
+    color:white;
+    margin: 0 5px;
+    font-size: 20px;
+}
+
+.music_controls{
+    margin-left: 43vw;
+    margin-top: 10vh;
+}
+
+.music_controls a{
+    color:white;
+    margin: 0 5px;
+    font-size: 20px;
+}
+
+p {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.index{
+    text-decoration: none;
+    color: #fcfcfc;
+    line-height: 35px;
+}
+
+form {
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}

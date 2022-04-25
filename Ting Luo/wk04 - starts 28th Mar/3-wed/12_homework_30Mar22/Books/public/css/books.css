@@ -1,0 +1,25 @@
+body {
+    background-image: url(https://i.pinimg.com/originals/a9/48/26/a94826add678c8ad2ef1990fd32535cb.jpg);
+    background-size: cover;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1{
+    line-height: 10vh;
+}
+nav {
+    margin-top: 30vh;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    margin: 25vh auto;
+    background-color: rgba(226, 213, 213, 0.5);
+    padding: auto;
+    min-height: 50vh;
+    
+}

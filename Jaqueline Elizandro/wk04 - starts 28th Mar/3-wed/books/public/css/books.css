@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+    background-color: #f4f2e9;
+    background-image: url('../img/book-image.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container_home {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1em;
+    height: 15em; 
+    color:#382110;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 4px;
+}
+
+.container_display {
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.93);
+    padding: 1em;
+    color:#382110;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    min-height: auto;
+}
+
+.title_home {
+    font-size: 65px;
+    padding: 1px;
+    margin: 0 auto;
+}
+
+.author {
+    margin-top: 0;
+    margin-bottom: 2.5em;
+}
+
+.title_display {
+    padding: 1px;
+    margin: 0;
+}
+
+form {
+    padding-top: 20px;
+}
+
+label {
+    padding: 1px;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #f4f2e9;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 0px 12px 10px;
+}
+
+button {
+    background-color: #409D69;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 32px;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.description {
+    line-height: 22px;
+    text-align: justify;
+    font-size: 15px;
+    margin: 0 auto;
+}
+
+img {
+    float: left;
+    vertical-align:top;
+    padding-right: 20px;
+    width: 25%;
+    height: 100%;
+}

@@ -1,0 +1,16 @@
+    <h1>Edit a Director</h1>
+    <form action="/directors/<%= @director.id %>" method="post">
+        <label>
+            Name:
+            <input name="name" placeholder="Charlie Chaplin" required value="<%= @director.name %>">
+        </label>
+         <label>
+            Years Active:
+            <input name="years_active" placeholder="1998-1999" required value="<%= @director.years_active %>">
+        </label>
+        <label>
+            Image:
+            <input name="image" type="url" placeholder="image" placeholder="http://..." value"<%= @director.image %>">
+        </label>
+        <button>Update Director</button>
+    </form>

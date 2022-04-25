@@ -1,0 +1,19 @@
+<h1>
+    <%= "#{ @movie.title } (#{ @movie.release_year })" %>
+</h1>
+
+<ul>
+   
+    <li>Director: <%= "<a href='/directors/#{ @director.id }'>#{ @director.first_name } #{ @director.last_name }</a>" %></li>
+
+    <li>Genre: <%= @movie.genre %></li>
+
+    <li>Synopsis:<br> <%= @movie.synopsis %></li>
+
+    <div class="container-movie-image"><img src="<%= @movie.photo %>" alt="<%= @movie.title %>"></div>
+
+</ul>
+
+<a href=<%= "/movies/#{ @movie.id }/edit"%>><button>Edit</button></a>
+
+<a href=<%= "/movies/#{ @movie.id }/delete"%>><button>Delete</button></a>

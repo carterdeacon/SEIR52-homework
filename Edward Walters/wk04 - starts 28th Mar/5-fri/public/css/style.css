@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+}
+
+
+body {
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+a {
+    color: rgb(15, 13, 133);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container-movie-image {
+    width: 33vw;
+    margin-top: 2em;
+}
+
+.container-movie-image > img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    background: black;
+    color: white;
+    font-size: 1rem;
+    padding: 1em 1.5em;
+    border-radius: 1.5em;
+    cursor: pointer;
+    border: none;
+    margin: 1.5em 0;
+}
+
+button:hover, button:focus {
+    background: white;
+    color: black;
+}
+
+li {
+    margin: 1em 0;
+    font-size: 1.2rem;
+}
+
+nav {
+    background-color: black;
+    height: 10vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover, nav a:focus {
+    text-decoration: underline;
+}
+
+.heading-page {
+    margin-bottom: 1em;
+    font-weight: bolder;
+}
+
+.heading-movies {
+    font-size: 2rem;
+    margin-bottom: 0.3em;
+}
+
+.movie {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.container {
+    height: 80vh;
+    margin: 2rem auto;
+    max-width: 1000px;
+}
+
+.container-home {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.img-home {
+    width: 100%;
+}
+.container-home-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.home-links {
+    font-size: 2.5rem;
+}
+
+
+label {
+    display: block;
+    padding: 0.5em 0;
+    font-size: 1.3rem;
+}
+
+label.bio {
+    display: flex;
+    align-items: center;
+    
+}
+
+span.bio {
+    margin-right: 1em;
+}
+
+input, textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 5px;
+    border: grey solid 1px;
+}
+
+textarea {
+    width: 30em;
+}
+
+.message-bottom {
+    font-weight: bold;
+    margin-top: 3em;
+}
+
+.invisible {
+    display: none;
+}
+

@@ -1,0 +1,13 @@
+<a class="link-home" href="/">HOME</a> | <a class="link-home" href="/movies">MOVIES</a>
+
+<h1 class="title">directors</h1>
+
+<a class="link-index" href="/directors/new">-- ADD NEW DIRECTOR --</a>
+
+<% @directors.each do |director| %>
+    <p>
+        <a class="list-index" href="/directors/<%= director["id"] %>">
+            <%= director["surname"] %>
+        </a>
+    </p>
+<% end %>

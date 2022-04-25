@@ -1,0 +1,27 @@
+<h1>Edit podcast</h1>
+
+<form action="/podcasts/<%= @podcast["id"] %>" method="post">
+    
+
+     <label>
+        Number:
+        <input name="number" placeholder="#88 JOEL TURNBULL" required value="<%= @podcast["number"] %>"">
+    </label>
+
+    <label>
+        Title:
+        <input name="title" placeholder="Why anything?" required value="<%= @podcast["title"] %>">
+    </label>
+
+    <label>
+        Theme:
+        <input name="theme" placeholder="Philosophy" required value="<%= @podcast["theme"] %>">
+    </label>
+
+    <label>
+        Image:
+        <input type="url" name="guest_image" placeholder="https://..." required value value="<%= @podcast["url"] %>">
+    </label>
+
+    <button>Update podcast</button>
+</form>

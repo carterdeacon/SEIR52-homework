@@ -1,0 +1,8 @@
+
+<h1>Cheese List</h1>
+
+<% @cheeses.each do |cheese| %>
+    <p>
+        <a class="list chiz" href="/cheeses/<%= cheese.id %>"><%= cheese.variant %></a>
+    </p>
+<% end %>

@@ -1,0 +1,20 @@
+<%= form_for @food do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :category %>
+    <%=f.text_field :category %>
+
+    <%= f.label :ingredients %>
+    <%=f.text_field :ingredients %>
+
+    <%= f.label :kilojoules %>
+    <%=f.number_field :kilojoules %>
+
+    <%=f.label :image %>
+    <%=f.url_field :image%>
+
+    <%= f.label :chain_id %>
+    <%= f.select :chain_id, Chain.pluck(:name, :id), :include_blank=>true %> 
+    <%=f.submit%>
+<% end%>

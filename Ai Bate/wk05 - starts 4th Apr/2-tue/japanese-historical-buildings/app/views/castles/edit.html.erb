@@ -1,0 +1,25 @@
+<h1>Edit Castle</h1>
+
+<form action="<%= castle_path(@castle.id) %>" method="post">
+    <label>
+    Name:
+    <input name="name" required value="<%= @castle.name %>">
+    </label>
+    <label>
+    Image:
+    <input type="url" name="image" value="<%= @castle.image %>">
+    </label>
+    <label>
+    Prefecture:
+    <input name="prefecture" value="<%= @castle.prefecture %>">
+    </label>
+    <label>
+    Build by who:
+    <input name="who" value="<%= @castle.who %>">
+    </label>
+    <label>
+    Built in :
+    <input type="number" name="age" value="<%= @castle.age %>">
+    </label>
+    <button>Update Castle</button>
+</form>

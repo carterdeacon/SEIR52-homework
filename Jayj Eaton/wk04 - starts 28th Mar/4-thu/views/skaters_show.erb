@@ -1,0 +1,12 @@
+<div class="bio-container">
+    <h1> <%= @skater['first_name'] %> <%= @skater['last_name'] %> </h1>
+    <h2>Born: <%= @skater['birthyr'] %>  From: <%= @skater['location'] %> </h2>
+    <p> <%= @skater['description'] %> </p>
+    <% unless @skater['image'].nil? || @skater['image'].empty? %>
+        <img class="image" src="<%= @skater['image'] %>" alt="skateboarder">
+    <%end%>
+</div>
+<div class="controls">
+    <a href="/skaters/<%= @skater['id'] %>/edit">Edit Skater</a>
+    <a href="/skaters/<%= @skater['id'] %>/delete">Delete Skater</a>
+</div>

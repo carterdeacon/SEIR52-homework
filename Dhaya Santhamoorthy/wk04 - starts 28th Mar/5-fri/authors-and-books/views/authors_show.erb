@@ -1,0 +1,17 @@
+<h1><%= @author.name %></h1>
+
+<p class="bio"><%= @author.bio %></p>
+
+<h2 class="book-list">Books by <%= @author.name %></h2>
+<% @books.each do |book| %>
+<h3><a class="item-list" href="/books/<%= book.id %>"><%= book.name %></a></h3>
+<% end %>
+
+<% unless @author.image.nil? || @author.image.empty? %>
+<img class="author-img" src="<%= @author.image %>" alt="<%= @author.name %>">
+<% end %>
+
+<div class="controls">
+    <a href="/authors/<%= @author.id %>/edit" class="edit-control">Edit Author</a>
+    <a href="/authors/<%= @author.id %>/delete" class="delete-control">Delete Author</a>
+</div>

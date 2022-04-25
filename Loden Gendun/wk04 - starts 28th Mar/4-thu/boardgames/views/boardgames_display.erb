@@ -1,0 +1,20 @@
+    <% @boardgame.keys.drop(1).each do |key| %>
+    <div>
+        <p>
+            <%= key.gsub('_', ' ').capitalize %>:
+        </p>
+        <p>
+            <%if key == "image" then%>
+            <img src="<%= @boardgame[key] %>" alt="Board Game Picture">
+            <%else%>
+            <%= @boardgame[key] %>
+            <%end%>
+        </p>
+    </div>
+
+    <% end %>
+
+    <div class="controls">
+     <a href="/boardgames/<%= params[:id] %>/edit">edit</a>
+     <a href="/boardgames/<%= params[:id] %>/delete">delete</a>
+    </div>

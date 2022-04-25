@@ -1,0 +1,12 @@
+<h1>The Magic 8 Ball</h1>
+
+<h3>Your answer is: </h3>
+<form action="/results">
+<div class="container">
+    <img src="/assets/ball.png">
+    <div class="result">
+    <%= @results.sample%>   
+    </div>
+</div>
+<button><a href="/games/magicball">Play again</a></button>
+</form>

@@ -1,0 +1,19 @@
+<h1>    
+    Brand:
+    <%= @camera["brand"] %>
+</h1>
+
+<h2>
+    Name:
+    <%= @camera["name"] %>
+</h2>
+
+
+<% unless @camera["image"].nil? || @camera["image"].empty? %>
+    <img class="imgs" src="<%= @camera["image"] %>" alt="<%= @camera["name"] %>">
+<% end %>
+
+<footer>
+    <a Class="af" href="/cameras/<%= @camera["id"] %>/edit">EDIT</a>
+    <a Class="af" href="/cameras/<%= @camera["id"] %>/delete">DELETE</a>
+</footer>
