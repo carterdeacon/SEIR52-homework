@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cover Me!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
 </head>
 <body>
     <h1>Cover Me!</h1>
 
-    <input id="title" type="text">
-    <button id="submit">Get Cover</button>
+    <form id="search">
+        <label>
+            Book title:
+            <input id="title" type="search" placeholder="Jaws" autofocus>
+        </label>
+        
+        <button id="submit">Get Cover</button>
+    </form>
+
+    <img id="cover">
 
     <script src="js/books.js"></script>
 </body>
