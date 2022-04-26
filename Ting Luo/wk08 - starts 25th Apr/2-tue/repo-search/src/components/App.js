@@ -1,9 +1,10 @@
-
+import RepoSearch from "./RepoSearch";
 
 function App() {
   return (
     <div className="App">
-      Coming Soon
+      <h1>GitHub Repo Search</h1>
+      <RepoSearch/>
     </div>
   );
 }
