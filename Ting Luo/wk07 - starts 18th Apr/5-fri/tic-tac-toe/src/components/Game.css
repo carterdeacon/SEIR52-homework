@@ -1,0 +1,23 @@
+
+    
+    ol, ul {
+      padding-left: 30px;
+    }
+    
+
+    .game {
+        display: flex;
+        flex-direction: row;
+      }
+      
+    .game-info {
+        margin-left: 20px;
+    }
+
+    .status {
+        margin-bottom: 10px;
+      }
+      
+      
+      
+      
