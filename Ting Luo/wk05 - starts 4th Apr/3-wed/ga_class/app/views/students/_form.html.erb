@@ -1,0 +1,11 @@
+<%= form_for @student do |f| %>
+    <%= f.label :Name%>
+    <%= f.text_field :name, :required => true %>
+    <%= f.label :Age%>
+    <%= f.number_field :age %>
+        <%= f.label :Location%>
+    <%= f.text_field :location %>
+     <%= f.label :course_id %>
+    <%= f.select :course_id, Course.pluck(:name, :id), :include_blank => true %>  
+    <%= f.submit%>
+<% end %>

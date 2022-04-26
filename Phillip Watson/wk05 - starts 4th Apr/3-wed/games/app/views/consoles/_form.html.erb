@@ -1,0 +1,22 @@
+
+
+<%= form_for @console do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+
+    <%= f.label :period %>
+    <%= f.text_field :period %>
+
+    <%= f.label :release_date %>
+    <%= f.text_field :release_date, :placeholder => 'DD-MM-YYYY' %>
+
+    <%= f.label :sold %>
+    <%= f.text_field :sold %>
+
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+
+    <%= f.submit %>
+
+<% end %> 

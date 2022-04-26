@@ -1,0 +1,21 @@
+<h1><%= @skifield.name %></h1>
+
+<%= image_tag @skifield.image, :class => 'feature' if @skifield.image.present? %>
+
+<ul>
+    <li>Name: <%= @skifield.name %></li>
+    <li>Country: <%= @skifield.country %></li>
+    <li>Lifts: <%= @skifield.lifts %></li>
+    <li>Runs (total): <%= @skifield.runs %>km</li>
+    <li>Longest Run: <%= @skifield.longest %>km</li>
+    <li>Top Elevation: <%= @skifield.top %>m</li>
+    <li>Base Elevation: <%= @skifield.base %>m</li>
+    <li>Average Snowfall per year: <%= @skifield.snowfall %>cm</li>
+    <li>Have I skied there?: <%= @skifield.skied %></li>
+</ul>
+
+<div class="controls">
+    <%= link_to "Edit Ski-Field", edit_skifield_path(@skifield.id) %>
+    |
+    <%= link_to "Delete Ski-Field", delete_skifield_path(@skifield.id) %>
+</div>

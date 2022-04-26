@@ -1,0 +1,28 @@
+
+html {
+    font-size: 24px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav a {
+    margin: 1em;
+}
+
+nav a:first-child {
+    margin-left: 0;
+}
+
+.feature {
+    height: 400px;
+    margin-top: 2em;
+}
+
+.small-img {
+    display: block;
+    width: 100px;
+    margin: 1em 0;
+}

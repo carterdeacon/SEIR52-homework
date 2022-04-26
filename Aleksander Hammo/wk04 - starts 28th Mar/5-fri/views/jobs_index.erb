@@ -1,0 +1,9 @@
+<h1>All jobs</h1>
+
+<% @jobs.each do |job| %>
+    <p>
+        <a href="/jobs/<%= job["id"] %>">
+            <%= job["title"] %>
+        </a>
+    </p>
+<% end %>

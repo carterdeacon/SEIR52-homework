@@ -1,0 +1,20 @@
+<div class="show-container">
+<h1><%=@chain.name%></h1>
+<%= image_tag @chain.logo, :class=>'chain-feature' if @chain.logo.present? %>
+<ul>
+    <li>Name:<%=@chain.name%></li>
+    <li>Founder: <%=@chain.founder%></li>
+    <li>Founding Date: <%= @chain.founded.strftime '%e %b %Y' unless @chain.founded.nil? %></li>
+    <li>Locations: <%=number_to_human @chain.locations%></li>
+    <%@chain.foods.each do |food|%>
+        <li>Menu Items: <%=link_to food.name, food%></li>
+    <%end%>
+</ul>
+</div>
+
+
+<div class="controls">
+    <%= link_to "Edit QSR Chain", edit_chain_path(@chain.id) %> 
+    <%= link_to "Delete QSR Chain", @achain, :method => 'delete', :data => {:confirm => 'Are you sure?'} %> <!-- we could use artist_path(@artist.id) we match the delete action with
+    the route delete--> 
+</div>

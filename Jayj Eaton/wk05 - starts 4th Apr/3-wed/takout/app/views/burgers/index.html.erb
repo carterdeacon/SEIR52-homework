@@ -1,0 +1,8 @@
+<h1>Burgers</h1>
+
+
+<% @burgers.each do |burger| %>
+    <p><%= link_to burger.name, burger, :class => 'bar-btn' %></p>
+    <p>$<%= burger.price %></p>     
+<% end %>
+

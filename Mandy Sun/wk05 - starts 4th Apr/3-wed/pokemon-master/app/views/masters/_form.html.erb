@@ -1,0 +1,13 @@
+
+   
+<%= form_for @master do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+    <%= f.label :alias %>
+    <%= f.text_field :alias %>
+    <%= f.label :gender %>
+    <%= f.text_field :gender %>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+    <%= f.submit %>
+<% end %>
