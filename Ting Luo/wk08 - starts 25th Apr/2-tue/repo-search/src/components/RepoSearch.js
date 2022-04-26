@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import SearchForm from './SearchForm';
+import UserList from './UserList';
 
 
 class RepoSearch extends Component{
@@ -20,15 +21,13 @@ class RepoSearch extends Component{
         
         axios.get(gitHubURL).then((response)=> {
             console.log(response);
-            if(response.status == 404){
+            if(response.status === 404){
                 this.setState({isURLValid : false});
                 return;
             }
-            let stargazers = response.data.map((person) => ({login: person.login, avatar: person.avatar_url})); 
-            console.log(stargazers, typeof(stargazers));
-            const newList = [1,2];
+            const newList = [...this.state.stargazers,response.data];
             console.log(newList);
-            this.setState({stargazers : newList});
+            this.setState({stargazers : response.data});
             this.setState({isURLValid: true});
         });
         
@@ -44,7 +43,7 @@ class RepoSearch extends Component{
                     <p>"Repo not found, please check your input!</p>
                 )}
                 {this.state.isURLValid && (
-                    <p>coming soon</p>
+                    <UserList list={this.state.stargazers}/>
                 )}
             </div>
 
