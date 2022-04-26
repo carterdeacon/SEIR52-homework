@@ -1,0 +1,9 @@
+<h1>ALL BOOKS</h1>
+
+<% @books.each do |book| %>
+    <%= image_tag book.image if book.image.present? %>
+    <ul>
+        <li>Name: <%= link_to book.name, book %></li>
+        <li>Year: <%= book.year %></li>
+    </ul>
+<% end %>

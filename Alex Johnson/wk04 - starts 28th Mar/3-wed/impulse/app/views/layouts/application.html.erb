@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Impulse</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+ 
+  </head>
+
+  <body>
+    <div class="container">
+         <div>
+        <%= link_to "All Artists", artists_path %>
+        <%= link_to "New Artist", new_artist_path %>
+        |
+        <%= link_to "All Releases", releases_path %>
+        <%= link_to "New Release", new_release_path %>
+      </div>
+
+        <%= yield %>
+    </div>
+  </body>
+</html>

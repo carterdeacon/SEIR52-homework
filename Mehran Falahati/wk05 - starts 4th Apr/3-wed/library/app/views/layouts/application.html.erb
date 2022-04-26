@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Library</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <nav>
+    <%= link_to "ALL AUTHORS", authors_path %>
+    <%= link_to "NEW AUTHOR", new_author_path %>
+    |
+    <%= link_to "ALL BOOKS", books_path %>
+    <%= link_to "NEW BOOK", new_book_path %>
+  
+  </nav>
+    <%= yield %>
+  </body>
+</html>

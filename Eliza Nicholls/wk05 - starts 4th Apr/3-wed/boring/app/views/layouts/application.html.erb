@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boring</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+  <nav> 
+    <%= link_to "all oatmeal", oatmeals_path %>
+    <%= link_to "New oatmeal", new_oatmeal_path %>
+     <%= link_to "all handsome spoons", handsomespoons_path %>
+    <%= link_to "New spoon", new_handsomespoon_path %>
+    </nav>
+    </div>
+    <%= yield %>
+  </body>
+</html>

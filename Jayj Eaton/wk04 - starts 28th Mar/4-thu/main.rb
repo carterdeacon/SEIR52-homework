@@ -22,7 +22,7 @@ post '/skaters' do
 end
 # show
 get '/skaters/:id' do
-    @skater = query_db "SELECT * FROM skaters WHERE id=#{ params['id']}"
+    @skater = query_db "SELECT * FROM skaters WHERE id=#{ params['id'] }"
     @skater = @skater.first
     erb :skaters_show
 end

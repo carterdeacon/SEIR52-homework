@@ -1,0 +1,34 @@
+body {
+    /* background-image: url('/assets/mountains.png');
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: right; */
+    background-color: #f7f9fb;
+    color: #5085a5;
+}
+
+.container {
+    margin: 1em;
+}
+
+.feature {
+    max-width: 100%;
+}
+
+.base {
+    max-width: 100%;
+}
+
+h1 {
+    color: #31708e;
+    text-align: center;
+}
+
+a {
+    color: #88b7d7;
+}
+
+nav {
+    text-align: right;
+    display: inline-block;
+}

@@ -1,0 +1,15 @@
+<h1><%= @pantheon.name %></h1>
+<h2>(<%= @pantheon.country %>)</h2>
+
+<ul>
+    <% @pantheon.gods.each do |god| %>
+    <li>
+        <%= god.name %>
+    </li>
+    <% end %>
+</ul>
+
+<div class="controls">
+<%= link_to 'edit pantheon', edit_pantheon_path(@pantheon) %>
+<%= button_to "Delete pantheon", @pantheon, :method => 'delete', :data => { :confirm => 'Are you sure?' } %>
+</div>

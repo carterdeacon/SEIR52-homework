@@ -1,0 +1,10 @@
+<% placepanth = Pantheon.first %>
+<%= form_for @pantheon do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true , :placeholder => placepanth.name%>
+
+    <%= f.label :country %>
+    <%= f.text_field :country , :placeholder => placepanth.country%>
+
+    <%= f.submit %>
+<% end %>
