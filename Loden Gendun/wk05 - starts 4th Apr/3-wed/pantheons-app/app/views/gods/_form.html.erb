@@ -1,0 +1,28 @@
+<% placegod = God.first %>
+<%= form_for @god do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true , :placeholder => placegod.name%>
+
+    <%= f.label :domain, 'Domains' %>
+    <%= f.text_field :domain , :placeholder => placegod.domain%>
+
+    <%= f.label :home %>
+    <%= f.text_field :home, :placeholder => placegod.home %>
+
+    <%= f.label :symbol %>
+    <%= f.text_field :symbol, :placeholder => placegod.symbol %>
+
+    <%= f.label :sacred_animals %>
+    <%= f.text_field :sacred_animals, :placeholder => placegod.sacred_animals %>
+
+    <%= f.label :retinue %>
+    <%= f.text_field :retinue, :placeholder => placegod.retinue %>
+
+    <%= f.label :other_names %>
+    <%= f.text_field :other_names, :placeholder => placegod.other_names %>   
+
+    <%= f.label :pantheon_id %>
+    <%= f.select :pantheon_id, Pantheon.pluck(:name, :id), :include_blank => true %> 
+
+    <%= f.submit %>
+<% end %>
