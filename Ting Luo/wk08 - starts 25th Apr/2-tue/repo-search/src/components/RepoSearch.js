@@ -8,7 +8,6 @@ class RepoSearch extends Component{
         super();
         this.state = {
             stargazers: [],
-            stargazerAvatarURLs: [],
             isURLValid: true,
         }
         this.searchSubmitHandler = this.searchSubmitHandler.bind(this);
@@ -25,12 +24,13 @@ class RepoSearch extends Component{
                 this.setState({isURLValid : false});
                 return;
             }
-            let stargazers = response.data.map((array)=> array.login); 
-            this.setState({stargazers : stargazers});
-            let stargazerAvatarURL = response.data.map((array) => array.avatar_url);
-            this.setState({stargazerAvatarURLs : stargazerAvatarURL});
+            let stargazers = response.data.map((person) => ({login: person.login, avatar: person.avatar_url})); 
+            console.log(stargazers, typeof(stargazers));
+            const newList = [1,2];
+            console.log(newList);
+            this.setState({stargazers : newList});
             this.setState({isURLValid: true});
-        })
+        });
         
 
     }
