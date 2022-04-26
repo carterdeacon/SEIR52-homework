@@ -1,4 +1,11 @@
+const state = {
+    currentPage: 1,
+    lastPageReached: false,
+};
+
 const searchFlickr = function(keywords, page) {
+    if (state.lastPageReached) return;
+
     const flickrURL = 'https://api.flickr.com/services/rest';
     $.getJSON(flickrURL, {
         method: 'flickr.photos.search', // not to be confused with HTTP methods like POST
@@ -6,12 +13,16 @@ const searchFlickr = function(keywords, page) {
         text: keywords,
         format: 'json',
         nojsoncallback: 1, // please don't be bored enough to read up on this
-        page: page 
-    }).done(showImages);
+        page: state.currentPage++ 
+    }).done(showImages).done(function(info) {
+        // console.log(info)
+        if(info.photos.page >= info.photos.pages) {
+            state.currentPage.lastPageReached = true;
+        };
+    });
 };
 
 const showImages = function(results) {
-    console.log(results)
     results.photos.photo.forEach(function(photo) {
         const thumbnailURL = generateURL(photo);
         const $img = $('<img>', {src: thumbnailURL});
@@ -33,30 +44,23 @@ const generateURL = function(p) {
     ].join('');
 };
 
-let page = 1
-let timeoutId = -1;
-
 $(document).ready(function() {
     $('#search').on('submit', function(event) {
         event.preventDefault(); // disable the form being submitted to a server
-        if ($('img').length > 0) {
-            $('img').remove();
-        };
+        state.currentPage = 1
+        state.lastPageReached = false;
+        $('#images').empty();
         const searchTerm = $('#query').val();
-        page = 1
-        searchFlickr(searchTerm, page);
+        searchFlickr(searchTerm);
     });
+
+    const relaxedSearchFlickr = _.debounce(searchFlickr, 4000, true); // leading edge (don't wait to run)
 
     $(window).on('scroll', function() {
         const scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
         if (scrollBottom < 700) { // TODO: adjust the number to suit your taste
             const searchTerm = $('#query').val();
-            clearTimeout(timeoutId)
-            timeoutId = setTimeout(function() {
-                page++
-                searchFlickr(searchTerm, page)
-            }, 600)
+            relaxedSearchFlickr(searchTerm)
         };
-        console.log(scrollBottom)
     });
 });
