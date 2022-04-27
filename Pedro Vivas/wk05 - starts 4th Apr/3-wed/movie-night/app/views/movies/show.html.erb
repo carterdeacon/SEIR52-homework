@@ -1,0 +1,16 @@
+<h1>
+    <%= @movie.title %>
+</h1>
+
+<%= image_tag @movie.poster , :class => 'feature' if @movie.poster.present? %>
+<ul>
+    <li>Title: <%= @movie.title %></li>
+    <li>Genre: <%= @movie.genre %></li>
+    <li>Release date: <%= @movie.release.strftime '%B %e, %Y' if @movie.release.present? %></li>
+    <li>Synopsis: <%= @movie.synopsis %></li>
+</ul>
+
+<div>
+    <%= link_to "Edit Movie", edit_movie_path(@movie) %>
+    <%= link_to "Delete Movie", @movie, :method => 'delete', :data => { :confirm => 'Sure?' } %>
+</div>

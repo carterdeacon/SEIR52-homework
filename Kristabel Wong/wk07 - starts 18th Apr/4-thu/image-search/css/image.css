@@ -1,0 +1,17 @@
+
+body {
+    width: 960px;
+    margin: 0 auto;
+}
+
+div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
