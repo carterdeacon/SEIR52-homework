@@ -1,0 +1,24 @@
+<h1>Animation Studio</h1>
+
+<div class="content">
+
+    <%= image_tag @studio.image, :class => 'thumb' if @studio.image.present? %>
+    <ul>
+        <li>Name: <%= @studio.name %></li>
+        <% unless @studio.founded.nil? %>
+            <li>Founded: <%= @studio.founded.strftime '%B %e, $Y' %></li>
+        <% end %>
+        <li>Headquarters: <%= @studio.headquarters %></li>
+        <li>Employees: <%= @studio.employees %></li>
+    </ul>
+
+    <% @studio.pictures.each do |picture| %>
+        <%= link_to image_tag(picture.image, :class => 'thumb'), picture %>
+    <% end %>
+
+    <div class="controls">
+    <%= link_to "Edit", edit_studio_path(@studio) %>
+    <%= link_to "Delete", @studio, :method => 'delete', :data => { :confirm => 'Are you sure'} %>
+    </div>
+   
+</div>

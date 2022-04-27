@@ -1,0 +1,22 @@
+<h1><%= @master.name %></h1>
+<div class="info">
+ 
+  <div class="pokemons_info">
+  <div class="image">
+       <%= image_tag @master.image, :class => "masters_image" if @master.image.present? %>
+      </div>
+     <p>Name: <%= @master.name%></p>
+     <p>Alias: <%= @master.alias %></p>
+     <p>Gender: <%= @master.gender %></p>
+
+     
+      
+  </div>
+  <% @master.pokemons.each do |pokemon| %>
+        <%= link_to image_tag(pokemon.image, :class => 'imageList'), pokemon %>
+    <% end %>
+  <div class="controls">
+     <%= link_to "Edit Profile",edit_master_path, :class => "linkButton" %>
+     <%= link_to "Leave Pokemon Association", @master, :method => "delete", :data => { :comfirm => "Are you sure?" }, :class => "linkButton"  %>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<h1>Bars</h1>
+
+<% @bars.each do |bar| %>
+    <div class="bars-content">
+        <p><%= link_to bar.name, bar, :class => "bar-btn" %></p>
+        <p>Location: <%= bar.location%></p>
+    </div>
+<%end%>

@@ -1,0 +1,13 @@
+<%= form_for @picture do |f| %>
+    <%= f.label :name%>
+    <%= f.text_field :name %>
+    <%= f.label :genre %>
+    <%= f.text_field :genre %>
+    <%= f.label :image %>
+    <%= f.text_field :image, :required => true %>
+    <%= f.label :gif %>
+    <%= f.text_field :gif %>
+    <%= f.label :studio_id %>
+    <%= f.select :studio_id, Studio.pluck(:name, :id), :include_blank => true %>
+    <%= f.submit %>
+<% end %>

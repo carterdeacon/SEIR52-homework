@@ -1,0 +1,21 @@
+<%= form_for @driver do |f| %>
+    <%= f.label :gname, 'Given name' %>
+    <%= f.text_field :gname %>
+
+    <%= f.label :surname %>
+    <%= f.text_field :surname, :required => true %>
+
+    <%= f.label :dob, 'Date of bith' %>
+    <%= f.date_field :dob %>
+
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+
+    <%= f.label :team_id %>
+    <%= f.select :team_id, Team.pluck(:name, :id), :include_blank => true %>
+
+     <%= f.submit%>
+<% end %>

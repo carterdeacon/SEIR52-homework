@@ -1,0 +1,20 @@
+<h1>Software Engineering Immersive Courses List</h1>
+
+<table>
+    <tr>
+        <th>Course Code</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Mode</th>
+    </tr>
+    <% @courses.each do |course|%>
+    <tr>    
+        <td><%= link_to course.name, course %></td>
+        <td><%=course.start.strftime "%A, %B, %e, %Y"%></td>
+        <td><%=course.end.strftime "%A, %B, %e, %Y" %></td>
+        <td><%=course.period%></td>
+    </tr>
+    <% end %>
+</table>
+
+

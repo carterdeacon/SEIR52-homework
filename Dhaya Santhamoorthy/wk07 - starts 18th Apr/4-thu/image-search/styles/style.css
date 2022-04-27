@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap");
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.second-header {
+  font-size: 1.25em;
+}
+
+#images {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 3em;
+}
+
+#image-thumbnails {
+  display: inline-block;
+  margin: 1em;
+  width: 15em;
+}

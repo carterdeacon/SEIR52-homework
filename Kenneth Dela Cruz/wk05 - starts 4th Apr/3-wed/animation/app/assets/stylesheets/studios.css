@@ -1,0 +1,47 @@
+body {
+    background-color: gainsboro;
+}
+
+.container {
+    max-width: 960px;
+    min-height: 100vh;
+    background-color: aliceblue;
+    margin: 0 auto;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+.thumb {
+    max-width: 30%;
+    position: relative;
+    left: 2%;
+}
+
+.content {
+    position: relative;
+    top: 6%;
+}
+
+label {
+    display: block;
+    text-align: center;
+}
+
+input {
+    display: block;
+    text-align: center;
+    margin: 4px auto;
+    
+}
+
+.controls {
+    position: relative;
+    left: 2%;
+}
+
+.clip {
+    max-height: 300px;
+}
