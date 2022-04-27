@@ -1,0 +1,8 @@
+/* #images {
+    display: flex;
+    gap: 10px;
+} */
+
+.show {
+    display:block;
+}
