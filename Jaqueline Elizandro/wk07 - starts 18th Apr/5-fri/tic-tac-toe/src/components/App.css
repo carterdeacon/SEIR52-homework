@@ -1,0 +1,60 @@
+.App {
+  height: 90vh;
+  width: 90%;
+  border-radius: 10px;
+  background-color: rgb(0, 48, 73);
+  color: white;
+  box-sizing: border-box;
+  margin: 1vh auto;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+  height: 100%;
+  width: 100%;
+}
+
+.game-board {
+  padding: 3vmin;
+  height: 50%;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 45%;
+	height: 45%;
+}
+
+.square {
+  display: flex;
+  width: 15vmin;
+	height: 15vmin;
+  border: 1px solid white;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-info {
+  grid-column-start: 2;
+  font-size: 5vmin;
+  place-self: center;
+  padding: 3vmin;
+  height: 50%;
+  width: 60%;
+}
+
+.game-info>ul {
+  font-size: 3vmin;
+  display: flex;
+  flex-flow: column wrap;
+  height: 50%;
+  width: 100%;
+}
+
+
