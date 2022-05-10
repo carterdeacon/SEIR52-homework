@@ -1,0 +1,17 @@
+<%= form_for @patient do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true %>
+    <%= f.label :family %>
+    <%= f.text_field :family %>
+    <%= f.label :dob, 'Date of birth' %>
+    <%= f.text_field :dob, :placeholder => 'YYYY-MM-DD' %>
+    <%= f.label :disease %>
+    <%= f.text_field :disease %>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+
+    <%= f.label :doctor_id %>
+    <%= f.select :doctor_id, Doctor.pluck(:name, :id), :include_blank => true %>
+
+    <%= f.submit %>
+<% end %>

@@ -1,0 +1,11 @@
+<h1>All Breweries</h1>
+
+<% @breweries.each do |brewery| %>
+    <%= link_to image_tag(brewery.image, :class => 'thumb'), brewery %>
+    <ul>
+        <li>Brewery Name: <%= brewery.name %></li>
+        <li>Location: <%= brewery.suburb %>, <%= brewery.state %>, <%= brewery.country %></li>
+        <li>Website: <%= link_to brewery.name, brewery.website %></li>
+
+    </ul>
+<% end %>

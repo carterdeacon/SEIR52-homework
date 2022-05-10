@@ -1,0 +1,46 @@
+<h1>New Ski-Field</h1>
+
+<form action="<%= skifields_path %>" method="post"">
+    <label>
+        Name:
+        <input name="name" required>
+    </label>
+    <label>
+        Image:
+        <input type="url" name="image">
+    </label>
+    <label>
+        Country:
+        <input name="country" required>
+    </label>
+    <label>
+        Lifts:
+        <input type="number" name="lifts">
+    </label>
+    <label>
+        Runs (total kms):
+        <input type="number" name="runs">
+    </label>
+    <label>
+        Longest Run (kms):
+        <input type="number" name="longest">
+    </label>
+    <label>
+        Top Elevation (ms):
+        <input type="number" name="top">
+    </label>
+    <label>
+        Base Elevation (ms):
+        <input type="number" name="base">
+    </label>
+    <label>
+        Average annual snowfall (cms):
+        <input type="number" name="snowfall">
+    </label>
+    <label>
+        Have I skied there:
+        <input name="skied">
+    </label>
+
+    <button>Create Ski-Field</button>
+</form>

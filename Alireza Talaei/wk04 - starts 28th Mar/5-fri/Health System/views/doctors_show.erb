@@ -1,0 +1,9 @@
+<h2><%=@doctor.name%></h2>
+<h2><%=@doctor.family%></h2>
+<p>Specialising in <%= @doctor.speciality%></p>
+<p>Urgent contact number is <%= @doctor.phone %></p>
+
+<img src="<%=@doctor.image%>" alt="<%=@doctor.name%>"><br>
+
+<a href="/doctors/<%=@doctor.id%>/edit">Edit Information</a>
+<a href="/doctors/<%=@doctor.id%>/delete">Delete</a>

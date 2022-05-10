@@ -1,0 +1,16 @@
+<h1>Rock Paper Scissors</h1>
+
+<p>You will be playing agaist computer.</p>
+
+<h3>Chooose a throw:</h3>
+
+<a href="/rockpaperscissors/result/rock">Rock</a>
+<a href="/rockpaperscissors/result/paper">Paper</a>
+<a href="/rockpaperscissors/result/scissors">Scissors</a>
+
+
+<p>
+Player throws <%= params[:throw].capitalize %> || Computer throws <%= @cPick.capitalize %>
+</p>
+
+<h2><%= @result %></h2>

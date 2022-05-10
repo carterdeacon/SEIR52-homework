@@ -1,0 +1,22 @@
+<h1><%= @pokemon.name%></h1>
+
+
+<div class="info">
+ 
+  <div class="pokemons_info">
+     <p>Name: <%= @pokemon.name%></p>
+     <% if @pokemon.master.present? %>
+        <p>Master: <%= link_to @pokemon.master.name, @pokemon.master %></p>
+    <% end %>
+     
+     <p>Category: <%= @pokemon.category %></p>
+     <p>Abilities: <%= @pokemon.abilities %></p>
+      <div class="image">
+       <%= image_tag @pokemon.image, :class => "pokemons_image" if @pokemon.image.present? %>
+      </div>
+  </div>
+  <div class="controls">
+     <%= link_to "Edit pokemon",edit_pokemon_path, :class => "linkButton" %>
+     <%= link_to "Release Pokemon", @pokemon, :method => "delete", :data => { :comfirm => "Are you sure?" }, :class => "linkButton"  %>
+  </div>
+</div>

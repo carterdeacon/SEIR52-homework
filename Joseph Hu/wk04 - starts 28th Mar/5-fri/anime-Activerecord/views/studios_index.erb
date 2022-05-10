@@ -1,0 +1,9 @@
+<h1> Animation Studios</h1>
+
+<% @studios.each do |studio|%>
+    <p>
+        <a href="/studios/<%= studio["id"] %>">
+            <%= studio["name"] %>
+        </a>
+    </p>
+<% end %>

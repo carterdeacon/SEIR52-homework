@@ -1,0 +1,19 @@
+
+
+body{
+
+    text-align: center;
+    background-color: aquamarine;
+}
+
+header{
+    background-color: blanchedalmond;
+}
+label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif
+}

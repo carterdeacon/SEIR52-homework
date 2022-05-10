@@ -1,0 +1,13 @@
+body{
+    background-color: antiquewhite;
+}
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+.thumb {
+    height: 12em;
+}
+label {
+    display: block;
+}

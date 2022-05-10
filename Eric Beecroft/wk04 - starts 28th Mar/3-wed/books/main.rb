@@ -11,9 +11,9 @@ get '/cover' do
 
     @book_url = "https://www.googleapis.com/books/v1/volumes?q=#{@title}"
 
-    book = HTTParty.get(@book_url)
+    @book = HTTParty.get(@book_url)
 
-    # @cover = puts book["items"]["volumeInfo"]["imageLinks"]
+    @cover_url = @book["items"][0]["volumeInfo"]["imageLinks"]["thumbnail"]
 
     erb :cover
 end

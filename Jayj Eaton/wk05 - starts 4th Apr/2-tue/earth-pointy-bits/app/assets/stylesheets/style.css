@@ -1,0 +1,9 @@
+body {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	background-color: aliceblue;
+}
+.feature {
+	max-width: 90%;
+}

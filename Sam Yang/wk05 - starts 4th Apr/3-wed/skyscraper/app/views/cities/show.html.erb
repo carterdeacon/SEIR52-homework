@@ -1,0 +1,18 @@
+<h1><%= @city.name %></h1>
+ 
+    <%= image_tag @city.image, :class => 'feature' if @city.image.present? %>
+    <ul>
+        <li>Name: <%= @city.name %></li>
+        <li>Country: <%= @city.country %></li>
+        <li>Population: <%= @city.population%></li>
+        <li>Metropolitan area: <%= @city.metropolitan_area %> km2</li>
+    </ul>
+
+    <% @city.buildings.each do |building| %>
+        <%= link_to image_tag(building.image, :class => 'thumb'), building %>
+    <% end %>
+
+    <div class="controls">
+        <%= link_to "Edit city", edit_city_path(@city)%>
+        <%= button_to "Delete city", @city, :method => 'delete', :data => { :confirm => "Are you sure?"} %>
+    </div>

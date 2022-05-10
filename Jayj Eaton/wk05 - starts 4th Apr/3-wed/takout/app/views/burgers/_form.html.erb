@@ -1,0 +1,14 @@
+<%= form_for @burger do |f| %>
+    <%= f.label :name%>
+    <%= f.text_field :name, :required => true %>
+    <%= f.label :ingredients %>
+    <%= f.text_field :ingredients %>
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+    <%= f.label :image %>
+    <%= f.url_field :image %>
+    <%= f.label :bar_id %>
+    <%= f.select :bar_id, Bar.pluck(:name, :id), :include_blank => true %>
+    
+    <%= f.submit %>
+<%end%>

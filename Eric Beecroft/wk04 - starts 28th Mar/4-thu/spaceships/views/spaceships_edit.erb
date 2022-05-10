@@ -1,6 +1,6 @@
 <h1>Edit spaceship</h1>
 
-<form action="/spaceships<%= @spaceship["id"] %>" method="post">
+<form action="/spaceships/<%= @spaceship["id"] %>" method="post">
     <label>
         Name:
         <input name="name" placeholder="Millenium Falcon" required value="<%= @spaceship["name"] %>">

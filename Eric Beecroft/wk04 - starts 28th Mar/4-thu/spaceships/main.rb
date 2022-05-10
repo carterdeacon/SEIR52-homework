@@ -39,7 +39,7 @@ end
 
 # Update
 post '/spaceships/:id' do
-    query_db "UPDATE spaceships SET name='#{ params[:name] }', class='#{ params[:class] }', '#{ params[:affiliation] }', '#{ params[:source] }', image='#{ params[:image] }' WHERE id=#{ params[:id] } "
+    query_db "UPDATE spaceships SET name='#{ params[:name] }', class='#{ params[:class] }', affiliation='#{ params[:affiliation] }', source='#{ params[:source] }', image='#{ params[:image] }' WHERE id=#{ params[:id] }"
     redirect to("/spaceships/#{ params[:id] }")
 end
 
