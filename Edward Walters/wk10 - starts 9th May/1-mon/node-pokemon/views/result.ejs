@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.min.css">
+    <title>Pokemon Search Result</title>
+</head>
+<body>
+    <h1>Search Result for <%= resultData.name %></h1>
+    <ul>
+        <li>Base Experience: <%= resultData.base_experience %></li>
+        <li>Height: <%= resultData.height %></li>
+        <li>Order: <%= resultData.order %></li>
+        <li>Weight: <%= resultData.weight %></li>
+        <li>Sprites: 
+            <ul><% for (let key in resultData.sprites) { %>
+                    <li><img src="<%= resultData.sprites[key] %>"/></li>
+                <% } %>
+            </ul>
+        </li>
+    </ul>
+
+    <a href='/'><button>Back</button></a>
+</body>
+</html>
