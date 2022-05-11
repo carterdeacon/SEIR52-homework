@@ -1,0 +1,24 @@
+.container {
+  margin: 0 auto;
+  height: 90%;
+  display: grid;
+  grid-template-columns: 40% auto;
+  align-items: center;
+}
+
+.title-form {
+  display: block;
+  align-self: start;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.thumb {
+  height: 90vmin;
+  justify-self: center;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px gray;
+  grid-column: 2 / 3;
+  margin: 1em;
+}
+
