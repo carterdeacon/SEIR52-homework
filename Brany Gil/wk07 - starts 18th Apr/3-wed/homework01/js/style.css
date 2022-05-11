@@ -1,0 +1,28 @@
+body{
+    background-position: center;
+
+    background: url("https://images.unsplash.com/photo-1606311698062-21c4f57cb27f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=916&q=80");
+}
+
+#container{
+
+    width: 350px;
+    overflow: auto;
+    margin: 40px auto;
+    background: rgba(255,255,255,.2);
+    padding-bottom: 40px;
+    border-radius: 10px;
+
+
+
+}
+
+label{
+    text-align: center;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+h1{
+font-family:Verdana, Geneva, Tahoma, sans-serif
+}
