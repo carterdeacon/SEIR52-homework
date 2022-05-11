@@ -1,0 +1,35 @@
+<h1>Let's FIX our lame unfinished soup.</h1>
+<form class="questions" action="/soups/<%= @soup["id"]%>" method="post">
+    <label>
+        Name of soup:  <br>
+            <input name="soupname" placeholder="Best Friend Soup" required value=<%=@soup["soupname"]%> >
+    </label>
+      <br>
+    <label> 
+        Describe the soup:  <br>
+            <input name="description_soup" placeholder="Velvety, orange, smooth." value=<%=@soup["description_soup"]%> >
+    </label>
+      <br>
+    <label>
+        What movie is this soup from:  <br>
+            <input name="movie" placeholder="My friend, Pumpkin jr." value=<%=@soup["movie"]%>>
+    </label>
+      <br>
+    <label>
+        Tell me about this soup scene:  <br>
+            <input name="scene_action" placeholder="Pumpkin jr befriends Potato jr over a hearty bowl of soup" value=<%=@soup["scene_action"]%>>
+     </label>
+      <br>
+    <label>
+        Image:  <br>
+            <input type="url" name="image" placeholder="http://...." value=<%=@soup["image"]%>>
+    </label>
+      <br>
+    <label>
+        Would you eat it?  <br>
+            <input name="desireabilty" placeholder="Ew! Looks yuck!" value=<%=@soup["desireabilty"]%>>
+    </label>
+      <br>
+
+<button>FIX Soup!</button>
+</form>
