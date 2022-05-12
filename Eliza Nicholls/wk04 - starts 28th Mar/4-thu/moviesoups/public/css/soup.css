@@ -1,0 +1,39 @@
+body {
+    background-color: rgba(4, 4, 68, 0.986);
+}
+
+.container {
+    background-color: rgba(247, 247, 247, 0.555);
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    max-height: 100vh;
+    height: 100%vh;
+}
+
+
+.feature {
+    display: inline-block;
+    max-width: 60%;
+}
+
+
+
+label {
+    display: inline;
+    margin: 0 auto;
+    text-align: left;
+}
+
+input {
+    text-align: left;
+
+}
+
+p {
+    font-style: italic;
+}
+
+nav {
+    background-color: white;
+}

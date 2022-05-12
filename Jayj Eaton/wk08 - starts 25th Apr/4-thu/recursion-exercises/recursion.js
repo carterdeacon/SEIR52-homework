@@ -2,8 +2,8 @@
 // You will have to figure out what parameters to include
 // All functions must use recursion
 
+// This function returns the largest number in a given array.
 function findMax(arr) {
-	// This function returns the largest number in a given array.
 	let nums = arr.slice();
 	if (nums.length == 1) {
 		return nums[0];
@@ -13,9 +13,9 @@ function findMax(arr) {
 	} else {
 		nums.splice(1, 1);
 	}
-	// i had the exact logic but i was trying to call the function without first making a new array and calling it at the end
 	return findMax(nums);
 }
+// i had the exact logic but i was trying to call the function without first making a new array and calling it at the end
 
 function factorial(n) {
 	// This function returns the factorial of a given number.
