@@ -92,7 +92,7 @@ function sum() {
 let sideVal = function (){
     let  smallSides ;
     if ( triangleA.sideA > triangleA.sideB && triangleA.sideA > triangleA.sideC){
-        smallSides = `${triangleA.sideB}  ${triangleA.sideC}`;
+        smallSides = [triangleA.sideB, triangleA.sideC];
 
     } else if ( triangleA.sideB > triangleA.sideA && triangleA.sideB > triangleA.sideC ){
         smallSides = `${triangleA.sideA} ${ triangleA.sideC}`;
