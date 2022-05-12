@@ -26,18 +26,29 @@ function factorial(number, result = 1){
     return factorial(number - 1, result);
 }
 
-function fibonacci(nth, number = 1, prevNum = 0, i = 1){
-    if (i === nth) {
-        return number;
+// iterative recursion
+// function fibonacci(nth, number = 1, prevNum = 0, i = 1){
+//     if (i === nth) {
+//         return number;
+//     }
+
+//     const temp = number;
+//     number += prevNum;
+//     prevNum = temp;
+//     i++;
+
+//     return fibonacci(nth, number, prevNum, i);
+// }
+
+function fibonacci(n){
+    if (n <= 2) {
+        return 1;
     }
 
-    const temp = number;
-    number += prevNum;
-    prevNum = temp;
-    i++;
-
-    return fibonacci(nth, number, prevNum, i);
+    return fibonacci(n-1) + fibonacci(n-2);
 }
+
+fibonacci(4);
 
 // converts bool array into coin string e.g. [false, true, false] => "THT"
 const coinify = array => array.map(element => element ? 'H' : 'T').join('');
@@ -57,11 +68,16 @@ function coinFlips( N, array = new Array(N).fill(false), output = [coinify(array
     return coinFlips(N, array, output);
 }
 
-function letterCombinations(){
-    // This function returns an array of all combinations of the given letters
-    // Input type: Array of single characters
-    // For example, letterCombinations(["a","b","c"]) would return the following:
-    // ["a","b","c","ab","ac","ba","bc","ca","cb","abc","acb","bac","bca","cab","cba"]
+function letterCombinations(array){
+    if (array.length === 1) {
+        return array[0];
+    }
+
+    const popped = array.pop();
+
+    const recursed = Array.from(letterCombinations(array));
+    
+    return [ ...recursed, popped, ...recursed.map(e=> e+popped) , ...recursed.map(e=> popped+e)];
 }
 
 module.exports = {

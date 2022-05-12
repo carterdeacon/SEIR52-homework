@@ -1,0 +1,1 @@
+ALTER TABLE cookbooks ADD COLUMN cook_ID INTEGER;

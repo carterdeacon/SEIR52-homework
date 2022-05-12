@@ -1,0 +1,22 @@
+<h1>  <%= @soup["soupname"] %></h1>
+
+<% unless @soup["image"].nil? || @soup["image"].empty? %>
+<img class="feature" src="<%= @soups["image"] %>"alt="<%=@soup["soupname"]%>">
+<% end %>
+
+<h2><%=@soup["movie"]%></h2> 
+<p>    
+
+ <%=@soup["scene_action"]%>
+
+
+
+</p>
+
+  <h4>  <%= @soup["description_soup"] %> </h4>  
+  <h3> Would you eat it? <%= @soup["desireabilty"] %></h3> 
+
+  <div class="controls">
+<a href="/soups/<%= @soup["id"] %>/edit">fix my sad SOUPS</a>
+<a href="/soups/<%= @soup["id"] %>/delete">throw away dumb soup.</a>
+</div>

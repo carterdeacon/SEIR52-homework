@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pokedata</title>
+	</head>
+	<body style="text-align: center">
+		<h1>Name: <%= data.name %></h1>
+		<h2>Type: <%= data.types[0].type.name %></h2>
+		<h2>Number: <%= data.id %></h2>
+		<img
+			src="<%=data.sprites.front_default%>"
+			alt="<%= data.name %>"
+			style="width: 150px"
+		/>
+	</body>
+</html>
