@@ -1,0 +1,2 @@
+module DeathsHelper
+end

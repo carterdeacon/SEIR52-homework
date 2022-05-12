@@ -134,4 +134,50 @@ const overDraw = function (){
     }
 };
    
+//////JOEL'S SOLUTION//////////
+// make a banking library in new file
+///just make your own library! with methods. 
+///bussiness logic- that's the background rules NOT what user see's
+///single source of truth for balance in the accounts.
+///will know about overfraft
+///THIS code has nothing to do with DOM
 
+
+/////////////acount.js (seperate j.s file)/////////////////////////
+const accounts = {
+    checkingBalance: 0,
+    savingsBalance: 0,
+
+    total: function (){
+        return this.checkingBalance + this.savingsBalance
+   } ,
+   checkingDeposit: function (amount){
+       amount = Number(amount);
+       this.checkingBalance += amount;
+   },
+
+   checkingWithdraw: function (){
+       if (thiamount <= this.checkingBalance)
+       this.checkingBalance -= checkingWithdraw
+   },
+
+   savingsDeposit: function (amount){
+    amount = Number(amount);
+    this.savingsBalance += amount;
+},
+    savingsWithdraw: function (){
+    if (amount <= this.savingsBalance)
+    this.savingsBalance -= amount;
+},
+};
+
+///////////atm.js - knows nothing of negative or overdraft. connects bussiness logic to DOM ///
+
+//on click function----> get the AMOUNT from DOM. (jquery library)
+
+//update USER screen----> onclick'button. RUN RENDER FUNCTION. Update every new change.
+
+///** render function has all the shit that needs to change on screen. render called at start of paage and in the other objects. basically, it is correct and gets called to refresh the page
+
+///////////final thoughts from eliza//////
+///seperate the js rules. then user screen is DOM. talk to each other. 
