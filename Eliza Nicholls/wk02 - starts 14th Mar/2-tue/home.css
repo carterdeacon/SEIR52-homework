@@ -93,92 +93,59 @@ div.box {
     text-align: center;
     /* line-height: 300px; */
     display: inline-block;
-    margin: -2px;
+    margin: 0px;
     column-count: 1;
     
     
 }
 
 img {
-    margin: -2px;
+    margin-left: 0px;
+    margin-right: -10px;
     display: inline-block;
-    align-items: center;
+    border-left: 0px;
+    z-index: 1;
+    position: relative;
+}
+
+.hide {
+    height: 200px;
+    width: 200px;
+    background-color: #f82bff;
+    z-index: 2;
+    display: inline-flex;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-left: 0px;
+    z-index: 2;
+    position: absolute;
+    left: 50px;
+    top: 175px;
 
 }
+
+.hide:hover{
+    visibility: visible;
+    background-color: rgba(108, 231, 7, 0);
+    transition: 6s;
+}
+
+
+
 
 p {
     /* line-height: 1px; */
-    font-size: 12px;
-    text-align: left;
+    font-size: 12x;
+    text-align: center;
     margin-left: 60px;
     margin-right: 10px;
     display: inline-block;
+    line-height: 200px;
 }
 
-.box h3:hover  {
-    color: #de47f1;
-}
-
-
-.box p:hover{
-    font-family: 'Codystar';
-    font-size: 12px;
-}
-
-.box p:hover span {
-    font-family: 'Codystar';
-    text-align: center;
-    visibility: visible;
-    color: rgba(19, 137, 233, 0.342);
-    font-size: 12px;
-    transition: 5s all;
-}
-
-.box-1 p:hover span {
-    font-family: 'Codystar';
-    text-align: center;
-    visibility: visible;
-    color: rgba(233, 19, 180, 0.685);
-    font-size: 12px;
-    transition: 5s all;
-}
-
-image :hover {
-    filter: grayscale();
-}
-
-.secret {
-    width: 40px;
-    height: 40px;
-    background-color: black;
-    position: fixed;
-    top: 10px;
-    left: 60px;
-    margin: 0 auto;
-    display: inline-block;
-}
-
-.burp {
-    width: 40px;
-    height: 40px;
-    background-color: rgb(243, 4, 4);
-    top: 0px;
-    left: 60px;
-    margin: 0 auto;
-    display: inline-block;
-  
-}
-
-.plop {
-    width: 40px;
-    height: 40px;
-    background-color: rgb(0, 57, 243);
-    margin: 0 auto;
-    display: inline-block;
-}
     
 
-.secret span {
+/* .secret span {
     visibility: hidden;
 }
 
@@ -191,6 +158,8 @@ image :hover {
     color: #de47f1;
     transition: 5s all;
 }
+
+ */
 
 
 /* 
