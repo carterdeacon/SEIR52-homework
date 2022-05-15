@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: whitesmoke;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  padding-left: 10px;
+}
+
+header ul li {
+  margin-right: 25px;
+  list-style: none;
+}
+
+header li a {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+header li a:visited {
+  color: blue;
+}
+
+footer p {
+  position: absolute;
+  bottom: 0;
+  background-color: #333333;
+  margin: 0;
+  padding: 10px 0;
+  width: 100%;
+  color: whitesmoke;
+  font-size: 12px;
+}
