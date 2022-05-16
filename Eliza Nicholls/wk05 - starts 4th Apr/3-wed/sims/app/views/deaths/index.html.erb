@@ -1,0 +1,12 @@
+<h1>Deaths#index</h1>
+
+<% @deaths.each do |death| %>
+
+<%= image_tag death.image, :class => 'thumb' if death.image.present? %>
+
+<ul>
+    <li>Type: <%= link_to death.type, death %> </li>
+    <li>Game: <%= death.game %></li>
+    <li>Description: <%= death.description %></li>
+</ul>
+<% end %>

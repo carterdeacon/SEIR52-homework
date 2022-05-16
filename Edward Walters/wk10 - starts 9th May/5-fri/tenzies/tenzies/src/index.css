@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Karla', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    background-color: #0B2434;
+    padding: 30px;
+
+}
+
+main {
+
+  background-color: #F5F5F5;
+  height: 50vh;
+  max-width: 800px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 4em;
+}
+
+.die {
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: #ffffff;
+  width: 75px;
+  height: 75px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.held {
+  background-color: #59e391;
+}
+
+.button-roll {
+  font-family: 'Karla', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: #5035FF;
+  color: #ffff;
+  border: none;
+  font-size: 2rem;
+  padding: .75em 2.5em;
+  margin-top: 2.5em;
+  box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+  border-radius: 10px;
+  cursor: pointer; 
+}
+
+.button-roll:focus {
+  outline: none;      
+}
+
+.button-roll:active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.title {
+  font-size: 6rem;
+  margin-top: -5rem;
+  margin-bottom: .5em;
+}
+
+.instructions {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2.5em;
+}
