@@ -1,0 +1,27 @@
+[
+    {
+        "id": 0,
+        "title": "Ulysses",
+        "description": "Ulysses Great Classics Collection",
+        "authors": ["James Joyce"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/41elPq8BENL._SX331_BO1,204,203,200_.jpg",
+        "publishYear" : 2022
+    },
+    {
+        "id": 1,
+        "title": "A Life on Our Planet",
+        "description": "My Witness Statement and a Vision for The Future",
+        "authors": ["David Attenborough"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/41ft8ICa81L._SY344_BO1,204,203,200_QL70_ML2_.jpg",
+        "publishYear" : 2020
+    },
+    {
+        "id": 99,
+        "title": "The Making of The Movie Jaws",
+        "description": "The behind-the-scenes story of the film that continues to make generations of beach-goers think twice before they go swimming.",
+        "authors": ["Edith Blake", "Michael A Smith"],
+        "image": "https://images-na.ssl-images-amazon.com/images/I/5154c8M80bL._SX331_BO1,204,203,200_.jpg",
+        "publishYear" : 2019
+    }
+]
+
