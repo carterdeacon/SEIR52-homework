@@ -1,0 +1,8 @@
+<h2>Pantheons</h2>
+<ul>
+    <% @pantheons.each do |pantheon|%>
+    <li>
+        <%= link_to pantheon.name, pantheon %> (<%= pantheon.country %>)
+    </li>
+    <% end %>
+</ul>
