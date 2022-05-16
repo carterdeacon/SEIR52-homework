@@ -10,7 +10,7 @@ img.style.left = '0px';
 
 const catWalk = function() {
     const first = parseInt(img.style.left);
-    const second = first + 1;
+    const second = first + 1.2;
     img.style.left = second + 'px';
     if (second > window.innerWidth - img.width) {
         clearTimeout(setTimeout);
