@@ -27,36 +27,35 @@
 
 $('#checking-deposit').on('click', function(){
     let $checkBal = Number($('#checking-balance').text().slice(1));
-    let $checkAmount = Number($('#checking-amount').val());
+    let $checkAmount = Number($('#checking-amount').val()); // we also can use + instead of Number
     let totalCheck = $checkBal + $checkAmount
     if ($checkAmount > 0){
         $('#checking-balance').text('$' + totalCheck) // if we do not add $ sign again it will remove the first charector
     }
     //console.log(totalCheck)
+    checkForZero();
 })
 
 $('#checking-withdraw').on('click', function(){
     let $checkBal = Number($('#checking-balance').text().substring(1));
-    let $checkAmount = Number($('#checking-amount').val());
+    let $checkAmount = Number($('#checking-amount').val()); // only input has value
     let totalCheck = $checkBal - $checkAmount
     if (totalCheck >= 0 && $checkAmount > 0){
         $('#checking-balance').text('$' + totalCheck)
-        // } else {
-        //     $('#checking-balance').append('you have not enough money')
-
-        //console.log('Sorry')
+    
     }
-    //console.log(totalCheck)
+    checkForZero();
 })
 
 
 $('#savings-deposit').on('click', function(){
     let $savingBal = Number($('#savings-balance').text().slice(1));
-    let $savingAmount = Number($('#savings-amount').val());
+    let $savingAmount = + $('#savings-amount').val(); // + do the sam eas Number
     let totalSaving = $savingBal + $savingAmount
     if ($savingAmount > 0) {
         $('#savings-balance').text('$' + totalSaving);
     }
+    checkForZero();
 })
 
 
@@ -67,41 +66,12 @@ $('#savings-withdraw').on('click', function(){
     if ($savingAmount > 0 && totalSaving >= 0) {
         $('#savings-balance').text('$' + totalSaving);
     }
+    checkForZero();
 })
 
-// $('#checking-balance').each(function(){
-//     let $checkBal = Number($('#checking-balance').text().substring(1))
-//     if ($checkBal === 0) {
-//         $('#checking-balance').css('background-color', '#F52F4F')
-//     } else if ($checkBal > 0) {
-//         $('#checking-balance').css('background-color', 'blue')
-//     }
-// })
-
-
-$('#checking-withdraw').on('click', function(){
-    $checkBal = Number($('#checking-balancce').text().slice(1));
-    $checkAmount = Number($('#checking-amount').val());
-    $savingBal = Number($('#savings-balance').text().slice(1))
-    if ($checkBal === 0) {
-        totalCheck = $savingBal - $checkAmount
-        $('#checking-balance').text('$' + totalCheck)
-    }
-})
-
-
-$('#checking-balance').each(function(){
-    let $zero = Number($('#checking-balance').text().substring(1))
-    if ($zero === 0 ) {
-        $('#checking-balance').addClass('zero')
-    } else {
-        $('#checking-balance').removeClass('zero')
-    }
-})
-
-// $('.balance').each(function(){
+// $('#checking-balance').ready(function(){
 //     let $zero = Number($('#checking-balance').text().substring(1))
-//     if ($zero === 0) {
+//     if ($zero === 0 ) {
 //         $('#checking-balance').addClass('zero')
 //     } else {
 //         $('#checking-balance').removeClass('zero')
@@ -109,3 +79,19 @@ $('#checking-balance').each(function(){
 // })
 
 
+const checkForZero = function() {
+    $('.zero').removeClass('zero');
+
+    const checkingBalance = $('#checking-balance').text().slice(1);
+    if (checkingBalance <= 0) {
+        $('#checking-balance').addClass('zero');
+    }
+
+    const savingsBalance = $('#savings-balance').text().slice(1);
+    if (savingsBalance <= 0) {
+        $('#savings-balance').addClass('zero');
+    }
+    
+}
+
+checkForZero(); //we need to call it first to start with red 

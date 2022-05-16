@@ -3,7 +3,5 @@ class RpsController < ApplicationController
     end
 
     def throw
-        p = params[:value]
-        if p
     end
 end

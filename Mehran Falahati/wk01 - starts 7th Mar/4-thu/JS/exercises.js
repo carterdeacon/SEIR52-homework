@@ -79,7 +79,7 @@ const isIsosceles = function(side1, side2, side3) {
 }
 const areaTri = function(side1, side2, side3) {
     const s = side1 + side2 + side3;
-    return Math.sqrt(s * ((s - side1) * (s - side2) * (s - side3)))
+    return Math.sqrt(s * ((s - side1) * (s - side2) * (s - side3))) // heron formula
 };
 
 
@@ -139,7 +139,7 @@ const shoppingCart = {
 }
 
 const cashRegister = function(itemName, itemPrice) {
-    for (let i = 0; i < cashRegister.length ; i++);
+    for (let i = 0; i < cashRegister.keys(shoppingCart) ; i++);
     total.push(i);
     console.log(total(i));
 }
