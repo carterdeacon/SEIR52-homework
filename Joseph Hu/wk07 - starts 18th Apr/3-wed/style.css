@@ -1,0 +1,133 @@
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 5%;
+}
+.search-bar{
+    border: 2px solid #ee6352;
+    display:flex;
+    border-radius: 100px;
+    height: 60px;
+    width: 60px;
+    
+    position: relative;
+    transition: width 450ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    overflow: hidden;
+    font-size: 1.25em;
+    padding: 3px
+
+}
+.search-bar_input{
+    flex-grow:1;
+    font-size: 1.5rem;
+    padding: 0.25 1em;
+    border: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    line-height: calc(60px - 3px);
+    opacity: 0;
+    cursor: pointer;
+}
+
+.submit{
+    margin-top: 3px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border:0;
+    background: transparent;
+    border-radius: 50%;
+    width: calc(60px - 10px);
+    height: calc(60px - 10px);
+    margin-left: auto;
+    transition: background 150ms ease-in-out;
+
+}
+
+/* changes the thing being focused on */
+.search-bar_input:focus-within {
+    outline: 0;
+}
+/* if the parent has anything within that gains focus then we can change the style */
+/* even if we focus on the child icon, the parent style changes */
+.search-bar:focus-within{
+    /* box-shadow: 10px 10px 30px black; */
+    width: 100%
+}
+.search-bar:focus-within .search-bar_input{
+    /* box-shadow: 10px 10px 30px black; */
+    opacity: 1;
+    cursor: initial;
+    width: calc(100% - 60px)
+
+
+}
+
+.search-bar:focus-within .submit{
+    background-color:#ee6352;
+    color: white;
+
+}
+
+.search-bar:focus .submit{
+    outline: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+img{
+    border-radius: 12px;
+    height: 400px;
+    object-fit: cover;
+    margin-right: 1%;
+}
+
+body{
+    background-color: #EAEFF1;
+    font-family: 'Raleway', sans-serif;
+}
+
+.card-container{
+    max-width: 640px;
+    margin: 0 auto;
+    margin-top: 10vh;
+}
+
+.card{
+    background-color: white;
+    padding: 8px;
+    border-radius: 12px;
+    border: 1px solid #BACDD8;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+
+}
+
+.author{
+
+    padding:4px 8px;
+    border: 1px solid #E5EAED;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #788697;
+}
+
+.name{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 3%;
+}
+
+p{
+    font-size: 14px;
+    color: #7F8C9B;
+    line-height: 150%;
+}
+.card-details{
+    padding: 16px;
